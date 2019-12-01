@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Banche_dati/pubmed.md" beforeDir="false" afterPath="$PROJECT_DIR$/Banche_dati/pubmed.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Banche_dati/retrieval.md" beforeDir="false" afterPath="$PROJECT_DIR$/Banche_dati/retrieval.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575219724412</updated>
-      <workItem from="1575219726059" duration="3163000" />
+      <workItem from="1575219726059" duration="3333000" />
     </task>
     <task id="LOCAL-00001" summary="preparazione readme">
       <created>1575220573547</created>
@@ -95,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575223143245</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="preparazione readme&#10;preparazione esercitazione su pubmed">
+      <created>1575224275206</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575224275206</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
