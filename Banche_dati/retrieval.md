@@ -1,14 +1,16 @@
 # Sistemi di retrieval
-Ci eserciteremo adesso ad usare i due principali sistemi di retrieval noti come ENTREZ per l’interrogazione delle Banche Dati. Entrambi i sistemi consentono di combinare i criteri di ricerca utilizzando quali operatori logici l’intersezione (AND), l’unione (OR) o l’esclusione (BUT NOT). 
+Ci eserciteremo adesso ad utilizzare il sistema di retrieval **ENTREZ** per l’interrogazione delle Banche Dati ospitate presso l'**NCBI**.  
+Il sistema permette di combinare i criteri di ricerca utilizzando gli operatori logici l’intersezione (**AND**), l’unione (**OR**) o l’esclusione (**NOT**).  
 
-Riferiremo le nostre ricerche ad un particolare esempio, la citocromo c ossidasi, che è un complesso multimerico localizzato nella membrana mitocondriale interna che partecipa al trasporto degli elettroni nella catena respiratoria mitocondriale. Esso è costituito da 13 peptidi di cui 3 codificati dal genoma mitocondriale e 10 dal genoma nucleare.
+Riferiremo le nostre ricerche ad un particolare esempio, la **Citocromo C ossidasi**, che come saprete, è un complesso multimerico localizzato nella membrana mitocondriale interna, partecipante al trasporto degli elettroni nella catena respiratoria mitocondriale.  
+Essa è costituita da **13 peptidi** di cui **3** codificati dal **genoma mitocondriale** e **10** dal **genoma nucleare**.  
   
-L’obiettivo dell’esercitazione è quello di selezionare i geni e le proteine corrispondenti alla subunità 4 umana utilizzando il sistema di interrogazione ENTREZ.
+L’obiettivo dell’esercitazione è quello di selezionare i geni e le proteine corrispondenti alla **subunità 4 umana** utilizzando il sistema di interrogazione **ENTREZ**.  
  
-Nota preliminare: ricorda che le virgolette consentono di delimitare più parole da ricercare insieme e che più operatori logici possono essere utilizzati in una stessa ricerca usando le parentesi tonde come in un’espressione matematica.
+__Nota preliminare__: ricorda che le virgolette consentono di delimitare più parole da ricercare insieme e che più operatori logici possono essere utilizzati in una stessa ricerca usando le parentesi tonde come in un’espressione matematica.  
   
-1.	Collegati al sito www.ncbi.nlm.nih.gov 
-2.	Seleziona Nucleotide nella casella Search 
+1.	Collegati al sito [www.ncbi.nlm.nih.gov](www.ncbi.nlm.nih.gov);   
+2.	Seleziona **Nucleotide** nella casella **Search**:  
 3.	Richiedi la sequenza nucleotidica desiderata attraverso l’uso delle chiavi: “cytochrome c oxidase”
 
  
