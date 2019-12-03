@@ -24,10 +24,10 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
 4.	Prova ad inserire degli errori nella nomenclatura (es: `"cytochrome c oxydase"` oppure `"cytocrome c oxidase"`). Nota le differenze nel risultato e prova a dedurne il motivo;  
 <details><summary></summary>
 <p>
-```"cytochrome c oxydase"``` <b>158</b>
+`"cytochrome c oxydase"` <b>158</b>
 </p>
 <p>  
-```"cytochrome c oxydase"``` <b>220</b>
+`"cytochrome c oxydase"` <b>220</b>
 </p>
 </details>   
 5.	Restringiamo la selezione richiedendo solo le sequenze nucleotidiche della subunità 4;   
