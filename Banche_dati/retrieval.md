@@ -135,7 +135,7 @@ Di queste proteine quante sono codificate dal genoma mitocondriale?
 Determina il numero di sequenze di rRNA 16S appartenenti al genere Escherichia sono disponibili nella banca dati.  
 Quante di queste non sono parziali?
   
-## Esercizio 7. 
+## Esercizio 8. 
 Interrogate la banca dati “Genome”.  
 - Quanti genomi di `Escherichia coli` sono disponibili?  
 - Quanti di `Fusobacterium nucleatum`?  
