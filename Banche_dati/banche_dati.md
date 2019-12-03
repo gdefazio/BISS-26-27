@@ -31,4 +31,4 @@ Immagina di aver prodotto una sequenza di un mRNA umano di un gene di tuo intere
 ## Esercizio 2: scaricare il file utilizzando il seguente [LINK](https://drive.google.com/open?id=1ttFY1BhOFBtxeisEXG1evapwyhMnPl7yNLU7cDmaoJA)
 Devi sottomettere la sequenza di un gene proteico di topo. Il gene è composto da due esoni: la sequenza per la ORF è completa. Sulla base delle informazioni suddette, completa la seguente ENTRY2 in formato Genbank.
 
-[Sistemi di Retrieval](./retrieval.md)    [Back to the top](../README.md)
+[Sistemi di Retrieval](./retrieval.md)                          [Back to the top](../README.md)

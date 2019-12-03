@@ -14,26 +14,23 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
   
 
 ![NCBI Home Page](./ncbi_home.jpg)
- 
+
 3.	Richiedi la sequenza nucleotidica desiderata attraverso l’uso del seguente termine di ricerca: `"cytochrome c oxidase"`;  
-<details><summary></summary>
-<p>
-<b>896.384</b>
-</p>
-</details>
+    <details><summary></summary>
+    <p>
+    <b>896.384</b>
+    </p>
+    </details>
 
 4.	Prova ad inserire degli errori nella nomenclatura (es: `"cytochrome c oxydase"` oppure `"cytocrome c oxidase"`). Nota le differenze nel risultato e prova a dedurne il motivo;  
-  
-<details><summary></summary>
-<p>
-
-`"cytochrome c oxydase"` <b>158</b>
-</p>
-<p>
-  
-`"cytochrome c oxydase"` <b>220</b>
-</p>
-</details>   
+    <details><summary></summary>
+    <p>
+    `"cytochrome c oxydase"` <b>158</b>
+    </p>
+    <p>  
+    `"cytochrome c oxydase"` <b>220</b>
+    </p>
+    </details>   
 
 5.	Restringiamo la selezione richiedendo solo le sequenze nucleotidiche della subunità 4. Utilizzeremo l'operatore logico **AND**;   
     a.	`"cytochrome c oxidase"` AND `"subunit 4"` 
@@ -50,13 +47,14 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
     </details>
 
 NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries diverso.  
+
 6.	Per includere tutte le sequenze usa l’operatore logico **OR** 
     a.	`"cytochrome c oxidase" AND ("subunit 4" OR "subunit iv")`  
-<details><summary></summary>
-<p>
-<b>134.334</b>
-</p>
-</details>  
+    <details><summary></summary>
+    <p>
+    <b>134.334</b>
+    </p>
+    </details>  
 
 7.	Puoi aumentare il numero di sequenze per la cytocrome c oxidase anche utilizzando la sigla “cox4”:  
     a.	`"cytochrome c oxidase" AND ("subunit 4" OR "subunit iv" OR "cox4")`
@@ -82,12 +80,11 @@ Prima di procedere al prossimo punto cliccare su “clear” per eliminare i lim
     c.	Selezionare il field `organism` e scrivere “Homo sapiens”.  
 
 ![advanced](./advanced.jpg)  
-
-<details><summary></summary>
-<p>
-<b>49.313</b>
-</p>
-</details>
+    <details><summary></summary>
+    <p>
+    <b>49.313</b>
+    </p>
+    </details>
     
 10.	 Scorrendo le sequenze potremmo notare che alcune corrispondono a **Pseudogeni**. Escludi le sequenze nucleotidiche annotate come "pseudogene" selezionando le sequenze attraverso la chiave `Pseudogene`:  
     a.	Ritorna su Advanced e interseca la query **#?** (derivata dalla ricerca precendente) con la query **#?** (corrispondente all’ultima ricerca) questa volta utilizzando l’operatore **NOT**: #? NOT #?   
@@ -102,48 +99,41 @@ Prima di procedere al prossimo punto cliccare su “clear” per eliminare i lim
   
 
  
-Esercizio 1. Utilizzando ENTREZ prova a selezionare la entry relativa all’mRNA per la proteina p53 di cane. Suggerimenti: puoi usare il campo “Limits” per selezionare le entries del gene per p53 (tp53), l’organismo Canis familiaris e il tipo di molecola (RNA). 
-  
-Soluzione: 
-
-
-Esercizio 2. Esamina la entry selezionata nell’esercizio 1. Determinate la lunghezza del trascritto, della regione codificante, del 5’UTR e del 3’UTR.
-  
-Soluzione: 
-  
-
-Esercizio 3. Esamina la entry selezionata nell’esercizio 1. Sei in grado di individiare la proteina associata? Qual è il suo accession number? Quanto è lunga la proteina?
-Osservando la Feature Table cosa potete annotare?
-
-Soluzione:
-  
-
-Esercizio 4. Utilizzando ENTREZ prova a selezionare la entry relativa alla proteina ATP8 (“ATP synthase subunit 8”) di Ciona robusta (https://invasions.si.edu/nemesis/calnemo/SpeciesSummary.jsp?TSN=-701). 
-  
-Soluzione: 
-  
-  
-Esercizio 5. Esamina la entry selezionata nell’esercizio 3 (CAD99002). Determina l’accession number della sequenza nucleotidica da cui è stata ricavata la entry, la lunghezza della proteina e della sequenza nucleotidica che codifica per questa proteina.
-  
-Soluzione: 
-  
-  
-Esercizio 6. Determina il numero di proteine umane presenti nella banca dati. Di queste proteine quante sono codificate dal genoma mitocondriale?
-
-Soluzione: 
-
-Esercizio 7. Determina il numero di sequenze di rRNA 16S appartenenti al genere Escherichia sono disponibili nella banca dati. Quante di queste non sono parziali?
-  
-Soluzione: 
-  
-Esercizio 7. Interrogate la banca dati “Genome”. Quanti genomi di Escherichia coli sono disponibili?. Quanti di Fusobacterium nucleatum?
-
-Soluzione: 
-
+## Esercizio 1. 
+Utilizzando ENTREZ prova a selezionare la entry relativa all’**mRNA** per la proteina **p53** di cane.  
+Suggerimenti: 
+- Il simbolo ufficiale del gene è `tp53`;  
+- il nome scientifico è `Canis faniliaris`;  
+ 
+## Esercizio 2. 
+Esamina la entry selezionata nell’esercizio 1:  
+- Determinate la lunghezza del trascritto, della regione codificante, del 5’UTR e del 3’UTR.  
    
-Letture consigliate: 
-Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 7-12 
-Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)
+### Esercizio 3.
+Esamina la entry selezionata nell’esercizio 1.  
+- Sei in grado di individiare la proteina associata?  
+- Qual è il suo accession number?  
+- Quanto è lunga la proteina?  
+Osservando la **Feature Table** cosa potete annotare?  
+
+## Esercizio 4. 
+Utilizzando ENTREZ prova a selezionare la entry relativa alla proteina ATP8 (“ATP synthase subunit 8”) di Ciona robusta (https://invasions.si.edu/nemesis/calnemo/SpeciesSummary.jsp?TSN=-701). 
+  
+  ## Esercizio 5. 
+Esamina la entry selezionata nell’esercizio 3 (CAD99002). Determina l’accession number della sequenza nucleotidica da cui è stata ricavata la entry, la lunghezza della proteina e della sequenza nucleotidica che codifica per questa proteina.
+
+  ## Esercizio 6. 
+Determina il numero di proteine umane presenti nella banca dati. Di queste proteine quante sono codificate dal genoma mitocondriale? 
+
+## Esercizio 7. 
+Determina il numero di sequenze di rRNA 16S appartenenti al genere Escherichia sono disponibili nella banca dati. Quante di queste non sono parziali?
+  
+## Esercizio 7. 
+Interrogate la banca dati “Genome”. Quanti genomi di Escherichia coli sono disponibili?. Quanti di Fusobacterium nucleatum?
+   
+Letture consigliate:  
+Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 7-12   
+Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)  
 
 
-[Sistemi di Retrieval](./retrieval.md)    [Back to the top](../README.md)
+[Sistemi di Retrieval](./retrieval.md)                          [Back to the top](../README.md)
