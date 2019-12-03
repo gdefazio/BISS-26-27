@@ -56,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575219724412</updated>
       <workItem from="1575219726059" duration="4982000" />
-      <workItem from="1575362932095" duration="2945000" />
+      <workItem from="1575362932095" duration="3418000" />
     </task>
     <task id="LOCAL-00001" summary="preparazione readme">
       <created>1575220573547</created>
@@ -156,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575368253705</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="sistemazione banche_dati.md">
+      <created>1575368840139</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1575368840139</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,13 +192,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione banche_dati.md" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1575368253588">
+    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1575368840011">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575368253588" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1575368256406">
+    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575368840011" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1575368841670">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575368256406" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575368841670" />
   </component>
 </project>

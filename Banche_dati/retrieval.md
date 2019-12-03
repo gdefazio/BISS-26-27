@@ -16,15 +16,31 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
 ![NCBI Home Page](./ncbi_home.jpg)
  
 3.	Richiedi la sequenza nucleotidica desiderata attraverso l’uso del seguente termine di ricerca: `"cytochrome c oxidase"`;  
-<details><summary>CLICK ME</summary>
+<details><summary></summary>
 <p>
 <b>896384</b>
 </p>
 </details>
-4.	Prova ad inserire degli errori nella nomenclatura (es: `"cytochrome c oxydase"` oppure `"cytocrome c oxidase"`). Nota le differenze nel risultato e prova a dedurne il motivo;   
-5.	Restringiamo la selezione richiedendo solo le sequenze nucleotidiche della subunità 4 
-a.	 “cytochrome c oxidase” AND “subunit 4” 
-b.	“cytochrome c oxidase” AND “subunit iv” 
+4.	Prova ad inserire degli errori nella nomenclatura (es: `"cytochrome c oxydase"` oppure `"cytocrome c oxidase"`). Nota le differenze nel risultato e prova a dedurne il motivo;  
+<details><summary></summary>
+<p>
+```"cytochrome c oxydase"``` <b>158</b>
+```"cytochrome c oxydase"``` <b>220</b>
+</p>
+</details>   
+5.	Restringiamo la selezione richiedendo solo le sequenze nucleotidiche della subunità 4;   
+    a.	`"cytochrome c oxidase"` AND `"subunit 4"` 
+    <details><summary></summary>
+    <p>
+    <b>95059</b>
+    </p>
+    </details>
+    b.	`"cytochrome c oxidase"` AND `"subunit iv"`  
+    <details><summary></summary>
+    <p>
+    <b>43409</b>
+    </p>
+    </details>
 NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries diverso.
 6.	Per includere tutte le sequenze usa l’operatore logico OR 
 a.	“cytochrome c oxidase” AND (“subunit 4” OR “subunit iv”) 
