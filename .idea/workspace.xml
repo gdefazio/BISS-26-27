@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Banche_dati/banche_dati.md" beforeDir="false" afterPath="$PROJECT_DIR$/Banche_dati/banche_dati.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Banche_dati/retrieval.md" beforeDir="false" afterPath="$PROJECT_DIR$/Banche_dati/retrieval.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575219724412</updated>
       <workItem from="1575219726059" duration="4982000" />
-      <workItem from="1575362932095" duration="3418000" />
+      <workItem from="1575362932095" duration="4314000" />
     </task>
     <task id="LOCAL-00001" summary="preparazione readme">
       <created>1575220573547</created>
@@ -163,7 +165,28 @@
       <option name="project" value="LOCAL" />
       <updated>1575368840139</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="sistemazione sistemi di retrieval.md">
+      <created>1575369280049</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1575369280049</updated>
+    </task>
+    <task id="LOCAL-00017" summary="sistemazione sistemi di retrieval.md">
+      <created>1575369348097</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1575369348097</updated>
+    </task>
+    <task id="LOCAL-00018" summary="sistemazione sistemi di retrieval.md">
+      <created>1575369391890</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1575369391890</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,16 +212,17 @@
     <MESSAGE value="preparazione esercirazioni Banche dati" />
     <MESSAGE value="sistemazione README" />
     <MESSAGE value="sistemazione banche_dati.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="sistemazione banche_dati.md" />
+    <MESSAGE value="sistemazione sistemi di retrieval.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="sistemazione sistemi di retrieval.md" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1575369347979">
+    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1575369391749">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575369347979" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1575369349157">
+    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575369391749" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1575369393367">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575369349157" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575369393367" />
   </component>
 </project>

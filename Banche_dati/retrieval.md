@@ -18,37 +18,54 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
 3.	Richiedi la sequenza nucleotidica desiderata attraverso l’uso del seguente termine di ricerca: `"cytochrome c oxidase"`;  
 <details><summary></summary>
 <p>
-<b>896384</b>
+<b>896.384</b>
 </p>
 </details>
+
 4.	Prova ad inserire degli errori nella nomenclatura (es: `"cytochrome c oxydase"` oppure `"cytocrome c oxidase"`). Nota le differenze nel risultato e prova a dedurne il motivo;  
+  
 <details><summary></summary>
 <p>
+
 `"cytochrome c oxydase"` <b>158</b>
 </p>
-<p>  
+<p>
+  
 `"cytochrome c oxydase"` <b>220</b>
 </p>
 </details>   
-5.	Restringiamo la selezione richiedendo solo le sequenze nucleotidiche della subunità 4;   
+
+5.	Restringiamo la selezione richiedendo solo le sequenze nucleotidiche della subunità 4. Utilizzeremo l'operatore logico **AND**;   
     a.	`"cytochrome c oxidase"` AND `"subunit 4"` 
     <details><summary></summary>
     <p>
-    <b>95059</b>
+    <b>95.059</b>
     </p>
     </details>
     b.	`"cytochrome c oxidase"` AND `"subunit iv"`  
     <details><summary></summary>
     <p>
-    <b>43409</b>
+    <b>43.409</b>
     </p>
     </details>
-NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries diverso.
-6.	Per includere tutte le sequenze usa l’operatore logico OR 
-a.	“cytochrome c oxidase” AND (“subunit 4” OR “subunit iv”) 
-7.	Puoi aumentare il numero di sequenze per la cytocrome c oxidase anche utilizzando la sigla “cox4” 
-a.	“cytochrome c oxidase” AND (“subunit 4” OR “subunit iv” OR “cox4”) 
-8.	Se siamo interessati a restringere le ricerche ad una specifica specie, ad esempio solo alle sequenze “umane”, possiamo modificare le opzioni note come “Limits” che trovate in alto a sinistra della pagina contenente la vostra ricerca. Se non è già presente “Homo sapiens” clicchiamo su “customize” e scriviamo “Homo sapiens” nel menù che si aprirà. Infine clicchiamo su “add”. In questo modo otterremo tutte le sequenze nucleotidiche specifiche dell’uomo. 
+
+NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries diverso.  
+6.	Per includere tutte le sequenze usa l’operatore logico **OR** 
+    a.	`"cytochrome c oxidase" AND ("subunit 4" OR "subunit iv")`  
+<details><summary></summary>
+<p>
+<b>134.334</b>
+</p>
+</details>  
+
+7.	Puoi aumentare il numero di sequenze per la cytocrome c oxidase anche utilizzando la sigla “cox4”:  
+    a.	`"cytochrome c oxidase" AND ("subunit 4" OR "subunit iv" OR "cox4")`
+    <details><summary></summary>
+    <p>
+    <b>134.445</b>
+    </p>
+    </details> 
+8.	Se siamo interessati a restringere le ricerche ad una specifica specie, ad esempio solo alle sequenze “umane”, possiamo modificare le opzioni note come **Limits** che trovate in alto a sinistra della pagina contenente la vostra ricerca. Se non è già presente “Homo sapiens” clicchiamo su “customize” e scriviamo “Homo sapiens” nel menù che si aprirà. Infine clicchiamo su “add”. In questo modo otterremo tutte le sequenze nucleotidiche specifiche dell’uomo. 
 
 Prima di procedere al prossimo punto cliccare su “clear” per eliminare i limiti imposti precedentemente
 
