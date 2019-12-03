@@ -25,6 +25,8 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
 <details><summary></summary>
 <p>
 ```"cytochrome c oxydase"``` <b>158</b>
+</p>
+<p>  
 ```"cytochrome c oxydase"``` <b>220</b>
 </p>
 </details>   
