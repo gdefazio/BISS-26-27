@@ -117,20 +117,29 @@ Esamina la entry selezionata nell’esercizio 1.
 Osservando la **Feature Table** cosa potete annotare?  
 
 ## Esercizio 4. 
-Utilizzando ENTREZ prova a selezionare la entry relativa alla proteina ATP8 (“ATP synthase subunit 8”) di Ciona robusta (https://invasions.si.edu/nemesis/calnemo/SpeciesSummary.jsp?TSN=-701). 
+Utilizzando ENTREZ prova a selezionare la entry **RefSeq** relativa alla proteina `"ATP synthase subunit 8"`, il cui **gene name** è `ATP8` di [Ciona robusta](https://invasions.si.edu/nemesis/calnemo/SpeciesSummary.jsp?TSN=-701). 
   
-  ## Esercizio 5. 
-Esamina la entry selezionata nell’esercizio 3 (CAD99002). Determina l’accession number della sequenza nucleotidica da cui è stata ricavata la entry, la lunghezza della proteina e della sequenza nucleotidica che codifica per questa proteina.
+## Esercizio 5. 
+Esamina la entry selezionata nell’esercizio 3 (YP_009357191.1).    
+Determina:  
+- l’accession number della sequenza nucleotidica da cui è stata ricavata la entry;  
+- la lunghezza della proteina;  
+- della sequenza nucleotidica che codifica per questa proteina.  
 
-  ## Esercizio 6. 
-Determina il numero di proteine umane presenti nella banca dati. Di queste proteine quante sono codificate dal genoma mitocondriale? 
+## Esercizio 6. 
+Determina il numero di proteine umane presenti nella banca dati.  
+Di queste proteine quante sono codificate dal genoma mitocondriale? 
 
 ## Esercizio 7. 
-Determina il numero di sequenze di rRNA 16S appartenenti al genere Escherichia sono disponibili nella banca dati. Quante di queste non sono parziali?
+Determina il numero di sequenze di rRNA 16S appartenenti al genere Escherichia sono disponibili nella banca dati.  
+Quante di queste non sono parziali?
   
 ## Esercizio 7. 
-Interrogate la banca dati “Genome”. Quanti genomi di Escherichia coli sono disponibili?. Quanti di Fusobacterium nucleatum?
+Interrogate la banca dati “Genome”.  
+- Quanti genomi di `Escherichia coli` sono disponibili?  
+- Quanti di `Fusobacterium nucleatum`?  
    
+
 Letture consigliate:  
 Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 7-12   
 Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)  
