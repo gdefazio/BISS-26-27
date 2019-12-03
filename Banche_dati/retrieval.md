@@ -64,17 +64,31 @@ NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries di
     <p>
     <b>134.445</b>
     </p>
-    </details> 
-8.	Se siamo interessati a restringere le ricerche ad una specifica specie, ad esempio solo alle sequenze “umane”, possiamo modificare le opzioni note come **Limits** che trovate in alto a sinistra della pagina contenente la vostra ricerca. Se non è già presente “Homo sapiens” clicchiamo su “customize” e scriviamo “Homo sapiens” nel menù che si aprirà. Infine clicchiamo su “add”. In questo modo otterremo tutte le sequenze nucleotidiche specifiche dell’uomo. 
+    </details>
+     
+8.	Se siamo interessati a restringere le ricerche ad una specifica specie, ad esempio solo alle sequenze “umane”, possiamo modificare le opzioni note come **Limits** che trovate in alto a sinistra della pagina contenente la vostra ricerca. Se non è già presente `Homo sapiens` clicchiamo su **customize** e scriviamo “Homo sapiens” nel menù che si aprirà.  
+    Infine clicchiamo su “add”. In questo modo otterremo tutte le sequenze nucleotidiche specifiche dell’uomo.  
+    <details><summary></summary>
+    <p>
+    <b>49.313</b>
+    </p>
+    </details>
 
-Prima di procedere al prossimo punto cliccare su “clear” per eliminare i limiti imposti precedentemente
+Prima di procedere al prossimo punto cliccare su “clear” per eliminare i limiti imposti precedentemente.  
 
-9.	Alternativamente possiamo sfruttare uno strumento più potente per selezionare le sole sequenze cox4 umane selezionando l’opzione “Advanced”: 
-a.	Nel primo campo di ricerca aggiungere la ricerca ““cytochrome c oxidase” AND (“subunit 4” OR “subunit iv” OR “cox4”)”
-b.	Selezionare l’operatore AND 
-c.	Selezionare il field “organism” e scrivere “Homo sapiens” 
+9.	Alternativamente possiamo sfruttare uno strumento più potente per selezionare le sole sequenze cox4 umane selezionando l’opzione **Advanced**: 
+    a.	Nel primo campo di ricerca aggiungere la ricerca `""cytochrome c oxidase" AND ("subunit 4" OR "subunit iv" OR "cox4")"`;  
+    b.	Selezionare l’operatore **AND**;    
+    c.	Selezionare il field `organism` e scrivere “Homo sapiens”.  
+
+![advanced](./advanced.jpg)  
 NB: controllare che i numeri delle queries effettuate corrispondano alle richieste che vogliamo intersecare (#?= “cytochrome c oxidase”  AND (“subunit 4” OR “subunit iv” OR “cox4”); #?= “homo sapiens”).
-
+<details><summary></summary>
+<p>
+<b>49.313</b>
+</p>
+</details>
+    
 10.	 Scorrendo le sequenze potremmo notare che alcune corrispondono a Pseudogeni. Escludi le sequenze nucleotidiche annotate come “pseudogene” selezionando le sequenze attraverso la chiave “Pseudogene” 
 a.	Ritorna su Advanced e interseca la query #? (derivata dall’ultima interzezione) con la query #? (corrispondente all’ultima ricerca) questa volta utilizzando l’operatore NOT: #? NOT #? 
 NB: Il numero di sequenze trovate si è ridotto.

@@ -3,7 +3,7 @@ Definizione: **Un Database (Base di Dati) è un sistema di archiviazione di dati
 **Possiamo, inoltre, definirlo come un insieme di dati tra loro correlati, memorizzati su un supporto di memoria di massa che possono essere manipolati da programmi chiamati Database Management System (DBMS).**
 
 In generale, possiamo identificare due tipologie di database: **DB non-relazionali** e **DB relazionali**.  
-I primi hanno una struttara sempliche che non permette operazioni avanzate. I DB che utilizzeremo sono tutti di tipo __relazionale__.    
+I primi hanno una struttara semplice che non permette operazioni avanzate. I DB che utilizzeremo sono tutti di tipo __relazionale__.    
 Un **DB relazionale** è costituito da una serie di tabelle, ognuna delle quali è composta da una serie di righe che sono unicamente definite da un codice, denominato __chiave__.    
 Le tabelle sono tra loro connesse tramite **legami logici**.    
 
