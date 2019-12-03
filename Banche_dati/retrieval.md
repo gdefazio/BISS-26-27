@@ -103,7 +103,7 @@ Prima di procedere al prossimo punto cliccare su “clear” per eliminare i lim
 Utilizzando ENTREZ prova a selezionare la entry relativa all’**mRNA** per la proteina **p53** di cane.  
 Suggerimenti: 
 - Il simbolo ufficiale del gene è `tp53`;  
-- il nome scientifico è `Canis faniliaris`;  
+- il nome scientifico è `Canis familiaris`;  
  
 ## Esercizio 2. 
 Esamina la entry selezionata nell’esercizio 1:  
@@ -114,7 +114,7 @@ Esamina la entry selezionata nell’esercizio 1.
 - Sei in grado di individiare la proteina associata?  
 - Qual è il suo accession number?  
 - Quanto è lunga la proteina?  
-Osservando la **Feature Table** cosa potete annotare?  
+- Osservando la **Feature Table** cosa potete annotare?  
 
 ## Esercizio 4. 
 Utilizzando ENTREZ prova a selezionare la entry **RefSeq** relativa alla proteina `"ATP synthase subunit 8"`, il cui **gene name** è `ATP8` di [Ciona robusta](https://invasions.si.edu/nemesis/calnemo/SpeciesSummary.jsp?TSN=-701). 
