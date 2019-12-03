@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Banche_dati/ncbi_home.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Banche_dati/pubmed.md" beforeDir="false" afterPath="$PROJECT_DIR$/Banche_dati/pubmed.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Banche_dati/retrieval.md" beforeDir="false" afterPath="$PROJECT_DIR$/Banche_dati/retrieval.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575219724412</updated>
       <workItem from="1575219726059" duration="4982000" />
-      <workItem from="1575362932095" duration="2731000" />
+      <workItem from="1575362932095" duration="2945000" />
     </task>
     <task id="LOCAL-00001" summary="preparazione readme">
       <created>1575220573547</created>
@@ -151,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575367848711</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="sistemazione banche_dati.md">
+      <created>1575368253704</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1575368253705</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,13 +185,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione banche_dati.md" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1575367848586">
+    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1575368253588">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575367848586" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1575367850041">
+    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575368253588" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1575368256406">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575367850041" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575368256406" />
   </component>
 </project>

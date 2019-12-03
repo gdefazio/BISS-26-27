@@ -11,12 +11,17 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
   
 1.	Collegati al sito [https://www.ncbi.nlm.nih.gov/](https://www.ncbi.nlm.nih.gov/);   
 2.	Nel menù a tendina accando alla casella di ricerca seleziona **Nucleotide**;  
-3.	Richiedi la sequenza nucleotidica desiderata attraverso l’uso del seguente termine di ricerca: `"cytochrome c oxidase"`.  
+  
 
 ![NCBI Home Page](./ncbi_home.jpg)
  
-
-4.	Prova ad inserire errori nella nomenclatura (es: ”cytochrome c oxydase” oppure “cytocrome c oxidase”), Nota le differenze nel risultato e prova a dedurne il motivo. 
+3.	Richiedi la sequenza nucleotidica desiderata attraverso l’uso del seguente termine di ricerca: `"cytochrome c oxidase"`;  
+<details><summary>CLICK ME</summary>
+<p>
+<b>896384</b>
+</p>
+</details>
+4.	Prova ad inserire degli errori nella nomenclatura (es: `"cytochrome c oxydase"` oppure `"cytocrome c oxidase"`). Nota le differenze nel risultato e prova a dedurne il motivo;   
 5.	Restringiamo la selezione richiedendo solo le sequenze nucleotidiche della subunità 4 
 a.	 “cytochrome c oxidase” AND “subunit 4” 
 b.	“cytochrome c oxidase” AND “subunit iv” 
