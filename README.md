@@ -5,7 +5,9 @@ Prima di addentrarci nello studio di questa disciplina è opportuno soffermarsi 
 Nel corso degli anni sono state proposte numerose definizioni che possono essere così sintetizzate:  
 
 ***La Bioinformatica si occupa della ricerca, dello sviluppo e dell’applicazione di approcci computazionali per l’interpretazione di dati biologici.***  
-**Questi includono l’informazione genetica racchiusa nei genomi e le modalità della loro espressione (trascrittoma, proteoma, microbioma, pathways metabolici, ecc.).**   
+
+**Questi includono l’informazione genetica racchiusa nei genomi e le modalità della loro espressione (trascrittoma, proteoma, microbioma, pathways metabolici, ecc.).**  
+ 
 La ricerca nel settore della Bioinformatica si occupa quindi di sviluppare gli approcci più appropriati per collezionare i dati biologici in apposite banche dati, di mettere a punto gli strumenti più idonei per la loro interrogazione e di sviluppare metodologie per la loro analisi con l’obiettivo di contribuire alla comprensione dei meccanismi molecolari alla base della vita.   
 
 La Bioinformatica è per sua natura **multidisciplinare** richiedendo il concorso di competenze diverse (Biologia Molecolare, Biochimica, Fisiologia, Genetica, Informatica, Matematica, Statistica, Chimica, Fisica, Ingegneria, ecc.) ed ha applicazioni pratiche in vasti settori della scienza.   
@@ -21,12 +23,14 @@ I principali tipi di dati biologici sono:
     -	**Letteratura scientifica** (per accedere ad un’importante risorsa di letteratura biomedica [https://www.ncbi.nlm.nih.gov/pubmed/](https://www.ncbi.nlm.nih.gov/pubmed/)).   
 
 Una buona conoscenza di base della __Biologia Molecolare__ ed in generale delle discipline biologiche di base(e.g. *Fisiologia*, *Biochimica* e *Genetica*) è fondamentale per comprendere e utilizzare al meglio gli strumenti che la Bioinformatica mette a disposizione della nostra attività di ricerca.   
+
 Uno dei principali compiti affidati alla Bioinformatica è archiviare i dati sopra citati, con tutte le informazioni ad essi correlate, in apposite *Banche Dati* o Database in modo da potervi accedere con opportuni programmi di interrogazione (retrieval).  
 La consultazione di una banca dati consiste quindi nel formulare una richiesta volta a selezionare un insieme di voci (*entries*) della stessa che soddisfino i nostri criteri di selezione (*query*). Ad esempio possiamo essere interessati a tutte le proteine codificate dal genoma umano (criterio 1), più lunghe di 1,000 amminoacidi (criterio 2) e che contengano uno specifico dominio catalitico (criterio 3), quindi in questo esempio i tre criteri riportati saranno combinati per intersezione.  
 I sistemi di retrieval consentono appunto di effettuare queries combinando diversi criteri tra loro utilizzando una serie di operatori logici quali intersezione (**AND**), unione (**OR**) o esclusione (**BUT NOT**).  
   
 Lo sviluppo della Bioinformatica ed in generale degli strumenti bioinformatici è stato affiancato da un enorme sviluppo della rete internet (o **world wide web**). Lo sviluppo della rete internet ha reso possibile la “globalizzazione” delle informazioni.  
 E’ sufficiente avere un computer connesso alla rete per accedere, da una qualunque località, a tutte le informazioni archiviate in qualunque altro computer in rete sulla terra. 
+
 Gli indirizzi internet sopra riportati (noti come *URL* o *uniform resource locators*) consentono l’accesso, utilizzando un Browser come *Safari*, *Chrome* o *Firefox* a documenti elettronici attraverso il protocollo *http/https* (*HyperText Transfer Protocol*).  
 La maggior parte delle risorse bioinformatiche, sia banche dati che programmi di analisi, sono disponibili ai ricercatori – normalmente in forma gratuita - sulla rete internet.   
   
