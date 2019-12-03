@@ -82,25 +82,24 @@ Prima di procedere al prossimo punto cliccare su “clear” per eliminare i lim
     c.	Selezionare il field `organism` e scrivere “Homo sapiens”.  
 
 ![advanced](./advanced.jpg)  
-NB: controllare che i numeri delle queries effettuate corrispondano alle richieste che vogliamo intersecare (#?= “cytochrome c oxidase”  AND (“subunit 4” OR “subunit iv” OR “cox4”); #?= “homo sapiens”).
+
 <details><summary></summary>
 <p>
 <b>49.313</b>
 </p>
 </details>
     
-10.	 Scorrendo le sequenze potremmo notare che alcune corrispondono a Pseudogeni. Escludi le sequenze nucleotidiche annotate come “pseudogene” selezionando le sequenze attraverso la chiave “Pseudogene” 
-a.	Ritorna su Advanced e interseca la query #? (derivata dall’ultima interzezione) con la query #? (corrispondente all’ultima ricerca) questa volta utilizzando l’operatore NOT: #? NOT #? 
-NB: Il numero di sequenze trovate si è ridotto.
- 
-11.	Ottenute le nostre sequenze possiamo selezionare la sequenza che interessa (es: AF017115) e visualizzare le informazioni contenute nella entry nei diversi formati. 
+10.	 Scorrendo le sequenze potremmo notare che alcune corrispondono a **Pseudogeni**. Escludi le sequenze nucleotidiche annotate come "pseudogene" selezionando le sequenze attraverso la chiave `Pseudogene`:  
+    a.	Ritorna su Advanced e interseca la query **#?** (derivata dalla ricerca precendente) con la query **#?** (corrispondente all’ultima ricerca) questa volta utilizzando l’operatore **NOT**: #? NOT #?   
+    NB: Il numero di sequenze trovate si è ridotto.
+    <details><summary></summary>
+    <p>
+    <b>49.300</b>
+    </p>
+    </details>
+    
+11.	Ottenute le nostre sequenze possiamo selezionare la sequenza che interessa (es: **AF017115**) e visualizzare le informazioni contenute nella entry.  
   
- 
-
-
-
-
-
 
  
 Esercizio 1. Utilizzando ENTREZ prova a selezionare la entry relativa all’mRNA per la proteina p53 di cane. Suggerimenti: puoi usare il campo “Limits” per selezionare le entries del gene per p53 (tp53), l’organismo Canis familiaris e il tipo di molecola (RNA). 

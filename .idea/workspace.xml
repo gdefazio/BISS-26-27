@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Banche_dati/banche_dati.md" beforeDir="false" afterPath="$PROJECT_DIR$/Banche_dati/banche_dati.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Banche_dati/retrieval.md" beforeDir="false" afterPath="$PROJECT_DIR$/Banche_dati/retrieval.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575219724412</updated>
       <workItem from="1575219726059" duration="4982000" />
-      <workItem from="1575362932095" duration="4635000" />
+      <workItem from="1575362932095" duration="4933000" />
     </task>
     <task id="LOCAL-00001" summary="preparazione readme">
       <created>1575220573547</created>
@@ -193,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575370094607</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="sistemazione sistemi di retrieval.md&#10;sistemazione README.md">
+      <created>1575370507118</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1575370507118</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,13 +229,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione sistemi di retrieval.md&#10;sistemazione README.md" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1575370094489">
+    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1575370506944">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575370094489" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1575369393367">
+    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575370506944" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1575370508636">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575369393367" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575370508636" />
   </component>
 </project>
