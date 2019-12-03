@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Banche_dati/db_figure.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Banche_dati/banche_dati.md" beforeDir="false" afterPath="$PROJECT_DIR$/Banche_dati/banche_dati.md" afterDir="false" />
     </list>
@@ -57,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575219724412</updated>
       <workItem from="1575219726059" duration="4982000" />
-      <workItem from="1575362932095" duration="1745000" />
+      <workItem from="1575362932095" duration="2224000" />
     </task>
     <task id="LOCAL-00001" summary="preparazione readme">
       <created>1575220573547</created>
@@ -129,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575292242572</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="preparazione esercirazioni Banche dati">
+      <created>1575366823844</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1575366823844</updated>
+    </task>
+    <task id="LOCAL-00012" summary="sistemazione README">
+      <created>1575366893857</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1575366893857</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,12 +165,18 @@
     <MESSAGE value="preparazione readme" />
     <MESSAGE value="preparazione readme&#10;preparazione esercitazione su pubmed" />
     <MESSAGE value="preparazione readme&#10;preparazione esercitazione su pubmed&#10;preparazione esercirazioni data-retrieval" />
-    <option name="LAST_COMMIT_MESSAGE" value="preparazione readme&#10;preparazione esercitazione su pubmed&#10;preparazione esercirazioni data-retrieval" />
+    <MESSAGE value="preparazione esercirazioni Banche dati" />
+    <MESSAGE value="sistemazione README" />
+    <option name="LAST_COMMIT_MESSAGE" value="sistemazione README" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1575366823611">
+    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1575366893734">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575366823611" />
+    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575366893734" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1575366920417">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575366920417" />
   </component>
 </project>

@@ -24,11 +24,11 @@ Come si può osservare dal confronto di una stessa entry in formato *GenBanké (
 La parte più importante della entry è la cosiddetta **Feature Table** che riporta le proprietà di specifiche regioni contenute all’interno della entry (ad es. la localizzazione di una sequenza codificante, ecc.).  
 Da notare i riferimenti crociati con altre banche dati (bibliografiche come Medline, proteiche o nucleotidiche).  
   
-## Esercizio 1: 
+## Esercizio 1: scaricare il file utilizzando il seguente [LINK](https://drive.google.com/open?id=1QHFJoZXIZp0OgWflGrcLEaKJIdXwTRmMK_tmW_YVihI)
 Immagina di aver prodotto una sequenza di un mRNA umano di un gene di tuo interesse e di doverla sottomettere a GenBank. Avendo presente il formato di una entry GenBank completa i campi di questa ENTRY1 con “punto interrogativo” in modo che i dati siano coerenti e biologicamente corretti.
  
 
-## Esercizio 2: 
+## Esercizio 2: scaricare il file utilizzando il seguente [LINK](https://drive.google.com/open?id=1ttFY1BhOFBtxeisEXG1evapwyhMnPl7yNLU7cDmaoJA)
 Devi sottomettere la sequenza di un gene proteico di topo. Il gene è composto da due esoni: la sequenza per la ORF è completa. Sulla base delle informazioni suddette, completa la seguente ENTRY2 in formato Genbank.
 
-[Back to the top](../README.md)
+[Sistemi di Retrieval](./retrieval.md)    [Back to the top](../README.md)
