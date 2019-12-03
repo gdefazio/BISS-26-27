@@ -29,3 +29,6 @@ Una volta che sono stati selezionati gli articoli di nostro interesse la banca d
 •	Particolarmente interessante è il campo Books dove si trovano, per alcune delle parole chiave presenti nella scheda dell’articolo in esame, i riferimenti a paragrafi o capitoli di libri presenti nella banca dati PubMed.  
 
 i)	Quante sequenze nucleotidiche (del database GenBank) di Homo sapiens sono riportate in articoli pubblicati nel 2010 che trattano del gene MTERF?
+
+
+[Back to the top](../README.md)

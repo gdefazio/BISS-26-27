@@ -9,10 +9,11 @@ L’obiettivo dell’esercitazione è quello di selezionare i geni e le proteine
  
 __Nota preliminare__: ricorda che le virgolette consentono di delimitare più parole da ricercare insieme e che più operatori logici possono essere utilizzati in una stessa ricerca usando le parentesi tonde come in un’espressione matematica.  
   
-1.	Collegati al sito [www.ncbi.nlm.nih.gov](www.ncbi.nlm.nih.gov);   
-2.	Seleziona **Nucleotide** nella casella **Search**:  
-3.	Richiedi la sequenza nucleotidica desiderata attraverso l’uso delle chiavi: “cytochrome c oxidase”
+1.	Collegati al sito [https://www.ncbi.nlm.nih.gov/](https://www.ncbi.nlm.nih.gov/);   
+2.	Nel menù a tendina accando alla casella di ricerca seleziona **Nucleotide**;  
+3.	Richiedi la sequenza nucleotidica desiderata attraverso l’uso del seguente termine di ricerca: `"cytochrome c oxidase"`.  
 
+![NCBI Home Page](./ncbi_home.jpg)
  
 
 4.	Prova ad inserire errori nella nomenclatura (es: ”cytochrome c oxydase” oppure “cytocrome c oxidase”), Nota le differenze nel risultato e prova a dedurne il motivo. 
@@ -90,3 +91,6 @@ Soluzione:
 Letture consigliate: 
 Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 7-12 
 Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)
+
+
+[Sistemi di Retrieval](./retrieval.md)    [Back to the top](../README.md)
