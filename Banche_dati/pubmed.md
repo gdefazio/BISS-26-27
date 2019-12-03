@@ -19,9 +19,9 @@ Per combinare precedenti ricerche ed eventualmente restringere l’insieme dei r
 Advanced mostra un elenco storico di tutte le ricerche effettuate che possono essere combinate con operatori logici per effettuare nuove ricerche. 
 
 Proviamo ora a svolgere alcuni semplici esercizi. 
-i)         Quanti articoli nella banca dati PubMed contengono la parola `Bioinformatics`?
-ii)        Quanti articoli trattano del gene p53?  Quanti riguardano anche i mitocondri? 
-iii)       Quanti articoli ha pubblicato il prof. G. Pesole nel 2005? 
+i)         Quanti articoli nella banca dati PubMed contengono la parola `Bioinformatics`?  
+ii)        Quanti articoli trattano del gene p53?  Quanti riguardano anche i mitocondri?  
+iii)       Quanti articoli ha pubblicato il prof. G. Pesole nel 2005?  
   
 Una volta che sono stati selezionati gli articoli di nostro interesse la banca dati PubMed offre altre due opzioni molto utili:  
 •	**Find related data**. Quest’opzione contiene i riferimenti incrociati con altre banche dati curate dall’NCBI come quella di acidi nucleici e proteine.   
