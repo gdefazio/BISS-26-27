@@ -7,7 +7,7 @@ I primi hanno una struttara semplice che non permette operazioni avanzate. I DB 
 Un **DB relazionale** è costituito da una serie di tabelle, ognuna delle quali è composta da una serie di righe che sono unicamente definite da un codice, denominato __chiave__.    
 Le tabelle sono tra loro connesse tramite **legami logici**.    
 
-![RVBD_prot](./db_figure.gif)
+![RVBD_prot](./db_figure.gif)  
 *Ref: https://f1000research.com/articles/8-530*
 
 Ogni tabella è costistuta da diverse righe e colonne:  
