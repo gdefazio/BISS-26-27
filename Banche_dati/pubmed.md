@@ -3,7 +3,7 @@
 La consultazione della **Letteratura Scientifica** inerente la tematica che si sta affrontando è una delle fasi essenziali di ogni progetto di ricerca.  
 La banca dati ***PubMed***, sviluppata presso il [**National Center for Biotechnology Information (NCBI)**](https://www.ncbi.nlm.nih.gov/pmc/about/intro/) raccoglie circa **30 milioni** di lavori (articoli, review, e libri) scientifici pubblicati.  
 Oltre all'NCBI, il suo mantenimento, è supportato dalla [**U.S. Library of Medicine**](https://www.ncbi.nlm.nih.gov/pmc/about/intro/). Attualmente, ricerca e raccoglie articoli da oltre 5.400 riviste internazionali a carattere biomedico.    
-Per interrogare questa banca dati, utilizzando il proprio browser (e.g. Safari, Explorer, Chrome, Opera, Firefox…) ci si deve collegare al sito: [https://pubmed.ncbi.nlm.nih.gov/](https://pubmed.ncbi.nlm.nih.gov/).  
+Per interrogare questa banca dati, utilizzando il proprio browser (e.g. Safari, Explorer, Chrome, Opera, Firefox…) ci si deve collegare al sito: [https://www.ncbi.nlm.nih.gov/pubmed/](https://www.ncbi.nlm.nih.gov/pubmed/).  
 ![pubmed](./pubmed.jpg)  
   
 La ricerca è effettuata inserendo nella casella *Search* il termine o i termini di interesse, eventualmente connettendoli con gli operatori logici **AND**, **OR** e **NOT**.  
