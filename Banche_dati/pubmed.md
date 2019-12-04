@@ -20,15 +20,15 @@ Per combinare precedenti ricerche ed eventualmente restringere l’insieme dei r
 
 Proviamo ora a svolgere alcuni semplici esercizi.  
 i)         Quanti articoli nella banca dati PubMed contengono la parola `Bioinformatics`?  
-ii)        Quanti articoli trattano del gene p53?  Quanti riguardano anche i mitocondri?  
-iii)       Quanti articoli ha pubblicato il prof. G. Pesole nel 2005?  
+ii)        Quanti articoli trattano del gene `p53`?  Quanti riguardano anche i `mitocondri`?  
+iii)       Quanti articoli ha pubblicato il prof. G. `Pesole` nel `2005?  
   
 Una volta che sono stati selezionati gli articoli di nostro interesse la banca dati PubMed offre altre due opzioni molto utili:    
 •	**Find related data**. Quest’opzione contiene i riferimenti incrociati con altre banche dati curate dall’NCBI come quelle di acidi nucleici e proteine.     
 •	E’ possibile, anche in Pubmed, selezionare tutti gli articoli che in qualche modo sono correlati a quello selezionato. Questa correlazione è stabilita sulla base del numero di parole condivise e della loro rilevanza.     
 •	Particolarmente interessante è il campo Books dove si trovano, per alcune delle parole chiave presenti nella scheda dell’articolo in esame, i riferimenti a paragrafi o capitoli di libri presenti nella banca dati PubMed.      
 
-i)	Quante sequenze nucleotidiche (del database GenBank) di Homo sapiens sono riportate in articoli pubblicati nel 2010 che trattano del gene MTERF?  
+i)	Quante sequenze nucleotidiche (del database GenBank) di Homo sapiens sono riportate in articoli pubblicati nel `2010` che trattano del gene `MTERF`?  
 
 
 [Back to the top](../README.md)
