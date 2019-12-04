@@ -1,6 +1,6 @@
 # **ESERCITAZIONI PRATICHE DEL CORSO DI BIOINFORMATICA ED ANALISI FUNZIONALE DEL GENOMA**  
 
-## ***Introduzione alla Bioinformativa***
+## ***Introduzione alla Bioinformatica***
 Prima di addentrarci nello studio di questa disciplina è opportuno soffermarsi su quale sia la definizione più appropriata e delinearne i principali ambiti di ricerca e applicazione.  
 Nel corso degli anni sono state proposte numerose definizioni che possono essere così sintetizzate:  
 
