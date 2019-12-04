@@ -121,7 +121,7 @@ Esamina la entry selezionata nell’esercizio 1.
 Utilizzando ENTREZ prova a selezionare la entry **RefSeq** relativa alla proteina `"ATP synthase subunit 8"`, il cui **gene name** è `ATP8` di [Ciona robusta](https://invasions.si.edu/nemesis/calnemo/SpeciesSummary.jsp?TSN=-701). 
   
 ## Esercizio 5. 
-Esamina la entry selezionata nell’esercizio 3$ (YP_009357191.1).    
+Esamina la entry selezionata nell’esercizio 4 (YP_009357191.1).    
 Determina:  
 - l’accession number della sequenza nucleotidica da cui è stata ricavata la entry;  
 - la lunghezza della proteina;  
