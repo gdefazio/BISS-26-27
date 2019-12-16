@@ -23,10 +23,20 @@ Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:
     Premi il bottone *BLAST*.    
     NB: (É anche possibile inserire direttamente l'**Accession Number** invece della sequenza stessa);  
 ![blast_result](./blast_description.jpg)
-    Nella pagina che si apre possiamo disingure tre macro sezioni:  
+
+Nella pagina che si apre possiamo disingure tre macro sezioni:  
     - Pannello 1 (rosso): _sezione generale_. Abbiamo tra opzione per cambiare la tipologia di report;  
     - Pannello 2 (viola): _sezione di filtering_: possiamo filtrare i dati sulla base dell' **organismo**, **percentuale di similarità**, **e-value** e **query coverage**;  
     - Pannello 3 (blue): _sezione dei risultati_: possiamo comabiare la modalità in cui sono visualizzati i risultati.   
+La modalità di visualizzazione di base è definita **Descriptions**, dove troviamo le seguenti informazioni:
+    * _Description_: Non è altro che la descrizione della sequenza contro cui abbiamo ottenuto un match;  
+    * _Max Score_: il punteggio massimo ottenuto dall'allineamento;  
+    * _Total Score_: il punteggio totale ottenuto dall'allineamento;
+    * _Query Coverage_: porzione della sequenza query interessata dall'allineamento;     
+    * _E value_: è una misura che ci dice l'affibabolità dell'allineamento;  
+    * _Per. Ident_: percentuale di indentità tra la sequena query e quella match;
+    * _Accession_: accession number della sequenza oggetto.  
+    
     Si apre una nuova finestra che mostra la presenza dei domini conservati identificati nella proteina.
 7.	E’ possibile visualizzare il risultato dell’analisi BLAST.
 8.	Esamina i risultati e osserva le sequenze omologhe di COX4 relative a specie di mammiferi.

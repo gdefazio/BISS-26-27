@@ -52,7 +52,7 @@ Letture consigliate:
 - [X] [Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
   - [X] [Sistemi di retrieval](Banche_dati/retrieval.md)  
   - [X] [PubMed](Banche_dati/pubmed.md)  
-## Esercitazione 2 (17-18/12/2019)
+### Esercitazione 2 (17-18/12/2019)
 ### Allineamento tra sequenze
 - [ ] [Allineamento e Multiallienamento](./Allineamento_tra_sequenze/allineamento.md)
 
