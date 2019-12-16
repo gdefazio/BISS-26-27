@@ -24,29 +24,38 @@ Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:
     NB: (É anche possibile inserire direttamente l'**Accession Number** invece della sequenza stessa);  
 ![blast_result](./blast_description.jpg)
 
-Nella pagina che si apre possiamo disingure tre macro sezioni:  
-    - Pannello 1 (rosso): _sezione generale_. Abbiamo tra opzione per cambiare la tipologia di report;  
-    - Pannello 2 (viola): _sezione di filtering_: possiamo filtrare i dati sulla base dell' **organismo**, **percentuale di similarità**, **e-value** e **query coverage**;  
-    - Pannello 3 (blue): _sezione dei risultati_: possiamo comabiare la modalità in cui sono visualizzati i risultati.   
-La modalità di visualizzazione di base è definita **Descriptions**, dove troviamo le seguenti informazioni:
-    * _Description_: Non è altro che la descrizione della sequenza contro cui abbiamo ottenuto un match;  
-    * _Max Score_: il punteggio massimo ottenuto dall'allineamento;  
-    * _Total Score_: il punteggio totale ottenuto dall'allineamento;
-    * _Query Coverage_: porzione della sequenza query interessata dall'allineamento;     
-    * _E value_: è una misura che ci dice l'affibabolità dell'allineamento;  
-    * _Per. Ident_: percentuale di indentità tra la sequena query e quella match;
-    * _Accession_: accession number della sequenza oggetto.  
-    
-    Si apre una nuova finestra che mostra la presenza dei domini conservati identificati nella proteina.
-7.	E’ possibile visualizzare il risultato dell’analisi BLAST.
+7.	E’ possibile visualizzare il risultato dell’analisi BLAST.  
+    Nella pagina che si apre possiamo disingure tre macro sezioni:  
+        - Pannello 1 (rosso): _sezione generale_. Abbiamo tra opzione per cambiare la tipologia di report;  
+        - Pannello 2 (viola): _sezione di filtering_: possiamo filtrare i dati sulla base dell' **organismo**, **percentuale di similarità**, **e-value** e **query coverage**;  
+        - Pannello 3 (blue): _sezione dei risultati_: possiamo comabiare la modalità in cui sono visualizzati i risultati.   
+    La modalità di visualizzazione di base è definita **Descriptions**, dove troviamo le seguenti informazioni:
+        * _Description_: Non è altro che la descrizione della sequenza contro cui abbiamo ottenuto un match;  
+        * _Max Score_: il punteggio massimo ottenuto dall'allineamento;  
+        * _Total Score_: il punteggio totale ottenuto dall'allineamento;
+        * _Query Coverage_: porzione della sequenza query interessata dall'allineamento;     
+        * _E value_: è una misura che ci dice l'affibabolità dell'allineamento;  
+        * _Per. Ident_: percentuale di indentità tra la sequena query e quella match;
+        * _Accession_: accession number della sequenza oggetto.  
+    Se selezioniamo la modalità di visualizzasione dei risultati **Graphic Summary**, noteremo che il Pannello 1 e 2 rimarranno invariati ma cambierà il 3.  
+![blast_graphic](./blast_graphic.jpg)
+    Nel riquadro in alto viene rappresenta la presenza dei domini conservati nella proteina query. Nel riquadro in basso è, invece, rappresento graficamente lo score ottenuto dagli allienamenti.  
+    Se seleziona una delle barre, verrà aperto un pop-up contenente le informazioni generali ed il **link** diretto al panello dove sono disponibili gli allineamenti (terza modalità di visualizzazione dei risultati).
+![blast_aling](./blast_align.jpg)
+
 8.	Esamina i risultati e osserva le sequenze omologhe di COX4 relative a specie di mammiferi.
 9.	Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina contenente l‘intera entry. È così possibile ricavare diverse informazioni, tra cui l‘AC delle sequenze nucleotidiche corrispondenti alla sequenza proteica. 
 10.	Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della subunità IV della citocromo c ossidasi umana (ricercandola con una ricerca testuale). In questo caso, quale tipo di BLAST si dovrebbe utilizzare? 
 ESERCIZI DA SVOLGERE 
 ESERCIZIO 1 
 Data questa sequenza:
+```
 > Sequenza Ignota
-MTTASTSQVRQNYHQDSEAAINRQINLELYASYVYLSMSYYFDRDDVALKN FAKYFLHQSHEEREHAEKLMKLQNQRGGRIFLQDIKKPDCDDWESGLNAME CALHLEKNVNQSLLELHKLATDKNDPHLCDFIETHYLNEQVKAIKELGDHVT NLRKMGAPESGLAEYLFDKHTLGDSDNES 
+MTTASTSQVRQNYHQDSEAAINRQINLELYASYVYLSMSYYFDRDDVALKN
+FAKYFLHQSHEEREHAEKLMKLQNQRGGRIFLQDIKKPDCDDWESGLNAME
+CALHLEKNVNQSLLELHKLATDKNDPHLCDFIETHYLNEQVKAIKELGDHVT
+NLRKMGAPESGLAEYLFDKHTLGDSDNES
+``` 
 Cercate di scoprire, utilizzando BlastP, 
 1)	Di che proteina si potrebbe trattare, e da quale specie probabilmente proviene
 2)	Contiene un dominio funzionale? Se si, quale? 
