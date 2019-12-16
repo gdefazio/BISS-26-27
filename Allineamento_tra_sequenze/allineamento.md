@@ -40,14 +40,20 @@ Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:
     Se selezioniamo la modalità di visualizzasione dei risultati **Graphic Summary**, noteremo che il Pannello 1 e 2 rimarranno invariati ma cambierà il 3.  
 ![blast_graphic](./blast_graphic.jpg)
     Nel riquadro in alto viene rappresenta la presenza dei domini conservati nella proteina query. Nel riquadro in basso è, invece, rappresento graficamente lo score ottenuto dagli allienamenti.  
-    Se seleziona una delle barre, verrà aperto un pop-up contenente le informazioni generali ed il **link** diretto al panello dove sono disponibili gli allineamenti (terza modalità di visualizzazione dei risultati).
+    Se si seleziona una delle barre, verrà aperto un pop-up contenente le informazioni generali ed il **link** diretto al panello dove sono disponibili gli allineamenti (terza modalità di visualizzazione dei risultati).  
 ![blast_aling](./blast_align.jpg)
+    Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina contenente l‘intera entry. È così possibile ricavare diverse informazioni, tra cui l‘AC delle sequenze nucleotidiche corrispondenti alla sequenza proteica.  
 
-8.	Esamina i risultati e osserva le sequenze omologhe di COX4 relative a specie di mammiferi.
-9.	Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina contenente l‘intera entry. È così possibile ricavare diverse informazioni, tra cui l‘AC delle sequenze nucleotidiche corrispondenti alla sequenza proteica. 
+# ESERCIZI DA SVOLGERE    
+## ESERCIZIO 1  
+Esamina i risultati e osserva le sequenze omologhe di COX4 relative a specie di mammiferi.  
+
+## ESERCIZIO 2
+Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina contenente l‘intera entry. È così possibile ricavare diverse informazioni, tra cui l‘AC delle sequenze nucleotidiche corrispondenti alla sequenza proteica. 
 10.	Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della subunità IV della citocromo c ossidasi umana (ricercandola con una ricerca testuale). In questo caso, quale tipo di BLAST si dovrebbe utilizzare? 
-ESERCIZI DA SVOLGERE 
-ESERCIZIO 1 
+
+# ESERCIZI DA SVOLGERE 
+## ESERCIZIO 1 
 Data questa sequenza:
 ```
 > Sequenza Ignota
@@ -57,9 +63,10 @@ CALHLEKNVNQSLLELHKLATDKNDPHLCDFIETHYLNEQVKAIKELGDHVT
 NLRKMGAPESGLAEYLFDKHTLGDSDNES
 ``` 
 Cercate di scoprire, utilizzando BlastP, 
-1)	Di che proteina si potrebbe trattare, e da quale specie probabilmente proviene
-2)	Contiene un dominio funzionale? Se si, quale? 
-3)	Esistono sequenze che si possono supporre ortologhe in altri organismi? 
+    1)	Di che proteina si potrebbe trattare, e da quale specie probabilmente proviene
+    2)	Contiene un dominio funzionale? Se si, quale? 
+    3)	Esistono sequenze che si possono supporre ortologhe in altri organismi? 
 (per rispondere a questa domanda potete utilizzare il link “Taxonomy Report” nella pagina dei risultati). 
-ESERCIZIO 2 
+
+## ESERCIZIO 2 
 Ricerca la sequenza dell’mRNA di p53 di Cavia porcellus. Utilizza questa sequenza come query per una ricerca con blastn e blastx e confronta i risultati.
