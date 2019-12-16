@@ -53,7 +53,7 @@ Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina c
 10.	Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della subunità IV della citocromo c ossidasi umana (ricercandola con una ricerca testuale). In questo caso, quale tipo di BLAST si dovrebbe utilizzare? 
 
 # ESERCIZI DA SVOLGERE 
-## ESERCIZIO 1 
+## ESERCIZIO 3
 Data questa sequenza:
 ```
 > Sequenza Ignota
@@ -62,11 +62,11 @@ FAKYFLHQSHEEREHAEKLMKLQNQRGGRIFLQDIKKPDCDDWESGLNAME
 CALHLEKNVNQSLLELHKLATDKNDPHLCDFIETHYLNEQVKAIKELGDHVT
 NLRKMGAPESGLAEYLFDKHTLGDSDNES
 ``` 
-Cercate di scoprire, utilizzando BlastP, 
-    1)	Di che proteina si potrebbe trattare, e da quale specie probabilmente proviene
-    2)	Contiene un dominio funzionale? Se si, quale? 
-    3)	Esistono sequenze che si possono supporre ortologhe in altri organismi? 
+Utilizzando il Protein BLAST, cercate di rispondere alle seguenti domande:   
+    1)	Di che proteina si potrebbe trattare, e da quale specie probabilmente proviene  
+    2)	Contiene un dominio funzionale? Se si, quale?  
+    3)	Esistono sequenze che si possono supporre ortologhe in altri organismi?   
 (per rispondere a questa domanda potete utilizzare il link “Taxonomy Report” nella pagina dei risultati). 
 
-## ESERCIZIO 2 
+## ESERCIZIO 4 
 Ricerca la sequenza dell’mRNA di p53 di Cavia porcellus. Utilizza questa sequenza come query per una ricerca con blastn e blastx e confronta i risultati.
