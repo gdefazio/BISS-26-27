@@ -71,7 +71,7 @@ Esamina i risultati e osserva le sequenze omologhe di COX4 relative a specie di 
 
 ## ESERCIZIO 2
 Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina contenente l‘intera entry. È così possibile ricavare diverse informazioni, tra cui l‘AC delle sequenze nucleotidiche corrispondenti alla sequenza proteica. 
-10.	Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della subunità IV della citocromo c ossidasi umana (ricercandola con una ricerca testuale). In questo caso, quale tipo di BLAST si dovrebbe utilizzare? 
+Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della subunità IV della citocromo c ossidasi umana (ricercandola con una ricerca testuale). In questo caso, quale tipo di BLAST si dovrebbe utilizzare? 
 
 # ESERCIZI DA SVOLGERE 
 ## ESERCIZIO 3
