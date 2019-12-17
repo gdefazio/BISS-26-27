@@ -92,6 +92,9 @@ Utilizzando il Protein BLAST, cercate di rispondere alle seguenti domande:
 ## ESERCIZIO 4 
 Ricerca la sequenza dell’mRNA di p53 di Cavia porcellus. Utilizza questa sequenza come query per una ricerca con blastn e blastx e confronta i risultati.
 
+Letture consigliate:    
+- Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli) - Capitolo 5  
+
 [Utilizzo di BLAST e BLAT per l'analisi genomica](./blast_genomico.md)                            
 
 [Back to the top](../README.md)
