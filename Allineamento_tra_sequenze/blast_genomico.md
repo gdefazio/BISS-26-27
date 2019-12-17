@@ -49,5 +49,22 @@ Per verificare le risposte, è sufficiente osservare gli allineamenti ed utiliz
     </p>
 </details>
 
-  
+Un altro programma molto efficiente e veloce per confrontare una sequenza data contro un intero genoma è il **BLAT**.
+BLAT è accessibile presso il server dell'UCSC: [http://genome.ucsc.edu/cgi-bin/hgBlat?command=start](http://genome.ucsc.edu/cgi-bin/hgBlat?command=start)
+![blat](./blat.png)
+
+Una volta selezionato il genoma e la versione dell' assembly è possibile condurre la ricerca dopo aver incollato nell'apposito riquadro la sequenza nucleotidica o proteica in esame.  
+Ad esempio, provate a cercare nel genoma umano la proteina corrispondente al gene COX4I1 precedentemente considerato (ricercate la sequenza nel database **nucleotide** su **NCBI** e copiate la sequenza in formato FASTA. Usate l’AC **NM_001861**!!!).   
+Il risultato della ricerca è una tabella che mostra gli "hits" in ordine descrescente di score. E' possibile visualizzare i risultati nel "Browser" oppure direttamente l'allineamento.  
+Potete ricavare le coordinate cromosomiche del gene cox4? 
+
+## ESERCIZIO 1   
+Provate a cercare nel genoma dell’uomo il gene della ferritina “heavy” (FTH1) a partire dal trascritto (NM_002032). Su che cromosoma è localizzato?   
+
+## ESERCIZIO 2  
+Ripetete l’esperimento sul genoma del topo (usando la sequenza dell’uomo). In questo caso, **non selezionate megablast**.  
+Su che cromosoma si trova il gene omologo a COX4I1 (idem: provate a rispondere e solo dopo a guardare le annotazioni)? 
+ 
+
+[Back to the top](../README.md)
 
