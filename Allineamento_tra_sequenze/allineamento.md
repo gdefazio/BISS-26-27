@@ -1,14 +1,35 @@
 # ALLINEAMENTO DI SEQUENZE   
-L’allineamento di due o più sequenze riporta la rappresentazione di un’ipotesi di omologia posizionale tra le basi o gli aminoacidi delle sequenze considerate.  
-Esso, infatti, presuppone che le sequenze da allineare siano omologhe e quindi filogeneticamente correlate.  
-L’allineamento viene rappresentato sotto forma di una tabella costituita da righe (che corrispondono alle sequenze omologhe considerate) e da colonne (che corrispondono a ciascun sito dell’allineamento).   
+**L'assunzione di base su cui si base il confronto tra sequenze è che se due sequenze sono identiche, avranno un comportamento identico nelle cellule viventi**.  
+Possiamo generalizzare questo concetto, dicendo che più due sequenze sono similari tra loro, maggiore sarà la possibilità che abbiano una funzione similare.  
+
+L’allineamento di due o più sequenze riporta **la rappresentazione di un’ipotesi di omologia posizionale** tra le basi o gli aminoacidi delle sequenze considerate.  
+Esso, infatti, presuppone che le sequenze da allineare siano **omologhe** e quindi **filogeneticamente correlate**.  
+_Allineare_ due sequenze significa rappresentarle una sotto l'altra, incolonnando i residui in modo da formare una matrice.  
+```
+AA-CTGAATT
+|| ||| |||
+AAACTGCATT
+```   
 L’allineamento può essere realizzato utilizzando algoritmi di **allineamento globale**, che quindi considerano l’intera lunghezza delle sequenze in esame, o **algoritmi di allineamento locale**.   
 
+```
+ACGTCGCCCCAA-CTGAATTATTTGCCATT
+          || ||| |||
+          AAACTGCATT
+```   
+
 ## Caratterizzazione di una sequenza mediante ricerca di similarità in banche dati: Applicazione di BLAST per la ricerca di sequenze omologhe  
-Il programma **BLAST** può essere utilizzato per trovare in banca dati sequenze simili (spesso anche omologhe) a quella che stiamo esaminando.  
+Il programma **BLAST (Basic Local Alignment Search Tool)** può essere utilizzato per trovare in banca dati sequenze simili (spesso anche omologhe) a quella che stiamo esaminando.  
 Come abbiamo visto in precedenza (Ricerca in Banche dati mediante “parole chiave”) l’interrogazione di una banca dati può essere effettuata anche attraverso “sistemi di retrieval” ricercando criteri testuali nelle annotazioni contenute nelle entries delle sequenze.  
 Talvolta, però, le sequenze collezionate nella banca dati non sono correttamente annotate e quindi potrebbe non essere possibile selezionarle mediante la ricerca di parole chiave.  
 In questo caso è possibile eseguire la ricerca sulla base della similarità di sequenza utilizzando programmi di “database searching” come il **BLAST (Basic Local Alignment Search Tool)** che confronta una sequenza sonda (per convenzione definita **QUERY**) con tutte le sequenze di una banca dati.    
+Esistono diverse versioni del BLAST:  
+- **blastp**: permette di allineare QUERY aminoacidiche contro un database di riferimento proteico;  
+- **blastn**: permette di allineare QUERY nucleotidiche contro un database di riferimento nucleotidico;  
+- **blastx**: permette di allineare QUERY nucleotidiche tradotte contro un database di riferimento proteico :sob:;   
+- **tblastn**: permette di allineare QUERY aminoacidica contro un database di riferimento nucleotidico tradotto :astonished:;  
+- **tblastx**: sia la QUERY che il database sono nucleotidici e vengono tradotti :scream:;   
+
 Supponiamo di voler cercare le sequenze simili alla *sub-unità IV della citocromo c ossidasi umana* (Accession Number: **P13073**).  
 Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:  
 1.	Collegati al sito [www.ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov);  
