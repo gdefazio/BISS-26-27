@@ -54,7 +54,7 @@ Letture consigliate:
 - [X] [PubMed](Banche_dati/pubmed.md)  
 ### Esercitazione 2 (17-18/12/2019)
 ### Allineamento tra sequenze
-- [ ] [Allineamento e Multiallienamento](./Allineamento_tra_sequenze/allineamento.md)
+- [ ] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
 - [ ] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
 
 
