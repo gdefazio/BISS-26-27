@@ -75,7 +75,7 @@ Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della subunità 
 Suggerimenti:
  - Il **gene name** è COX4I1  
  - Restringete la ricerca (*limits*) per **mRNA** e **RefSeq**  
- - selezionate la **Transcript Variant 5**  
+ - selezionate la **Transcript Variant 5**      
 
 # ESERCIZI DA SVOLGERE 
 ## ESERCIZIO 3
@@ -94,7 +94,10 @@ Utilizzando il Protein BLAST, cercate di rispondere alle seguenti domande:
 (per rispondere a questa domanda potete utilizzare il link “Taxonomy Report” nella pagina dei risultati). 
 
 ## ESERCIZIO 4 
-Ricerca la sequenza dell’mRNA di p53 di Cavia porcellus. Utilizza questa sequenza come query per una ricerca con blastn e blastx e confronta i risultati.
+Ricerca la sequenza dell’mRNA di p53 di Cavia porcellus. Utilizza questa sequenza come query per una ricerca con blastn e blastx e confronta i risultati.  
+Suggerimenti:
+    - **gene name**: **tp53**  
+    - restringere la ricerca per **mRNA** 
 
 Letture consigliate:    
 - Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli) - Capitolo 5  
