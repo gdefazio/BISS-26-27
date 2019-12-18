@@ -442,15 +442,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta cartella su allineamento.md&#10;Allineamento su GEnomi" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1576603528117">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1576680603872">
+      <screen x="0" y="0" width="800" height="600" />
     </state>
     <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576603528117" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1575476846428" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1576603529738">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1576680603872" />
+    <state x="0" y="80" key="Vcs.Push.Dialog.v2" timestamp="1576680605092">
+      <screen x="0" y="0" width="800" height="600" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1576603529738" />
-    <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1575476847876" />
+    <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1576680605092" />
   </component>
 </project>

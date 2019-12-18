@@ -75,6 +75,7 @@ Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della subunità 
 Suggerimenti:
  - Il **gene name** è COX4I1  
  - Restringete la ricerca (*limits*) per **mRNA** e **RefSeq**  
+ - selezionate la **Transcript Variant 5**  
 
 # ESERCIZI DA SVOLGERE 
 ## ESERCIZIO 3
