@@ -63,13 +63,13 @@ Nella sezione **Summary** sono riportate delle informazioni relative all'annotaz
     > Attualmente, le sequenze del genomiche umane e dnurine sono sufficientemente stabili per iniziare a identificare quelle localizzazioni geniche identiche tra i tre principali browser pubblici del genoma.
     > A tal fine, è stato istituito il progetto **Consensus CDS (CCDS)**. Il progetto CCDS è uno sforzo collaborativo per identificare un insieme centrale di regioni codificanti proteine ​​che sono costantemente annotate e di alta qualità. 
     >I risultati iniziali del progetto Consensus CDS (CCDS) sono ora disponibili attraverso le pagine del gene Ensembl  e dalla pagina del progetto CCDS presso l'NCBI.
-    > Il set CCDS è stato realizzato tra **Ensembl**, il **National Center for Biotechnology Information (NCBI)** e il **HUGO Gene Nomenclature Committee (HGNC)**.
-* UniProtKB
-* RefSeq: 
-* Ensembl version
-* Other assemblies
-* Gene type
-* Annotation method 
+    > Il set CCDS è stato realizzato tra **Ensembl**, il **National Center for Biotechnology Information (NCBI)** e il **HUGO Gene Nomenclature Committee (HGNC)**.  
+* UniProtKB  
+* RefSeq  
+* Ensembl version  
+* Other assemblies  
+* Gene type  
+* Annotation method      
 
 
 illustra schematicamente la struttura del gene e il suo contesto genomico.
