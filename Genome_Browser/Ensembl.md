@@ -1,4 +1,5 @@
 #ENSEMBL
+
 I dati dei principali progetti genomici sono organizzati in banche dati specializzate che integrano tutta una serie di annotazioni, di natura eterogenea, in modo che il ricercatore, utilizzando un apposito **"browser"**, ottenga facilmente tutte le informazioni disponibili relative ad una determinata regione genomica.  
 I due browser genomici più diffusi sono **ENSEMBL** e **UCSC**, di cui vedremo le principali caratteristiche.  
 
