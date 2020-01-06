@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Genome_Browser/COX4I1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Browser/ENSEMBL_home.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Browser/Ensembl.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Browser/HUGO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Browser/UCSC.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Browser/home_human.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -61,14 +67,8 @@
       <updated>1575219724412</updated>
       <workItem from="1575219726059" duration="4982000" />
       <workItem from="1575362932095" duration="8762000" />
-      <workItem from="1576405134003" duration="11700000" />
-    </task>
-    <task id="LOCAL-00006" summary="preparazione readme&#10;preparazione esercitazione su pubmed">
-      <created>1575223143244</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1575223143245</updated>
+      <workItem from="1576405134003" duration="11963000" />
+      <workItem from="1578308719402" duration="2722000" />
     </task>
     <task id="LOCAL-00007" summary="preparazione readme&#10;preparazione esercitazione su pubmed">
       <created>1575224275206</created>
@@ -406,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576682065631</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="sistemazione README.md&#10;Aggiunta cartella su allineamento.md&#10;Allineamento su GEnomi">
+      <created>1576685302481</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1576685302481</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,15 +449,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta cartella su allineamento.md&#10;Allineamento su GEnomi" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1576682065468">
-      <screen x="0" y="0" width="800" height="600" />
+    <state x="206" y="34" key="CommitChangelistDialog2" timestamp="1576685302304">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576603528117" />
+    <state x="206" y="34" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576685302304" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1576682065468" />
-    <state x="0" y="80" key="Vcs.Push.Dialog.v2" timestamp="1576682066730">
-      <screen x="0" y="0" width="800" height="600" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1576685303738">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1576603529738" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1576685303738" />
     <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1576682066730" />
   </component>
 </project>
