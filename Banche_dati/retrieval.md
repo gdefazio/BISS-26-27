@@ -146,7 +146,7 @@ Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 7-12
 Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)  
 
 
-[Ricerca bibliografica nella banca dati PubMed ](./pubmed.md)                            
+[Ricerca bibliografica nella banca dati PubMed ](./pubmed.md)       ``                     
 
 
 [Back to the top](../README.md)

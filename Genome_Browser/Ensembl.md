@@ -64,19 +64,90 @@ Nella sezione **Summary** sono riportate delle informazioni relative all'annotaz
     > A tal fine, è stato istituito il progetto **Consensus CDS (CCDS)**. Il progetto CCDS è uno sforzo collaborativo per identificare un insieme centrale di regioni codificanti proteine ​​che sono costantemente annotate e di alta qualità. 
     >I risultati iniziali del progetto Consensus CDS (CCDS) sono ora disponibili attraverso le pagine del gene Ensembl  e dalla pagina del progetto CCDS presso l'NCBI.
     > Il set CCDS è stato realizzato tra **Ensembl**, il **National Center for Biotechnology Information (NCBI)** e il **HUGO Gene Nomenclature Committee (HGNC)**.  
-* UniProtKB  
-* RefSeq  
-* Ensembl version  
-* Other assemblies  
-* Gene type  
-* Annotation method      
+* UniProtKB: se disponibile il link alla banca dati **UniProtKB**;  
+* RefSeq: se disponibile il link alla banca dati **RefSeq**;  
+* Ensembl version: versione dell'annotazione ENSEMBL;  
+* Other assemblies: altre versioni dell'assembly;  
+* Gene type: tipologia di gene;  
+* Annotation method: metodo di annotazione:  
+ >
 
+E', inoltre, possibile osservare una rappresentazione schematica della struttura del gene ed il contesto genomico in cui si trova.    
+Sono rappresentate entrambe le strand (bianco e nero) e al centro il contig genomico in cui si trovano.  
+Relativamente ad entrambe le strand è riportata la posizione degli elementi trascritti ed eventualmente codificanti per proteine.  
+- Utilizzando il menù di configurazione  possiamo selezionare le “track” da visualizzare e gestirne le opzioni di visualizzazione: 
+ >ad esempio possiamo includere la rappresentazione relativa alle modificazioni Istoniche: selezioniamo la modifica **H3K27Ac**.  
 
-illustra schematicamente la struttura del gene e il suo contesto genomico.
-Sono rappresentate entrambe le strand (bianco e nero) e al centro il contig genomico in cui si trovano. Relativamente ad entrambe le strand è riportata la posizione degli elementi trascritti ed eventualmente codificanti per proteine.
-	Utilizzando il menù di configurazione  possiamo selezionare le “track” da visualizzare e gestirne le opzioni di visualizzazione (ad esempio possiamo includere la rappresentazione relativa alle modificazioni Istoniche: selezioniamo la modifica H3K27Ac)
 Possiamo visualizzare a questo punto l'informazione relativa a trascritti e proteine, cliccando sui link corrispondenti. Poi se vogliamo avere indicazioni più dettagliate sulla struttura in esoni ed introni e sulla loro localizzazione, possiamo cliccare sul box 
-a sinistra, dalla pagina relativa al trascritto:
+a sinistra, dalla pagina relativa al trascritto:  
+![options](./options.jpg)
+
+* Selezioniamo il trascritto, **ENST00000253452** e usiamo il box laterale per cercare di rispondere alle seguenti domande:  
+    * da quanti esoni è costituito il gene?  
+    * qual è la loro lunghezza?  
+    * l'introne più lungo?  
+    * oltre alle coordinate assolute del gene, degli esoni e degli introni.  
+    
+La sezione "Protein Summary" fornisce informazioni circa la struttura proteica, le proprietà chimico fisiche e la presenza di domini funzionali. Scegliamo la prima proteina codificata **ENSP00000253452**.  
+Comparirà una descrizione grafica della proteina e dei domini funzionali o strutturali riconosciuti in essa e una serie di informazioni chimico fisiche.  
+![protein](./protein_summary.jpg)
+
+Tornando alla scheda relativa al gene, possiamo anche determinare i geni **ortologhi** (e **paraloghi**) in altri organismi selezionando la voce **"Orthologues"** nel box a sinistra, nella sezione **Comparative Genomics**.    
+Notare che per ciascun organismo corrispondente è mostrato il rapporto quantitativo tra gli ortologhi.  
+![ortologhi](./ortologhi.jpg)
+
+Al di sotto è riportata una lista delle specie in cui sono stati identificati dei geni ortogologhi. 
+Nello **“Species set”** è possibile restringere la visualizzazione degli ortologhi ad uno specifico gruppo (ad es. i roditori `Rodents`).  
+Utilizzando il campo “Filter” in alto a destra è possibile ricercare una specie.
+
+## Esportazione Sequenze
+Se desideriamo esportare una qualunque sequenza relativa a questo gene (nucleotidica o proteica) dobbiamo selezionare la voce "Sequence" (sulla sinistra sotto il box).  
+Automaticamente la pagina verrà aggiornata e cliccando sull’opzione “Download sequence”, si aprirà una form che consente l'estrazione di varie tipologie di sequenza (gene, regione codificante, regioni non tradotte, etc.) in modo da salvarle sul nostro computer per effettuare ulteriori analisi.  
+Proviamo a salvare la sequenza del gene in formato FASTA, includendo 100 bp a monte e a valle e selezionando solo l’opzione genomic (quindi deselezionare tutti gli altri tipi di sequenza). Visualizzare la sequenza in formato text.
+![download](./download_sequence.jpg)
+
+## Analisi del contesto genomico di un gene
+Se clicchiamo sulla scheda **"Location"** possiamo esaminare la sezione **"Region in detail"** e ottenere informazioni sul contesto genomico del gene in esame.  
+* Ad esempio, quali sono i geni adiacenti a monte e a valle?  
+* A quale distanza si trovano?  
+* Qual è la composizione in basi?  
+
+
+### Esercizio 1
+Determina la lunghezza del trascritto `ENST00000253452` e della proteina relativa al trascritto in esame.  
+Guardare la pagina relativa al gene.  
+* Lunghezza trascritto:  
+* Lunghezza proteina:  
+
+
+### Esercizio 2
+Esamina le informazioni dei geni ortologhi a quello umano.  
+* Quanti esoni ha il gene di topo (filtrate per `Mus musculus`)?  
+* Qual’è la lunghezza totale del gene umano e di quello di topo?  
+* Qual’è la lunghezza complessiva degli introni umani e di topo (considerare per entrambi il trasscitto codificante proteina più lungo )?   
+
+### Esercizio 3
+Tra gli ortologhi cerca l'identificativo Ensembl del gene di Danio rerio []. Tra le informazioni disponibili individua:
+Cromosoma in cui mappa il gene []
+Lunghezza trascritto []
+Lunghezza proteina []
+
+### Esercizio 4
+Ricerca il nome ufficiale del gene `Dystrophin` dell'uomo.  
+Cerca questo gene in ENSEMBL, utilizzando il nome ufficiale.   
+1.	Qual è l'identificatore del gene?  
+2.	Su quale cromosoma è localizzato il gene?  
+3.	Su quali coordinate?  
+4.	Su quale strand?   
+5.	Quanti trascritti alternativi sono annotati?  
+6.	Quanto sono lunghi il trascritto più lungo e quello più corto?  
+7.	Quanti introni ed esoni hanno?  
+8.	Quanto sono lunghe la proteina più lunga e quella più corta annotate per questo gene?  
+
+[Ricerca bibliografica nella banca dati PubMed ](./pubmed.md)       ``                     
+
+
+[Back to the top](../README.md)
 
 
 
