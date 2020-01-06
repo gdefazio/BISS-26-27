@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Genome_Browser/download_sequence.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Genome_Browser/options.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Genome_Browser/ortologhi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Genome_Browser/protein_summary.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Browser/UCSC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Browser/ucsc_browser.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Browser/ucsc_cox4i1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Banche_dati/retrieval.md" beforeDir="false" afterPath="$PROJECT_DIR$/Banche_dati/retrieval.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Genome_Browser/Ensembl.md" beforeDir="false" afterPath="$PROJECT_DIR$/Genome_Browser/Ensembl.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Genome_Browser/UCSC.md" beforeDir="false" afterPath="$PROJECT_DIR$/Genome_Browser/UCSC.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,21 +66,7 @@
       <workItem from="1575219726059" duration="4982000" />
       <workItem from="1575362932095" duration="8762000" />
       <workItem from="1576405134003" duration="11963000" />
-      <workItem from="1578308719402" duration="4720000" />
-    </task>
-    <task id="LOCAL-00009" summary="preparazione readme&#10;preparazione esercitazione su pubmed&#10;preparazione esercirazioni data-retrieval">
-      <created>1575292131759</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1575292131759</updated>
-    </task>
-    <task id="LOCAL-00010" summary="preparazione readme&#10;preparazione esercitazione su pubmed&#10;preparazione esercirazioni data-retrieval">
-      <created>1575292242572</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1575292242572</updated>
+      <workItem from="1578308719402" duration="6067000" />
     </task>
     <task id="LOCAL-00011" summary="preparazione esercirazioni Banche dati">
       <created>1575366823844</created>
@@ -412,7 +397,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578312577664</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione sui browser umani">
+      <created>1578338668926</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1578338668926</updated>
+    </task>
+    <task id="LOCAL-00059" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione sui browser umani">
+      <created>1578338778268</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1578338778268</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,15 +448,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta e sistemazione lezione sui browser umani" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1578338668582">
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1578338778066">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578338668582" />
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578338778066" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1576682065468" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578338670291">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578338779784">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578338670291" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578338779784" />
     <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1576682066730" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1578339356321">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1578339356321" />
   </component>
 </project>
