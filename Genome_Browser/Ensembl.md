@@ -145,7 +145,7 @@ Cerca questo gene in ENSEMBL, utilizzando il nome ufficiale.
 7.	Quanti introni ed esoni hanno?  
 8.	Quanto sono lunghe la proteina più lunga e quella più corta annotate per questo gene?  
 
-[UCSC](./UCSC.md)       ``                     
+[UCSC](./UCSC.md)             
 
 
 [Back to the top](../README.md)
