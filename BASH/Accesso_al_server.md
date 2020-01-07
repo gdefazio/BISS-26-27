@@ -27,7 +27,7 @@ In windows dovremo utilizzare **Putty**.
 ![key](./key.png)
 3. A questo punto selezionate ``Session``:
     - Nel panello ``Host Name (or IP address)`` scrivete l'indirizzo del server;  
-    - In `Saved Sessions` scrivete **srv00** e cliccate su `save`(in questo modo creiamo un profilo di connessione;  
+    - In `Saved Sessions` scrivete **srv00** e cliccate su `save`(in questo modo creiamo un profilo di connessione);  
     - Cliccate su **open**.  
         * Il sistema vi chiederà l'utente di login: scrivete `epigen`  
         * di seguito vi chiederà la password e scriverete quella che vi sarà comunicata.  
