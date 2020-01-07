@@ -18,7 +18,7 @@ Esamina con attenzione le informazioni contenute in questa pagina:
 - Quanti pseudogeni?  
 - Qual è l’attuale lunghezza del genoma?  
 
-Sono disponibili anche due versioni di Ensemble per:  
+Sono disponibili anche due versioni di Ensembl per:  
 *	Piante: [http://plants.ensembl.org/index.html](http://plants.ensembl.org/index.html)   
 *	Procarioti: [http://bacteria.ensembl.org/index.html](http://bacteria.ensembl.org/index.html)  
 
@@ -129,9 +129,9 @@ Esamina le informazioni dei geni ortologhi a quello umano.
 ### Esercizio 3
 Tra gli ortologhi cerca l'identificativo Ensembl del gene di Danio rerio.  
 Tra le informazioni disponibili individua:  
-Cromosoma in cui mappa il gene []
-Lunghezza trascritto []
-Lunghezza proteina []
+Cromosoma in cui mappa il gene []  
+Lunghezza trascritto []  
+Lunghezza proteina []  
 
 ### Esercizio 4
 Ricerca il nome ufficiale del gene `Dystrophin` dell'uomo.  
