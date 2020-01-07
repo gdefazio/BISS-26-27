@@ -22,7 +22,7 @@ Sono disponibili anche due versioni di Ensemble per:
 *	Piante: [http://plants.ensembl.org/index.html](http://plants.ensembl.org/index.html)   
 *	Procarioti: [http://bacteria.ensembl.org/index.html](http://bacteria.ensembl.org/index.html)  
 
-##Ricerca in Ensembl mediante parole chiave o coordinate genomiche.
+## Ricerca in Ensembl mediante parole chiave o coordinate genomiche.
 A questo punto possiamo "*navigare*" nel *genoma umano* per esaminarne una particolare regione.  
 Inizieremo ad esaminare la regione genomica nella quale è localizzato il gene che codifica per la **Subunità 4 della Citocromo C ossidasi**.  
 La ricerca può essere effettuata utilizzando differenti modalotà di interrogazione della banca dati:  
@@ -125,10 +125,11 @@ Guardare la pagina relativa al gene.
 Esamina le informazioni dei geni ortologhi a quello umano.  
 * Quanti esoni ha il gene di topo (filtrate per `Mus musculus`)?  
 * Qual’è la lunghezza totale del gene umano e di quello di topo?  
-* Qual’è la lunghezza complessiva degli introni umani e di topo (considerare per entrambi il trasscitto codificante proteina più lungo )?   
+* Qual’è la lunghezza complessiva degli introni umani e di topo (considerare per entrambi il trascritto codificante proteina più lungo)?   
 
 ### Esercizio 3
-Tra gli ortologhi cerca l'identificativo Ensembl del gene di Danio rerio []. Tra le informazioni disponibili individua:
+Tra gli ortologhi cerca l'identificativo Ensembl del gene di Danio rerio.  
+Tra le informazioni disponibili individua:  
 Cromosoma in cui mappa il gene []
 Lunghezza trascritto []
 Lunghezza proteina []
