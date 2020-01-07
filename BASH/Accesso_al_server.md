@@ -7,12 +7,16 @@ Per accedervi dovrete tutti scaricare il file `bmmm1920.ppk` che trovate in ques
 - Per gli utenti windows non è un problema dove scaricherete il file.  
 
 ## Sistemi operativi UNIX-BASED
-Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il terminale e digitare il seguente comando:  
+Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il terminale e digitare i seguenti comandi:  
 ```
+chmod 600 /path/to/the/key/bmmm1920.ppk
+
 ssh -i /path/to/the/key/bmmm1920.ppk epigen@srv00.recas.ba.infn.it 
 ```
 Se avete scaricato il file in Downloads:  
 ```
+chmod 600 ~/Downloads/bmmm1920.ppk
+
 ssh -i ~/Downloads/bmmm1920.ppk epigen@srv00.recas.ba.infn.it 
 ```
 Alla prima connessione il sistema vi chiederà se il server sia "fidato" e dovrete digitare `yes`.  
