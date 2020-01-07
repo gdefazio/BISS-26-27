@@ -31,5 +31,5 @@ In windows dovremo utilizzare **Putty**.
     - Cliccate su **open**.  
         * Il sistema vi chiederà l'utente di login: scrivete `epigen`  
         * di seguito vi chiederà la password e scriverete quella che vi sarà comunicata.  
-Se avete salvato la sessione al prossimo utilizzo vi basterà selezionare srv00 e cliccare su `load`.  
+Se avete salvato la sessione al prossimo utilizzo vi basterà selezionare `srv00` e cliccare su `load`.  
 ![session](./session.png)
