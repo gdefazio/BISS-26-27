@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Genome_Browser/Ensembl.md" beforeDir="false" afterPath="$PROJECT_DIR$/Genome_Browser/Ensembl.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,21 +62,7 @@
       <workItem from="1575219726059" duration="4982000" />
       <workItem from="1575362932095" duration="8762000" />
       <workItem from="1576405134003" duration="11963000" />
-      <workItem from="1578308719402" duration="6302000" />
-    </task>
-    <task id="LOCAL-00012" summary="sistemazione README">
-      <created>1575366893857</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1575366893857</updated>
-    </task>
-    <task id="LOCAL-00013" summary="sistemazione banche_dati.md">
-      <created>1575367848711</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1575367848711</updated>
+      <workItem from="1578308719402" duration="6466000" />
     </task>
     <task id="LOCAL-00014" summary="sistemazione banche_dati.md">
       <created>1575368253704</created>
@@ -407,7 +393,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578340343411</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione sui browser umani">
+      <created>1578340552494</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1578340552494</updated>
+    </task>
+    <task id="LOCAL-00062" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione sui browser umani">
+      <created>1578340592797</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1578340592797</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,15 +444,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta e sistemazione lezione sui browser umani" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1578340552259">
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1578340592595">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578340552259" />
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578340592595" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1576682065468" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578340554036">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578340594175">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578340554036" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578340594175" />
     <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1576682066730" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1578339356321">
       <screen x="0" y="0" width="1440" height="900" />

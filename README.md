@@ -59,6 +59,6 @@ Letture consigliate:
 ### Esercitazione 3 (07-08/12/2020)
 ### Genome Browser
 - [ ] [ENSEMBL](./Genome_Browser/Ensembl.md)
-- [ ] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Genome_Browser/UCSC.md)
+- [ ] [UCSC](./Genome_Browser/UCSC.md)
 
 
