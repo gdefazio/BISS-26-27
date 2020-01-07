@@ -70,8 +70,7 @@ Nella sezione **Summary** sono riportate delle informazioni relative all'annotaz
 * Ensembl version: versione dell'annotazione ENSEMBL;  
 * Other assemblies: altre versioni dell'assembly;  
 * Gene type: tipologia di gene;  
-* Annotation method: metodo di annotazione:  
- >
+* Annotation method: metodo di [annotazione](http://www.ensembl.org/info/genome/genebuild/genome_annotation.html.  
 
 E', inoltre, possibile osservare una rappresentazione schematica della struttura del gene ed il contesto genomico in cui si trova.    
 Sono rappresentate entrambe le strand (bianco e nero) e al centro il contig genomico in cui si trovano.  
