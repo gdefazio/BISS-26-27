@@ -1,6 +1,6 @@
 # Accesso al Server
 Il resto delle Esercitazioni richiedere l'utilizzo di uno dei server disponibili presso l'**IBIOM (Istituto di Biomembrane, Bioenergetica e Biotecnologie molecolari)** del **CNR** di Bari.  
-Il server che andremo ad utilizzare è raggiungile al seguente indirizzo `srv00.recas.infn.it`.  
+Il server che andremo ad utilizzare è raggiungile al seguente indirizzo `srv00.recas.ba.infn.it`.  
 
 Per accedervi dovrete tutti scaricare il file `bmmm1920.ppk` che trovate in questa cartella. 
 - Per gli utenti dei sistemi UNIX-based (mac) scaricate il file nella cartella **Downloads**.  
@@ -33,3 +33,19 @@ In windows dovremo utilizzare **Putty**.
         * di seguito vi chiederà la password e scriverete quella che vi sarà comunicata.  
 Se avete salvato la sessione al prossimo utilizzo vi basterà selezionare `srv00 e cliccare su `load`.  
 ![session](./session.png)
+
+# Configurazion FileZilla
+**FileZilla** è un tool che ci permette di scambiare file tra il nostro computer ed il server.  
+Occorre configurarlo in modo appropriato:
+* Su `File` selezionate `Site Manager`;  
+* Selezionate `New Site` si aprirà una nuova scheda in cui potrete indicare un nome a vostra scelta;  
+* Nel pannello a sinistra vanno inseriti i seguenti parametri:  
+    - **Protocols**: `SFTP SSH File Transfert Protocol`  
+    - **Host**: `srv00.recas.ba.infn.it`
+    - **Port**: `22`    
+    - **Logon Type**: ``key file``  
+    - **User**: ``epigen``
+    - **Key file**: selezionate il file `bmmm1920.ppk`
+* Cliccate su ``Connect``.  
+
+![filezilla](./filezilla.jpg)
