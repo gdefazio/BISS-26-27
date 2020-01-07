@@ -60,5 +60,5 @@ Letture consigliate:
 ### Genome Browser
 - [ ] [ENSEMBL](./Genome_Browser/Ensembl.md)
 - [ ] [UCSC](./Genome_Browser/UCSC.md)
-
+- [ ] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)
 
