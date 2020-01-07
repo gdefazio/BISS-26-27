@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BASH/Accesso_al_server.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Metabarcoding/Picture1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Metabarcoding/Picture2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BASH/bmmm1920.ppk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BASH/key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BASH/putty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BASH/session.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Metabarcoding/metabarcoding.md" beforeDir="false" afterPath="$PROJECT_DIR$/Metabarcoding/metabarcoding.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BASH/Accesso_al_server.md" beforeDir="false" afterPath="$PROJECT_DIR$/BASH/Accesso_al_server.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,21 +66,7 @@
       <workItem from="1575219726059" duration="4982000" />
       <workItem from="1575362932095" duration="8762000" />
       <workItem from="1576405134003" duration="11963000" />
-      <workItem from="1578308719402" duration="8961000" />
-    </task>
-    <task id="LOCAL-00016" summary="sistemazione sistemi di retrieval.md">
-      <created>1575369280049</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1575369280049</updated>
-    </task>
-    <task id="LOCAL-00017" summary="sistemazione sistemi di retrieval.md">
-      <created>1575369348097</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1575369348097</updated>
+      <workItem from="1578308719402" duration="10586000" />
     </task>
     <task id="LOCAL-00018" summary="sistemazione sistemi di retrieval.md">
       <created>1575369391890</created>
@@ -410,7 +397,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578387362803</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
+      <created>1578395456154</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1578395456154</updated>
+    </task>
+    <task id="LOCAL-00066" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
+      <created>1578395513112</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1578395513112</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,18 +445,19 @@
     <MESSAGE value="sistemazione README.md&#10;Aggiunta cartella su allineamento.md" />
     <MESSAGE value="sistemazione README.md&#10;Aggiunta cartella su allineamento.md&#10;Allineamento su GEnomi" />
     <MESSAGE value="sistemazione README.md&#10;Aggiunta e sistemazione lezione sui browser umani" />
-    <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta e sistemazione lezione sui browser umani" />
+    <MESSAGE value="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server" />
+    <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1578395455912">
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1578395512925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578395455912" />
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578395512925" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1576682065468" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578395457677">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578395514159">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578395457677" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578395514159" />
     <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1576682066730" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1578339356321">
       <screen x="0" y="0" width="1440" height="900" />
