@@ -100,21 +100,21 @@ Questo formato presenta una struttura suddivisa in 4 righe:
 
 # Breve introduzione alla linea di comando Bash
 Alcuni comandi che potrebbero esserci utili durante il tutorial:  
-• `pwd`: restituisce il path relativo alla directory in cui ci troviamo;  
-• `cd`: permette di spostarci tra le differenti directory;  
-• `ls`: elenca il contenuto di una directory;   
-    Opzioni: 
-    `-l` (mostra più informazioni)  
-    `-a` (mostra i file nascosti)  
-    `-t` (elenca i file in base alla data di creazione)   
-    `-r` (mostra prima il più vecchio);  
-• `mkdir`: permette di creare una nuova cartella;  
-• `df`: evidenzia lo spazio disponibile;  
-• `cp`: per effettuare la copia dei file;  
-• `rm`: eliminare un file;  
-• `man`: richiedere il manuale di un comando;  
-• `less`: mostra il contenuto di un file;  
-• `whoami`: mostra lo user name dell’utilizzatore corrente;  
-• `ssh`: permette di collegare la nostra macchina con un server remoto  
+* `pwd`: restituisce il path relativo alla directory in cui ci troviamo;  
+* `cd`: permette di spostarci tra le differenti directory;  
+* `ls`: elenca il contenuto di una directory;   
+   Opzioni: 
+    * `-l` (mostra più informazioni)  
+    * `-a` (mostra i file nascosti)  
+    * `-t` (elenca i file in base alla data di creazione)   
+    * `-r` (mostra prima il più vecchio);  
+* `mkdir`: permette di creare una nuova cartella;  
+* `df`: evidenzia lo spazio disponibile;  
+* `cp`: per effettuare la copia dei file;  
+* `rm`: eliminare un file;  
+* `man`: richiedere il manuale di un comando;  
+* `less`: mostra il contenuto di un file;  
+* `whoami`: mostra lo user name dell’utilizzatore corrente;  
+* `ssh`: permette di collegare la nostra macchina con un server remoto  
 
 [Back to the top](../README.md) 
