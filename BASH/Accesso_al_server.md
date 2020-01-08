@@ -2,9 +2,9 @@
 Il resto delle Esercitazioni richiedere l'utilizzo di uno dei server disponibili presso l'**IBIOM (Istituto di Biomembrane, Bioenergetica e Biotecnologie molecolari)** del **CNR** di Bari.  
 Il server che andremo ad utilizzare è raggiungile al seguente indirizzo `srv00.recas.ba.infn.it`.  
 
-Per accedervi dovrete tutti scaricare il file `bmmm1920.ppk` che trovate in questa cartella. 
-- Per gli utenti dei sistemi UNIX-based (mac) scaricate il file nella cartella **Downloads**.  
-- Per gli utenti windows non è un problema dove scaricherete il file.  
+Per accedervi dovrete tutti scaricare il file chiave che trovate in questa cartella. 
+- Per gli utenti dei sistemi UNIX-based (mac) scaricate il file `bmmm1920` nella cartella **Downloads**.  
+- Per gli utenti windows dovrete scaricare il file `bmmm1920.ppk` e non è un problema dove lo scaricherete.  
 
 ## Sistemi operativi UNIX-BASED
 Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il terminale e digitare i seguenti comandi:  
@@ -15,9 +15,9 @@ ssh -i /path/to/the/key/bmmm1920.ppk epigen@srv00.recas.ba.infn.it
 ```
 Se avete scaricato il file in Downloads:  
 ```
-chmod 600 ~/Downloads/bmmm1920.ppk
+chmod 600 ~/Downloads/bmmm1920
 
-ssh -i ~/Downloads/bmmm1920.ppk epigen@srv00.recas.ba.infn.it 
+ssh -i ~/Downloads/bmmm1920 epigen@srv00.recas.ba.infn.it 
 ```
 Alla prima connessione il sistema vi chiederà se il server sia "fidato" e dovrete digitare `yes`.  
 Di seguito vi chiederà la **password** (vi verrà comunicata al momento) e dovrete inserirla. **Notate che il cursore non si muoverà mentre digitate la password!!!**.  
