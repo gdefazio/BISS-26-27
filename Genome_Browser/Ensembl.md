@@ -61,7 +61,7 @@ Nella sezione **Summary** sono riportate delle informazioni relative all'annotaz
 * Name: simbolo ufficiale;  
 * [CCDS](http://www.ensembl.org/info/genome/genebuild/ccds.html):  
     > L'annotazione di geni sul genoma umano e di topo è fornita da più risorse pubbliche, usando metodi diversi e dando come risultato informazioni simili ma non sempre identiche.   
-    > Attualmente, le sequenze del genomiche umane e dnurine sono sufficientemente stabili per iniziare a identificare quelle localizzazioni geniche identiche tra i tre principali browser pubblici del genoma.
+    > Attualmente, le sequenze del genomiche umane e murine sono sufficientemente stabili per iniziare a identificare quelle localizzazioni geniche identiche tra i tre principali browser pubblici del genoma.
     > A tal fine, è stato istituito il progetto **Consensus CDS (CCDS)**. Il progetto CCDS è uno sforzo collaborativo per identificare un insieme centrale di regioni codificanti proteine ​​che sono costantemente annotate e di alta qualità. 
     >I risultati iniziali del progetto Consensus CDS (CCDS) sono ora disponibili attraverso le pagine del gene Ensembl  e dalla pagina del progetto CCDS presso l'NCBI.
     > Il set CCDS è stato realizzato tra **Ensembl**, il **National Center for Biotechnology Information (NCBI)** e il **HUGO Gene Nomenclature Committee (HGNC)**.  
