@@ -58,7 +58,7 @@ Letture consigliate:
 - [X] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
 ### Esercitazione 3 (07-08/12/2020)
 ### Genome Browser
-- [ ] [ENSEMBL](./Genome_Browser/Ensembl.md)
-- [ ] [UCSC](./Genome_Browser/UCSC.md)
-- [ ] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)
+- [X] [ENSEMBL](./Genome_Browser/Ensembl.md)
+- [X] [UCSC](./Genome_Browser/UCSC.md)
+- [X] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)
 
