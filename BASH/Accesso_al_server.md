@@ -1,3 +1,11 @@
+Accesso Al server ed Introduzione al BASH
+===================  
+- [Accesso al Server](#accesso-al-server)
+- [Configurazione FileZilla](#configurazion-filezilla)
+- [Il formato FASTA](#il-formato-fasta)
+- [Il formato FASTQ](#il-formato-fastq)
+- [Breve introduzione alla linea di comando Bash](#breve-introduzione-alla-linea-di-comando-bash)
+
 # Accesso al Server
 Il resto delle Esercitazioni richiedere l'utilizzo di uno dei server disponibili presso l'**IBIOM (Istituto di Biomembrane, Bioenergetica e Biotecnologie molecolari)** del **CNR** di Bari.  
 Il server che andremo ad utilizzare è raggiungile al seguente indirizzo `srv00.recas.ba.infn.it`.  
@@ -107,7 +115,7 @@ Il **Quality Score** o **Phred Socre** è una misura della probabilità che la b
 Si fatto maggiore è il **Quality score** minore è la probabilità che la base chiamata sia erronea:  
 
 |Q|P|  
-|:-:|:-:|  
+|:---:|:---:|  
 |0|1|  
 |10|0.1|  
 |20|0.01|  
@@ -116,8 +124,16 @@ Si fatto maggiore è il **Quality score** minore è la probabilità che la base 
 
 Conoscendo il quality score associato a ciascuna base delle sequenze ottenute durante il sequenziamento è possibile calcolare l'**Expected Error (EE)**, come:  
 ![EE](./EE.png)  
-Di fatto, l'**EE** è dato dalla sommatoria delle *Probabilità di errore P* osservate. In modo estrmamente empirico data una sequenza ci dice il numero di basi errate nella sequenza.  
+Di fatto, l'**EE** è dato dalla sommatoria delle *Probabilità di errore P* osservate. In modo estrmamente empirico data, una sequenza ci dice il numero di basi errate nella sequenza.  
 
+## Come valutare la qualità dei dati
+Una volta ottenuti dei dati di sequenziamento la prima cosa che va fatta è una valutazione della loro qualità.  
+A questo scopo utilizzeremo un tool ampiamente utilizzato [`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).  
+Eseguiamo le seqguenti operazioni:  
+1. Colleghiamoci al server;  
+2. Entrate nelle vostre cartelle:
+    `cd cognome_nome`  
+3. Creiamo una cartella per scaricare 
 
  
 
