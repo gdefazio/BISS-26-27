@@ -103,7 +103,17 @@ Questo formato presenta una struttura suddivisa in 4 righe:
 4. Quality score in formato ASCII.
 
 Il **Quality Score** o **Phred Socre** è una misura della probabilità che la base letta sia erronea ed è calcolato utilizzando questa formula:  
-$Q = -10\log_{10}(P)$     
+![Q](./Q.png)  
+Si fatto maggiore è il **Quality score** minore è la probabilità che la base chiamata sia erronea:  
+
+|Q|P|  
+|:-:|:-:|  
+|0|1|  
+|10|0.1|  
+|20|0.01|  
+|30|0.001|  
+|40|0.0001|  
+
 
 # Breve introduzione alla linea di comando Bash
 Alcuni comandi che potrebbero esserci utili durante il tutorial:  
