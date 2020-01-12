@@ -114,6 +114,13 @@ Si fatto maggiore è il **Quality score** minore è la probabilità che la base 
 |30|0.001|  
 |40|0.0001|  
 
+Conoscendo il quality score associato a ciascuna base delle sequenze ottenute durante il sequenziamento è possibile calcolare l'**Expected Error (EE)**, come:  
+![EE](./EE.png)  
+Di fatto, l'**EE** è dato dalla sommatoria delle *Probabilità di errore P* osservate. In modo estrmamente empirico data una sequenza ci dice il numero di basi errate nella sequenza.  
+
+
+ 
+
 
 # Breve introduzione alla linea di comando Bash
 Alcuni comandi che potrebbero esserci utili durante il tutorial:  
