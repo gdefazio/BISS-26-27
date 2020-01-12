@@ -133,7 +133,12 @@ Eseguiamo le seqguenti operazioni:
 1. Colleghiamoci al server;  
 2. Entrate nelle vostre cartelle:
     `cd cognome_nome`  
-3. Creiamo una cartella per scaricare 
+3. Creiamo una cartella dove scaricheremo i dati per questo tutorial ed eseguiremo le analisi:
+    `mkdir fastqc_test && cd fastqc_test`  
+4. Adesso scarichiamo il file che dovremo utilizzare per le nostre analisi:  
+    `wget --no-check-certificate \
+    'https://docs.google.com/uc?export=download&id=1n6mrvGO0_dS-hkICDnIFZNkUFCWbtEhl' \
+    -O T216P_S82_L001_R1_001.fastq.gz`
 
  
 
