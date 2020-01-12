@@ -87,7 +87,7 @@ AAAAAAAAGGAATTC
 Presenta la riga iniziale che comincia con il simbolo di maggiore “>”, a cui fa seguito un identificativo unico, seguito da una opzionale corta definizione.  
 Le linee a seguire contengono la sequenza amminoacidica o nucleotidica. La sequenza biologica è rappresentata con un alfabeto con un codice a singola lettera per indicare il nucleotide o l’aminoacido (per avere ulteriori informazioni circa il formato FASTA consultare la relativa pagina [Wikipedia](https://en.wikipedia.org/wiki/FASTA_format)).
 
-#Il formato FASTQ
+# Il formato FASTQ
 Il formato FASTQ è formato testuale utilizzato per annotare le sequenze biologiche nucleotiche ed i quality-score associati a seguito di una procedura di sequenziamento del DNA.    
 E’ il formato utilizzato per i dati di sequenziamento (per ulteriori informazioni circa il formato FASTQ potete consultare la relativa pagina [Wikipedia](https://en.wikipedia.org/wiki/FASTQ_format)).  
 ```
