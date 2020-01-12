@@ -99,8 +99,11 @@ CCCTTCTTGTCTTCAGCGTTTCTCC
 Questo formato presenta una struttura suddivisa in 4 righe:  
 1. Riga di intestazione che inizia con “@”;  
 2. Sequenza biologica;  
-3. riga di separazione che inizia con un “+”. Talora può contenere una descrizione;  
-4. Quality score in formato ASCII.  
+3. Riga di separazione che inizia con un “+”. Talora può contenere una descrizione;  
+4. Quality score in formato ASCII.
+
+Il **Quality Score** o **Phred Socre** è una misura della probabilità che la base letta sia erronea ed è calcolato utilizzando questa formula:  
+$Q = -10\log_{10}(P)$     
 
 # Breve introduzione alla linea di comando Bash
 Alcuni comandi che potrebbero esserci utili durante il tutorial:  

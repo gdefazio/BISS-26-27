@@ -34,13 +34,14 @@ Un marcatore genetico di specie ideale dovrebbe avere le seguenti caratteristich
 ![picture2](./Picture2.png)  
 *Figura 2: rappresentazione della variabilità del gene per l’rRNA 16S nei procarioti.*
 
-Il tutorial che andremo a completare riguarda lo studio del microbioma orale.  
-Lo studio dei microorganismi che compongono queste comunità è fondamentale per capire sia i meccanismi fisiologici in cui sono coinvolti (digestione, addestramento del sistema immunitario adattivo (Human Microbiome Project, 2012)) che quelli patologici (Brennan and Garrett, 2016).  
-I dati che analizzeremo oggi sono disponibile nel repository [SRA (Sequence Read Archive)](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?).  
-In particolare, i campioni analizzati fanno riferimento ai seguenti progetti:
-1.	Studio del microbioma orale in bambini obesi affetti da diabete di tipo 2 o non affetti ([PRJEB16156](./https://www.ebi.ac.uk/ena/data/view/PRJEB16156));
+I dati che analizzeremo oggi sono disponibile nel repository [SRA (Sequence Read Archive)](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?).    
+In particolare, il tutorial che andremo a completare riguarda lo studio del microbioma orale [PRJEB16156](./https://www.ebi.ac.uk/ena/data/view/PRJEB16156).  
+Nel suddetto studio, trovate il lavoro a questo [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0172647), sono stati analizzati un totale di 37 campioni ma per i nostri scopi ne ho selezionati casualmente 15:
+* 5 controlli sani;  
+* 5 soggetti obesu;  
+* 5 soggetti affetti da diabete mellito tipo 2.      
+I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA 16S e successivamente sequenziando gli ampliconi in modalità paired-end (PE) 2x300 con piattaforma Illumina MiSeq®.  
 
-I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA 16S e successivamente sequenziando gli ampliconi in modalità paired-end (PE) 2x250 con piattaforma Illumina MiSeq®.
 
 
 
