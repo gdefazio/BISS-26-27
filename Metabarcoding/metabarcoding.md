@@ -169,8 +169,13 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
 
 ## Alpha e Beta Diversità
 La Diversità è una misura della complessità del sistema che stiamo osservando, in funzione del numero di oggetti e della loro abbondanza relativa.  
+![diversità](./diversita.png)
 
-$ \gamma G$ = $ \alpha A$ + $ \beta B$   
+In particolare:
+    * $\alpha$: diversità intra-campione;   
+    * $\beta$: diversità inter-campione;  
+    * $\gamma$: diversità totale;  
+   
     ```
     qiime phylogeny align-to-tree-mafft-fasttree \
       --i-sequences rep-seqs_16S.qza \
