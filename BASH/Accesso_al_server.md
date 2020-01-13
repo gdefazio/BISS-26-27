@@ -47,6 +47,8 @@ In windows dovremo utilizzare **Putty**.
 Se avete salvato la sessione al prossimo utilizzo vi basterà selezionare `srv00 e cliccare su `load`.  
 ![session](./session.png)
 
+[Indice](#accesso-al-server-ed-introduzione-al-bash)
+
 # Configurazion FileZilla
 **FileZilla** è un tool che ci permette di scambiare file tra il nostro computer ed il server.  
 Occorre configurarlo in modo appropriato:
@@ -82,6 +84,8 @@ Alcuni comandi che potrebbero esserci utili durante il tutorial:
 * `whoami`: mostra lo user name dell’utilizzatore corrente;  
 * `ssh`: permette di collegare la nostra macchina con un server remoto  
 
+[Indice](#accesso-al-server-ed-introduzione-al-bash)
+
 # Il formato FASTA
 Il formato FASTA è un formato testuale comunemente utilizzato in bioinformatica per annotare le sequenze biologiche, sia nucleotidiche che aminoacidiche.  
 Di seguito è riportato un esempio:
@@ -114,6 +118,8 @@ AAAAAAAAGGAATTC
 ```
 Presenta la riga iniziale che comincia con il simbolo di maggiore “>”, a cui fa seguito un identificativo unico, seguito da una opzionale corta definizione.  
 Le linee a seguire contengono la sequenza amminoacidica o nucleotidica. La sequenza biologica è rappresentata con un alfabeto con un codice a singola lettera per indicare il nucleotide o l’aminoacido (per avere ulteriori informazioni circa il formato FASTA consultare la relativa pagina [Wikipedia](https://en.wikipedia.org/wiki/FASTA_format)).
+
+[Indice](#accesso-al-server-ed-introduzione-al-bash)
 
 # Il formato FASTQ
 Il formato FASTQ è formato testuale utilizzato per annotare le sequenze biologiche nucleotiche ed i quality-score associati a seguito di una procedura di sequenziamento del DNA.    
@@ -170,7 +176,7 @@ Eseguiamo le seqguenti operazioni:
     `fastqc --noextract  T216P_S82_L001_R1_001.fastq.gz`  
 6. Scarichiamo sui nostri computer i seguenti file i seguenti file:  
     * `T216P_S82_L001_R1_001_fastqc.html`  
-    * `T216P_S82_L001_R1_001_fastqc.zip  
+    * `T216P_S82_L001_R1_001_fastqc.zip`  
 
 ### Esercizio 1
 Applicate il `FastQC` sui seguenti file:  
@@ -182,6 +188,6 @@ Applicate il `FastQC` sui seguenti file:
    ```
 * Eseguite `FastQC` sui due file e commentate i risultati ottenuti.  
 
-
+[Indice](#accesso-al-server-ed-introduzione-al-bash)
 
 [Back to the top](../README.md) 
