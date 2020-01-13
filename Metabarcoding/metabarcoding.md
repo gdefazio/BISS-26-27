@@ -14,8 +14,13 @@ La metagenomica può effettuare il profiling del microbioma mediante due approcc
   
 Quanto al metodo di sequenziamento, sono utilizzati due approcci principali:  
 •	L’analisi dell’intero metagenoma/metatranscrittoma basata sul sequenziamento **shotgun** del DNA/RNA totale estratto dal campione. Quest’approccio consente di ottenere sia informazioni tassonomiche che funzionali ma è notevolmente costoso in termini di sequenziamento e analisi computazionale.  
-•	La strategia **amplicon-based** o **metabarcoding** che si basa sull'amplificazione selettiva di specifici marcatori tassonomici utilizzando coppie di primer universali capaci di essere efficienti su grandi gruppi tassonomici (ad esempio batteri, funghi, ecc) ed il successivo sequenziamento high-throughput delle librerie di ampliconi ottenute. Quest’approccio può fornire informazioni solo sulla composizione tassonomica del campione ma con superiore capacità d’identificazione e risoluzione a livello di specie. Inoltre, risulta meno costoso in termini di sequenziamento e analisi computazionale.    
-    Le regioni marker più utilizzate includono diverse combinazioni delle regioni iper-variabili del gene del rRNA 16S (nei batteri), gli spaziatori interni trascritti (ITS) dei geni del cluster degli RNA ribosomiali (nei funghi) o specifiche porzioni del gene della Citocromo c ossidasi 1 mitocondriale (nei Metazoa).  
+•	La strategia **amplicon-based** o **metabarcoding** che si basa sull'amplificazione selettiva di specifici marcatori tassonomici utilizzando coppie di **primer universali** capaci di essere efficienti su grandi gruppi tassonomici (ad esempio batteri, funghi, ecc) ed il successivo sequenziamento high-throughput delle librerie di ampliconi ottenute.  
+    Quest’approccio può fornire informazioni solo sulla composizione tassonomica del campione ma con superiore capacità d’identificazione e risoluzione a livello di specie.  
+    Inoltre, risulta meno costoso in termini di sequenziamento e analisi computazionale.    
+    Le regioni marker più utilizzate includono:  
+    * diverse combinazioni delle regioni iper-variabili del gene del **rRNA 16S (nei batteri)**;  
+    * gli **spaziatori interni trascritti (ITS) dei geni del cluster degli RNA ribosomiali (nei funghi)**;  
+    * specifiche porzioni del gene della Citocromo c ossidasi 1 mitocondriale (nei Metazoa).  
     
 ## Metabarcoding approach
 Scopo dell’esercitazione odierna è l’analisi del microbioma umano attraverso l’approccio di metabarconding, che possiamo idealmente suddividere in 5 step principali:  
@@ -35,11 +40,27 @@ Un marcatore genetico di specie ideale dovrebbe avere le seguenti caratteristich
 ![picture2](./Picture2.png)  
 *Figura 2: rappresentazione della variabilità del gene per l’rRNA 16S nei procarioti.*
 
+Come detto per selezionare il marcatore di interesse utilizziamo una **coppia di primer universali** capace di amplificare l'intero range tassonomico di interesse.    
+***Ma come facciamo a valutare che una coppia di primer sia realmente universale?***    
+Possiamo testare i nostri primer in silico e valutare come si comportano sui dati ad oggi conosciuti.  
+Per il 16S possiamo utilizzare uno dei servizi messi a disposizione dalla database [**SILVA**], chiamto **TestPrime**:  
+1. Collegatevi a TestPrime utilizzando il seguente [link](https://www.arb-silva.de/search/testprime/);    
+![testprime](./testprime.jpg)  
+
+2. Vogliamo testare la seguente coppia di primer per la regione V4:  
+    * Forward: `GTGCCAGCMGCCGCGGTAA`  
+    * Reverse:  `GGACTACNVGGGTWTCTAAT`  
+3. Impostiamo 4 mismatch.  
+All'avvio dell'esecuzione di aprirà una finestra che vi mostrerà tutti i possibili primer partendo da quelli contenenti le degenerazioni.  
+
+Ripetete l'analisi ma in questo caso selesionate l'opzione `Length of 0-mismatch zone at 3' end` e indicate `5 bases`.  
+
+### Analisi di dati reali
 I dati che analizzeremo oggi sono disponibile nel repository [SRA (Sequence Read Archive)](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?).    
 In particolare, il tutorial che andremo a completare riguarda lo studio del microbioma orale [PRJEB16156](./https://www.ebi.ac.uk/ena/data/view/PRJEB16156).  
 Nel suddetto studio, trovate il lavoro a questo [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0172647), sono stati analizzati un totale di 37 campioni ma per i nostri scopi ne ho selezionati casualmente 15:
 * 5 controlli sani;  
-* 5 soggetti obesu;  
+* 5 soggetti obesi;  
 * 5 soggetti affetti da diabete mellito tipo 2.      
 I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA 16S e successivamente sequenziando gli ampliconi in modalità paired-end (PE) 2x300 con piattaforma Illumina MiSeq®.  
 
