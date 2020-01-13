@@ -66,8 +66,9 @@ Nel suddetto studio, trovate il lavoro a questo [link](https://journals.plos.org
 ***Lo scopo di questa esercitazione è capire se via siano differenze tra il microbioma orale di soggetti sani, obesi ed affetti da diabete.***  
  
 I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA 16S e successivamente sequenziando gli ampliconi in modalità paired-end (PE) 2x300 con piattaforma Illumina MiSeq®.  
-Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.org/). Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIM2 View**](https://view.qiime2.org/).  
+Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.org/). Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIME   2 View**](https://view.qiime2.org/).  
 
+## Preparazione dell'area di lavoro
 * Come prima operazione occore entrare nelle vostre cartelle:  
     `cd cognome_nome`  
 * Successivamente va create la cartella `PRJEB16156` e bisogna posizionarsi al suo interno:  
@@ -83,6 +84,8 @@ Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.or
     `cp -r /home/epigen/microbiome_analysis/input_data .`  
     `cp -r /home/epigen/microbiome_analysis/sample-metadata.tsv .`               
 A questo punto abbiamo completato tutte le operazioni preliminari necessarie per preparare l'ambiente di lavoro. Possiamo procedere con le analisi.  
+
+## Importazione dei dati
 * Importiamo i dati in QIIME2:  
     ```
     qiime tools import \
@@ -99,6 +102,8 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
     ```
 * Scarchiamo il file `demux-paired_end.qzv` e visualizziamolo con QIIME2 view.  
     * Come valutiamo la qualità del sequenziamento?  
+
+## Denoising
 * Effettuiamo il **Denoising** dei dati:  
     Il **Denoising** (letteralmente eliminazione del rumore di fondo (*noise*)) è una procedura che permette di riconoscere il rumore introdotto dalla PCR e dal sequenziamento.    
     [Giusto un po' di teoria](https://drive.google.com/open?id=1NsN9iUI-UOP9M6n7HbJ32UaHgGIoBKkcqkjSX7hg2tU).  
@@ -136,7 +141,8 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
     ```
   
 * Scarchiamo i file `table_16S.qzv`, `denoising-stats_16S.qzv` e `rep-seqs.qzv` e visualizziamoli con QIIME2 view.  
-  
+
+## Classificazione tassonomica  
 * Effettuaiamo la classificazione tassonomica:  
     >nohup qiime feature-classifier classify-sklearn \
       --i-classifier /home/epigen/microbiome_analysis/SILVA_ref/v3.v4.SILVA_132_NR_99_classifier.qza \
@@ -161,4 +167,16 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
 
 * Scarchiamo i file `taxonomy_16S_SKLEARN.qzv` e `taxa-bar-plots_16S_SKLEARN.qzv` e visualizziamoli con QIIME2 view.  
 
+## Alpha e Beta Diversità
+La Diversità è una misura della complessità del sistema che stiamo osservando, in funzione del numero di oggetti e della loro abbondanza relativa.  
+
+$ \gamma G = \alpha A + \beta B $   
+    ```
+    qiime phylogeny align-to-tree-mafft-fasttree \
+      --i-sequences rep-seqs_16S.qza \
+      --o-alignment aligned-rep-seqs_16S.qza \
+      --o-masked-alignment masked-aligned-rep-seqs_16S.qza \
+      --o-tree unrooted-tree_16S.qza \
+      --o-rooted-tree rooted-tree_16S.qza
+    ```
 [Back to the top](../README.md) 
