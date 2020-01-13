@@ -2,9 +2,10 @@ Accesso Al server ed Introduzione al BASH
 ===================  
 - [Accesso al Server](#accesso-al-server)
 - [Configurazione FileZilla](#configurazion-filezilla)
+- [Breve introduzione alla linea di comando Bash](#breve-introduzione-alla-linea-di-comando-bash)
 - [Il formato FASTA](#il-formato-fasta)
 - [Il formato FASTQ](#il-formato-fastq)
-- [Breve introduzione alla linea di comando Bash](#breve-introduzione-alla-linea-di-comando-bash)
+
 
 # Accesso al Server
 Il resto delle Esercitazioni richiedere l'utilizzo di uno dei server disponibili presso l'**IBIOM (Istituto di Biomembrane, Bioenergetica e Biotecnologie molecolari)** del **CNR** di Bari.  
@@ -62,6 +63,25 @@ Occorre configurarlo in modo appropriato:
 
 ![filezilla](./filezilla.jpg)
 
+# Breve introduzione alla linea di comando Bash
+Alcuni comandi che potrebbero esserci utili durante il tutorial:  
+* `pwd`: restituisce il path relativo alla directory in cui ci troviamo;  
+* `cd`: permette di spostarci tra le differenti directory;  
+* `ls`: elenca il contenuto di una directory;   
+   Opzioni: 
+    * `-l` (mostra più informazioni)  
+    * `-a` (mostra i file nascosti)  
+    * `-t` (elenca i file in base alla data di creazione)   
+    * `-r` (mostra prima il più vecchio);  
+* `mkdir`: permette di creare una nuova cartella;  
+* `df`: evidenzia lo spazio disponibile;  
+* `cp`: per effettuare la copia dei file;  
+* `rm`: eliminare un file;  
+* `man`: richiedere il manuale di un comando;  
+* `less`: mostra il contenuto di un file;  
+* `whoami`: mostra lo user name dell’utilizzatore corrente;  
+* `ssh`: permette di collegare la nostra macchina con un server remoto  
+
 # Il formato FASTA
 Il formato FASTA è un formato testuale comunemente utilizzato in bioinformatica per annotare le sequenze biologiche, sia nucleotidiche che aminoacidiche.  
 Di seguito è riportato un esempio:
@@ -99,16 +119,25 @@ Le linee a seguire contengono la sequenza amminoacidica o nucleotidica. La seque
 Il formato FASTQ è formato testuale utilizzato per annotare le sequenze biologiche nucleotiche ed i quality-score associati a seguito di una procedura di sequenziamento del DNA.    
 E’ il formato utilizzato per i dati di sequenziamento (per ulteriori informazioni circa il formato FASTQ potete consultare la relativa pagina [Wikipedia](https://en.wikipedia.org/wiki/FASTQ_format)).  
 ```
-@EAS54_6_R1_2_1_413_324
-CCCTTCTTGTCTTCAGCGTTTCTCC
+@M03156:25:000000000-AGC3U:1:1101:10602:1714 1:N:0:82
+CCTACGGGAGGCAGCAGTAGGGAATCTTCGGCAATGGGGGCAACCCTGACCGAGCAACGCCGCGTGAGTGAAGAAGGTTTTCGGATCGTAAAGCTCTGTTGTAAGTCAAGAACGAGTGT
 +
-;;3;;;;;;;;;;;;7;;;;;;;88
+CCCCCGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGDGGGGGGEEGGGGGCEFGFGGFGGGGFGGGGDEFCEFFCFDFFFGCFGCFCCCFGGGFDFEC@CFDF
 ```
 Questo formato presenta una struttura suddivisa in 4 righe:  
 1. Riga di intestazione che inizia con “@”;  
 2. Sequenza biologica;  
 3. Riga di separazione che inizia con un “+”. Talora può contenere una descrizione;  
-4. Quality score in formato ASCII.
+4. Quality score in formato ASCII.  
+Nella riga di intestazione possiamo visualizzare alcune [informazioni tecniche](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/FileFormat_FASTQ-files_swBS.htm):  
+* M03156: è l'identificativo del sequenziatore. Possiamo dire che è stata utilizzata una Miseq.  
+* 25: questo è un contatore progressivo che conteggia il numero di sequenziamenti eseguiti. In questo caso il 25imo.    
+* 000000000-AGC3U: identificativo della flow-cell.  
+* 1: flowcell line;  
+* 1101: tile number nella flowcell;  
+* 10602:1714: coordinate cartesiane del cluster;  
+* 1: read della coppia PE. Può assumere 2 valore 1 o 2;  
+* N: indica se la read è stata filtrata (Y) o meno (N);  
 
 Il **Quality Score** o **Phred Socre** è una misura della probabilità che la base letta sia erronea ed è calcolato utilizzando questa formula:  
 ![Q](./Q.png)  
@@ -131,33 +160,28 @@ Una volta ottenuti dei dati di sequenziamento la prima cosa che va fatta è una 
 A questo scopo utilizzeremo un tool ampiamente utilizzato [`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).  
 Eseguiamo le seqguenti operazioni:  
 1. Colleghiamoci al server;  
-2. Entrate nelle vostre cartelle:
+2. Entrate nelle vostre cartelle:  
     `cd cognome_nome`  
-3. Creiamo una cartella dove scaricheremo i dati per questo tutorial ed eseguiremo le analisi:
+3. Creiamo una cartella dove scaricheremo i dati per questo tutorial ed eseguiremo le analisi:  
     `mkdir fastqc_test && cd fastqc_test`  
 4. Adesso scarichiamo il file che dovremo utilizzare per le nostre analisi:  
-    `wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1n6mrvGO0_dS-hkICDnIFZNkUFCWbtEhl' -O T216P_S82_L001_R1_001.fastq.gz`
+    `wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1n6mrvGO0_dS-hkICDnIFZNkUFCWbtEhl' -O T216P_S82_L001_R1_001.fastq.gz`  
+5. Eseguiamo il FastQC:  
+    `fastqc --noextract  T216P_S82_L001_R1_001.fastq.gz`  
+6. Scarichiamo sui nostri computer i seguenti file i seguenti file:  
+    * `T216P_S82_L001_R1_001_fastqc.html`  
+    * `T216P_S82_L001_R1_001_fastqc.zip`
 
- 
+### Esercizio 1
+Applicate il `FastQC` sui seguenti file:  
+* create la cartella `test_fastqc` e spostatevi al suo interno;  
+* Usando il seguente comando scaricate i 2 file:  
+   ```
+  wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=142ipR5m5ELJVpto6EGH8BNbJA9Ur5DAx' -O Sample1_S2_L001_R1_001.fastq.gz
+  wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1zGEWBk29KEijLUyZdrq-lLRyN7ikD2Ng' -O Sample1_S2_L001_R2_001.fastq.gz
+   ```
+* Eseguite `FastQC` sui due file e commentate i risultati ottenuti.  
 
 
-# Breve introduzione alla linea di comando Bash
-Alcuni comandi che potrebbero esserci utili durante il tutorial:  
-* `pwd`: restituisce il path relativo alla directory in cui ci troviamo;  
-* `cd`: permette di spostarci tra le differenti directory;  
-* `ls`: elenca il contenuto di una directory;   
-   Opzioni: 
-    * `-l` (mostra più informazioni)  
-    * `-a` (mostra i file nascosti)  
-    * `-t` (elenca i file in base alla data di creazione)   
-    * `-r` (mostra prima il più vecchio);  
-* `mkdir`: permette di creare una nuova cartella;  
-* `df`: evidenzia lo spazio disponibile;  
-* `cp`: per effettuare la copia dei file;  
-* `rm`: eliminare un file;  
-* `man`: richiedere il manuale di un comando;  
-* `less`: mostra il contenuto di un file;  
-* `whoami`: mostra lo user name dell’utilizzatore corrente;  
-* `ssh`: permette di collegare la nostra macchina con un server remoto  
 
 [Back to the top](../README.md) 
