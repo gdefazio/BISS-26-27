@@ -74,7 +74,7 @@ Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.or
 * Successivamente va create la cartella `PRJEB16156` e bisogna posizionarsi al suo interno:  
     `mkdir PRJEB16156 && cd PRJEB16156`
 * Adesso va attivato l'ambiente virtuale in cui è installato **QIIME2**:  
-    `source activate qiime2-2019.10` 
+    `conda activate qiime2-2019.10` 
 * Creiamo una cartella che mantenga i dati temporanei e indichiamo al sistema operativo di utilizzarla:  
     ```
     mkdir tmp
