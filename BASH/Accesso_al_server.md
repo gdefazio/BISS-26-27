@@ -184,6 +184,7 @@ Applicate il `FastQC` sui seguenti file:
 * Usando il seguente comando scaricate i 2 file:  
    ```
   wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=142ipR5m5ELJVpto6EGH8BNbJA9Ur5DAx' -O Sample1_S2_L001_R1_001.fastq.gz
+  
   wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1zGEWBk29KEijLUyZdrq-lLRyN7ikD2Ng' -O Sample1_S2_L001_R2_001.fastq.gz
    ```
 * Eseguite `FastQC` sui due file e commentate i risultati ottenuti.  
