@@ -128,7 +128,7 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
         --m-input-file denoising-stats_16S.qza \
         --o-visualization denoising-stats_16S.qzv
     ```
-* Effettuaiamo la classificazione tassonomica:
+* Effettuaiamo la classificazione tassonomica:  
     >nohup qiime feature-classifier classify-sklearn \
       --i-classifier /home/epigen/microbiome_analysis/SILVA_ref/v3.v4.SILVA_132_NR_99_classifier.qza \
       --i-reads rep-seqs_16S.qza \
