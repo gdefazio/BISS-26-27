@@ -170,7 +170,7 @@ Eseguiamo le seqguenti operazioni:
     `fastqc --noextract  T216P_S82_L001_R1_001.fastq.gz`  
 6. Scarichiamo sui nostri computer i seguenti file i seguenti file:  
     * `T216P_S82_L001_R1_001_fastqc.html`  
-    * `T216P_S82_L001_R1_001_fastqc.zip`
+    * `T216P_S82_L001_R1_001_fastqc.zip  
 
 ### Esercizio 1
 Applicate il `FastQC` sui seguenti file:  
