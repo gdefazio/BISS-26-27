@@ -62,6 +62,7 @@ Nel suddetto studio, trovate il lavoro a questo [link](https://journals.plos.org
 * 5 controlli sani;  
 * 5 soggetti obesi;  
 * 5 soggetti affetti da diabete mellito tipo 2.  
+
 ***Lo scopo di questa analisi è capire se via siano differenze tra il microbioma orale di soggetti sani, obesi ed affetti da diabete.***   
 I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA 16S e successivamente sequenziando gli ampliconi in modalità paired-end (PE) 2x300 con piattaforma Illumina MiSeq®.  
 Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.org/). Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIM2 View**](https://view.qiime2.org/).  
