@@ -170,7 +170,7 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
 ## Alpha e Beta Diversità
 La Diversità è una misura della complessità del sistema che stiamo osservando, in funzione del numero di oggetti e della loro abbondanza relativa.  
 
-$ \gamma G = \alpha A + \beta B $   
+$ \gamma G$ = $ \alpha A$ + $ \beta B$   
     ```
     qiime phylogeny align-to-tree-mafft-fasttree \
       --i-sequences rep-seqs_16S.qza \
