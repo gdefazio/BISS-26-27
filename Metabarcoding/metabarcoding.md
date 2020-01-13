@@ -63,7 +63,70 @@ Nel suddetto studio, trovate il lavoro a questo [link](https://journals.plos.org
 * 5 soggetti obesi;  
 * 5 soggetti affetti da diabete mellito tipo 2.      
 I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA 16S e successivamente sequenziando gli ampliconi in modalità paired-end (PE) 2x300 con piattaforma Illumina MiSeq®.  
+Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.org/). Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIM2 View**](https://view.qiime2.org/).  
+
+* Come prima operazione occore entrare nelle vostre cartelle:  
+    `cd cognome_nome`  
+* Successivamente va create la cartella `PRJEB16156` e bisogna posizionarsi al suo interno:  
+    `mkdir PRJEB16156 && cd PRJEB16156`
+* Adesso va attivato l'ambiente virtuale in cui è installato **QIIME2**:  
+source activate qiime2-2019.10
+
+mkdir tmp
+export TMPDIR="$PWD/tmp"
+
+qiime tools import \
+    --type 'SampleData[PairedEndSequencesWithQuality]' \
+    --input-path input_data \
+    --input-format CasavaOneEightSingleLanePerSampleDirFmt \
+    --output-path demux-paired-end.qza
+
+qiime demux summarize \
+    --i-data  demux-paired-end.qza \
+    --o-visualization demux-paired_end.qzv
+
+nohup qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs demux-paired-end.qza \
+  --p-trunc-len-f 290 \
+  --p-trunc-len-r 290 \
+  --p-max-ee-f 2 \
+  --p-max-ee-r 4 \
+  --o-table table_16S.qza \
+  --o-representative-sequences rep-seqs_16S.qza \
+  --o-denoising-stats denoising-stats_16S.qza &
+
+# ripetizione
+nohup qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs ../demux-paired-end.qza \
+  --p-trunc-len-f 300 \
+  --p-trunc-len-r 300 \
+  --p-trim-left-f 17 \
+  --p-trim-left-r 21 \
+  --p-max-ee-f 5 \
+  --p-max-ee-r 7 \
+  --p-n-threads 10 \
+  --o-table table_16S.qza \
+  --o-representative-sequences rep-seqs_16S.qza \
+  --o-denoising-stats denoising-stats_16S.qza &
 
 
+
+qiime feature-table summarize \
+   --i-table table_16S.qza \
+   --o-visualization table_16S.qzv \
+   --m-sample-metadata-file sample-metadata.tsv
+
+qiime feature-table tabulate-seqs \
+    --i-data rep-seqs_16S.qza \
+    --o-visualization rep-seqs.qzv
+
+qiime metadata tabulate \
+    --m-input-file denoising-stats_16S.qza \
+    --o-visualization denoising-stats_16S.qzv
+
+nohup qiime feature-classifier classify-sklearn \
+  --i-classifier /home/epigen/microbiome_analysis/SILVA_ref/v3.v4.SILVA_132_NR_99_classifier.qza \
+  --i-reads rep-seqs_16S.qza \
+  --o-classification taxonomy_16S_SKLEARN.qza &
 
 
