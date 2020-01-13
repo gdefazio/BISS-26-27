@@ -158,3 +158,4 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
 
 * Scarchiamo i file `taxonomy_16S_SKLEARN.qzv` e `taxa-bar-plots_16S_SKLEARN.qzv` e visualizziamoli con QIIME2 view.  
 
+[Back to the top](../README.md) 
