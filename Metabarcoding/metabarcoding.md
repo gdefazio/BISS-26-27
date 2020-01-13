@@ -91,14 +91,16 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
     --input-format CasavaOneEightSingleLanePerSampleDirFmt \
     --output-path demux-paired-end.qza
     ```  
-* Creaimo un file di visualizzazione (estensione *qzv*) per valutare la qualità dei nostri dati:  
+* Creiamo un file di visualizzazione (estensione *qzv*) per valutare la qualità dei nostri dati:  
     ```
     qiime demux summarize \
     --i-data  demux-paired-end.qza \
     --o-visualization demux-paired_end.qzv
     ```
+* Scarchiamo il file `demux-paired_end.qzv` e visualizziamolo con QIIME2 view.  
+    * Come valutiamo la qualità del sequenziamento?  
 * Effettuiamo il **Denoising** dei dati:    
-      >nohup qiime dada2 denoise-paired \
+     >nohup qiime dada2 denoise-paired \
           --i-demultiplexed-seqs demux-paired-end.qza \
           --p-trunc-len-f 300 \
           --p-trunc-len-r 300 \
@@ -113,6 +115,7 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
  
      Essendo una operazione molto lunga abbiamo già effettuato il denoising. Dovete solo copiare i file:  
     `cp -r /home/epigen/microbiome_analysis/{rep-seqs_16S.qza,denoising-stats_16S.qza} .`   
+
 * Andiamo a creare dei file di visualizzazione per verificare come sia andata la procedura di Denoising:  
     ```
     qiime feature-table summarize \
@@ -128,10 +131,30 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
         --m-input-file denoising-stats_16S.qza \
         --o-visualization denoising-stats_16S.qzv
     ```
+  
+* Scarchiamo i file `table_16S.qzv`, `denoising-stats_16S.qzv` e `rep-seqs.qzv` e visualizziamoli con QIIME2 view.  
+  
 * Effettuaiamo la classificazione tassonomica:  
     >nohup qiime feature-classifier classify-sklearn \
       --i-classifier /home/epigen/microbiome_analysis/SILVA_ref/v3.v4.SILVA_132_NR_99_classifier.qza \
       --i-reads rep-seqs_16S.qza \
       --o-classification taxonomy_16S_SKLEARN.qza &
+    
+    Essendo una operazione molto lunga abbiamo già effettuato la classificazione tassonomica. Dovete solo copiare i file:  
+    `cp -r /home/epigen/microbiome_analysis/taxonomy_16S_SKLEARN.qza .`
+    
+* Adesso andiamo a generare dei file *qzv* che ci permettano di valutare i risultati della classificazione tassonomica:  
+    ```
+     qiime metadata tabulate \
+        --m-input-file taxonomy_16S_SKLEARN.qza \
+        --o-visualization taxonomy_16S_SKLEARN.qzv
+  
+    qiime taxa barplot \
+        --i-table table_16S.qza \
+        --i-taxonomy taxonomy_16S_SKLEARN.qza \
+        --m-metadata-file sample-metadata.tsv \
+        --o-visualization taxa-bar-plots_16S_SKLEARN.qzv
+    ```
 
+* Scarchiamo i file `taxonomy_16S_SKLEARN.qzv` e `taxa-bar-plots_16S_SKLEARN.qzv` e visualizziamoli con QIIME2 view.  
 
