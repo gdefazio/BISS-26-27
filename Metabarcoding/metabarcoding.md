@@ -81,7 +81,7 @@ Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.or
     ```  
 * Copiamo i dati all'interno della nostra cartella:  
     `cp -r /home/epigen/microbiome_analysis/input_data .`  
-    `cp -r /home/epigen/microbiome_analysis/sample-metadata.ts .`  
+    `cp -r /home/epigen/microbiome_analysis/sample-metadata.tsv .`               
 A questo punto abbiamo completato tutte le operazioni preliminari necessarie per preparare l'ambiente di lavoro. Possiamo procedere con le analisi.  
 * Importiamo i dati in QIIME2:  
     ```
@@ -97,49 +97,41 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
     --i-data  demux-paired-end.qza \
     --o-visualization demux-paired_end.qzv
     ```
+* Effettuiamo il **Denoising** dei dati:  
+      > nohup qiime dada2 denoise-paired \
+      --i-demultiplexed-seqs demux-paired-end.qza \
+      --p-trunc-len-f 300 \
+      --p-trunc-len-r 300 \
+      --p-trim-left-f 17 \
+      --p-trim-left-r 21 \
+      --p-max-ee-f 5 \
+      --p-max-ee-r 7 \
+      --p-n-threads 10 \
+      --o-table table_16S.qza \
+      --o-representative-sequences rep-seqs_16S.qza \
+      --o-denoising-stats denoising-stats_16S.qza &  
+ 
+     Essendo una operazione molto lunga abbiamo già effettuato il denoising. Dovete solo copiare i file:
+    `cp -r /home/epigen/microbiome_analysis/{rep-seqs_16S.qza,denoising-stats_16S.qza} .`   
+* Andiamo a creare dei file di visualizzazione per verificare come sia andata la procedura di Denoising:  
+    ```
+    qiime feature-table summarize \
+       --i-table table_16S.qza \
+       --o-visualization table_16S.qzv \
+       --m-sample-metadata-file sample-metadata.tsv
 
-nohup qiime dada2 denoise-paired \
-  --i-demultiplexed-seqs demux-paired-end.qza \
-  --p-trunc-len-f 290 \
-  --p-trunc-len-r 290 \
-  --p-max-ee-f 2 \
-  --p-max-ee-r 4 \
-  --o-table table_16S.qza \
-  --o-representative-sequences rep-seqs_16S.qza \
-  --o-denoising-stats denoising-stats_16S.qza &
+    qiime feature-table tabulate-seqs \
+        --i-data rep-seqs_16S.qza \
+        --o-visualization rep-seqs.qzv
 
-# ripetizione
-nohup qiime dada2 denoise-paired \
-  --i-demultiplexed-seqs ../demux-paired-end.qza \
-  --p-trunc-len-f 300 \
-  --p-trunc-len-r 300 \
-  --p-trim-left-f 17 \
-  --p-trim-left-r 21 \
-  --p-max-ee-f 5 \
-  --p-max-ee-r 7 \
-  --p-n-threads 10 \
-  --o-table table_16S.qza \
-  --o-representative-sequences rep-seqs_16S.qza \
-  --o-denoising-stats denoising-stats_16S.qza &
-
-
-
-qiime feature-table summarize \
-   --i-table table_16S.qza \
-   --o-visualization table_16S.qzv \
-   --m-sample-metadata-file sample-metadata.tsv
-
-qiime feature-table tabulate-seqs \
-    --i-data rep-seqs_16S.qza \
-    --o-visualization rep-seqs.qzv
-
-qiime metadata tabulate \
-    --m-input-file denoising-stats_16S.qza \
-    --o-visualization denoising-stats_16S.qzv
-
-nohup qiime feature-classifier classify-sklearn \
-  --i-classifier /home/epigen/microbiome_analysis/SILVA_ref/v3.v4.SILVA_132_NR_99_classifier.qza \
-  --i-reads rep-seqs_16S.qza \
-  --o-classification taxonomy_16S_SKLEARN.qza &
+    qiime metadata tabulate \
+        --m-input-file denoising-stats_16S.qza \
+        --o-visualization denoising-stats_16S.qzv
+    ```
+* Effettuaiamo la classificazione tassonomica:
+    >nohup qiime feature-classifier classify-sklearn \
+      --i-classifier /home/epigen/microbiome_analysis/SILVA_ref/v3.v4.SILVA_132_NR_99_classifier.qza \
+      --i-reads rep-seqs_16S.qza \
+      --o-classification taxonomy_16S_SKLEARN.qza &
 
 
