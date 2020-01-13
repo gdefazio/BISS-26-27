@@ -107,6 +107,21 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
 * Effettuiamo il **Denoising** dei dati:  
     Il **Denoising** (letteralmente eliminazione del rumore di fondo (*noise*)) è una procedura che permette di riconoscere il rumore introdotto dalla PCR e dal sequenziamento.    
     [Giusto un po' di teoria](https://drive.google.com/open?id=1NsN9iUI-UOP9M6n7HbJ32UaHgGIoBKkcqkjSX7hg2tU).  
+    Il trimming delle sequenze PE: 
+    ![read](./read.png)  
+    
+    Prima di decidere se trimmare le sequenze al 3' e di quanto trimmare dobbiamo valutare quanto le due read si sovrappongono. Per farlo possiamo tenere conto della formula:  
+    ![sovrapposizione](./sovrapposizione.png)  
+    Dove:  
+        - R è la lunghezza nominale delle read;
+        - L è la lunghezza media dell'amplicone.  
+    Nel nostro caso l'amplicone ha una lunghezza media di 560 nt, per cui: **S = 2*300 - 560 = 600 - 560 = 40**.  
+    
+    <details><summary></summary>
+    <p>
+    <b>In considerazione della qualità delle sequenze conviene non effettuare il trimming al 3'.</b>
+    </p>
+    </details>
     
      >nohup qiime dada2 denoise-paired \
           --i-demultiplexed-seqs demux-paired-end.qza \
