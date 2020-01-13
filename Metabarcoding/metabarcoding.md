@@ -61,7 +61,8 @@ In particolare, il tutorial che andremo a completare riguarda lo studio del micr
 Nel suddetto studio, trovate il lavoro a questo [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0172647), sono stati analizzati un totale di 37 campioni ma per i nostri scopi ne ho selezionati casualmente 15:
 * 5 controlli sani;  
 * 5 soggetti obesi;  
-* 5 soggetti affetti da diabete mellito tipo 2.      
+* 5 soggetti affetti da diabete mellito tipo 2.  
+***Lo scopo di questa analisi è capire se via siano differenze tra il microbioma orale di soggetti sani, obesi ed affetti da diabete.***   
 I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA 16S e successivamente sequenziando gli ampliconi in modalità paired-end (PE) 2x300 con piattaforma Illumina MiSeq®.  
 Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.org/). Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIM2 View**](https://view.qiime2.org/).  
 
@@ -70,11 +71,14 @@ Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.or
 * Successivamente va create la cartella `PRJEB16156` e bisogna posizionarsi al suo interno:  
     `mkdir PRJEB16156 && cd PRJEB16156`
 * Adesso va attivato l'ambiente virtuale in cui è installato **QIIME2**:  
-source activate qiime2-2019.10
+    `source activate qiime2-2019.10` 
+* Creiamo una cartella che mantenga i dati temporanei e indichiamo al sistema operativo di utilizzarla:  
+    ```
+    mkdir tmp
+    export TMPDIR="$PWD/tmp"
+    ```  
 
-mkdir tmp
-export TMPDIR="$PWD/tmp"
-
+A questo punto abbiamo completato tutte le operazioni preliminari necessarie per preparare l'ambiente di lavoro. Possiamo procedere con le analisi.  
 qiime tools import \
     --type 'SampleData[PairedEndSequencesWithQuality]' \
     --input-path input_data \
