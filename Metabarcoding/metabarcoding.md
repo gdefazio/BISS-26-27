@@ -57,7 +57,7 @@ Ripetete l'analisi ma in questo caso selesionate l'opzione `Length of 0-mismatch
 
 ### Analisi di dati reali
 I dati che analizzeremo oggi sono disponibile nel repository [SRA (Sequence Read Archive)](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?).    
-In particolare, il tutorial che andremo a completare riguarda lo studio del microbioma orale [PRJEB16156](./https://www.ebi.ac.uk/ena/data/view/PRJEB16156).  
+In particolare, il tutorial che andremo a completare riguarda lo studio del microbioma orale [PRJEB16156](/https://www.ebi.ac.uk/ena/data/view/PRJEB16156).  
 Nel suddetto studio, trovate il lavoro a questo [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0172647), sono stati analizzati un totale di 37 campioni ma per i nostri scopi ne ho selezionati casualmente 15:
 * 5 controlli sani;  
 * 5 soggetti obesi;  
@@ -97,21 +97,21 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
     --i-data  demux-paired-end.qza \
     --o-visualization demux-paired_end.qzv
     ```
-* Effettuiamo il **Denoising** dei dati:  
-      > nohup qiime dada2 denoise-paired \
-      --i-demultiplexed-seqs demux-paired-end.qza \
-      --p-trunc-len-f 300 \
-      --p-trunc-len-r 300 \
-      --p-trim-left-f 17 \
-      --p-trim-left-r 21 \
-      --p-max-ee-f 5 \
-      --p-max-ee-r 7 \
-      --p-n-threads 10 \
-      --o-table table_16S.qza \
-      --o-representative-sequences rep-seqs_16S.qza \
-      --o-denoising-stats denoising-stats_16S.qza &  
+* Effettuiamo il **Denoising** dei dati:    
+      >nohup qiime dada2 denoise-paired \
+          --i-demultiplexed-seqs demux-paired-end.qza \
+          --p-trunc-len-f 300 \
+          --p-trunc-len-r 300 \
+          --p-trim-left-f 17 \
+          --p-trim-left-r 21 \
+          --p-max-ee-f 5 \
+          --p-max-ee-r 7 \
+          --p-n-threads 10 \
+          --o-table table_16S.qza \
+          --o-representative-sequences rep-seqs_16S.qza \
+          --o-denoising-stats denoising-stats_16S.qza &  
  
-     Essendo una operazione molto lunga abbiamo già effettuato il denoising. Dovete solo copiare i file:
+     Essendo una operazione molto lunga abbiamo già effettuato il denoising. Dovete solo copiare i file:  
     `cp -r /home/epigen/microbiome_analysis/{rep-seqs_16S.qza,denoising-stats_16S.qza} .`   
 * Andiamo a creare dei file di visualizzazione per verificare come sia andata la procedura di Denoising:  
     ```
