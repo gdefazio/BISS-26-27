@@ -73,21 +73,7 @@
       <workItem from="1575362932095" duration="8762000" />
       <workItem from="1576405134003" duration="11963000" />
       <workItem from="1578308719402" duration="15240000" />
-      <workItem from="1578587457624" duration="7765000" />
-    </task>
-    <task id="LOCAL-00048" summary="sistemazione README.md&#10;Aggiunta cartella su allineamento.md&#10;Allineamento su GEnomi">
-      <created>1576582825309</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1576582825309</updated>
-    </task>
-    <task id="LOCAL-00049" summary="sistemazione README.md&#10;Aggiunta cartella su allineamento.md&#10;Allineamento su GEnomi">
-      <created>1576582873460</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1576582873460</updated>
+      <workItem from="1578587457624" duration="8015000" />
     </task>
     <task id="LOCAL-00050" summary="sistemazione README.md&#10;Aggiunta cartella su allineamento.md&#10;Allineamento su GEnomi">
       <created>1576603528310</created>
@@ -418,7 +404,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578908990241</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
+      <created>1578909174346</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1578909174346</updated>
+    </task>
+    <task id="LOCAL-00098" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
+      <created>1578909227958</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1578909227959</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,15 +456,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1578909174138">
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1578909227756">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578909174138" />
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578909227756" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1578501400406" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578909175593">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578909229515">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578909175593" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578909229515" />
     <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1578501402076" />
     <state x="399" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1578646985787">
       <screen x="0" y="23" width="1440" height="825" />

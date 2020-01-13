@@ -63,7 +63,8 @@ Nel suddetto studio, trovate il lavoro a questo [link](https://journals.plos.org
 * 5 soggetti obesi;  
 * 5 soggetti affetti da diabete mellito tipo 2.  
 
-***Lo scopo di questa analisi è capire se via siano differenze tra il microbioma orale di soggetti sani, obesi ed affetti da diabete.***   
+***Lo scopo di questa esercitazione è capire se via siano differenze tra il microbioma orale di soggetti sani, obesi ed affetti da diabete.***  
+ 
 I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA 16S e successivamente sequenziando gli ampliconi in modalità paired-end (PE) 2x300 con piattaforma Illumina MiSeq®.  
 Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.org/). Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIM2 View**](https://view.qiime2.org/).  
 
@@ -78,17 +79,24 @@ Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.or
     mkdir tmp
     export TMPDIR="$PWD/tmp"
     ```  
-
+* Copiamo i dati all'interno della nostra cartella:  
+    `cp -r /home/epigen/microbiome_analysis/input_data .`  
+    `cp -r /home/epigen/microbiome_analysis/sample-metadata.ts .`  
 A questo punto abbiamo completato tutte le operazioni preliminari necessarie per preparare l'ambiente di lavoro. Possiamo procedere con le analisi.  
-qiime tools import \
+* Importiamo i dati in QIIME2:  
+    ```
+    qiime tools import \
     --type 'SampleData[PairedEndSequencesWithQuality]' \
     --input-path input_data \
     --input-format CasavaOneEightSingleLanePerSampleDirFmt \
     --output-path demux-paired-end.qza
-
-qiime demux summarize \
+    ```  
+* Creaimo un file di visualizzazione (estensione *qzv*) per valutare la qualità dei nostri dati:  
+    ```
+    qiime demux summarize \
     --i-data  demux-paired-end.qza \
     --o-visualization demux-paired_end.qzv
+    ```
 
 nohup qiime dada2 denoise-paired \
   --i-demultiplexed-seqs demux-paired-end.qza \
