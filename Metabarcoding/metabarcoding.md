@@ -99,7 +99,10 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
     ```
 * Scarchiamo il file `demux-paired_end.qzv` e visualizziamolo con QIIME2 view.  
     * Come valutiamo la qualità del sequenziamento?  
-* Effettuiamo il **Denoising** dei dati:    
+* Effettuiamo il **Denoising** dei dati:  
+    Il **Denoising** (letteralmente eliminazione del rumore di fondo (*noise*)) è una procedura che permette di riconoscere il rumore introdotto dalla PCR e dal sequenziamento.    
+    [Giusto un po' di teoria](https://drive.google.com/open?id=1NsN9iUI-UOP9M6n7HbJ32UaHgGIoBKkcqkjSX7hg2tU).  
+    
      >nohup qiime dada2 denoise-paired \
           --i-demultiplexed-seqs demux-paired-end.qza \
           --p-trunc-len-f 300 \

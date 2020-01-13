@@ -74,14 +74,7 @@
       <workItem from="1575362932095" duration="8762000" />
       <workItem from="1576405134003" duration="11963000" />
       <workItem from="1578308719402" duration="15240000" />
-      <workItem from="1578587457624" duration="9503000" />
-    </task>
-    <task id="LOCAL-00055" summary="sistemazione README.md&#10;Aggiunta cartella su allineamento.md&#10;Allineamento su GEnomi">
-      <created>1576685302481</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1576685302481</updated>
+      <workItem from="1578587457624" duration="10325000" />
     </task>
     <task id="LOCAL-00056" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione sui browser umani">
       <created>1578312488171</created>
@@ -419,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578911800705</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
+      <created>1578912024100</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1578912024101</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,15 +457,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1578911800471">
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1578916154909">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578911800471" />
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578916154909" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1578501400406" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578911803074">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578912025979">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578911803074" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578912025979" />
     <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1578501402076" />
     <state x="399" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1578646985787">
       <screen x="0" y="23" width="1440" height="825" />

@@ -56,13 +56,12 @@ Letture consigliate:
 ### Allineamento tra sequenze
 - [X] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
 - [X] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
-### Esercitazione 3 (07-08/12/2020)
+### Esercitazione 3 (07-08/01/2020)
 ### Genome Browser
 - [X] [ENSEMBL](./Genome_Browser/Ensembl.md)  
 - [X] [UCSC](./Genome_Browser/UCSC.md)  
 - [X] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
-
-### Esercitazione 4 (07-08/12/2020)
-### Genome Browser
+### Esercitazione 4 (13-14/01/2020)
+### Metabarcoding
 - [ ] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md)  
 - [ ] [Metabarcoding](./Metabarcoding/metabarcoding.md)
