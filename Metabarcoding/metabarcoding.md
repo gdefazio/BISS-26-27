@@ -208,12 +208,10 @@ In particolare:
               - C<sub>ij</sub>: E' la somma della conta più bassa delle specie osservate in entrambe i siti.  
           s distance (a quantitative measure of community dissimilarity)
         - Distanza *unweighted UniFrac*: una misura qualitativa della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;  
-        - Distanza *weighted UniFrac*: una misura quantitiva della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;
-
-  
-       
+        - Distanza *weighted UniFrac*: una misura quantitiva della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;       
     * **gamma**: diversità totale.  
    
+* Prima di procedere con le misure di diversità dobbiamo costruire un albero filogenetico a partire dalle ASV ottenute.  
     ```
     qiime phylogeny align-to-tree-mafft-fasttree \
       --i-sequences rep-seqs_16S.qza \
@@ -221,5 +219,55 @@ In particolare:
       --o-masked-alignment masked-aligned-rep-seqs_16S.qza \
       --o-tree unrooted-tree_16S.qza \
       --o-rooted-tree rooted-tree_16S.qza
+    ```  
+* Al fine di poter comparare i dati ottenuti li dobbiamo **normalizzare**. La procedura di Normalizzazione utilizzata per i dati del microbioma è la **Rarefazione**.  
+  Questa procedura si basa sulla scelta di un valore di rarefazione (*sampling depth*) a cui tutti i campioni saranno ricondotti. In pratica, si effettua un campionamento senza reimmissione, fino a raggiungere il valore di rarefazione prescelto.  
+  Tutti i campioni con conte al di sotto del sampling depth saranno scartati.  
+  ```
+  qiime diversity alpha-rarefaction \
+      --i-table table_16S.qza \
+      --i-phylogeny rooted-tree_16S.qza \
+      --p-max-depth 100000 \
+      --m-metadata-file sample-metadata.tsv \
+      --o-visualization alpha-rarefaction.qzv
+  ```  
+  
+* Passiamo alla stima degli indici di diversità
     ```
+    qiime diversity core-metrics-phylogenetic \
+      --i-phylogeny rooted-tree_16S.qza \
+      --i-table table_16S.qza \
+      --p-sampling-depth 40000 \
+      --m-metadata-file sample-metadata.tsv \
+      --output-dir core-metrics-results_16S
+    ```  
+* Verifichiamo se vi siano delle differenze significative tra gli indici di alpha diversità:    
+    ```  
+    qiime diversity alpha-group-significance \
+      --i-alpha-diversity core-metrics-results_16S/faith_pd_vector.qza \
+      --m-metadata-file sample-metadata.tsv \
+      --o-visualization core-metrics-results_16S/faith-pd-group-significance_16S.qzv
+    
+    qiime diversity alpha-group-significance \
+      --i-alpha-diversity core-metrics-results_16S/evenness_vector.qza \
+      --m-metadata-file sample-metadata.tsv \
+      --o-visualization core-metrics-results_16S/evenness-group-significance.qzv
+    ```  
+* Verifichiamo se vi siano delle differenze significative tra gli indici di beta diversità:  
+    ```
+    qiime diversity beta-group-significance \
+      --i-distance-matrix core-metrics-results_16S/unweighted_unifrac_distance_matrix.qza \
+      --m-metadata-file sample-metadata.tsv \
+      --m-metadata-column Condition \
+      --o-visualization core-metrics-results_16S/unweighted-unifrac-tran-name-significance.qzv \
+      --p-pairwise
+    
+    qiime diversity beta-group-significance \
+      --i-distance-matrix core-metrics-results_16S/unweighted_unifrac_distance_matrix.qza \
+      --m-metadata-file sample-metadata.tsv \
+      --m-metadata-column Condition \
+      --o-visualization core-metrics-results_16S/unweighted-unifrac-subject-group-significance.qzv \
+      --p-pairwise
+    ```  
+
 [Back to the top](../README.md) 
