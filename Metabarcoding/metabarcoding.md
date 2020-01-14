@@ -195,6 +195,28 @@ In particolare:
         - *Faith's Phylogenetic Diversity*: una misura qualitativa della richness della comunità in esame che tiene conto delle relazioni filogenetiche.      
     * **beta**: diversità inter-campione: utilizziamo delle misure che indicano quanto differenti sono due comunità.  
      Queste misure non fanno altro che andare a compare i campioni a coppie, per cui alla fine dell'analisi si ottiene una matrice che indica la dissimilarità tra ciascuna coppia di campioni.  
+     Esistno diverse tipologie di metriche per calcolare la Beta diversità:  
+        - Distanza di **Jaccard**: una misura qualitativa della dissimilarità;  
+          ![jaccard dissimilarity](./Jaccard-Dissimilarity.gif)  
+          ![jaccard similarity](./Jaccard_similarity.gif)  
+          X e Y rappresentano i campioni in analisi ed in particolare le specie osservate. Quindi la misura tiene conto solo del fatto che una specie sia osservata o meno e non della sua abbondanza.   
+        - Distanza di **Bray-Curtis**: una misura quantitiva della dissimilarità;  
+          ![bray curtis](./bray_curtis.gif)  
+          Dove:  
+          - *i* e *j* sono i due campioni in analisi:  
+          _ S<sub>i</sub> e S<sub>j</sub>
+          
+          i & j are the two sites,
+Si is the total number of specimens counted on site i,
+Sj is the total number of specimens counted on site j,
+Cij is the sum of only the lesser counts for each species found in both sites.
+          
+        Jaccard distance (a qualitative measure of community dissimilarity)
+Bray-Curtis distance (a quantitative measure of community dissimilarity)
+unweighted UniFrac distance (a qualitative measure of community dissimilarity that incorporates phylogenetic relationships between the features)
+weighted UniFrac distance (a quantitative measure of community dissimilarity that incorporates phylogenetic relationships between the features)
+
+  
        
     * **gamma**: diversità totale.  
    
