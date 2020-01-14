@@ -57,7 +57,7 @@ Ripetete l'analisi ma in questo caso selesionate l'opzione `Length of 0-mismatch
 
 ### Analisi di dati reali
 I dati che analizzeremo oggi sono disponibile nel repository [SRA (Sequence Read Archive)](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?).    
-In particolare, il tutorial che andremo a completare riguarda lo studio del microbioma orale [PRJEB16156](/https://www.ebi.ac.uk/ena/data/view/PRJEB16156).  
+In particolare, il tutorial che andremo a completare riguarda lo studio del microbioma orale [PRJEB16156](https://www.ebi.ac.uk/ena/data/view/PRJEB16156).  
 Nel suddetto studio, trovate il lavoro a questo [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0172647), sono stati analizzati un totale di 37 campioni ma per i nostri scopi ne ho selezionati casualmente 15:
 * 5 controlli sani;  
 * 5 soggetti obesi;  
@@ -139,7 +139,7 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
      Essendo una operazione molto lunga abbiamo già effettuato il denoising. Dovete solo copiare i file:  
     `cp -r /home/epigen/microbiome_analysis/{rep-seqs_16S.qza,denoising-stats_16S.qza} .`   
 
-* Andiamo a creare dei file di visualizzazione per verificare come sia andata la procedura di Denoising:  
+* Andiamo a creare dei file di visualizzazione per verificare come sia andata la procedura di **Denoising**:  
     ```
     qiime feature-table summarize \
        --i-table table_16S.qza \
@@ -187,8 +187,15 @@ La Diversità è una misura della complessità del sistema che stiamo osservando
 ![diversità](./diversita.png)
 
 In particolare:  
-    * **alpha**: diversità intra-campione;   
-    * **beta**: diversità inter-campione;  
+    * **alpha**: diversità intra-campione. Si possono utillizzare diverse misure:  
+        - *Richness*: rappresenta il numero di specie differenti osservate in una comunità biologica;  
+        - *Eveness*: indica quanto sia uniforme la comunità osservata;  
+        - *Shannon Index*: è una misura quantitativa della richezza di specie;  
+            ![shannon](./shannon.gif)  
+        - *Faith's Phylogenetic Diversity*: una misura qualitativa della richness della comunità in esame che tiene conto delle relazioni filogenetiche.      
+    * **beta**: diversità inter-campione: utilizziamo delle misure che indicano quanto differenti sono due comunità.  
+     Queste misure non fanno altro che andare a compare i campioni a coppie, per cui alla fine dell'analisi si ottiene una matrice che indica la dissimilarità tra ciascuna coppia di campioni.  
+       
     * **gamma**: diversità totale.  
    
     ```
