@@ -55,6 +55,7 @@ All'avvio dell'esecuzione di aprirà una finestra che vi mostrerà tutti i possi
 
 Ripetete l'analisi ma in questo caso selesionate l'opzione `Length of 0-mismatch zone at 3' end` e indicate `5 bases`.  
 
+***Summary dei risultati ottenuti***  
 |Regno|No restrizione al 3'|Restrizione al 3'|
 |:---:|:---:|:---:|
 |Bacteria|96.6|91.7|
