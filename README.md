@@ -63,5 +63,9 @@ Letture consigliate:
 - [X] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
 ### Esercitazione 4 (13-14/01/2020)
 ### Metabarcoding
-- [ ] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md)  
+- [X] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md)  
+- [X] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
+
+### Esercitazione 4 (15-20/01/2020)
+### Metabarcoding
 - [ ] [Metabarcoding](./Metabarcoding/metabarcoding.md)
