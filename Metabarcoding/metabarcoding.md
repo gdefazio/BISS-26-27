@@ -246,12 +246,12 @@ In particolare:
     qiime diversity alpha-group-significance \
       --i-alpha-diversity core-metrics-results_16S/faith_pd_vector.qza \
       --m-metadata-file sample-metadata.tsv \
-      --o-visualization core-metrics-results_16S/faith-pd-group-significance_16S.qzv
+      --o-visualization core-metrics-results_16S/faith-pd-Condition-significance_16S.qzv
     
     qiime diversity alpha-group-significance \
       --i-alpha-diversity core-metrics-results_16S/evenness_vector.qza \
       --m-metadata-file sample-metadata.tsv \
-      --o-visualization core-metrics-results_16S/evenness-group-significance.qzv
+      --o-visualization core-metrics-results_16S/evenness-Condition-significance.qzv
     ```  
 * Verifichiamo se vi siano delle differenze significative tra gli indici di beta diversità:  
     ```
@@ -259,14 +259,14 @@ In particolare:
       --i-distance-matrix core-metrics-results_16S/unweighted_unifrac_distance_matrix.qza \
       --m-metadata-file sample-metadata.tsv \
       --m-metadata-column Condition \
-      --o-visualization core-metrics-results_16S/unweighted-unifrac-tran-name-significance.qzv \
+      --o-visualization core-metrics-results_16S/unweighted-unifrac-Condition-significance.qzv \
       --p-pairwise
     
     qiime diversity beta-group-significance \
-      --i-distance-matrix core-metrics-results_16S/unweighted_unifrac_distance_matrix.qza \
+      --i-distance-matrix core-metrics-results_16S/weighted_unifrac_distance_matrix.qza \
       --m-metadata-file sample-metadata.tsv \
       --m-metadata-column Condition \
-      --o-visualization core-metrics-results_16S/unweighted-unifrac-subject-group-significance.qzv \
+      --o-visualization core-metrics-results_16S/unweighted-unifrac-Condition-significance.qzv \
       --p-pairwise
     ```  
 

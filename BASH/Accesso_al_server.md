@@ -178,6 +178,8 @@ Eseguiamo le seqguenti operazioni:
     * `T216P_S82_L001_R1_001_fastqc.html`  
     * `T216P_S82_L001_R1_001_fastqc.zip`  
 
+Per avere una descrizione dei boxplot potete utilizzare la relativa pagina [Wikipedia](https://en.wikipedia.org/wiki/Box_plot).  
+
 ### Esercizio 1
 Applicate il `FastQC` sui seguenti file:  
 * create la cartella `test_fastqc` e spostatevi al suo interno;  
