@@ -55,6 +55,12 @@ All'avvio dell'esecuzione di aprirà una finestra che vi mostrerà tutti i possi
 
 Ripetete l'analisi ma in questo caso selesionate l'opzione `Length of 0-mismatch zone at 3' end` e indicate `5 bases`.  
 
+|Regno|No restrizione al 3'|Restrizione al 3'|
+|:---:|:---:|:---:|
+|Bacteria|96.6|91.7|
+|Archaea|97.5|94.2|
+Eukaryota|93.7|20.8|  
+
 ### Analisi di dati reali
 I dati che analizzeremo oggi sono disponibile nel repository [SRA (Sequence Read Archive)](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?).    
 In particolare, il tutorial che andremo a completare riguarda lo studio del microbioma orale [PRJEB16156](https://www.ebi.ac.uk/ena/data/view/PRJEB16156).  
