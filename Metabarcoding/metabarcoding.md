@@ -145,7 +145,7 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
           --o-denoising-stats denoising-stats_16S.qza &  
  
      Essendo una operazione molto lunga abbiamo già effettuato il denoising. Dovete solo copiare i file:  
-    `cp -r /home/epigen/microbiome_analysis/{rep-seqs_16S.qza,denoising-stats_16S.qza} .`   
+    `cp -r /home/epigen/microbiome_analysis/{rep-seqs_16S.qza,denoising-stats_16S.qza,table_16S.qza} .`   
 
 * Andiamo a creare dei file di visualizzazione per verificare come sia andata la procedura di **Denoising**:  
     ```
