@@ -274,7 +274,7 @@ In particolare:
       --i-distance-matrix core-metrics-results_16S/weighted_unifrac_distance_matrix.qza \
       --m-metadata-file sample-metadata.tsv \
       --m-metadata-column Condition \
-      --o-visualization core-metrics-results_16S/unweighted-unifrac-Condition-significance.qzv \
+      --o-visualization core-metrics-results_16S/weighted-unifrac-Condition-significance.qzv \
       --p-pairwise
     ```  
 
