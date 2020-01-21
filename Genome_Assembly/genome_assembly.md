@@ -182,14 +182,13 @@ SPAdes è un altro algoritmo per l’assembly dei genomi che utilizza un approcc
 
 #### [Meccanismo di funzionamento di SPAdes](https://en.wikipedia.org/wiki/SPAdes_(software)
 SPAdes applica un processo a 4 stadi:
-**Stadio 1**: SPAdes costruisce il grado di de Bruijn utilizzando k-mer di lunghezza multipla in modo da rimuovere il rumore introdotto da read chimeriche e bubble;  
+**Stadio 1**: SPAdes costruisce il grado di de Bruijn utilizzando k-mer di lunghezza multipla in modo da rimuovere il rumore introdotto da read chimeriche e bubble.  
+    In particolare, l'utilizzo di k-mer di diversa lunghezza permette di usare quelli più corti per caratterizzare regioni a basso coverage per ridurre la frammentazione e kmer più lunghi per regioni ad elevato coverage e risolvere eventuali errori del grafo.  
 **Stadio 2**: calcola la distanza esatta tra 2 k-mer nel genoma.  
+    Questo approccio permette di stimare correttamente la distanza tra due k-mer indipendentemente dalla dimensione settata durante la preparazione della libreria.        
 **Stadio 3**: Costruisce il *paired assembly graph*.  
-**stadio 4**: genera i contig.  
-
-   
-
-
+**Stadio 4**: genera i contig.  
+    
 #### Applicazione di SPAdes   
 La riga di comando per laciare SPAdes è la seguente:  
 > spades.py --careful -o spades_application -1 Sample_1.fastq -2 Sample_2.fastq -s Sample_s.fastq  
