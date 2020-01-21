@@ -4,7 +4,7 @@
 - [APPROCCI BIOINFORMATICI PER L’ASSEMBLAGGIO DELLE READ: I GRAFI DI DE BRUIJN](#approcci-bioinformatici-per-lassemblaggio-delle-read-i-grafi-di-de-bruijn)
 - [VALUTAZIONE DELL’ASSEMBLAGGIO OTTENUTO](#valutazione-dellassemblaggio-ottenuto)
 - [SCOPO DELL'ESERCITAZIONIE](#scopo-dellesercitazione)
-    * [Velvet](#velvet)
+    * [Velvet](#velvet)  
         *[Meccanismo di funzionamento di Velvet](#meccanismo-di-funzionamento-di-velvet)
     * [SPAdes](#spades)
     
