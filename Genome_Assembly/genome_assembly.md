@@ -181,7 +181,7 @@ Come potete notare dalla complessità del grafico conferma che la lunghezza dei 
 SPAdes è un altro algoritmo per l’assembly dei genomi che utilizza un approccio automatico per definire i grafi di de Bruijn partendo da k-mer di differente lunghezza (i.e 21, 33 e 55).
 
 #### [Meccanismo di funzionamento di SPAdes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3342519/#!po=13.8889)
-SPAdes applica un processo a 4 stadi:
+SPAdes applica un processo a 4 stadi:  
 **Stadio 1**: SPAdes costruisce il grado di de Bruijn utilizzando k-mer di lunghezza multipla in modo da rimuovere il rumore introdotto da read chimeriche e bubble.  
     In particolare, l'utilizzo di k-mer di diversa lunghezza permette di usare quelli più corti per caratterizzare regioni a basso coverage per ridurre la frammentazione e kmer più lunghi per regioni ad elevato coverage e risolvere eventuali errori del grafo.  
 **Stadio 2**: calcola la distanza esatta tra 2 k-mer nel genoma.  
