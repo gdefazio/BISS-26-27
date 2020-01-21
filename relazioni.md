@@ -6,7 +6,7 @@ Esempio: supponiamo che l'esame sia previsto per il 04/02.
 |29/01|30/01|31/01|01/02|02/02|03/04|04/04|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |LAVORATIVO|LAVORATIVO|LAVORATIVO|NON LAVORATIVO|NON LAVORATIVO|LAVORATIVO|**ESAME**|
-|LIMITE ULTIMO PER CONSEGNA|4|3|3|3|2|1|
+|**LIMITE ULTIMO PER CONSEGNA**|4|3|3|3|2|1|
 
 La relazione dovrà riguardare tutte le seguenti tematiche:
 * Descrizione della procedura bioinformatica applicata per l’assemblaggio di un genoma batterico corredata da un breve commento dei risultati ottenuti;  
