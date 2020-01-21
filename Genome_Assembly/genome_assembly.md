@@ -39,7 +39,39 @@ In particolare, la Figura 3 rappresenta un grafo per un set di k-mer che non con
 ***FIGURA 3: GRAFO DI DE BRUIJN IN UNA SEQUENZA CHE NON CONTIENE K-MER RIPETUTI.** [REF](HTTP://WWW.HOMOLOG.US/TUTORIALS/INDEX.PHP?P=2.1&S=1)*  
 
 ![kmer2](./kmer7_1.png)  
-***FIGURA 4: GRAFO DI DE BRUIJN IN UNA SEQUENZA CHE CONTIENE K-MER RIPETUTI.** [REF](HTTP://WWW.HOMOLOG.US/TUTORIALS/INDEX.PHP?P=2.1&S=1)*    
+***FIGURA 4: GRAFO DI DE BRUIJN IN UNA SEQUENZA CHE CONTIENE K-MER RIPETUTI.** [REF](HTTP://WWW.HOMOLOG.US/TUTORIALS/INDEX.PHP?P=2.1&S=1)*  
+
+In un grafo di de Bruijn i k-mer rappresentano gli archi che connettono due vertici **V<sub>a</sub>** e **V<sub>b</sub>**, qualora **V<sub>a</sub>** sia prefisso di **V<sub>b</sub>** (tolta la prima base) o **V<sub>b</sub>** sia suffisso di **V<sub>a</sub>** (tolta l’ultima base).  
+Il vantaggio di questo approccio consta nel fatto di non dover calcolare la similarità tra tutte le coppie di k-mer.
+Per la risoluzione del grafo si applica un metodo definiti **Percorso Euleriano**, che prevede esattamente un passaggio per ciascun arco.  
+La presenza di regioni ripetute o errori di sequenziamento la individiazione di un percorso Euleriamo diventa più complessa per cui si accettano percorsi per cui un arco è visitato almeno una volta.  
+Gli esempi riportati nelle figure 3 e 4 mostrano una estrema semplificazione del problema, ma già la presenza di una ripetizione nella figura 4, fa si che la risoluzione del grafo (identificazione della sequenza biologica) diventi più complessa.  
+
+![grafoA](./grafoA.png)  
+
+![grafoB](./grafoB.png)  
+***FIGURA 5: ESEMPIO DI GRAFO DI DE BRUIJN COMPLESSO***  
+
+In **Figura 5** è riportato un grafo di de Bruijn più complesso, che mostra delle biforcazioni dovute a polimorfismi e/o errori (nt in rosso) e un bubble (regione rappresentata in grande in 5b). Per esempio la risoluzione del bubble in figura 5b è possibile tenendo conto del coverage dei k-mer, in pratica il numero di volte che uno specifico k-mer è osservato nelle nostre reads.  
+K-mer con una bassa rappresentazione probabilmente presentano degli errori di sequenziamento. Bubble e biforcazioni si possono generare anche in presenza di regioni ripetute che rendono più complesso il processo di ricostruzione del genoma.  
+
+La scelta della lunghezza del k-mer influenza la costruzione e la risoluzione dei grafi. Programmi di assemblaggio, come *+Velvet** +([Zerbino and Birney, 2008](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2336801/)) e **SPAdes** ([Bankevich et al., 2012](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3342519/)), utilizzano un approccio a più step, in cui utilizzano k-mer di diversa lunghezza variabile (e.g. 25 – 31) e poi assemblano le read andando a utilizzare i grafi generati.   
+
+Non ci sono regole particolari per la scelta della lunghezza dei k-mer ma possiamo assumere alcunu principi di base:
+* la lunghezza dei k-mer deve essere dispari per evitare la formazione di palindromi;
+    ```
+        8mer: ATTCCTTA
+        8mer complement: TAAGGAAT
+        8mer reverse complement TAAGGAAT
+    ```  
+* deve essere inferiore alla lunghezza delle read, altrimenti sarà difficile osservare overlap.  
+
+In linea generale k-mer corti aumentano la connettività ma (ottimo per regioni del genoma a basso coverage) ma aumentano le connessioni ambigue (regioni ripettute).     
+I kmer più lunghi permettono di aumentare la specificità (ridurre il rumore durante l’assemblaggio) ma tendono a ridurre la connettività.    
+*Parliamo di coverage del kmer: non ci si riferisce al numero di volte in cui un singolo nt viene osservato ma al numero di volte in cui uno specifico k-mer è osservato. Come abbiamo precedentemente visto quest’ultima osservazione può essere utilizzata per risolvere le bubble nei grafi di de Bruijn.*
+
+
+  
 
     
 
