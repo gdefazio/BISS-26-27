@@ -198,7 +198,7 @@ Applichiamo quast sui dati generati con SPAdes:
 1. creiamo la cartella che conterrà le informazioni dell'assembly di SPAdes:  
     `mkdir ../spades && cd ../spades`  
 2. Eseguiamo quast:  
-    `quast.py -s /home/epigen/genome_assembly/spades_application/contigs.fasta -o quast_spades` 
+    `quast.py -s /home/epigen/genome_assembly/spades_application/contigs.fasta -o quast_spades`   
     Scarichiamo la cartella generata da quast.   
 Anche in questo caso valutiamo il grafo generato (**Figura 7**).  
 ![spades_bandage](./spades_bandage.png)  
