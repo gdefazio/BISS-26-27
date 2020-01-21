@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Genome_Assembly/pair.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Assembly/pe-mp_usage.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Genome_Assembly/genome_assembly.md" beforeDir="false" afterPath="$PROJECT_DIR$/Genome_Assembly/genome_assembly.md" afterDir="false" />
     </list>
@@ -76,14 +76,7 @@
       <workItem from="1578308719402" duration="15240000" />
       <workItem from="1578587457624" duration="19078000" />
       <workItem from="1579078000465" duration="1265000" />
-      <workItem from="1579168067717" duration="2050000" />
-    </task>
-    <task id="LOCAL-00082" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
-      <created>1578501400571</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1578501400571</updated>
+      <workItem from="1579168067717" duration="2455000" />
     </task>
     <task id="LOCAL-00083" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
       <created>1578562047976</created>
@@ -421,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579596160007</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione genome assembly">
+      <created>1579596352623</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1579596352623</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,15 +460,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta e sistemazione lezione genome assembly" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1579596159809">
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1579596352362">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579596159809" />
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579596352362" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1579088999391" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579596161578">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579596355501">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579596161578" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579596355501" />
     <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1579089000861" />
     <state x="399" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1578646985787">
       <screen x="0" y="23" width="1440" height="825" />
