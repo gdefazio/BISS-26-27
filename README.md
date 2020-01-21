@@ -68,4 +68,11 @@ Letture consigliate:
 
 ### Esercitazione 5 (15-20/01/2020)
 ### Metabarcoding
-- [ ] [Metabarcoding](./Metabarcoding/metabarcoding.md)
+- [X] [Metabarcoding](./Metabarcoding/metabarcoding.md)
+
+### Esercitazione 6 (21-22/01/2020)
+### Genome Assembly
+- [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
+
+
+# Relazioni
