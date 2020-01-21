@@ -138,6 +138,7 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     shuffleSequences_fastq.pl Sample_1.fastq Sample_2.fastq \
     Sample_alternate.fastq
     ```  
+    Controllate che il file sia stato generato.  
 8.	Iniziamo ad utilizzare Velvet per assemblare le nostre read. Utilizzeremo k-mer lunghi 25 nt.  
     Velvet si compone di due applicativi. Il primo è **velveth** e prepara i dati di partenza in un formato adeguato per le successive analisi:  
     ```
@@ -147,9 +148,12 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     ```
     velvetg run_25
     ```  
-10.	Calcoliamo le statistiche per valutare l’assemblaggio:
-quast.py -s run_25/contigs.fa -o quast_25
+10.	Calcoliamo le statistiche per valutare l’assemblaggio:  
+    `quast.py -s run_25/contigs.fa -o quast_25`  
 
+Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all'assemblaggio, utilizzando il programma [**Bandage** (Bioinformatics Application for Navigating De novo Assembly Graphs Easily)](http://rrwick.github.io/Bandage/) (**Figura 6**).  
+![velvet_bandage](./velvet_k25_bandage.png)  
+***FIGURA 6: DE BRUIJN GRAPH OTTENUTO CON VELVET E K-MER LUNGHI 25NT.***  
 
   
 
