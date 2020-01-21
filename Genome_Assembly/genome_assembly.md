@@ -8,7 +8,7 @@
         * [Meccanismo di funzionamento di Velvet](#meccanismo-di-funzionamento-di-velvet)
         * [Applicazione di Velvet](#applicazione-di-velvet)
     * [SPAdes](#spades)
-        * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spades)
+        * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spadeshttpsenwikipediaorgwikispades_software)
         * [Applicazione di SPAdes](#applicazione-di-spades)
     
 
