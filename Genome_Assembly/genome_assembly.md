@@ -8,7 +8,7 @@
         * [Meccanismo di funzionamento di Velvet](#meccanismo-di-funzionamento-di-velvet)
         * [Applicazione di Velvet](#applicazione-di-velvet)
     * [SPAdes](#spades)
-        * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spadeshttpswwwncbinlmnihgovpmcarticlespmc3342519po138889)
+        * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spades)
         * [Applicazione di SPAdes](#applicazione-di-spades)
     
 
