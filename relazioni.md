@@ -3,11 +3,11 @@
 Ogni studente dovrà presentare una relazione relativa ai laboratori svolti entro **5gg LAVORATIVI**  dalla data in cui è previsto l’esame.  
 Esempio: supponiamo che l'esame sia previsto per il 04/02.   
  
-|29\/01|30/01|31/01|01/02|02/02|03/04|04/04|
+|29 Gennaio|30 Gennaio|31 Gennaio|01 Febbraio|02 Febbraio|03 Febbraio|04 Febbraio|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |Mercoledì|Giovedì|Venerdì|Sabato|Domenica|Lunedì|Martedì|
 |LAVORATIVO|LAVORATIVO|LAVORATIVO|NON LAVORATIVO|NON LAVORATIVO|LAVORATIVO|**ESAME**|
-|**LIMITE ULTIMO PER CONSEGNA**|4|3|3|3|2|1|
+|**LIMITE ULTIMO PER LA CONSEGNA**|4|3|3|3|2|1|
 
 La relazione dovrà riguardare **tutte** le seguenti tematiche:
 * Descrizione della procedura bioinformatica applicata per l’assemblaggio di un genoma batterico corredata da un breve commento dei risultati ottenuti;  
