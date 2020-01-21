@@ -1,15 +1,15 @@
-# RELAZIONI
+# RELAZIONE
 
 Ogni studente dovrà presentare una relazione relativa ai laboratori svolti entro **5gg LAVORATIVI**  dalla data in cui è previsto l’esame.  
 Esempio: supponiamo che l'esame sia previsto per il 04/02.   
  
-|29/01|30/01|31/01|01/02|02/02|03/04|04/04|
+|29\/01|30/01|31/01|01/02|02/02|03/04|04/04|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |Mercoledì|Giovedì|Venerdì|Sabato|Domenica|Lunedì|Martedì|
 |LAVORATIVO|LAVORATIVO|LAVORATIVO|NON LAVORATIVO|NON LAVORATIVO|LAVORATIVO|**ESAME**|
 |**LIMITE ULTIMO PER CONSEGNA**|4|3|3|3|2|1|
 
-La relazione dovrà riguardare tutte le seguenti tematiche:
+La relazione dovrà riguardare **tutte** le seguenti tematiche:
 * Descrizione della procedura bioinformatica applicata per l’assemblaggio di un genoma batterico corredata da un breve commento dei risultati ottenuti;  
 * Descrizione della procedura bioinformatica relativa all’analisi di dati di Metabarcoding e discussione dei dati ottenuti. 
     - Inoltre, va effettuata una ricerca in **PubMed** relativa al ***Fusobacterium nucleatum*** e alla possibile associazione con patologie: selezionarne e discuterne uno.  
@@ -21,7 +21,7 @@ La relazione dovrà riguardare tutte le seguenti tematiche:
     - Numero di trascritti annotati;
         - Considerando il trascritto codificante proteina più lungo dovete indicare:
             * l'identificativo del trascritto;
-            * il numero di Esono che partecipano alla formazione di quel trascritto;
+            * il numero di Esoni che partecipano alla formazione di quel trascritto;
             * la lunghezza delle regione 5' e 3' UTR e della CDS;
             * la lunghezza della proteina codificata.    
     - Numero di Ortologhi annotati.  
@@ -76,3 +76,6 @@ La relazione dovrà riguardare tutte le seguenti tematiche:
 |Rossella|Valenzano|FXYD domain containing ion transport regulator 5|
 |Antonio Benedetto|Ventura|von Willebrand factor A domain containing 5A|
 |Alessandra|Zecchillo|TSPY like 4
+
+
+[Back to the top](../README.md) 
