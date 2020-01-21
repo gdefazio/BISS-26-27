@@ -8,7 +8,7 @@
         * [Meccanismo di funzionamento di Velvet](#meccanismo-di-funzionamento-di-velvet)
         * [Applicazione di Velvet](#applicazione-di-velvet)
     * [SPAdes](#spades)
-        * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spadeshttpsenwikipediaorgwikispades_software)
+        * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spadeshttpswwwncbinlmnihgovpmcarticlespmc3342519po138889)
         * [Applicazione di SPAdes](#applicazione-di-spades)
     
 
@@ -109,7 +109,7 @@ Velvet è un programma di assemblaggio di genomi basato sulla costruzione e riso
 In particolare, le read di sequenziamento sono scomposte in k-mer, che vengono poi utilizzati per la costruzione dei grafi.  
 Le informazioni relative alla rappresentazione i ciascun k-mer (coverage) sono utilizzate per la risoluzione di strutture complesse nei grafi, come ad esempio le bubbles.  
 
-#### [Meccanismo di funzionamento di Velvet](https://en.wikipedia.org/wiki/Velvet_assembler)
+#### [Meccanismo di funzionamento di Velvet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2336801/?report=reader#!po=31.8182)
 1. Velvet converte le read in kmer della lunghezza predefinita dall'utente.  
 2. Ogni Kmer rappresenta un nodo del grafico. Due nodi sono connessi presentano una sovrapposizione della loro sequenza pari a k-1.  
    Formalemente diremo che due nodi **N<sub>A</sub>** e N<sub>B</sub> sono connessi se gli ultimi `k-1`nt di N<sub>A</sub> corrispondono ai primi `k-1` nt di N<sub>B</sub>.  
@@ -180,7 +180,7 @@ Come potete notare dalla complessità del grafico conferma che la lunghezza dei 
 ### SPAdes
 SPAdes è un altro algoritmo per l’assembly dei genomi che utilizza un approccio automatico per definire i grafi di de Bruijn partendo da k-mer di differente lunghezza (i.e 21, 33 e 55).
 
-#### [Meccanismo di funzionamento di SPAdes](https://en.wikipedia.org/wiki/SPAdes_(software)
+#### [Meccanismo di funzionamento di SPAdes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3342519/#!po=13.8889)
 SPAdes applica un processo a 4 stadi:
 **Stadio 1**: SPAdes costruisce il grado di de Bruijn utilizzando k-mer di lunghezza multipla in modo da rimuovere il rumore introdotto da read chimeriche e bubble.  
     In particolare, l'utilizzo di k-mer di diversa lunghezza permette di usare quelli più corti per caratterizzare regioni a basso coverage per ridurre la frammentazione e kmer più lunghi per regioni ad elevato coverage e risolvere eventuali errori del grafo.  
