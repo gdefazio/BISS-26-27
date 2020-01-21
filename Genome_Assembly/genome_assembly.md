@@ -5,6 +5,8 @@
 - [VALUTAZIONE DELL’ASSEMBLAGGIO OTTENUTO](#valutazione-dellassemblaggio-ottenuto)
 - [SCOPO DELL'ESERCITAZIONIE](#scopo-dellesercitazione)
     * [Velvet](#velvet)
+    * [SPAdes](#spades)
+    
 
 ## INTRODUZIONE
 Il sequenziamento di un genoma segue principalmente 4 fasi:  
@@ -34,6 +36,8 @@ Con questa tecnologia è possibile produrre tre tipologie di read:
 In **Figura 1** è riporta schematicamente la procedura per la produzione delle PE e MP reads. Come è possibile osservare con le PE è possibile sequenziare frammenti le cui dimensioni variano tra le 200 e 800 bp, mentre con le MP è possibile sequenziare le estremità di frammenti molto più grandi (2-5 Kb).  
 ![usage](./pe-mp_usage.png)  
 ***Figura 2: utilizzo di PE e MP nel “Genome Sequencing”.** [REF](https://www.ecseq.com/support/ngs/what-is-mate-pair-sequencing-useful-for)*  
+
+[Indice](#genome-assembly)
 
 ## APPROCCI BIOINFORMATICI PER L’ASSEMBLAGGIO DELLE READ: I GRAFI DI DE BRUIJN
 I programmi che permettono di assemblare le WGS read utilizzano l’approccio basato sulla costruzione e la successiva risoluzione dei [**grafi di de Bruijn**](https://en.wikipedia.org/wiki/De_Bruijn_graph).  
@@ -75,6 +79,8 @@ Non ci sono regole particolari per la scelta della lunghezza dei k-mer ma possia
 In linea generale k-mer corti aumentano la connettività ma (ottimo per regioni del genoma a basso coverage) ma aumentano le connessioni ambigue (regioni ripettute).     
 I kmer più lunghi permettono di aumentare la specificità (ridurre il rumore durante l’assemblaggio) ma tendono a ridurre la connettività.    
 *Parliamo di coverage del kmer: non ci si riferisce al numero di volte in cui un singolo nt viene osservato ma al numero di volte in cui uno specifico k-mer è osservato. Come abbiamo precedentemente visto quest’ultima osservazione può essere utilizzata per risolvere le bubble nei grafi di de Bruijn.*
+
+[Indice](#genome-assembly)
 
 ## VALUTAZIONE DELL’ASSEMBLAGGIO OTTENUTO
 Il risultato ottimale di un assemblaggio è costituito da una serie di contig che rappresentano in rapporto 1:1 le molecole di DNA presenti nel genoma.  
@@ -142,7 +148,7 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     `velvetg run_25`  
 10.	Calcoliamo le statistiche per valutare l’assemblaggio con **quast**:  
     `quast.py -s run_25/contigs.fa -o quast_25`  
-
+    Scarichiamo la cartella generata da quast.  
 Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all'assemblaggio, utilizzando il programma [**Bandage** (Bioinformatics Application for Navigating De novo Assembly Graphs Easily)](http://rrwick.github.io/Bandage/) (**Figura 6**).  
 ![velvet_bandage](./velvet_k25_bandage.png)  
 ***FIGURA 6: DE BRUIJN GRAPH OTTENUTO CON VELVET E K-MER LUNGHI 25NT.***  
@@ -157,13 +163,31 @@ La riga di comando per laciare SPAdes è la seguente:
 Per questioni di natura prettamente computazionale l’esecuzione di SPAdes è già stata effettuata. Però possiamo valutare la qualità dell'assemblaggio ottenuto.  
 Applichiamo quast sui dati generati con SPAdes:  
 1. creiamo la cartella che conterrà le informazioni dell'assembly di SPAdes:  
-    `mkdir ../spades && cd spades`  
+    `mkdir ../spades && cd ../spades`  
 2. Eseguiamo quast:  
-    `quast.py -s /home/epigen/genome_assembly/spades_application/contigs.fasta -o quast_spades`  
+    `quast.py -s /home/epigen/genome_assembly/spades_application/contigs.fasta -o quast_spades` 
+    Scarichiamo la cartella generata da quast.   
 Anche in questo caso valutiamo il grafo generato (**Figura 7**).  
 ![spades_bandage](./spades_bandage.png)  
 ***FIGURA 7: DE BRUIJN GRAPH OTTENUTO CON SPADES***  
+Il grafo conferma i dati ottenuti con quast.  
 
+Benché l’assemblaggio sia sicuramente migliore rispetto a quello ottenuto precedentemente può essere ancora migliorato.  
+Infatti, il grafo mostra ancora dei bubbles e dei contig che non sono stati assemblati (nodi in basso).  
+
+Possiamo provare a migliorare l’assemblaggio aggiungendo altri k-mer nella costruzione del grafi di de Bruijn:  
+>spades.py --careful -o spades_application_multikmer -1 Sample_1.fastq -2 Sample_2.fastq -s Sample_s.fastq -k 21,33,55,67,71,81,91  
+
+Infine, ne valutiamo la qualità con quast:  
+ `quast.py -s /home/epigen/genome_assembly/spades_application_multikmer/contigs.fasta -o quast_spades_multikmer`  
+ Scarichiamo la cartella generata da quast.  
+
+![spades_more](./spades_bandage_mostkmer.png)  
+***Figura 8: DE BRUIJN GRAPH OTTENUTO CON SPADES utilizzando 7 differenti lunghezze di k-mer.***  
+
+[Indice](#genome-assembly)
+
+[Back to the top](../README.md) 
 
   
 
