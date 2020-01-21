@@ -75,21 +75,7 @@
       <workItem from="1578308719402" duration="15240000" />
       <workItem from="1578587457624" duration="19078000" />
       <workItem from="1579078000465" duration="1265000" />
-      <workItem from="1579168067717" duration="4813000" />
-    </task>
-    <task id="LOCAL-00086" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
-      <created>1578851247857</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1578851247857</updated>
-    </task>
-    <task id="LOCAL-00087" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
-      <created>1578851302714</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1578851302714</updated>
+      <workItem from="1579168067717" duration="5393000" />
     </task>
     <task id="LOCAL-00088" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
       <created>1578852814924</created>
@@ -420,7 +406,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579599045789</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione genome assembly">
+      <created>1579599336152</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1579599336152</updated>
+    </task>
+    <task id="LOCAL-00136" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione genome assembly">
+      <created>1579599517325</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1579599517325</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,15 +459,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta e sistemazione lezione genome assembly" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1579599335908">
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1579599517132">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579599335908" />
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579599517132" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1579088999391" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579599337537">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579599519507">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579599337537" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579599519507" />
     <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1579089000861" />
     <state x="399" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1578646985787">
       <screen x="0" y="23" width="1440" height="825" />

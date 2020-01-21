@@ -4,7 +4,7 @@
 - [APPROCCI BIOINFORMATICI PER L’ASSEMBLAGGIO DELLE READ: I GRAFI DI DE BRUIJN](#approcci-bioinformatici-per-lassemblaggio-delle-read-i-grafi-di-de-bruijn)
 - [VALUTAZIONE DELL’ASSEMBLAGGIO OTTENUTO](#valutazione-dellassemblaggio-ottenuto)
 - [SCOPO DELL'ESERCITAZIONIE](#scopo-dellesercitazione)
-    * [Velve](#velvet)
+    * [Velvet](#velvet)
 
 ## INTRODUZIONE
 Il sequenziamento di un genoma segue principalmente 4 fasi:  
@@ -108,7 +108,7 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     `mkdir genome_assembly && cd genome_assembly`  
     poi:  
     `mkdir velvet && cd velvet`  
-4.	Eseguiamo il [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) per valutare la qualità delle sequenze:  
+4.	Eseguiamo il [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) per valutare la qualità delle sequenze:  
     `mkdir pre_trimming`   
     poi:  
     ```
@@ -116,6 +116,7 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     /home/epigen/genome_assembly/s_6_1.fastq \
     /home/epigen/genome_assembly/s_6_2.fastq -o pre_trimming
     ```  
+    Scaricate i risultati del FastQC.  
 5.	effettuiamo il trimming delle sequenze:  
     ```
     sickle pe -f /home/epigen/genome_assembly/s_6_1.fastq \
@@ -123,7 +124,7 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     -t sanger -o Sample_1.fastq -p Sample_2.fastq \
     -s Sample_s.fastq -q 25 -l 45
     ```  
-6.	riutilizziamo il fastqc per valutare le sequenze trimmate:  
+6.	riutilizziamo il FastQC per valutare le sequenze trimmate:  
     ```
     mkdir post_trimming
     ```  
@@ -131,13 +132,21 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     ```
     fastqc Sample_* --noextract -t 2 -o post_trimming
     ```  
-7.	Prima di lanciare Velvet è necessario utilizzare uno dei suoi applicativi per convertire le sequenze i un formato adeguato:
-shuffleSequences_fastq.pl Sample_1.fastq Sample_2.fastq \
-Sample_alternate.fastq
-8.	Iniziamo ad utilizzare Velvet per assemblare le nostre read. Inizieremo con k-mer lunghi 25 nt. Velvet si compone di due applicativi. Il primo è velveth e prepara i dati di partenza in un formato adeguato per le successive analisi:
-velveth run_25 25 fastq -shortPaired Sample_alternate.fastq
-9.	Adesso applichiamo velvetg che si occuperà di costruire i grafi e creare i contig.
-velvetg run_25
+    Scaricate i risultati del FastQC.  
+7.	Prima di lanciare Velvet è necessario utilizzare uno dei suoi applicativi per convertire le sequenze i un formato adeguato:  
+    ```
+    shuffleSequences_fastq.pl Sample_1.fastq Sample_2.fastq \
+    Sample_alternate.fastq
+    ```  
+8.	Iniziamo ad utilizzare Velvet per assemblare le nostre read. Utilizzeremo k-mer lunghi 25 nt.  
+    Velvet si compone di due applicativi. Il primo è **velveth** e prepara i dati di partenza in un formato adeguato per le successive analisi:  
+    ```
+    velveth run_25 25 fastq -shortPaired Sample_alternate.fastq
+    ```  
+9.	Adesso applichiamo **velvetg** che si occuperà di costruire i grafi e creare i contig.  
+    ```
+    velvetg run_25
+    ```  
 10.	Calcoliamo le statistiche per valutare l’assemblaggio:
 quast.py -s run_25/contigs.fa -o quast_25
 
