@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ca37bc-b6db-4cc1-a088-ccf16464d83f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Genome_Assembly/spades_bandage_mostkmer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Genome_Assembly/velvet_bandage_multikmer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Assembly/velvet_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Assembly/velvet_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Assembly/velvet_bublbles.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genome_Assembly/velvet_tips.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Genome_Assembly/genome_assembly.md" beforeDir="false" afterPath="$PROJECT_DIR$/Genome_Assembly/genome_assembly.md" afterDir="false" />
     </list>
@@ -77,14 +79,7 @@
       <workItem from="1578308719402" duration="15240000" />
       <workItem from="1578587457624" duration="19078000" />
       <workItem from="1579078000465" duration="1265000" />
-      <workItem from="1579168067717" duration="6824000" />
-    </task>
-    <task id="LOCAL-00092" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
-      <created>1578906713795</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1578906713795</updated>
+      <workItem from="1579168067717" duration="8130000" />
     </task>
     <task id="LOCAL-00093" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
       <created>1578906890243</created>
@@ -422,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579601194078</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione genome assembly">
+      <created>1579601785341</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1579601785341</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,15 +463,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta e sistemazione lezione genome assembly" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1579601193854">
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1579601785070">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579601193854" />
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579601785070" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1579088999391" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579601195474">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579601786952">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579601195474" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579601786952" />
     <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1579089000861" />
     <state x="399" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1578646985787">
       <screen x="0" y="23" width="1440" height="825" />

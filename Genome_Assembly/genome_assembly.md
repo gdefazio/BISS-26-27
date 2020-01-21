@@ -5,6 +5,7 @@
 - [VALUTAZIONE DELL’ASSEMBLAGGIO OTTENUTO](#valutazione-dellassemblaggio-ottenuto)
 - [SCOPO DELL'ESERCITAZIONIE](#scopo-dellesercitazione)
     * [Velvet](#velvet)
+        *[Meccanismo di funzionamento di Velvet](#meccanismo-di-funzionamento-di-velvet)
     * [SPAdes](#spades)
     
 
@@ -104,6 +105,23 @@ Utilizzeremo read prodotte con sequenziamento **Illumina** in modalità paired-e
 Velvet è un programma di assemblaggio di genomi basato sulla costruzione e risoluzione dei grafi di de Bruijn.  
 In particolare, le read di sequenziamento sono scomposte in k-mer, che vengono poi utilizzati per la costruzione dei grafi.  
 Le informazioni relative alla rappresentazione i ciascun k-mer (coverage) sono utilizzate per la risoluzione di strutture complesse nei grafi, come ad esempio le bubbles.  
+
+#### [Meccanismo di funzionamento di Velvet](https://en.wikipedia.org/wiki/Velvet_assembler)
+1. Velvet converte le read in kmer della lunghezza predefinita dall'utente.  
+2. Ogni Kmer rappresenta un nodo del grafico. Due nodi sono connessi presentano una sovrapposizione della loro sequenza pari a k-1.  
+   Formalemente diremo che due nodi **N<sub>A</sub>** e N<sub>B</sub> sono connessi se gli ultimi `k-1`nt di N<sub>A</sub> corrispondono ai primi `k-1` nt di N<sub>B</sub>.  
+   Questo processo è effettuato contemporaneamente sul **revertito complementare** delle sequenze.  
+   ![graph generation](./velvet_1.jpg)  
+3. Semplificazione: Tutti i nodi che non interessano la generazione del path (non contengono biforcazioni) vengono uniti per ridurre l'utilizzo di memoria.  
+   ![semplification](./velvet_2.jpg)
+4. Rimozione degli errori. Abbiamo principalmente 3 tipologie di errori:
+    * Tips (errori di sequenziamento). Un nodo è considerato un tip se ricade in queste 3 casistiche:  
+        - è disconnesso da uno dei due lati;  
+        - l'arco che connette questo nodo ha una bassa *multiplicità* (multiplicity, il numero di volte in cui l'arco è osservato).
+    ![tips](./velvet_tips.pdf)    
+    * Bubbles: Utilizza un algoritmo che pesa le informazioni tra i nodi e considera quale sia il path più probabile.  
+    ![bubble](./velvet_bublbles.jpg)  
+    * Connessioni errate: sono eliminati tutti quei path che hanno una bassa multiplicità.  
  
 Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ottenuto.  
 
