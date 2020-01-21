@@ -140,12 +140,29 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     `velveth run_25 25 fastq -shortPaired Sample_alternate.fastq`  
 9.	Adesso applichiamo **velvetg** che si occuperà di costruire i grafi e creare i contig.  
     `velvetg run_25`  
-10.	Calcoliamo le statistiche per valutare l’assemblaggio:  
+10.	Calcoliamo le statistiche per valutare l’assemblaggio con **quast**:  
     `quast.py -s run_25/contigs.fa -o quast_25`  
 
 Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all'assemblaggio, utilizzando il programma [**Bandage** (Bioinformatics Application for Navigating De novo Assembly Graphs Easily)](http://rrwick.github.io/Bandage/) (**Figura 6**).  
 ![velvet_bandage](./velvet_k25_bandage.png)  
 ***FIGURA 6: DE BRUIJN GRAPH OTTENUTO CON VELVET E K-MER LUNGHI 25NT.***  
+
+Come potete notare dalla complessità del grafico conferma che la lunghezza dei K-mer scelta non è stata sufficiente per ottenere un assemblaggio ottimale, anche in considerazione dell’elevato numero di bubbles generati.  
+
+### SPAdes
+SPAdes è un altro algoritmo per l’assembly dei genomi che utilizza un approccio automatico per definire i grafi di de Bruijn partendo da k-mer di differente lunghezza (i.e 21, 33 e 55).  
+La riga di comando per laciare SPAdes è la seguente:  
+> spades.py --careful -o spades_application -1 Sample_1.fastq -2 Sample_2.fastq -s Sample_s.fastq  
+
+Per questioni di natura prettamente computazionale l’esecuzione di SPAdes è già stata effettuata. Però possiamo valutare la qualità dell'assemblaggio ottenuto.  
+Applichiamo quast sui dati generati con SPAdes:  
+1. creiamo la cartella che conterrà le informazioni dell'assembly di SPAdes:  
+    `mkdir ../spades && cd spades`  
+2. Eseguiamo quast:  
+    `quast.py -s /home/epigen/genome_assembly/spades_application/contigs.fasta -o quast_spades`  
+Anche in questo caso valutiamo il grafo generato (**Figura 7**).  
+![spades_bandage](./spades_bandage.png)  
+***FIGURA 7: DE BRUIJN GRAPH OTTENUTO CON SPADES***  
 
 
   
