@@ -6,7 +6,10 @@
 - [SCOPO DELL'ESERCITAZIONIE](#scopo-dellesercitazione)
     * [Velvet](#velvet)
         * [Meccanismo di funzionamento di Velvet](#meccanismo-di-funzionamento-di-velvet)
+        * [Applicazione di Velvet](#applicazione-di-velvet)
     * [SPAdes](#spades)
+        * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spades)
+        * [Applicazione di SPAdes](#applicazione-di-spades)
     
 
 ## INTRODUZIONE
@@ -15,7 +18,7 @@ Il sequenziamento di un genoma segue principalmente 4 fasi:
     * **Purezza**: l’utilizzo di una procedura di estrazione del DNA non appropriata per la matrice di partenza può portare alla presenza di contaminanti come *polisaccaridi*, *proteoglicani*, *proteine*, *metaboliti*, *pigmenti*, etc. Questi influenzano negativamente le procedure di preparazione delle librerie soprattutto per gli approcci PCR-free (**PacBio** e **Nanopore**) e **Mate-Pair** e riducono l’efficienza gli approcci che prevedono passaggi di amplificazione in PCR.  
     * **Integrità strutturale**: la presenza di *fenoli*, *etanolo* e *Sali* (e.g. EDTA) possono danneggiare il DNA. Una inappropriata conservazione del DNA a -20°C in acqua favorisce la degradazione per idrolisi. L’utilizzo di buffer per la conservazione a pH inadeguato favoriscono la formazione di nick.  
 2. **Frammentazione del DNA**: La frammentazione può essere ottenuta per *sonicazione*, *nebulizzazione* o *taglio enzimatico*. E’ un passaggio fondamentale perché il DNA presente nelle cellule deve essere frammentato nel modo più casuale possibile al fine di leggere ogni nucleotide ogni nucleotide del genoma ottenendone la migliore rappresentazione;  
-3. **Sequenziamento**. La profondità del sequenziamento influenza profondamente la qualità di un assemblaggio. Si utilizza il concetto di coverage per indicare che il numero di volte che in media viene osservato un nt. Quindi una stima della dimensione del genoma è fondamentale per settare adeguatamente i parametri di sequenziamento.  
+3. **Sequenziamento**. La profondità del sequenziamento influenza profondamente la qualità di un assemblaggio. Si utilizza il concetto di **coverage** per indicare che il numero medio di volte che una base del genoma viene osservata. Quindi una stima della dimensione del genoma è fondamentale per settare adeguatamente i parametri di sequenziamento.  
 4. **Analisi Bioinformatica e assemblaggio del genoma**.  
 
 Con il termine **assemblaggio** intendiamo l’operazione di ricostruzione della sequenza completa delle molecole di DNA (cromosomi, organelli e plasmidi) presenti in una cellula.  
@@ -123,6 +126,7 @@ Le informazioni relative alla rappresentazione i ciascun k-mer (coverage) sono u
     ![bubble](./velvet_bublbles.jpg)  
     * Connessioni errate: sono eliminati tutti quei path che hanno una bassa multiplicità.  
  
+#### Applicazione di Velvet
 Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ottenuto.  
 
 1.	Collegatevi al server.  
@@ -174,7 +178,19 @@ Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all
 Come potete notare dalla complessità del grafico conferma che la lunghezza dei K-mer scelta non è stata sufficiente per ottenere un assemblaggio ottimale, anche in considerazione dell’elevato numero di bubbles generati.  
 
 ### SPAdes
-SPAdes è un altro algoritmo per l’assembly dei genomi che utilizza un approccio automatico per definire i grafi di de Bruijn partendo da k-mer di differente lunghezza (i.e 21, 33 e 55).  
+SPAdes è un altro algoritmo per l’assembly dei genomi che utilizza un approccio automatico per definire i grafi di de Bruijn partendo da k-mer di differente lunghezza (i.e 21, 33 e 55).
+
+#### [Meccanismo di funzionamento di SPAdes](https://en.wikipedia.org/wiki/SPAdes_(software)
+SPAdes applica un processo a 4 stadi:
+**Stadio 1**: SPAdes costruisce il grado di de Bruijn utilizzando k-mer di lunghezza multipla in modo da rimuovere il rumore introdotto da read chimeriche e bubble;  
+**Stadio 2**: calcola la distanza esatta tra 2 k-mer nel genoma.  
+**Stadio 3**: Costruisce il *paired assembly graph*.  
+**stadio 4**: genera i contig.  
+
+   
+
+
+#### Applicazione di SPAdes   
 La riga di comando per laciare SPAdes è la seguente:  
 > spades.py --careful -o spades_application -1 Sample_1.fastq -2 Sample_2.fastq -s Sample_s.fastq  
 
