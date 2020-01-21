@@ -125,13 +125,9 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     -s Sample_s.fastq -q 25 -l 45
     ```  
 6.	riutilizziamo il FastQC per valutare le sequenze trimmate:  
-    ```
-    mkdir post_trimming
-    ```  
+    `mkdir post_trimming`  
     poi:   
-    ```
-    fastqc Sample_* --noextract -t 2 -o post_trimming
-    ```  
+    `fastqc Sample_* --noextract -t 2 -o post_trimming`  
     Scaricate i risultati del FastQC.  
 7.	Prima di lanciare Velvet è necessario utilizzare uno dei suoi applicativi per convertire le sequenze i un formato adeguato:  
     ```
@@ -141,19 +137,16 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     Controllate che il file sia stato generato.  
 8.	Iniziamo ad utilizzare Velvet per assemblare le nostre read. Utilizzeremo k-mer lunghi 25 nt.  
     Velvet si compone di due applicativi. Il primo è **velveth** e prepara i dati di partenza in un formato adeguato per le successive analisi:  
-    ```
-    velveth run_25 25 fastq -shortPaired Sample_alternate.fastq
-    ```  
+    `velveth run_25 25 fastq -shortPaired Sample_alternate.fastq`  
 9.	Adesso applichiamo **velvetg** che si occuperà di costruire i grafi e creare i contig.  
-    ```
-    velvetg run_25
-    ```  
+    `velvetg run_25`  
 10.	Calcoliamo le statistiche per valutare l’assemblaggio:  
     `quast.py -s run_25/contigs.fa -o quast_25`  
 
 Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all'assemblaggio, utilizzando il programma [**Bandage** (Bioinformatics Application for Navigating De novo Assembly Graphs Easily)](http://rrwick.github.io/Bandage/) (**Figura 6**).  
 ![velvet_bandage](./velvet_k25_bandage.png)  
 ***FIGURA 6: DE BRUIJN GRAPH OTTENUTO CON VELVET E K-MER LUNGHI 25NT.***  
+
 
   
 
