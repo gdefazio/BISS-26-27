@@ -1,6 +1,12 @@
 # GENOME ASSEMBLY
 
-## Introduzione
+- [Introduzione](#introduzione)
+- [APPROCCI BIOINFORMATICI PER L’ASSEMBLAGGIO DELLE READ: I GRAFI DI DE BRUIJN](#approcci-bioinformatici-per-lassemblaggio-delle-read-i-grafi-di-de-bruijn)
+- [VALUTAZIONE DELL’ASSEMBLAGGIO OTTENUTO](#valutazione-dellassemblaggio-ottenuto)
+- [SCOPO DELL'ESERCITAZIONIE](#scopo-dellesercitazione)
+    * [Velve](#velvet)
+
+## INTRODUZIONE
 Il sequenziamento di un genoma segue principalmente 4 fasi:  
 1. **Isolamento del genoma di interesse**. La qualità del DNA di partenza influenza profondamente il processo di sequenziamento ed assemblaggio del genoma. La qualità del DNA di partenza si misura in termini di **Purezza** e **Integrità strutturale**.  
     * **Purezza**: l’utilizzo di una procedura di estrazione del DNA non appropriata per la matrice di partenza può portare alla presenza di contaminanti come *polisaccaridi*, *proteoglicani*, *proteine*, *metaboliti*, *pigmenti*, etc. Questi influenzano negativamente le procedure di preparazione delle librerie soprattutto per gli approcci PCR-free (**PacBio** e **Nanopore**) e **Mate-Pair** e riducono l’efficienza gli approcci che prevedono passaggi di amplificazione in PCR.  
@@ -55,7 +61,7 @@ Gli esempi riportati nelle figure 3 e 4 mostrano una estrema semplificazione del
 In **Figura 5** è riportato un grafo di de Bruijn più complesso, che mostra delle biforcazioni dovute a polimorfismi e/o errori (nt in rosso) e un bubble (regione rappresentata in grande in 5b). Per esempio la risoluzione del bubble in figura 5b è possibile tenendo conto del coverage dei k-mer, in pratica il numero di volte che uno specifico k-mer è osservato nelle nostre reads.  
 K-mer con una bassa rappresentazione probabilmente presentano degli errori di sequenziamento. Bubble e biforcazioni si possono generare anche in presenza di regioni ripetute che rendono più complesso il processo di ricostruzione del genoma.  
 
-La scelta della lunghezza del k-mer influenza la costruzione e la risoluzione dei grafi. Programmi di assemblaggio, come *+Velvet** +([Zerbino and Birney, 2008](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2336801/)) e **SPAdes** ([Bankevich et al., 2012](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3342519/)), utilizzano un approccio a più step, in cui utilizzano k-mer di diversa lunghezza variabile (e.g. 25 – 31) e poi assemblano le read andando a utilizzare i grafi generati.   
+La scelta della lunghezza del k-mer influenza la costruzione e la risoluzione dei grafi. Programmi di assemblaggio, come **Velvet** +([Zerbino and Birney, 2008](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2336801/)) e **SPAdes** ([Bankevich et al., 2012](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3342519/)), utilizzano un approccio a più step, in cui utilizzano k-mer di diversa lunghezza variabile (e.g. 25 – 31) e poi assemblano le read andando a utilizzare i grafi generati.   
 
 Non ci sono regole particolari per la scelta della lunghezza dei k-mer ma possiamo assumere alcunu principi di base:
 * la lunghezza dei k-mer deve essere dispari per evitare la formazione di palindromi;
@@ -70,6 +76,25 @@ In linea generale k-mer corti aumentano la connettività ma (ottimo per regioni 
 I kmer più lunghi permettono di aumentare la specificità (ridurre il rumore durante l’assemblaggio) ma tendono a ridurre la connettività.    
 *Parliamo di coverage del kmer: non ci si riferisce al numero di volte in cui un singolo nt viene osservato ma al numero di volte in cui uno specifico k-mer è osservato. Come abbiamo precedentemente visto quest’ultima osservazione può essere utilizzata per risolvere le bubble nei grafi di de Bruijn.*
 
+## VALUTAZIONE DELL’ASSEMBLAGGIO OTTENUTO
+Il risultato ottimale di un assemblaggio è costituito da una serie di contig che rappresentano in rapporto 1:1 le molecole di DNA presenti nel genoma.  
+Questo goal è difficile da raggiungere per le caratteristiche intrinseche dei genomi come la presenza di regioni ripetute.  
+Per descrivere un assemblaggio possiamo utilizzare:  
+* la lunghezza totale combinata dei contig o degli scaffold;  
+* la media e la deviazione standard della lunghezza dei contig;  
+* **N50**: definisce la qualità dell’assemblaggio in termini di continuità. Operativamente si può considerare come la **mediana ponderata della lunghezza dei contig osservati**.  
+    Dato un set di contig ognuno con la sua lunghezza, N50 è definito come la lunghezza minima al 50% del genoma (se nota) o dell’assemblaggio.  
+    Se consideriamo 9 contig ordinati per lunghezza in modo decrescente 10, 9, 8, 7, 6, 5, 4, 3, 2 la dimensione totale del genoma è pari a 54.  
+    Metà della lunghezza del genoma è data da 10 + 9 + 8 = 27. Ne consegue che l’ N50 è pari a 8.  
+    Valori auspicabili di N50 sono nell’ordine di  decine di Kbp.  
+*	**L50**: il numero minimo di contig la cui lunghezza è pari a N50.  
+    Considerando l’esempio precedente L50 = 3.  
+    
+## SCOPO DELL'ESERCITAZIONE
+Lo scopo delle esercitazioni è l'assemblaggio del genoma  di ***Escherichia coli str. K-12 substr. MG1655***.  
+Utilizzeremo read prodotte con sequenziamento **Illumina** in modalità paired-end 2x100.  
+
+### VELVET
 
   
 
