@@ -95,6 +95,45 @@ Lo scopo delle esercitazioni è l'assemblaggio del genoma  di ***Escherichia col
 Utilizzeremo read prodotte con sequenziamento **Illumina** in modalità paired-end 2x100.  
 
 ### VELVET
+Velvet è un programma di assemblaggio di genomi basato sulla costruzione e risoluzione dei grafi di de Bruijn.  
+In particolare, le read di sequenziamento sono scomposte in k-mer, che vengono poi utilizzati per la costruzione dei grafi.  
+Le informazioni relative alla rappresentazione i ciascun k-mer (coverage) sono utilizzate per la risoluzione di strutture complesse nei grafi, come ad esempio le bubbles.  
+ 
+Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ottenuto.  
+
+1.	Collegatevi al server.  
+2.	Posizionatevi nella vs cartella.  
+    `cd Cognome_Nome`  
+3.	Creiamo la cartella contenente i dati del genome assembly e spostiamoci al suo interno:  
+    `mkdir genome_assembly && cd genome_assembly`  
+    poi:  
+    `mkdir velvet && cd velvet`  
+4.	Eseguiamo il [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) per valutare la qualità delle sequenze:  
+    `mkdir pre_trimming` 
+    poi:  
+    ```
+    fastqc --noextract -t 2 \
+    /home/epigen/genome_assembly/s_6_1.fastq \
+    /home/epigen/genome_assembly/s_6_2.fastq -o pre_trimming
+    ```  
+5.	effettuiamo il trimming delle sequenze:
+sickle pe -f /home/epigen/genome_assembly/s_6_1.fastq \
+-r /home/epigen/genome_assembly/s_6_2.fastq \
+-t sanger -o Sample_1.fastq -p Sample_2.fastq \
+-s Sample_s.fastq -q 25 -l 45
+6.	riutilizziamo il fastqc per valutare le sequenze trimmate:
+mkdir post_trimming
+fastqc Sample_* --noextract -t 2 -o post_trimming
+7.	Prima di lanciare Velvet è necessario utilizzare uno dei suoi applicativi per convertire le sequenze i un formato adeguato:
+shuffleSequences_fastq.pl Sample_1.fastq Sample_2.fastq \
+Sample_alternate.fastq
+8.	Iniziamo ad utilizzare Velvet per assemblare le nostre read. Inizieremo con k-mer lunghi 25 nt. Velvet si compone di due applicativi. Il primo è velveth e prepara i dati di partenza in un formato adeguato per le successive analisi:
+velveth run_25 25 fastq -shortPaired Sample_alternate.fastq
+9.	Adesso applichiamo velvetg che si occuperà di costruire i grafi e creare i contig.
+velvetg run_25
+10.	Calcoliamo le statistiche per valutare l’assemblaggio:
+quast.py -s run_25/contigs.fa -o quast_25
+
 
   
 
