@@ -109,21 +109,28 @@ Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ott
     poi:  
     `mkdir velvet && cd velvet`  
 4.	Eseguiamo il [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) per valutare la qualità delle sequenze:  
-    `mkdir pre_trimming` 
+    `mkdir pre_trimming`   
     poi:  
     ```
     fastqc --noextract -t 2 \
     /home/epigen/genome_assembly/s_6_1.fastq \
     /home/epigen/genome_assembly/s_6_2.fastq -o pre_trimming
     ```  
-5.	effettuiamo il trimming delle sequenze:
-sickle pe -f /home/epigen/genome_assembly/s_6_1.fastq \
--r /home/epigen/genome_assembly/s_6_2.fastq \
--t sanger -o Sample_1.fastq -p Sample_2.fastq \
--s Sample_s.fastq -q 25 -l 45
-6.	riutilizziamo il fastqc per valutare le sequenze trimmate:
-mkdir post_trimming
-fastqc Sample_* --noextract -t 2 -o post_trimming
+5.	effettuiamo il trimming delle sequenze:  
+    ```
+    sickle pe -f /home/epigen/genome_assembly/s_6_1.fastq \
+    -r /home/epigen/genome_assembly/s_6_2.fastq \
+    -t sanger -o Sample_1.fastq -p Sample_2.fastq \
+    -s Sample_s.fastq -q 25 -l 45
+    ```  
+6.	riutilizziamo il fastqc per valutare le sequenze trimmate:  
+    ```
+    mkdir post_trimming
+    ```  
+    poi:   
+    ```
+    fastqc Sample_* --noextract -t 2 -o post_trimming
+    ```  
 7.	Prima di lanciare Velvet è necessario utilizzare uno dei suoi applicativi per convertire le sequenze i un formato adeguato:
 shuffleSequences_fastq.pl Sample_1.fastq Sample_2.fastq \
 Sample_alternate.fastq
