@@ -4,7 +4,7 @@ Ogni studente dovrà presentare una relazione relativa ai laboratori svolti entr
 Esempio: supponiamo che l'esame sia previsto per il 04/02.   
  
 |29 Gennaio|30 Gennaio|31 Gennaio|01 Febbraio|02 Febbraio|03 Febbraio|04 Febbraio|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Mercoledì|Giovedì|Venerdì|Sabato|Domenica|Lunedì|Martedì|
 |LAVORATIVO|LAVORATIVO|LAVORATIVO|NON LAVORATIVO|NON LAVORATIVO|LAVORATIVO|**ESAME**|
 |**LIMITE ULTIMO PER LA CONSEGNA**|4|3|3|3|2|1|
