@@ -26,3 +26,51 @@ La relazione dovrà riguardare tutte le seguenti tematiche:
     - Numero di Ortologhi annotati.
 
 
+|Nome|Cognome|Gene Name|
+|:---:|:---:|:---:|
+|Damiano|Amoruso|small nuclear ribonucleoprotein polypeptide C|
+|Giulia|Angelini|aminoacylase 1|
+|Alessandro|Bastone|membrane spanning 4-domains A18|
+|Laura |Bellino|TBC1 domain family member 24|
+|Federica|Bisceglia|von Willebrand factor C domain containing 2|
+|Roberta|Bucci|TNF alpha induced protein 8 like 3|
+|Simona|Buonanno|KN motif and ankyrin repeat domains 3|
+|Monica|Campioni|intraflagellar transport 88|
+|Giulia|Casamassima|histidine triad nucleotide binding protein 3|
+|Assunta|Catino|CD27 molecule|
+|Clarisssa|Chirulli|docking protein 4|
+|Valentina|Consoli|retinol binding protein 4|
+|Lorenza|Cutrone|ELAV like RNA binding protein 1|
+|Alessia|Daponte|fibroblast growth factor receptor 1|
+|Federica Concetta|Di Noia|chromodomain helicase DNA binding protein 1|
+|Ruggiero|Dipaola|heterogeneous nuclear ribonucleoprotein U|
+|Maurizio|Fanelli|transmembrane protein 132E|
+|Olga|Favale|DnaJ heat shock protein family (Hsp40) member C12|
+|Francesca|Filannino|cation channel sperm associated 1|
+|Francesco|Ladisa|thromboxane A synthase 1|
+|Emanuela|Lavarra|gamma-aminobutyric acid type A receptor subunit rho2|
+|Nunzio Simone|Lorito|NmrA like redox sensor 1|
+|Sabrina|Luchena|cancer susceptibility 1|
+|Camilla|Mandorino|PAT1 homolog 2|
+|Anna Maria|Marinelli|RFNG O-fucosylpeptide 3-beta-N-acetylglucosaminyltransferase|
+|Elisabetta|Marsala|interleukin 16|
+|Antonio|Martino|olfactory receptor family 5 subfamily W member 2|
+|Anna |Mastrangelo|RB binding protein 6, ubiquitin ligase|
+|Stefano|Mazzeo|ubiquitin specific peptidase 31|
+|Miriana|Mazzone|heat shock protein family E (Hsp10) member 1|
+|Chiara|Morrone|flavin containing dimethylaniline monoxygenase 3|
+|Ignazio|Palermo|synaptojanin 1|
+|Chiara|Pellegrino|nuclear receptor 2C2 associated protein|
+|Antonio|Radesco|protein phosphatase 2 regulatory subunit B'alpha|
+|Martina|Rella|mitochondrial ribosomal protein L13|
+|Cinzia|Riccardi|defensin beta 110|
+|Andrea|Rizzo|SEC24 homolog B, COPII coat complex component|
+|Giovanna|Saracino|family with sequence similarity 177 member A1|
+|Serena|Sebastiano|thiamine triphosphatase|
+|Giorgia|Tarricone|gelsolin|
+|Claudia|Telegrafo|trinucleotide repeat containing adaptor 6B|
+|Federico|Tridente|collectin subfamily member 12|
+|Desiree|Valente|shieldin complex subunit 3|
+|Rossella|Valenzano|FXYD domain containing ion transport regulator 5|
+|Antonio Benedetto|Ventura|von Willebrand factor A domain containing 5A|
+|Alessandra|Zecchillo|TSPY like 4

@@ -75,28 +75,7 @@
       <workItem from="1578308719402" duration="15240000" />
       <workItem from="1578587457624" duration="19078000" />
       <workItem from="1579078000465" duration="1265000" />
-      <workItem from="1579168067717" duration="10644000" />
-    </task>
-    <task id="LOCAL-00104" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
-      <created>1578912024100</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1578912024101</updated>
-    </task>
-    <task id="LOCAL-00105" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
-      <created>1578916166050</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1578916166050</updated>
-    </task>
-    <task id="LOCAL-00106" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
-      <created>1578916637016</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1578916637016</updated>
+      <workItem from="1579168067717" duration="11445000" />
     </task>
     <task id="LOCAL-00107" summary="sistemazione README.md&#10;Aggiunta e sistemazione lezione metabarcoding&#10;Dati per connessione al server">
       <created>1578916678149</created>
@@ -420,7 +399,28 @@
       <option name="project" value="LOCAL" />
       <updated>1579608296984</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="sistemazione README.md&#10;Aggiunta sezione delle relazioni">
+      <created>1579608620776</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1579608620776</updated>
+    </task>
+    <task id="LOCAL-00154" summary="sistemazione README.md&#10;Aggiunta sezione delle relazioni">
+      <created>1579608678524</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1579608678524</updated>
+    </task>
+    <task id="LOCAL-00155" summary="sistemazione README.md&#10;Aggiunta sezione delle relazioni">
+      <created>1579608735904</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1579608735904</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,15 +460,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="sistemazione README.md&#10;Aggiunta sezione delle relazioni" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1579608678337">
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2" timestamp="1579608735611">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579608678337" />
+    <state x="206" y="0" width="1028" height="900" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579608735611" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.800.600@0.0.800.600" timestamp="1579088999391" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579608680227">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579608737008">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579608680227" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579608737008" />
     <state x="0" y="80" key="Vcs.Push.Dialog.v2/0.0.800.600@0.0.800.600" timestamp="1579089000861" />
     <state x="399" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1578646985787">
       <screen x="0" y="23" width="1440" height="825" />
