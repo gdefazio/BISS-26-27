@@ -1,5 +1,7 @@
 # RELAZIONE
 
+:skull: :skull: :skull:  
+
 Ogni studente dovrà presentare una relazione relativa ai laboratori svolti entro **5gg LAVORATIVI**  dalla data in cui è previsto l’esame.  
 Esempio: supponiamo che l'esame sia previsto per il 04/02.   
  

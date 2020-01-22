@@ -75,4 +75,4 @@ Letture consigliate:
 - [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
 
 
-### [Relazioni](./relazioni.md)
+### [Relazioni](./relazioni.md)  :gift:
