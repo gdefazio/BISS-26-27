@@ -278,4 +278,8 @@ In particolare:
       --p-pairwise
     ```  
 
+***PER SCARICARE TUTTI I DATI PRODOTTI DURANTE L'ESERCITAZIONE UTILIZZATE IL LINK SOTTOSTANTE***
+:arrow_down_small: [**LINK**](https://drive.google.com/open?id=1tA2PmUEpD2x_Z-hZ1J6xqbxOrw1WQpUS)
+
+
 [Back to the top](../README.md) 
