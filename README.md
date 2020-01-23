@@ -72,7 +72,7 @@ Letture consigliate:
 
 ### Esercitazione 6 (21-22/01/2020)
 ### Genome Assembly
-- [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
+- [X] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
 
 
 ### [Relazioni](./relazioni.md)  :gift:
