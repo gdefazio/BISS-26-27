@@ -11,11 +11,12 @@ La ricerca nel settore della Bioinformatica si occupa quindi di sviluppare gli a
 
 La Bioinformatica è per sua natura **multidisciplinare** richiedendo il concorso di competenze diverse (Biologia Molecolare, Biochimica, Fisiologia, Genetica, Informatica, Matematica, Statistica, Chimica, Fisica, Ingegneria, ecc.) ed ha applicazioni pratiche in vasti settori della scienza.   
 
-L’aumento esponenziale dei dati biologici, cui assistiamo in questi anni a seguito del completamento di numerosi progetti di sequenziamento genomico (incluso il genoma umano) e dell’avvio di numerosi progetti su larga scala per lo studio del trascrittoma, del proteoma e del microbioma di numerosi organismi, comporta una crescente importanza della Bioinformatica in tutti i settori della ricerca a livello biomolecolare. [](https://www.ncbi.nlm.nih.gov/genbank/statistics/)
+L’aumento esponenziale dei dati biologici, cui assistiamo in questi anni a seguito del completamento di numerosi progetti di sequenziamento genomico (incluso il genoma umano) e dell’avvio di numerosi progetti su larga scala per lo studio del trascrittoma, del proteoma e del microbioma di numerosi organismi, comporta una crescente importanza della Bioinformatica in tutti i settori della ricerca a livello biomolecolare. [https://www.ncbi.nlm.nih.gov/genbank/statistics/](https://www.ncbi.nlm.nih.gov/genbank/statistics/)
   
 I principali tipi di dati biologici sono:  
     -	**Sequenze nucleotidiche** (vedi [https://www.ncbi.nlm.nih.gov/guide/dna-rna/](https://www.ncbi.nlm.nih.gov/guide/dna-rna/) per una lista delle risorse di sequenze di DNA o RNA oppure [http://www.ebi.ac.uk/ena](http://www.ebi.ac.uk/ena) per un archivio di informazioni sul sequenziamento nucleotidico nel mondo);  
     -	**Sequenze proteiche** (vedi [https://www.ncbi.nlm.nih.gov/guide/proteins/](https://www.ncbi.nlm.nih.gov/guide/proteins/) per un elenco di risorse proteiche oppure [http://us.expasy.org/sprot/](http://us.expasy.org/sprot/) per informazioni su una delle più importanti risorse di sequenze proteiche, la *UniProtKB/Swiss-Prot*);   
+    -	**Dati Genomi** (vedi [ncbi.nlm.nih.gov/genome/](ncbi.nlm.nih.gov/genome/) banca pubblica che collezione sequenze ed annotazioni dei genomi);   
     -	**Strutture tridimensionali** di proteine ed altre macromolecole (vedi [https://www.ncbi.nlm.nih.gov/guide/domains-structures/](https://www.ncbi.nlm.nih.gov/guide/domains-structures/) per le risorse di domini e strutture molecolari oppure [http://www.rcsb.org/pdb/](http://www.rcsb.org/pdb/) per la risorsa di macromolecole biologiche *PDB*);     
     -	**Dati di espressione** ([https://www.ncbi.nlm.nih.gov/guide/genes-expression/](https://www.ncbi.nlm.nih.gov/guide/genes-expression/) per le risorse relative all’espressione dei geni e ai fenotipi correlati);   
     -	**Dati metabolici** ([http://www.genome.jp/kegg/](http://www.genome.jp/kegg/) per una risorsa sulle relazioni metaboliche tra i geni e i loro prodotti);  
@@ -43,3 +44,5 @@ Prima di iniziare queste Esercitazioni è opportuno ricordare alcuni concetti ba
 Letture consigliate:  
 - Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 1-6.  
 - Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)
+
+[Back to the top](../README.md)
