@@ -35,10 +35,10 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
 5.	Restringiamo la selezione richiedendo solo le sequenze nucleotidiche della subunità 4. Utilizzeremo l'operatore logico **AND**;   
     a.	`"cytochrome c oxidase"` AND `"subunit 4"`  
     <details><summary></summary>
-    <p>
+    <p>  
     <b>3.766</b>
     </p>
-    </details>
+    </details>   
     
     
     b.	`"cytochrome c oxidase"` AND `"subunit iv"`  
@@ -141,13 +141,19 @@ Interrogate la banca dati “Genome”.
 - Quanti genomi di `Escherichia coli` sono disponibili?  
 - Quanti di `Fusobacterium nucleatum`?  
    
+## Esercizio 9. 
+Proviamo adesso a ricercare qualcosa di più interessante.  
+- Quanti genomi di `severe acute respiratory syndrome coronavirus 2` sono disponibili?  
+- Aprite il link alla entry di riferimento e scaricate la sequenza genomica in formato `FASTA`.  
+  
+
 
 Letture consigliate:  
 Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 7-12   
 Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)  
 
 
-[Ricerca bibliografica nella banca dati PubMed ](./pubmed.md)       ``                     
+[Ricerca bibliografica nella banca dati PubMed ](./pubmed.md)                     
 
 
 [Back to the top](../README.md)

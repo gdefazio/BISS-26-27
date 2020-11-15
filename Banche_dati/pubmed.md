@@ -31,4 +31,7 @@ Una volta che sono stati selezionati gli articoli di nostro interesse la banca d
 i)	Quante sequenze nucleotidiche (del database GenBank) di Homo sapiens sono riportate in articoli pubblicati nel `2010` che trattano del gene `MTERF`?  
 
 
+[GISAID](./gisaid.md)  
+
+
 [Back to the top](../README.md)
