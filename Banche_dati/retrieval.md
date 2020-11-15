@@ -18,7 +18,7 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
 3.	Richiedi la sequenza nucleotidica desiderata attraverso l’uso del seguente termine di ricerca: `"cytochrome c oxidase"`;  
     <details><summary></summary>
     <p>
-    <b>896.384</b>
+    <b>634.020</b>
     </p>
     </details>
 
@@ -28,32 +28,33 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
     `"cytochrome c oxydase"` <b>158</b>
     </p>
     <p>  
-    `"cytochrome c oxydase"` <b>220</b>
+    `"cytochrome c oxydase"` <b>221</b>
     </p>
     </details>   
 
 5.	Restringiamo la selezione richiedendo solo le sequenze nucleotidiche della subunità 4. Utilizzeremo l'operatore logico **AND**;   
-    a.	`"cytochrome c oxidase"` AND `"subunit 4"` 
+    a.	`"cytochrome c oxidase"` AND `"subunit 4"`  
     <details><summary></summary>
     <p>
-    <b>95.059</b>
+    <b>3.766</b>
     </p>
     </details>
+    
     
     b.	`"cytochrome c oxidase"` AND `"subunit iv"`  
     <details><summary></summary>
     <p>
-    <b>43.409</b>
+    <b>2.577</b>
     </p>
     </details>
 
 NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries diverso.  
 
-6.	Per includere tutte le sequenze usa l’operatore logico **OR** 
+6.	Per includere tutte le sequenze usa l’operatore logico **OR**  
     a.	`"cytochrome c oxidase" AND ("subunit 4" OR "subunit iv")`  
     <details><summary></summary>
     <p>
-    <b>134.334</b>
+    <b>6.035</b>
     </p>
     </details>  
 
@@ -61,7 +62,7 @@ NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries di
     a.	`"cytochrome c oxidase" AND ("subunit 4" OR "subunit iv" OR "cox4")`
     <details><summary></summary>
     <p>
-    <b>134.445</b>
+    <b>6.099</b>
     </p>
     </details>
      
@@ -69,7 +70,7 @@ NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries di
     Infine clicchiamo su “add”. In questo modo otterremo tutte le sequenze nucleotidiche specifiche dell’uomo.  
     <details><summary></summary>
     <p>
-    <b>49.313</b>
+    <b>79</b>
     </p>
     </details>
 
@@ -83,7 +84,7 @@ Prima di procedere al prossimo punto cliccare su “clear” per eliminare i lim
 ![advanced](./advanced.jpg)  
     <details><summary></summary>
     <p>
-    <b>49.313</b>
+    <b>79</b>
     </p>
     </details>
     
@@ -92,7 +93,7 @@ Prima di procedere al prossimo punto cliccare su “clear” per eliminare i lim
     NB: Il numero di sequenze trovate si è ridotto.
     <details><summary></summary>
     <p>
-    <b>49.300</b>
+    <b>69</b>
     </p>
     </details>
     
