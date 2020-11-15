@@ -7,6 +7,7 @@
 - [] [Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
 - [] [Sistemi di retrieval](Banche_dati/retrieval.md)  
 - [] [PubMed](Banche_dati/pubmed.md)  
+- [] [GISAID](Banche_dati/gisaid.md)  
 ### Esercitazione 2 ()
 ### Allineamento tra sequenze
 - [] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
