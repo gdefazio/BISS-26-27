@@ -1,5 +1,8 @@
 # **ESERCITAZIONI PRATICHE DEL CORSO DI BIOINFORMATICA ED ANALISI FUNZIONALE DEL GENOMA**  
 
+Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https://www.menti.com/9awgurbzuo).  
+
+
 ## Programma
 ### Esercitazione 1 (16/11/2020)
 ### Banche dati: definizioni generali e sistemi di retrieval
