@@ -17,7 +17,7 @@ Nella home page troverete:
  - Un tool che mappa i numeri di casi nel mondo;  
  
 Nella sezione **Database Features** possiamo accedere al genoma di riferimento in GISAID per hCoV-19.  
-*** E' lo stesso genoma che abbiamo ottenuto dalla banca dati Genome di NCBI? ***  
+***E' lo stesso genoma che abbiamo ottenuto dalla banca dati Genome di NCBI?***  
 Per ciascuna delle proteine codificate dal genoma di hCoV-19 è possibile ottenere le informazioni generali ed i lavori scientifici
 che le hanno descritte.  
 

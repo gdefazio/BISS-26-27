@@ -6,11 +6,11 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 ## Programma
 ### Esercitazione 1 (16/11/2020)
 ### Banche dati: definizioni generali e sistemi di retrieval
-- [] [Introduzione alla Bioinformatica](./Intro_Bioinfo.md)
-- [] [Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
-- [] [Sistemi di retrieval](Banche_dati/retrieval.md)  
-- [] [PubMed](Banche_dati/pubmed.md)  
-- [] [GISAID](Banche_dati/gisaid.md)  
+- [X] [Introduzione alla Bioinformatica](./Intro_Bioinfo.md)
+- [X] [Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
+- [X] [Sistemi di retrieval](Banche_dati/retrieval.md)  
+- [X] [PubMed](Banche_dati/pubmed.md)  
+- [X] [GISAID](Banche_dati/gisaid.md)  
 ### Esercitazione 2 ()
 ### Allineamento tra sequenze
 - [] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
