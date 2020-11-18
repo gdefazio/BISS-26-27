@@ -11,7 +11,7 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 - [X] [Sistemi di retrieval](Banche_dati/retrieval.md)  
 - [X] [PubMed](Banche_dati/pubmed.md)  
 - [X] [GISAID](Banche_dati/gisaid.md)  
-### Esercitazione 2 ()
+### Esercitazione 2 (30/11/2020)
 ### Allineamento tra sequenze
 - [] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
 - [] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
