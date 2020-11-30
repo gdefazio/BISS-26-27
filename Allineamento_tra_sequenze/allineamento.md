@@ -9,23 +9,25 @@ L’allineamento di due o più sequenze riporta **la rappresentazione di un’i
 Esso, infatti, presuppone che le sequenze da allineare siano **omologhe** e quindi **filogeneticamente correlate**.  
 _Allineare_ due sequenze significa rappresentarle una sotto l'altra, incolonnando i residui in modo da formare una matrice.  
 ```
-AA-CTGAATT
-|| ||| |||
-AAACTGCATT
+FTFTALILLAVAV
+|  ||| ||| ||
+F--TAL-LLA-AV
 ```   
 L’allineamento può essere realizzato utilizzando algoritmi di **allineamento globale**, che quindi considerano l’intera lunghezza delle sequenze in esame, o **algoritmi di allineamento locale**.   
 
 ```
-ACGTCGCCCCAA-CTGAATTATTTGCCATT
-          || ||| |||
-          AAACTGCATT
+FTFTALILLA-VAV
+  |||| ||| | 
+--FTAL-LLAAV-
 ```   
 
 ## Caratterizzazione di una sequenza mediante ricerca di similarità in banche dati: Applicazione di BLAST per la ricerca di sequenze omologhe  
 Il programma **BLAST (Basic Local Alignment Search Tool)** può essere utilizzato per trovare in banca dati sequenze simili (spesso anche omologhe) a quella che stiamo esaminando.  
 Come abbiamo visto in precedenza (Ricerca in Banche dati mediante “parole chiave”) l’interrogazione di una banca dati può essere effettuata anche attraverso “sistemi di retrieval” ricercando criteri testuali nelle annotazioni contenute nelle entries delle sequenze.  
 Talvolta, però, le sequenze collezionate nella banca dati non sono correttamente annotate e quindi potrebbe non essere possibile selezionarle mediante la ricerca di parole chiave.  
-In questo caso è possibile eseguire la ricerca sulla base della similarità di sequenza utilizzando programmi di “database searching” come il **BLAST (Basic Local Alignment Search Tool)** che confronta una sequenza sonda (per convenzione definita **QUERY**) con tutte le sequenze di una banca dati.    
+In questo caso è possibile eseguire la ricerca sulla base della similarità di sequenza utilizzando programmi di “database searching” come il **BLAST (Basic Local Alignment Search Tool)** che confronta una sequenza sonda (per convenzione definita **QUERY**) con tutte le sequenze di una banca dati.  
+![blast_alg](blast_glossary-Image001.jpg)  
+[https://www.ncbi.nlm.nih.gov/books/NBK62051/**](https://www.ncbi.nlm.nih.gov/books/NBK62051/)  
 Esistono diverse versioni del BLAST:  
 - **blastp**: permette di allineare QUERY aminoacidiche contro un database di riferimento proteico;  
 - **blastn**: permette di allineare QUERY nucleotidiche contro un database di riferimento nucleotidico;  
