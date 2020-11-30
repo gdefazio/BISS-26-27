@@ -32,7 +32,7 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 ### Metabarcoding
 - [ ] [Metabarcoding](./Metabarcoding/metabarcoding.md)
 
-### Esercitazione 6 (21-22/01/2020)
+### Esercitazione 6 ()
 ### Genome Assembly
 - [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
 
