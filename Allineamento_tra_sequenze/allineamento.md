@@ -1,6 +1,9 @@
 # ALLINEAMENTO DI SEQUENZE   
 **L'assunzione di base su cui si base il confronto tra sequenze è che se due sequenze sono identiche, avranno un comportamento identico nelle cellule viventi**.  
-Possiamo generalizzare questo concetto, dicendo che più due sequenze sono similari tra loro, maggiore sarà la possibilità che abbiano una funzione similare.  
+  
+Possiamo generalizzare questo concetto, dicendo che **più due sequenze sono similari tra loro, maggiore sarà la probabilità che abbiano una funzione similare**.  
+Questo principio ci permettedere di desumere le proprietà di una sequenza nucleotidica o aminocidica ignota, basandosi sulle caratteristiche della sequenza nota con cui riusciamo ad ottenre un allineamento.  
+
 
 L’allineamento di due o più sequenze riporta **la rappresentazione di un’ipotesi di omologia posizionale** tra le basi o gli aminoacidi delle sequenze considerate.  
 Esso, infatti, presuppone che le sequenze da allineare siano **omologhe** e quindi **filogeneticamente correlate**.  
@@ -29,6 +32,8 @@ Esistono diverse versioni del BLAST:
 - **blastx**: permette di allineare QUERY nucleotidiche tradotte contro un database di riferimento proteico :sob:;   
 - **tblastn**: permette di allineare QUERY aminoacidica contro un database di riferimento nucleotidico tradotto :astonished:;  
 - **tblastx**: sia la QUERY che il database sono nucleotidici e vengono tradotti :scream:;   
+- **Gapped blast**: versione aggiornata dell'algortimo in cui sono ammessi gap durante la fase di estensione :scream:;
+- **PSI-BLAST**: Algoritmo che ricalcola gli score di allineamento interattivamente sulla base dei match osservati :scream:;
 
 Supponiamo di voler cercare le sequenze simili alla *sub-unità IV della citocromo c ossidasi umana* (Accession Number: **P13073**).  
 Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:  
