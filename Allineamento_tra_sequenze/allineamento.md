@@ -28,6 +28,7 @@ Talvolta, però, le sequenze collezionate nella banca dati non sono correttamen
 In questo caso è possibile eseguire la ricerca sulla base della similarità di sequenza utilizzando programmi di “database searching” come il **BLAST (Basic Local Alignment Search Tool)** che confronta una sequenza sonda (per convenzione definita **QUERY**) con tutte le sequenze di una banca dati.  
 ![blast_alg](blast_glossary-Image001.jpg)  
 [https://www.ncbi.nlm.nih.gov/books/NBK62051/**](https://www.ncbi.nlm.nih.gov/books/NBK62051/)  
+  
 Esistono diverse versioni del BLAST:  
 - **blastp**: permette di allineare QUERY aminoacidiche contro un database di riferimento proteico;  
 - **blastn**: permette di allineare QUERY nucleotidiche contro un database di riferimento nucleotidico;  
