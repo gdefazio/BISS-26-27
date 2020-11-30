@@ -5,7 +5,7 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 
 ## Programma
 ### Esercitazione 1 (16/11/2020)
-### Banche dati: definizioni generali e sistemi di retrieval
+#### Banche dati: definizioni generali e sistemi di retrieval
 - [X] [Introduzione alla Bioinformatica](./Intro_Bioinfo.md)
 - [X] [Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
 - [X] [Sistemi di retrieval](Banche_dati/retrieval.md)  
@@ -13,14 +13,14 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 - [X] [GISAID](Banche_dati/gisaid.md)  
 
 ### Esercitazione 2 (30/11/2020)
-### Allineamento tra sequenze
+#### Allineamento tra sequenze
 - [ ] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
 - [ ] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
+#### Genome Browser
+- [ ] [ENSEMBL](./Genome_Browser/Ensembl.md)
+- [ ] [UCSC](./Genome_Browser/UCSC.md)
 
 ### Esercitazione 3 ()
-### Genome Browser
-- [ ] [ENSEMBL](./Genome_Browser/Ensembl.md)  
-- [ ] [UCSC](./Genome_Browser/UCSC.md)  
 - [ ] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
 
 ### Esercitazione 4 ()
