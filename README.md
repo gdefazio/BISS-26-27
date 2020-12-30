@@ -14,13 +14,14 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 
 ### Esercitazione 2 (30/11/2020)
 #### Allineamento tra sequenze
-- [ ] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
-- [ ] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
+- [X] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
+- [X] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
 #### Genome Browser
-- [ ] [ENSEMBL](./Genome_Browser/Ensembl.md)
-- [ ] [UCSC](./Genome_Browser/UCSC.md)
+- [X] [ENSEMBL](./Genome_Browser/Ensembl.md)
 
-### Esercitazione 3 ()
+### Esercitazione 3 (08/01/2021)
+- [ ] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md)
+- [ ] [UCSC](./Genome_Browser/UCSC.md)
 - [ ] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
 
 ### Esercitazione 4 ()
