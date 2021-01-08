@@ -15,39 +15,39 @@ Per accedervi dovrete tutti scaricare il file chiave che trovate in questa carte
 - Per gli utenti dei sistemi UNIX-based (mac) scaricate il file `bmmm1920` nella cartella **Downloads**.  
 - Per gli utenti windows dovrete scaricare il file `bmmm1920.ppk` e non è un problema dove lo scaricherete.  
 
+Una volta completato il download del file non lo dovete aprire. Al massimo spostatelo nella cartella che trovate più comoda.  
+***Soprattutto per chi di voi utilizza sistemi UNIX-based consiglio di non spostare il file, così lo troverà direttamente in download quando dovrà utilizzare il terminale.***  
+
 ## Sistemi operativi UNIX-BASED
-Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il terminale e digitare i seguenti comandi:  
+Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il **terminale** (cercate l'applicazione terminale tra quelle disponibili) e digitare i seguenti comandi:    
+Il comando generale è:  
 ```
 chmod 600 /path/to/the/key/bmmm1920.ppk
 
 ssh -i /path/to/the/key/bmmm1920.ppk epigen@srv00.recas.ba.infn.it 
 ```
+
 Se avete scaricato il file in Downloads:  
 ```
 chmod 600 ~/Downloads/bmmm1920.txt
 
-ssh -i ~/Downloads/bmmm1920.txt epigen@srv00.recas.ba.infn.it 
+ssh -i -X ~/Downloads/bmmm1920.txt epigen@srv00.recas.ba.infn.it 
 ```
 Alla prima connessione il sistema vi chiederà se il server sia "fidato" e dovrete digitare `yes`.  
 Di seguito vi chiederà la **password** (vi verrà comunicata al momento) e dovrete inserirla. **Notate che il cursore non si muoverà mentre digitate la password!!!**.  
 Se avrete digitato la password correttamente avre avuto accesso al server.  
 
 ## WINDOWS
-In windows dovremo utilizzare **Putty**.  
-1. Avviate Putty con un doppio click del mouse sul file `putty.exe`.  
-![putty](./putty.png)
-2. Cliccate su ``SSH`` e successivamente su ``Auth``. Nella finestra di immissione della key cliccate su ``Browse..``e selezionate il file `bmmm1920.ppk`.
-![key](./key.png)
-3. A questo punto selezionate ``Session``:
-    - Nel panello ``Host Name (or IP address)`` scrivete l'indirizzo del server;  
-    - In `Saved Sessions` scrivete **srv00** e cliccate su `save`(in questo modo creiamo un profilo di connessione);  
-    - Cliccate su **open**.  
-        * Il sistema vi chiederà l'utente di login: scrivete `epigen`  
-        * di seguito vi chiederà la password e scriverete quella che vi sarà comunicata.  
-Se avete salvato la sessione al prossimo utilizzo vi basterà selezionare `srv00 e cliccare su `load`.  
-![session](./session.png)
+In windows dovremo utilizzare **MobaXterm**.  
+1. Avviate `MobaXterm`;  
+2. Cliccate su **Session**;  
+![moba1](./moba1.jpg)  
+3. Cliccate su `SSH`:  
+    - in `Remote host` inserite l'indirizzo del server: `srv00.recas.ba.infn.it`;  
+    - Spuntate `Specific username` e nel campo adiacente scrive **epigen**;  
+    - in `advanced SSH settings` spuntate `Use private key` e dal menù a tendina selezionate il file che avete scaricato.  
+    - Cliccate su *OK* ed avviate la connessione.  
 
-[Indice](#accesso-al-server-ed-introduzione-al-bash)
 
 # Configurazion FileZilla
 **FileZilla** è un tool che ci permette di scambiare file tra il nostro computer ed il server.  
