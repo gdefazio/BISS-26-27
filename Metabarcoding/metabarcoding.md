@@ -245,36 +245,43 @@ In particolare:
     qiime diversity core-metrics-phylogenetic \
       --i-phylogeny rooted-tree_16S.qza \
       --i-table table_16S.qza \
-      --p-sampling-depth 40000 \
-      --m-metadata-file sample-metadata.tsv \
+      --p-sampling-depth 15000 \
+      --m-metadata-file metadata.tsv \
       --output-dir core-metrics-results_16S
     ```  
 * Verifichiamo se vi siano delle differenze significative tra gli indici di alpha diversità:    
     ```  
     qiime diversity alpha-group-significance \
-      --i-alpha-diversity core-metrics-results_16S/faith_pd_vector.qza \
-      --m-metadata-file sample-metadata.tsv \
-      --o-visualization core-metrics-results_16S/faith-pd-Condition-significance_16S.qzv
+      --i-alpha-diversity core-metrics-results_16S/shannon_vector.qza \
+      --m-metadata-file metadata.tsv \
+      --o-visualization core-metrics-results_16S/shannon-Condition-significance_16S.qzv
     
     qiime diversity alpha-group-significance \
-      --i-alpha-diversity core-metrics-results_16S/evenness_vector.qza \
-      --m-metadata-file sample-metadata.tsv \
-      --o-visualization core-metrics-results_16S/evenness-Condition-significance.qzv
+      --i-alpha-diversity core-metrics-results_16S/faith_pd_vector.qza \
+      --m-metadata-file metadata.tsv \
+      --o-visualization core-metrics-results_16S/faith_pd-Condition-significance.qzv
     ```  
 * Verifichiamo se vi siano delle differenze significative tra gli indici di beta diversità:  
     ```
     qiime diversity beta-group-significance \
       --i-distance-matrix core-metrics-results_16S/unweighted_unifrac_distance_matrix.qza \
-      --m-metadata-file sample-metadata.tsv \
-      --m-metadata-column Condition \
+      --m-metadata-file metadata.tsv \
+      --m-metadata-column type \
       --o-visualization core-metrics-results_16S/unweighted-unifrac-Condition-significance.qzv \
       --p-pairwise
     
     qiime diversity beta-group-significance \
       --i-distance-matrix core-metrics-results_16S/weighted_unifrac_distance_matrix.qza \
-      --m-metadata-file sample-metadata.tsv \
-      --m-metadata-column Condition \
+      --m-metadata-file metadata.tsv \
+      --m-metadata-column type \
       --o-visualization core-metrics-results_16S/weighted-unifrac-Condition-significance.qzv \
+      --p-pairwise
+  
+    qiime diversity beta-group-significance \
+      --i-distance-matrix core-metrics-results_16S/bray_curtis_distance_matrix.qza \
+      --m-metadata-file metadata.tsv \
+      --m-metadata-column type \
+      --o-visualization core-metrics-results_16S/bray_curtis-Condition-significance.qzv \
       --p-pairwise
     ```  
 

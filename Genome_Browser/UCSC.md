@@ -25,7 +25,18 @@ Se vogliamo estrarre delle specifiche informazioni per una data regione, possiam
 
 
 Ad esempio, possiamo estrarre le coordinate genomiche e le caratteristiche degli elementi genici (esoni, introni e CDS).  
-Il formato normalmente utilizzato è un formato tabellare, importabile in Excel denominato `GTF`. Ma è anche possibile ottenere moltissime altre informazioni di vario genere.  
+Il formato normalmente utilizzato è un formato tabellare, importabile in Excel denominato `GTF`. Ma è anche possibile ottenere moltissime altre informazioni di vario genere.
+
+# COVID-19 Pandemic Resources at UCSC 
+Anche su UCSC è disponibile una risorsa dedica al **SARS-COV-2**, chiamata [**COVID-19 Pandemic Resources at UCSC **](http://genome.ucsc.edu/covid19.html).  
+![http://genome.ucsc.edu/covid19.html](Screenshot%202021-01-08%20at%2011.08.05.jpg).  
+
+Proviamo ad utilizzare il genome browser. Nella sezione `Comparative Genomics` attiviamo le seguenti track in modalità *full*:  
+    - 119 Vertebrate CoVs;  
+    - Human CoV.  
+
+***Cosa notate?**
+
 
 [Back to the top](../README.md) 
 

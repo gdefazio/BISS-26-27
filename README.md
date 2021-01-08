@@ -21,6 +21,7 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 
 ### Esercitazione 3 (08/01/2021)
 - [ ] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md#esercizi)
+- [ ] [ENSEMBL: COVID-19](./Genome_Browser/Ensembl.md#covid-19)
 - [ ] [UCSC](./Genome_Browser/UCSC.md)
 - [ ] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
 
