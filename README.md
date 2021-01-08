@@ -20,7 +20,7 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 - [X] [ENSEMBL](./Genome_Browser/Ensembl.md)
 
 ### Esercitazione 3 (08/01/2021)
-- [ ] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md)
+- [ ] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md#esercizi)
 - [ ] [UCSC](./Genome_Browser/UCSC.md)
 - [ ] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
 

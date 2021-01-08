@@ -112,7 +112,7 @@ Se clicchiamo sulla scheda **"Location"** possiamo esaminare la sezione **"Regio
 * A quale distanza si trovano?  
 * Qual è la composizione in basi?  
 
-
+# Esercizi
 ### Esercizio 1
 Determina la lunghezza del trascritto `ENST00000253452` e della proteina relativa al trascritto in esame.  
 Guardare la pagina relativa al gene.  
@@ -145,6 +145,12 @@ Cerca questo gene in ENSEMBL, utilizzando il nome ufficiale.
 7.	Quanti introni ed esoni hanno?  
 8.	Quanto sono lunghe la proteina più lunga e quella più corta annotate per questo gene?  
 
+# COVID-19
+E' stata realizzata una release di ENSEMBL per raccogliere e mostrare i dati relativi al genoma di **SARS-COV-2**: [***The Ensembl COVID-19 resource***](https://covid-19.ensembl.org/index.html).  
+Si tratta di una risorsa ancora in via di sviluppo, il cui contenuto viene constantemente aggioranto a seconda delle nuove infomazioni disponibili.  
+Potete trovare il pre-print del lavoro su **bioRxiv**: [https://doi.org/10.1101/2020.12.18.422865](https://doi.org/10.1101/2020.12.18.422865).  
+
+![home_ensembl_covid19](Screenshot%202021-01-07%20at%2020.07.02.jpg)
 [UCSC](./UCSC.md)             
 
 

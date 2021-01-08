@@ -82,7 +82,7 @@ Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.or
 * Successivamente va create la cartella `PRJEB16156` e bisogna posizionarsi al suo interno:  
     `mkdir PRJEB16156 && cd PRJEB16156`
 * Adesso va attivato l'ambiente virtuale in cui è installato **QIIME2**:  
-    `conda activate qiime2-2019.10` 
+    `conda activate qiime2-2020.11` 
 * Creiamo una cartella che mantenga i dati temporanei e indichiamo al sistema operativo di utilizzarla:  
     ```
     mkdir tmp
@@ -133,13 +133,13 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
     
      >nohup qiime dada2 denoise-paired \
           --i-demultiplexed-seqs demux-paired-end.qza \
-          --p-trunc-len-f 300 \
-          --p-trunc-len-r 300 \
-          --p-trim-left-f 17 \
-          --p-trim-left-r 21 \
-          --p-max-ee-f 5 \
-          --p-max-ee-r 7 \
-          --p-n-threads 10 \
+          --p-trunc-len-f 270 \
+          --p-trunc-len-r 260 \
+          --p-trim-left-f 20 \
+          --p-trim-left-r 20 \
+          --p-max-ee-f 4 \
+          --p-max-ee-r 5 \
+          --p-n-threads 20 \
           --o-table table_16S.qza \
           --o-representative-sequences rep-seqs_16S.qza \
           --o-denoising-stats denoising-stats_16S.qza &  
@@ -152,7 +152,7 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
     qiime feature-table summarize \
        --i-table table_16S.qza \
        --o-visualization table_16S.qzv \
-       --m-sample-metadata-file sample-metadata.tsv
+       --m-sample-metadata-file metadata.tsv 
 
     qiime feature-table tabulate-seqs \
         --i-data rep-seqs_16S.qza \
@@ -167,8 +167,8 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
 
 ## Classificazione tassonomica  
 * Effettuaiamo la classificazione tassonomica:  
-    >nohup qiime feature-classifier classify-sklearn \
-      --i-classifier /home/epigen/microbiome_analysis/SILVA_ref/v3.v4.SILVA_132_NR_99_classifier.qza \
+    nohup qiime feature-classifier classify-sklearn \
+      --i-classifier /home/epigen/microbiome_analysis/silva-138-99-515-806-nb-classifier.qza \
       --i-reads rep-seqs_16S.qza \
       --o-classification taxonomy_16S_SKLEARN.qza &
     
