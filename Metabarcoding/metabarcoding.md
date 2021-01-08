@@ -167,7 +167,7 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
 
 ## Classificazione tassonomica  
 * Effettuaiamo la classificazione tassonomica:  
-    nohup qiime feature-classifier classify-sklearn \
+    >nohup qiime feature-classifier classify-sklearn \
       --i-classifier /home/epigen/microbiome_analysis/silva-138-99-515-806-nb-classifier.qza \
       --i-reads rep-seqs_16S.qza \
       --o-classification taxonomy_16S_SKLEARN.qza &
@@ -177,14 +177,14 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
     
 * Adesso andiamo a generare dei file *qzv* che ci permettano di valutare i risultati della classificazione tassonomica:  
     ```
-     qiime metadata tabulate \
+    qiime metadata tabulate \
         --m-input-file taxonomy_16S_SKLEARN.qza \
         --o-visualization taxonomy_16S_SKLEARN.qzv
   
     qiime taxa barplot \
         --i-table table_16S.qza \
         --i-taxonomy taxonomy_16S_SKLEARN.qza \
-        --m-metadata-file sample-metadata.tsv \
+        --m-metadata-file metadata.tsv \
         --o-visualization taxa-bar-plots_16S_SKLEARN.qzv
     ```
 
@@ -235,8 +235,8 @@ In particolare:
   qiime diversity alpha-rarefaction \
       --i-table table_16S.qza \
       --i-phylogeny rooted-tree_16S.qza \
-      --p-max-depth 100000 \
-      --m-metadata-file sample-metadata.tsv \
+      --p-max-depth 50000 \
+      --m-metadata-file metadata.tsv \
       --o-visualization alpha-rarefaction.qzv
   ```  
   

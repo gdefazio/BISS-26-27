@@ -147,10 +147,52 @@ Cerca questo gene in ENSEMBL, utilizzando il nome ufficiale.
 
 # COVID-19
 E' stata realizzata una release di ENSEMBL per raccogliere e mostrare i dati relativi al genoma di **SARS-COV-2**: [***The Ensembl COVID-19 resource***](https://covid-19.ensembl.org/index.html).  
-Si tratta di una risorsa ancora in via di sviluppo, il cui contenuto viene constantemente aggioranto a seconda delle nuove infomazioni disponibili.  
+Si tratta di una risorsa ancora in via di sviluppo, il cui contenuto viene constantemente aggioranto, a seconda delle nuove infomazioni disponibili.  
 Potete trovare il pre-print del lavoro su **bioRxiv**: [https://doi.org/10.1101/2020.12.18.422865](https://doi.org/10.1101/2020.12.18.422865).  
 
 ![home_ensembl_covid19](Screenshot%202021-01-07%20at%2020.07.02.jpg)
+
+Prima di procedere con l'ispezione delle informazioni disponibili, recuperiamo un po' di statistiche relative alla versione del database che stiamo utilizzando.  
+Cliccalte sul seguente [**LINK**](https://covid-19.ensembl.org/Sars_cov_2/Info/Annotation).  
+
+Proviamo ad modificare la visualizzazione dei dati per poter verificare le differenti annotazioni disponibili per il genoma di SARS-COV-2:  
+1. Selezioniamo `Whole Genome`;  
+2. Si aprirà in automatico la pagina di visualizzazione della regione genomica. In questo caso permetterà di visualizzare l'intero genoma di SARS-COV-2;  
+3. Assicuratevi di aver selezionato `Region in Detail`;  
+4. Procediamo a modificare la visualizzazione delle track:  
+    - Dato che vogliamo visualizzare l'intero genoma riducete al minimo lo zoom;  
+    - Sulla sinistra selezionate `Configure this page`;    
+    - Selezionate `Genes and Transcripts`;  
+    - Abilitate la visualizzazione di *ENA annotation* in modalità *Expandend with labels*.  
+
+Notate differenze tra le due annotazioni disponibili?  
+
+Adesso siamo interessati a visualizzare le varianti già annotate per SARS-COV-2.  
+Siamo particolarmente interessati alla variante inglese [*(report OMS)*](https://www.who.int/csr/don/21-december-2020-sars-cov2-variant-united-kingdom/en/).  
+La variante inglese è caratterizzata da 14 mutazioni nella regione della proteina **SPIKE**:  
+* delezione 69-70  
+* delezione 144  
+* N501Y: questa mutazione cade nel dominio RBD nella tasca di 6 aa fondamentale per il legame ad ACE2;  
+* A570D  
+* D614G  
+* P681H  
+* T716I  
+* S982A  
+* D1118H  
+
+Andiamo ad effettuare una inspezione delle varianti annotate per la proteina **SPIKE**:  
+1. Dal Grafico selezioniamo la regione corrispondente al trascritto della proteina S *ENSSAST00005000004.1*;
+    ![select prot](Screenshot%202021-01-08%20at%2010.08.48.jpg)  
+2. Nella scheda del trascritto andiamo ad osservare le caratteristiche del prodotto proteico `Protein Information:
+    - Guardiamo prima la sezione `Protein Summary`;  
+    - Andiamo a vedere i domini annotati `Domains & features`.  
+3. Adesso guardiamo la sezione `Genetic Variation`:  
+    - Selezionate `Variant Table` e cercate alle Coordinate AminoAcidiche la posizione 501: selezionate la variante;  
+    - Nella scheda che si apre proviamo a studiare la distribuzione della variante N501Y: selezioante `Population genetics`.  
+    
+
+
+
 [UCSC](./UCSC.md)             
 
 
