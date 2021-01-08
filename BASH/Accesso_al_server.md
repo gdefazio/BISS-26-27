@@ -29,9 +29,9 @@ ssh -i /path/to/the/key/bmmm1920.ppk epigen@srv00.recas.ba.infn.it
 
 Se avete scaricato il file in Downloads:  
 ```
-chmod 600 ~/Downloads/bmmm1920.txt
+chmod 600 ~/Downloads/BASH_bmmm1920.txt
 
-ssh -i -X ~/Downloads/bmmm1920.txt epigen@srv00.recas.ba.infn.it 
+ssh -i -X ~/Downloads/BASH_bmmm1920.txt epigen@srv00.recas.ba.infn.it 
 ```
 Alla prima connessione il sistema vi chiederà se il server sia "fidato" e dovrete digitare `yes`.  
 Di seguito vi chiederà la **password** (vi verrà comunicata al momento) e dovrete inserirla. **Notate che il cursore non si muoverà mentre digitate la password!!!**.  
