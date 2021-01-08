@@ -1,10 +1,16 @@
-# Metabarcoding
+Metabarcoding
+==============
+- [Introduzione](#introduzione)
+- [Metabarcoding approach](#metabarcoding-approach)
+    * [Valutazione bioinformatica di una coppia di primer](#valutazione-bioinformatica-di-una-coppia-di-primer)
+    * [Analisis di dati reali](#analisi-di-dati-reali)
+
 
 ## Introduzione
 L'approccio metagenomico si basa sull'analisi del materiale genetico totale (**metagenoma**) direttamente estratto da un campione ambientale (Kunin et al., 2008; Wooley et al., 2010).  
 Anche se il metagenoma consiste nell'intero contenuto genetico delle specie viventi in un determinato habitat, questo nuovo approccio è applicato principalmente per indagare sulle comunità microbiche.  
-Considerando che circa il **99%** delle specie batteriche non possono essere isolate e coltivate mediante tecniche standard di laboratorio (Staley and Konopka, 1985), l'approccio metagenomico, che non prevede alcuna procedura di coltivazione, offre uno strumento senza precedenti per allargare la conoscenza del mondo microbico. L’importanza di poter di poter accedere alla porzione microbica “nascosta”  risiede nel fatto che circa i due terzi della biodiversità presente sulla terra siano composti da microorganismi (Singh et al., 2009).  
-I microorganismi, i loro genomi e le iterazioni che tra loro stabiliscono in ogni ambiente che colonizzano sono definiti con il termine **microbioma**.  
+Considerando che circa il **99%** delle specie batteriche non possono essere isolate e coltivate mediante tecniche standard di laboratorio (Staley and Konopka, 1985), l'approccio metagenomico, che non prevede alcuna procedura di coltivazione, offre uno strumento senza precedenti per allargare la conoscenza del mondo microbico. L’importanza di poter di poter accedere alla porzione microbica “nascosta” risiede nel fatto che circa i due terzi della biodiversità presente sulla terra siano composti da microorganismi (Singh et al., 2009).  
+I microorganismi, i loro genomi e le iterazioni che tra loro stabiliscono in ogni ambiente che colonizzano sono definiti con il termine **microbiota**.  
 Il grande interesse verso le comunità microbiche è dato dal fatto che esse sono capaci di colonizzare qualsiasi habitat, dal terreno alle acque oceaniche, compreso il corpo umano.  
 Proprio considerando il corpo umano, la composizione del microbioma cambia a seconda del sito anatomico o dell’età del soggetto (Turnbaugh et al., 2013), ma anche in base allo stile di vita.   
 Inoltre, l’avvento delle tecnologie di sequenziamento di nuova generazione ad elevato throughput (**Next-Generation Sequencing, NGS**) (Nowrousian, 2010) ha sostenuto lo studio di tutti i possibili habitat.  
@@ -40,6 +46,7 @@ Un marcatore genetico di specie ideale dovrebbe avere le seguenti caratteristich
 ![picture2](./Picture2.png)  
 *Figura 2: rappresentazione della variabilità del gene per l’rRNA 16S nei procarioti.*
 
+### Valutazione bioinformatica di una coppia di primer
 Come detto per selezionare il marcatore di interesse utilizziamo una **coppia di primer universali** capace di amplificare l'intero range tassonomico di interesse.    
 ***Ma come facciamo a valutare che una coppia di primer sia realmente universale?***    
 Possiamo testare i nostri primer in silico e valutare come si comportano sui dati ad oggi conosciuti.  
@@ -64,23 +71,28 @@ Ripetete l'analisi ma in questo caso selesionate l'opzione `Length of 0-mismatch
 Eukaryota|93.7|20.8|  
 
 ### Analisi di dati reali
-I dati che analizzeremo oggi sono disponibile nel repository [SRA (Sequence Read Archive)](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?).    
-In particolare, il tutorial che andremo a completare riguarda lo studio del microbioma orale [PRJEB16156](https://www.ebi.ac.uk/ena/data/view/PRJEB16156).  
-Nel suddetto studio, trovate il lavoro a questo [link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0172647), sono stati analizzati un totale di 37 campioni ma per i nostri scopi ne ho selezionati casualmente 15:
-* 5 controlli sani;  
-* 5 soggetti obesi;  
-* 5 soggetti affetti da diabete mellito tipo 2.  
+Per questa esercitazioni utilizzeremo dei dati di ricente pubblicazione [Ravegnini et al. 2020](https://www.mdpi.com/1422-0067/21/24/9735).  
+Lo scopo dello studio riguadava la caratterizzazione del microbioma gastrico in soggetti affetti tumore (*Gastric cancer, GC*).  
+I GC sono la quinta forma tumorale per incidenza nel monda e la terza causa di morte per tumore.  L'avvento della genomica ha permesso di capire come in realtà si tratti di una complessa rappresentazione di patologie, dove differenti mutazioni danno origine a diverse forme tumorali.  
+Noi studieremo i dati di soggetti affetti da:
+    - **ADC**: Adenocarcima. E' la forma più comune e rappresenta il 95% dei GC. Ha solitamente origine nella mucosa  
+    - **SRCC**: Single-ring Cell Carcinoma. Forma più rara che si origine nelle cellule ghiandolari.    
+Per i nostri scopi analizzeremo 20 campioni:
+* 10 campioni ADC;  
+* 10 campioni SRCC.  
 
-***Lo scopo di questa esercitazione è capire se via siano differenze tra il microbioma orale di soggetti sani, obesi ed affetti da diabete.***  
+
+***Lo scopo di questa esercitazione è capire se via siano differenze tra il microbioma gastrico dei soggetti affetti da ADC e SRCC.***  
  
 I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA 16S e successivamente sequenziando gli ampliconi in modalità paired-end (PE) 2x300 con piattaforma Illumina MiSeq®.  
-Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.org/). Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIME   2 View**](https://view.qiime2.org/).  
+Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.org/).  
+Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIME   2 View**](https://view.qiime2.org/).  
 
 ## Preparazione dell'area di lavoro
 * Come prima operazione occore entrare nelle vostre cartelle:  
     `cd cognome_nome`  
-* Successivamente va create la cartella `PRJEB16156` e bisogna posizionarsi al suo interno:  
-    `mkdir PRJEB16156 && cd PRJEB16156`
+* Successivamente va create la cartella `Ravegnini_et_al` e bisogna posizionarsi al suo interno:  
+    `mkdir Ravegnini_et_al && cd Ravegnini_et_al`
 * Adesso va attivato l'ambiente virtuale in cui è installato **QIIME2**:  
     `conda activate qiime2-2020.11` 
 * Creiamo una cartella che mantenga i dati temporanei e indichiamo al sistema operativo di utilizzarla:  
@@ -90,8 +102,9 @@ Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.or
     ```  
 * Copiamo i dati all'interno della nostra cartella:  
     `cp -r /home/epigen/microbiome_analysis/input_data .`  
-    `cp -r /home/epigen/microbiome_analysis/sample-metadata.tsv .`               
-A questo punto abbiamo completato tutte le operazioni preliminari necessarie per preparare l'ambiente di lavoro. Possiamo procedere con le analisi.  
+    `cp /home/epigen/microbiome_analysis/metadata.tsv .`               
+A questo punto abbiamo completato tutte le operazioni preliminari necessarie per preparare l'ambiente di lavoro.  
+Possiamo procedere con le analisi.  
 
 ## Importazione dei dati
 * Importiamo i dati in QIIME2:  
@@ -114,7 +127,7 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
 ## Denoising
 * Effettuiamo il **Denoising** dei dati:  
     Il **Denoising** (letteralmente eliminazione del rumore di fondo (*noise*)) è una procedura che permette di riconoscere il rumore introdotto dalla PCR e dal sequenziamento.    
-    [Giusto un po' di teoria](https://drive.google.com/open?id=1NsN9iUI-UOP9M6n7HbJ32UaHgGIoBKkcqkjSX7hg2tU).  
+    [Giusto un po' di teoria](https://docs.google.com/presentation/d/1X8s-J-gOjWvXYDAnRh39_nwKuLJtU0l0fG2MrLXyUpo/edit?usp=sharing).  
     Il trimming delle sequenze PE: 
     ![read](./read.png)  
     
@@ -123,11 +136,11 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
     Dove:  
         - R è la lunghezza nominale delle read;
         - L è la lunghezza media dell'amplicone.  
-    Nel nostro caso l'amplicone ha una lunghezza media di 560 nt, per cui: **S = 2*300 - 560 = 600 - 560 = 40**.  
+    Nel nostro caso l'amplicone ha una lunghezza media di 560 nt, per cui: **S = 2*300 - 500 = 600 - 500 = 100**.  
     
     <details><summary></summary>
     <p>
-    <b>In considerazione della qualità delle sequenze conviene non effettuare il trimming al 3'.</b>
+    <b>In considerazione della qualità delle sequenze e della possibile regione di sovrapposizione conviene limitare il trimming alle ultime posizioni delle reads.</b>
     </p>
     </details>
     
@@ -286,7 +299,7 @@ In particolare:
     ```  
 
 ***PER SCARICARE TUTTI I DATI PRODOTTI DURANTE L'ESERCITAZIONE UTILIZZATE IL LINK SOTTOSTANTE***  
-:arrow_down_small: [**LINK**](https://drive.google.com/open?id=1tA2PmUEpD2x_Z-hZ1J6xqbxOrw1WQpUS)
+:arrow_down_small: [**LINK**](https://drive.google.com/drive/folders/1xq64qRbubjqc9PXIuRaVUallDzNWzL7K?usp=sharing)
 
 
 [Back to the top](../README.md) 

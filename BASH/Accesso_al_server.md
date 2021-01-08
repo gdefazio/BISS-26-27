@@ -147,7 +147,7 @@ Nella riga di intestazione possiamo visualizzare alcune [informazioni tecniche](
 
 Il **Quality Score** o **Phred Socre** è una misura della probabilità che la base letta sia erronea ed è calcolato utilizzando questa formula:  
 ![Q](./Q.png)  
-Si fatto maggiore è il **Quality score** minore è la probabilità che la base chiamata sia erronea:  
+Di fatto maggiore è il **Quality score** minore è la probabilità che la base chiamata sia erronea:  
 
 |Q|P|  
 |:---:|:---:|  
@@ -159,7 +159,7 @@ Si fatto maggiore è il **Quality score** minore è la probabilità che la base 
 
 Conoscendo il quality score associato a ciascuna base delle sequenze ottenute durante il sequenziamento è possibile calcolare l'**Expected Error (EE)**, come:  
 ![EE](./EE.png)  
-Di fatto, l'**EE** è dato dalla sommatoria delle *Probabilità di errore P* osservate. In modo estrmamente empirico data, una sequenza ci dice il numero di basi errate nella sequenza.  
+Di fatto, l'**EE** è dato dalla sommatoria delle *Probabilità di errore P* osservate. In modo estrmamente empirico data,data una sequenza stima il numero che ci aspettiamo siano errate nella sequenza.  
 
 ## Come valutare la qualità dei dati
 Una volta ottenuti dei dati di sequenziamento la prima cosa che va fatta è una valutazione della loro qualità.  
