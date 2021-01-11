@@ -20,14 +20,14 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 - [X] [ENSEMBL](./Genome_Browser/Ensembl.md)
 
 ### Esercitazione 3 (08/01/2021)
-- [ ] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md#esercizi)
-- [ ] [ENSEMBL: COVID-19](./Genome_Browser/Ensembl.md#covid-19)
-- [ ] [UCSC](./Genome_Browser/UCSC.md)
-- [ ] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
+- [X] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md#esercizi)
+- [X] [ENSEMBL: COVID-19](./Genome_Browser/Ensembl.md#covid-19)
+- [X] [UCSC](./Genome_Browser/UCSC.md)
+- [X] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
 
-### Esercitazione 4 ()
+### Esercitazione 4 (11/01/2021)
 ### Metabarcoding
-- [ ] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md)  
+- [ ] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md#il-formato-fasta)  
 - [ ] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
 
 ### Esercitazione 5 ()
