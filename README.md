@@ -27,12 +27,13 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 
 ### Esercitazione 4 (11/01/2021)
 ### Metabarcoding
-- [ ] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md#il-formato-fasta)  
+- [X] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md#il-formato-fasta)  
+
+
+### Esercitazione 5 (13-15/01/2021)
+### Metabarcoding
 - [ ] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
 
-### Esercitazione 5 ()
-### Metabarcoding
-- [ ] [Metabarcoding](./Metabarcoding/metabarcoding.md)
 
 ### Esercitazione 6 ()
 ### Genome Assembly

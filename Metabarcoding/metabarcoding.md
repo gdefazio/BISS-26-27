@@ -74,7 +74,7 @@ Eukaryota|93.7|20.8|
 Per questa esercitazioni utilizzeremo dei dati di ricente pubblicazione [Ravegnini et al. 2020](https://www.mdpi.com/1422-0067/21/24/9735).  
 Lo scopo dello studio riguadava la caratterizzazione del microbioma gastrico in soggetti affetti tumore (*Gastric cancer, GC*).  
 I GC sono la quinta forma tumorale per incidenza nel monda e la terza causa di morte per tumore.  L'avvento della genomica ha permesso di capire come in realtà si tratti di una complessa rappresentazione di patologie, dove differenti mutazioni danno origine a diverse forme tumorali.  
-Noi studieremo i dati di soggetti affetti da:
+Noi studieremo i dati di soggetti affetti da:  
     - **ADC**: Adenocarcima. E' la forma più comune e rappresenta il 95% dei GC. Ha solitamente origine nella mucosa  
     - **SRCC**: Single-ring Cell Carcinoma. Forma più rara che si origine nelle cellule ghiandolari.    
 Per i nostri scopi analizzeremo 20 campioni:
@@ -101,7 +101,6 @@ Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro 
     export TMPDIR="$PWD/tmp"
     ```  
 * Copiamo i dati all'interno della nostra cartella:  
-    `cp -r /home/epigen/microbiome_analysis/input_data .`  
     `cp /home/epigen/microbiome_analysis/metadata.tsv .`               
 A questo punto abbiamo completato tutte le operazioni preliminari necessarie per preparare l'ambiente di lavoro.  
 Possiamo procedere con le analisi.  
@@ -111,7 +110,7 @@ Possiamo procedere con le analisi.
     ```
     qiime tools import \
     --type 'SampleData[PairedEndSequencesWithQuality]' \
-    --input-path input_data \
+    --input-path /home/epigen/microbiome_analysis/input_data \
     --input-format CasavaOneEightSingleLanePerSampleDirFmt \
     --output-path demux-paired-end.qza
     ```  
