@@ -4,12 +4,14 @@
 - [APPROCCI BIOINFORMATICI PER L’ASSEMBLAGGIO DELLE READ: I GRAFI DI DE BRUIJN](#approcci-bioinformatici-per-lassemblaggio-delle-read-i-grafi-di-de-bruijn)
 - [VALUTAZIONE DELL’ASSEMBLAGGIO OTTENUTO](#valutazione-dellassemblaggio-ottenuto)
 - [SCOPO DELL'ESERCITAZIONIE](#scopo-dellesercitazione)
+    * [Valutazione preliminare della qualità delle sequenze e trimming](#Valutazione preliminare della qualità delle sequenze e trimming)  
     * [Velvet](#velvet)
-        * [Meccanismo di funzionamento di Velvet](#meccanismo-di-funzionamento-di-velvet)
+        * [Meccanismo di funzionamento di Velvet](#meccanismo-di-funzionamento-di-velvethttpswwwncbinlmnihgovpmcarticlespmc2336801reportreaderpo318182)
         * [Applicazione di Velvet](#applicazione-di-velvet)
     * [SPAdes](#spades)
-        * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spades)
+        * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spadeshttpswwwncbinlmnihgovpmcarticlespmc3342519po138889)
         * [Applicazione di SPAdes](#applicazione-di-spades)
+- [Annotazione funzionale del Genoma](#annotazione-funzionale-del-genoma)
     
 
 ## INTRODUZIONE
@@ -97,13 +99,46 @@ Per descrivere un assemblaggio possiamo utilizzare:
     Se consideriamo 9 contig ordinati per lunghezza in modo decrescente 10, 9, 8, 7, 6, 5, 4, 3, 2 la dimensione totale del genoma è pari a 54.  
     Metà della lunghezza del genoma è data da 10 + 9 + 8 = 27. Ne consegue che l’ N50 è pari a 8.  
     Valori auspicabili di N50 sono nell’ordine di  decine di Kbp.  
-*	**L50**: il numero minimo di contig la cui lunghezza è pari a N50.  
+* **L50**: il numero minimo di contig la cui lunghezza è pari a N50.  
     Considerando l’esempio precedente L50 = 3.  
     
 ## SCOPO DELL'ESERCITAZIONE
 Lo scopo delle esercitazioni è l'assemblaggio del genoma  di ***Escherichia coli str. K-12 substr. MG1655***.  
 Utilizzeremo read prodotte con sequenziamento **Illumina** in modalità paired-end 2x100.  
 
+### Valutazione preliminare della qualità delle sequenze e trimming
+Prima di procedere con l'assembly delle reads ottenute occore valutarne la qualità.  
+1.	Collegatevi al server.  
+2.	Posizionatevi nella vs cartella.  
+    `cd Cognome_Nome`  
+3.	Creiamo la cartella contenente i dati del genome assembly e spostiamoci al suo interno:  
+    `mkdir genome_assembly && cd genome_assembly`        
+4.	Eseguiamo il [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) per valutare la qualità delle sequenze:  
+    `mkdir pre_trimming`   
+    poi:  
+    ```
+    fastqc --noextract -t 2 \
+    /home/epigen/genome_assembly/s_6_1.fastq.gz \
+    /home/epigen/genome_assembly/s_6_2.fastq.gz -o pre_trimming
+    ```  
+    Scaricate i risultati del FastQC.  
+5.	effettuiamo il trimming delle sequenze:  
+    ```
+    sickle pe -f /home/epigen/genome_assembly/s_6_1.fastq.gz \
+    -r /home/epigen/genome_assembly/s_6_2.fastq.gz \
+    -t sanger -o Sample_1.fastq -p Sample_2.fastq \
+    -s Sample_s.fastq -q 25 -l 45
+    ```  
+6.	riutilizziamo il FastQC per valutare le sequenze trimmate:  
+    ```
+    mkdir post_trimming
+    ```    
+    poi:
+    ```   
+    fastqc Sample_* --noextract -t 2 -o post_trimming
+    ```    
+    Scaricate i risultati del FastQC.  
+    
 ### VELVET
 Velvet è un programma di assemblaggio di genomi basato sulla costruzione e risoluzione dei grafi di de Bruijn.  
 In particolare, le read di sequenziamento sono scomposte in k-mer, che vengono poi utilizzati per la costruzione dei grafi.  
@@ -112,7 +147,7 @@ Le informazioni relative alla rappresentazione i ciascun k-mer (coverage) sono u
 #### [Meccanismo di funzionamento di Velvet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2336801/?report=reader#!po=31.8182)
 1. Velvet converte le read in kmer della lunghezza predefinita dall'utente.  
 2. Ogni Kmer rappresenta un nodo del grafico. Due nodi sono connessi presentano una sovrapposizione della loro sequenza pari a k-1.  
-   Formalemente diremo che due nodi **N<sub>A</sub>** e N<sub>B</sub> sono connessi se gli ultimi `k-1`nt di N<sub>A</sub> corrispondono ai primi `k-1` nt di N<sub>B</sub>.  
+   Formalemente diremo che due nodi **N<sub>A</sub>** e **N<sub>B</sub>** sono connessi se gli ultimi `k-1`nt di **N<sub>A</sub>** corrispondono ai primi `k-1` nt di **N<sub>B</sub>**.  
    Questo processo è effettuato contemporaneamente sul **revertito complementare** delle sequenze.  
    ![graph generation](./velvet_1.jpg)  
 3. Semplificazione: Tutti i nodi che non interessano la generazione del path (non contengono biforcazioni) vengono uniti per ridurre l'utilizzo di memoria.  
@@ -125,51 +160,27 @@ Le informazioni relative alla rappresentazione i ciascun k-mer (coverage) sono u
     * Bubbles: Utilizza un algoritmo che pesa le informazioni tra i nodi e considera quale sia il path più probabile.  
     ![bubble](./velvet_bublbles.jpg)  
     * Connessioni errate: sono eliminati tutti quei path che hanno una bassa multiplicità.  
- 
+  
 #### Applicazione di Velvet
-Utilizzeremo Velvet con k-mer lunghi 25 nt e poi valuteremo l’assemblaggio ottenuto.  
-
-1.	Collegatevi al server.  
-2.	Posizionatevi nella vs cartella.  
-    `cd Cognome_Nome`  
-3.	Creiamo la cartella contenente i dati del genome assembly e spostiamoci al suo interno:  
-    `mkdir genome_assembly && cd genome_assembly`  
-    poi:  
-    `mkdir velvet && cd velvet`  
-4.	Eseguiamo il [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) per valutare la qualità delle sequenze:  
-    `mkdir pre_trimming`   
-    poi:  
-    ```
-    fastqc --noextract -t 2 \
-    /home/epigen/genome_assembly/s_6_1.fastq \
-    /home/epigen/genome_assembly/s_6_2.fastq -o pre_trimming
-    ```  
-    Scaricate i risultati del FastQC.  
-5.	effettuiamo il trimming delle sequenze:  
-    ```
-    sickle pe -f /home/epigen/genome_assembly/s_6_1.fastq \
-    -r /home/epigen/genome_assembly/s_6_2.fastq \
-    -t sanger -o Sample_1.fastq -p Sample_2.fastq \
-    -s Sample_s.fastq -q 25 -l 45
-    ```  
-6.	riutilizziamo il FastQC per valutare le sequenze trimmate:  
-    `mkdir post_trimming`  
-    poi:   
-    `fastqc Sample_* --noextract -t 2 -o post_trimming`  
-    Scaricate i risultati del FastQC.  
-7.	Prima di lanciare Velvet è necessario utilizzare uno dei suoi applicativi per convertire le sequenze i un formato adeguato:  
-    ```
-    shuffleSequences_fastq.pl Sample_1.fastq Sample_2.fastq \
-    Sample_alternate.fastq
-    ```  
-    Controllate che il file sia stato generato.  
-8.	Iniziamo ad utilizzare Velvet per assemblare le nostre read. Utilizzeremo k-mer lunghi 25 nt.  
+Valuteremo la qualità dell’assemblaggio ottenuto con Velvet utilizzando dei kmer di lunghezza pari a 25nt.  
+*** NB: per questioni di tempo e di capacità computazioni non potremo applicare Velvet***  
+1. Creaimo una cartella che conterrà i dati di Velvet:  
+    `mkdir velvet && cd velvet`
+2.	Prima di lanciare Velvet è necessario utilizzare uno dei suoi applicativi per convertire le sequenze i un formato adeguato:  
+    
+        > shuffleSequences_fastq.pl Sample_1.fastq Sample_2.fastq Sample_alternate.fastq  
+      
+3.	Iniziamo ad utilizzare Velvet per assemblare le nostre read. Utilizzeremo k-mer lunghi 25 nt.  
     Velvet si compone di due applicativi. Il primo è **velveth** e prepara i dati di partenza in un formato adeguato per le successive analisi:  
-    `velveth run_25 25 fastq -shortPaired Sample_alternate.fastq`  
-9.	Adesso applichiamo **velvetg** che si occuperà di costruire i grafi e creare i contig.  
-    `velvetg run_25`  
-10.	Calcoliamo le statistiche per valutare l’assemblaggio con **quast**:  
-    `quast.py -s run_25/contigs.fa -o quast_25`  
+    
+        > velveth run_25 25 fastq -shortPaired Sample_alternate.fastq  
+      
+4.	Adesso applichiamo **velvetg** che si occuperà di costruire i grafi e creare i contig.  
+
+        > velvetg run_25  
+                                                                                                   
+5.	Calcoliamo le statistiche per valutare l’assemblaggio con **quast**:  
+    `quast.py -s /home/epigen/genome_assembly/.result_folder/run25_velvetg/contigs.fa -o quast_25`  
     Scarichiamo la cartella generata da quast.  
 Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all'assemblaggio, utilizzando il programma [**Bandage** (Bioinformatics Application for Navigating De novo Assembly Graphs Easily)](http://rrwick.github.io/Bandage/) (**Figura 6**).  
 ![velvet_bandage](./velvet_k25_bandage.png)  
@@ -190,14 +201,15 @@ SPAdes applica un processo a 4 stadi:
 **Stadio 4**: genera i contig.  
     
 #### Applicazione di SPAdes   
-La riga di comando per laciare SPAdes è la seguente:  
+La riga di comando per laciare SPAdes è la seguente:
+1. Creiamo una cartella per i dati di SPAdes:  
+    `cd .. && mkdir spades && cd spades`  
+***Per questioni di natura prettamente computazionale l’esecuzione di SPAdes è già stata effettuata. Però possiamo valutare la qualità dell'assemblaggio ottenuto.***  
+
 > spades.py --careful -o spades_application -1 Sample_1.fastq -2 Sample_2.fastq -s Sample_s.fastq  
 
-Per questioni di natura prettamente computazionale l’esecuzione di SPAdes è già stata effettuata. Però possiamo valutare la qualità dell'assemblaggio ottenuto.  
 Applichiamo quast sui dati generati con SPAdes:  
-1. creiamo la cartella che conterrà le informazioni dell'assembly di SPAdes:  
-    `mkdir ../spades && cd ../spades`  
-2. Eseguiamo quast:  
+1. Eseguiamo quast sull'assemby generato da SPAdes:  
     `quast.py -s /home/epigen/genome_assembly/spades_application/contigs.fasta -o quast_spades`   
     Scarichiamo la cartella generata da quast.   
 Anche in questo caso valutiamo il grafo generato (**Figura 7**).  
@@ -217,6 +229,46 @@ Infine, ne valutiamo la qualità con quast:
 
 ![spades_more](./spades_bandage_mostkmer.png)  
 ***Figura 8: DE BRUIJN GRAPH OTTENUTO CON SPADES utilizzando 7 differenti lunghezze di k-mer.***  
+
+## Annotazione funzionale del Genoma
+Una volta assemblato un genoma ed essere giunti alla conclusione che la qualità dell'assemblaggio e soddisfacente, possiamo procedere alla sua **annotazione**.  
+Con **annotazione** di un genoma intendiamo la procedura bioinformatica attraverso la quale identifichiamo i geni, i prodotti di questi geni e cerchiamo di associare una funziona a questi prodotti.  
+In questo caso utilizzeremo un programma chiamato [**PROKKA**](https://academic.oup.com/bioinformatics/article/30/14/2068/2390517). Questo programma utilizza una serie di altri tool per identificare le "feature" le loro coordinate e associare una annotazione funzionale.  
+
+|Tool|Funzione|
+|:---:|:---:|
+|Prodigal|Coding sequence (CDS) |
+|RNAmmer|Ribosomal RNA genes (rRNA) |
+|Aragorn|Transfer RNA genes |  
+|SignalP|Signal leader peptides |
+|Infernal|Non-coding RNA |
+
+A scopo esemplificativo andremo a visualizzare o dati di annotazione ottenti con la prima applicazione di SPAdes.  
+Di seguito la linea di comando utilizzata da PROKKA:  
+
+> prokka --outdir genome_annotation --genus Escherichia --mincontiglen 200 --cpus 5 contigs.fasta  
+
+Adesso possiamo copiare i dati nella nostra cartella ed iniziare a visualizzare i prodotti ottenuti:  
+```
+cp -r /home/epigen/genome_assembly/genome_annotation/ spades_basic_prokka_annotation
+
+cd spades_basic_prokka_annotation
+```
+All'interno della cartella troveremo i file con le seguenti estensioni:  
+
+|Suffix|Description of file contents|
+|:---:|:---:|
+|.fna|FASTA file contente i contigs (nucleotide)|
+|.faa|FASTA file la traduzione delle CDS (protein)| 
+|.ffn|FASTA file contenente tutte le annotazioni genomiche (nucleotide)| 
+|.fsa|Contig formattati per la sottomissione in banca dati (nucleotide)| 
+|.tbl|Feature table per la sottomissione in banca dati| 
+|.sqn|Sequin per la sottomissione in banca dati| 
+|.gbk|Genbank file contenente sequenze e annotazionie| 
+|.gff|GFF v3 file contenente sequenze e annotazionie| 
+|.log|Log file di Prokka| 
+|.txt|statistiche relative al processo di annotazione|
+|.err|file che riporta le problematiche associate al file .sqn| 
 
 [Indice](#genome-assembly)
 
