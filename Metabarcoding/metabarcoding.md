@@ -226,7 +226,6 @@ In particolare:
               - *i* e *j* sono i due campioni in analisi;  
               - S<sub>i</sub> e S<sub>j</sub> rappresentano la somma delle conte delle specie osservate nei siti *i* e *j*;  
               - C<sub>ij</sub>: E' la somma della conta più bassa delle specie osservate in entrambe i siti.  
-          s distance (a quantitative measure of community dissimilarity)
         - Distanza *unweighted UniFrac*: una misura qualitativa della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;  
         - Distanza *weighted UniFrac*: una misura quantitiva della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;       
     * **gamma**: diversità totale.  

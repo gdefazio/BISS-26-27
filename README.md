@@ -25,13 +25,13 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 - [X] [UCSC](./Genome_Browser/UCSC.md)
 - [X] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
 
-### Esercitazione 4 (11/01/2021)
+### Esercitazione 4 (11-13/01/2021)
 ### Metabarcoding
-- [X] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md#il-formato-fasta)  
+- [ ] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md#il-formato-fasta)  
 
 
 ### Esercitazione 5 - 6 (13-15-18/01/2021)
-### Metabarcoding
+### Metabarcoding / Genome Assembly
 - [ ] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
 - [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
 
