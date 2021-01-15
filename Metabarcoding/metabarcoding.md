@@ -297,6 +297,46 @@ In particolare:
       --p-pairwise
     ```  
 
+## Analisi comparativa tra le due tipologie tumorali  
+Utilizzeremo [**ANCOM (analysis of composition of microbiomes)**](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4450248/) per andare ad effettuare una analisi comparativa tra le due tipologie tumorali analizzate.  
+1. Abbiamo detto che la tabella delle ASV è ricca in zeri (**zero inflated**). Ancom aggiunge delle _pseudo-conte_ per eliminare gli zeri.  
+```
+qiime composition add-pseudocount \
+  --i-table table_16S.qza \
+  --o-composition-table comp-table.qza
+```
+2. effettuiamo l'analisi comparativa:  
+```
+qiime composition ancom \
+  --i-table comp-table.qza \
+  --m-metadata-file metadata.tsv \
+  --m-metadata-column type \
+  --o-visualization ancom-type.qzv
+```
+Abbiamo effettuto la comparazione a livello di ASV ma potremmo essere interessari a comparare a livelli tassonomici superiori.  
+1. Dobbiamo raggruppare i dati al livello tassonomico di interesse. In questo caso il 6 livello della tassonomia SILVA (genere).  
+```
+qiime taxa collapse \
+  --i-table table_16S.qza \
+  --i-taxonomy taxonomy_16S_SKLEARN.qza \
+  --p-level 6 \
+  --o-collapsed-table table-l6.qza
+```  
+2. aggiungiamo le pseudoconte.  
+```
+qiime composition add-pseudocount \
+  --i-table table-l6.qza \
+  --o-composition-table comp-table-l6.qza
+```  
+3. effettuiamo l'analisi comparativa
+```
+qiime composition ancom \
+  --i-table comp-table-l6.qza \
+  --m-metadata-file metadata.tsv \
+  --m-metadata-column type \
+  --o-visualization ancom-type-l6.qzv
+```
+
 ***PER SCARICARE TUTTI I DATI PRODOTTI DURANTE L'ESERCITAZIONE UTILIZZATE IL LINK SOTTOSTANTE***  
 :arrow_down_small: [**LINK**](https://drive.google.com/drive/folders/1xq64qRbubjqc9PXIuRaVUallDzNWzL7K?usp=sharing)
 

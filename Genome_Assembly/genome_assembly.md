@@ -273,7 +273,7 @@ All'interno della cartella troveremo i file con le seguenti estensioni:
 [Indice](#genome-assembly)
 
 ***USATE IL LINK SOTTOSTANTE PER SCARICARE I DATI CHE VI SERVIRANNO PER LA RELAZIONE***  
-:arrow_down_small: [LINK](https://drive.google.com/open?id=172gOUqWiNGcEdxaDvUfuJ8ikRJdj2SVh)
+:arrow_down_small: [LINK](https://drive.google.com/drive/folders/1paX_32cL_u6aNP3SgyScQbwDMBjsK1SP?usp=sharing)
 
 
 [Back to the top](../README.md) 

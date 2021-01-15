@@ -30,14 +30,9 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 - [X] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md#il-formato-fasta)  
 
 
-### Esercitazione 5 (13-15/01/2021)
+### Esercitazione 5 - 6 (13-15-18/01/2021)
 ### Metabarcoding
 - [ ] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
-
-
-### Esercitazione 6 ()
-### Genome Assembly
 - [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
 
-
-### [Relazioni](./relazioni.md)  :gift:
+### [Relazioni](./relazioni.md)  
