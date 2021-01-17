@@ -1,19 +1,18 @@
 # RELAZIONE
-
-:skull: :skull: :skull:  
-
-Ogni studente dovrà presentare una relazione relativa ai laboratori svolti entro **5gg LAVORATIVI**  dalla data in cui è previsto l’esame.  
-Esempio: supponiamo che l'esame sia previsto per il 04/02.   
+  
+Ogni studente dovrà presentare una relazione relativa ai laboratori svolti entro **5gg LAVORATIVI** dalla data in cui è previsto l’esame orale.  
+Esempio: Prendiamo ad esempio l'esame previsto per il lunedì 08/02.   
  
-|29 Gennaio|30 Gennaio|31 Gennaio|01 Febbraio|02 Febbraio|03 Febbraio|04 Febbraio|
+|05 Febbraio|05 Febbraio|05 Febbraio|05 Febbraio|06 Febbraio|07 Febbraio|08 Febbraio|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Mercoledì|Giovedì|Venerdì|Sabato|Domenica|Lunedì|Martedì|
-|LAVORATIVO|LAVORATIVO|LAVORATIVO|NON LAVORATIVO|NON LAVORATIVO|LAVORATIVO|**ESAME**|
-|**LIMITE ULTIMO PER LA CONSEGNA**|4|3|3|3|2|1|
+|Martedì|Mercoledì|Giovedì|Venerdì|Sabato|Domenica|Lunedì|
+|LAVORATIVO|LAVORATIVO|LAVORATIVO|LAVORATIVO|NON LAVORATIVO|NON LAVORATIVO|**ESAME**|
+|**LIMITE ULTIMO PER LA CONSEGNA**|4|3|2|1|1|1|
 
 La relazione dovrà riguardare **tutte** le seguenti tematiche:
-* Descrizione della procedura bioinformatica applicata per l’assemblaggio di un genoma batterico corredata da un breve commento dei risultati ottenuti;  
-* Descrizione della procedura bioinformatica relativa all’analisi di dati di Metabarcoding e discussione dei dati ottenuti. 
+* Descrizione della procedura bioinformatica per l’assemblaggio e annotazione di un genoma batterico corredata da un breve commento dei risultati ottenuti;  
+* Descrizione della procedura bioinformatica relativa all’analisi di dati di Metabarcoding e discussione dei dati ottenuti:  
+    - Vanno comparati i risultati ottenuti durante l'esercitazione con quelli ottenuti nel lavoro Ravegnini et al. 2020; 
     - Inoltre, va effettuata una ricerca in **PubMed** relativa al ***Fusobacterium nucleatum*** e alla possibile associazione con patologie: selezionarne e discuterne uno.  
     - Nella relazione va indicata la ricerca effettuata su **PubMed** e il PMID del lavoro scelto.  
 * Nella tabella sottostante è indicato per ciascuno di voi un gene umano per cui dovrà effettuare la ricerca su **ENSEMBL** e indicare le seguenti informazioni:
@@ -32,52 +31,55 @@ La relazione dovrà riguardare **tutte** le seguenti tematiche:
 
 |Nome|Cognome|Gene Name|
 |:---:|:---:|:---:|
-|Damiano|Amoruso|small nuclear ribonucleoprotein polypeptide C|
-|Giulia|Angelini|aminoacylase 1|
-|Alessandro|Bastone|membrane spanning 4-domains A18|
-|Laura |Bellino|TBC1 domain family member 24|
-|Federica|Bisceglia|von Willebrand factor C domain containing 2|
-|Roberta|Bucci|TNF alpha induced protein 8 like 3|
-|Simona|Buonanno|KN motif and ankyrin repeat domains 3|
-|Monica|Campioni|intraflagellar transport 88|
-|Giulia|Casamassima|histidine triad nucleotide binding protein 3|
-|Assunta|Catino|CD27 molecule|
-|Clarisssa|Chirulli|docking protein 4|
-|Valentina|Consoli|retinol binding protein 4|
-|Lorenza|Cutrone|ELAV like RNA binding protein 1|
-|Alessia|Daponte|fibroblast growth factor receptor 1|
-|Federica Concetta|Di Noia|chromodomain helicase DNA binding protein 1|
-|Ruggiero|Dipaola|heterogeneous nuclear ribonucleoprotein U|
-|Maurizio|Fanelli|transmembrane protein 132E|
-|Olga|Favale|DnaJ heat shock protein family (Hsp40) member C12|
-|Francesca|Filannino|cation channel sperm associated 1|
-|Francesco|Ladisa|thromboxane A synthase 1|
-|Emanuela|Lavarra|gamma-aminobutyric acid type A receptor subunit rho2|
-|Nunzio Simone|Lorito|NmrA like redox sensor 1|
-|Sabrina|Luchena|cancer susceptibility 1|
-|Camilla|Mandorino|PAT1 homolog 2|
-|Anna Maria|Marinelli|RFNG O-fucosylpeptide 3-beta-N-acetylglucosaminyltransferase|
-|Elisabetta|Marsala|interleukin 16|
-|Antonio|Martino|olfactory receptor family 5 subfamily W member 2|
-|Anna |Mastrangelo|RB binding protein 6, ubiquitin ligase|
-|Stefano|Mazzeo|ubiquitin specific peptidase 31|
-|Miriana|Mazzone|heat shock protein family E (Hsp10) member 1|
-|Chiara|Morrone|flavin containing dimethylaniline monoxygenase 3|
-|Ignazio|Palermo|synaptojanin 1|
-|Chiara|Pellegrino|nuclear receptor 2C2 associated protein|
-|Antonio|Radesco|protein phosphatase 2 regulatory subunit B'alpha|
-|Martina|Rella|mitochondrial ribosomal protein L13|
-|Cinzia|Riccardi|defensin beta 110|
-|Andrea|Rizzo|SEC24 homolog B, COPII coat complex component|
-|Giovanna|Saracino|family with sequence similarity 177 member A1|
-|Serena|Sebastiano|thiamine triphosphatase|
-|Giorgia|Tarricone|gelsolin|
-|Claudia|Telegrafo|trinucleotide repeat containing adaptor 6B|
-|Federico|Tridente|collectin subfamily member 12|
-|Desiree|Valente|shieldin complex subunit 3|
-|Rossella|Valenzano|FXYD domain containing ion transport regulator 5|
-|Antonio Benedetto|Ventura|von Willebrand factor A domain containing 5A|
-|Alessandra|Zecchillo|TSPY like 4
+|Nome |Cognome|Name|
+|Paulina|Borowiec|alpha-1-B glycoprotein|
+|Rosa|Buonamassa|arylacetamide deacetylase like 2|
+|Diletta|Capobianco|ATP binding cassette subfamily C member 1|
+|Carmela|Centoducati|ATP binding cassette subfamily G member 5|
+|Antonella|Cicirelli|acetylcholinesterase (Cartwright blood group)|
+|Sara |Cileo|apoptotic chromatin condensation inducer 1|
+|Carmela |Colabufo|atypical chemokine receptor 1 (Duffy blood group)|
+|Francesca|Conte|acyl-CoA thioesterase 2|
+|Cristiano|Coppola|ADAM metallopeptidase domain 9|
+|Angelica|D'Ascoli|1-acylglycerol-3-phosphate O-acyltransferase 3|
+|Anna Simona|Daddario|aldo-keto reductase family 1 member D1|
+|Giulia|de Martino|ALG10 alpha-1,2-glucosyltransferase|
+|Katya|De Meo|apolipoprotein C3|
+|Giuseppe|Debiase|keratin 77|
+|Ilaria|Delle Fontane|Kell metallo-endopeptidase (Kell blood group)|
+|Giuseppe|Di Noia|kynurenine 3-monooxygenase|
+|Claudia|Dibenedetto|keratin associated protein 9-4|
+|Ilaria|Ferro|laminin subunit gamma 1|
+|Giorgia |Gemma |lymphocyte activating 3|
+|Desirè |Greco|ladinin 1|
+|Rebecca |Lasalandra|lactamase beta like 1|
+|Nicoletta|Lionetti |L3MBTL histone methyl-lysine binding protein 1|
+|Sabrina|Luchena|late cornified envelope 3D|
+|Federica|Mafrica|lipocalin 2|
+|Roberta|Maggiore|leucine rich repeat containing G protein-coupled receptor 4|
+|Alessio|Manfredi|luteinizing hormone/choriogonadotropin receptor|
+|Sara |Massa|lengsin, lens protein with glutamine synthetase domain|
+|Angela|Matarrese|microtubule actin crosslinking factor 1|
+|Ciro|Mazza|macrophage erythroblast attacher, E3 ubiquitin ligase|
+|Alessia|Memeo|MAGE family member C2|
+|Isabella|Mongelli|microtubule associated serine/threonine kinase 1|
+|Francesca|Monteleone|methylmalonyl-CoA epimerase|
+|Chiara|Morrone|midkine|
+|Marika|Pagliara|Mdm1 nuclear protein|
+|elena|paternoster|matrix remodeling associated 8|
+|Valeria|Perniola|tripartite motif containing 38|
+|Paola |Poliseno |TruB pseudouridine synthase family member 1|
+|Giuseppe|Romanazzi|laminin subunit beta 3|
+|Silvia |Saltarelli|TSC complex subunit 1|
+|Salvatore Alessandro|Santeramo|tubulin alpha 1a|
+|Giorgia |Sclavo |U2 small nuclear RNA auxiliary factor 2|
+|Elena|Serra|ubinuclein 1|
+|Miriana|Sicolo|UDP-glucose 6-dehydrogenase|
+|Gianluca|Signorile|cAMP responsive element binding protein 3 like 4|
+|A. Federica|Sirago|cAMP responsive element modulator|
+|Elena|Squiccimarro|CDP-L-ribitol pyrophosphorylase A|
+|Valeria|Vurchio|cell cycle regulator of NHEJ|
+|Annamaria |Zerulo|DDB1 and CUL4 associated factor 6|
 
 
 [Back to the top](../README.md) 
