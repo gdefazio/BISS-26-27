@@ -3,18 +3,20 @@
 Ogni studente dovrà presentare una relazione relativa ai laboratori svolti entro **5gg LAVORATIVI** dalla data in cui è previsto l’esame orale.  
 Esempio: Prendiamo ad esempio l'esame previsto per il lunedì 08/02.   
  
-|05 Febbraio|05 Febbraio|05 Febbraio|05 Febbraio|06 Febbraio|07 Febbraio|08 Febbraio|
+|02 Febbraio|03 Febbraio|04 Febbraio|05 Febbraio|06 Febbraio|07 Febbraio|08 Febbraio|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Martedì|Mercoledì|Giovedì|Venerdì|Sabato|Domenica|Lunedì|
 |LAVORATIVO|LAVORATIVO|LAVORATIVO|LAVORATIVO|NON LAVORATIVO|NON LAVORATIVO|**ESAME**|
 |**LIMITE ULTIMO PER LA CONSEGNA**|4|3|2|1|1|1|
 
 La relazione dovrà riguardare **tutte** le seguenti tematiche:
-* Descrizione della procedura bioinformatica per l’assemblaggio e annotazione di un genoma batterico corredata da un breve commento dei risultati ottenuti;  
+* Descrizione della procedura bioinformatica per l’assemblaggio e annotazione di un genoma batterico corredata da un breve commento dei risultati ottenuti;
+  
 * Descrizione della procedura bioinformatica relativa all’analisi di dati di Metabarcoding e discussione dei dati ottenuti:  
     - Vanno comparati i risultati ottenuti durante l'esercitazione con quelli ottenuti nel lavoro Ravegnini et al. 2020; 
     - Inoltre, va effettuata una ricerca in **PubMed** relativa al ***Fusobacterium nucleatum*** e alla possibile associazione con patologie: selezionarne e discuterne uno.  
     - Nella relazione va indicata la ricerca effettuata su **PubMed** e il PMID del lavoro scelto.  
+    
 * Nella tabella sottostante è indicato per ciascuno di voi un gene umano per cui dovrà effettuare la ricerca su **ENSEMBL** e indicare le seguenti informazioni:
     - Simbolo ufficiale del Gene;   
     - Identificativo del Gene;
@@ -76,7 +78,7 @@ La relazione dovrà riguardare **tutte** le seguenti tematiche:
 |Elena|Serra|ubinuclein 1|
 |Miriana|Sicolo|UDP-glucose 6-dehydrogenase|
 |Gianluca|Signorile|cAMP responsive element binding protein 3 like 4|
-|A. Federica|Sirago|cAMP responsive element modulator|
+|A.Federica|Sirago|cAMP responsive element modulator|
 |Elena|Squiccimarro|CDP-L-ribitol pyrophosphorylase A|
 |Valeria|Vurchio|cell cycle regulator of NHEJ|
 |Annamaria |Zerulo|DDB1 and CUL4 associated factor 6|
