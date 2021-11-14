@@ -1,6 +1,6 @@
 # **ESERCITAZIONI PRATICHE DEL CORSO DI BIOINFORMATICA ED ANALISI FUNZIONALE DEL GENOMA**  
 
-Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https://www.menti.com/9awgurbzuo).  
+Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https://docs.google.com/forms/d/e/1FAIpQLSdF3kWuMoRu7nwkzQXdJb9UjHOgGKljLVVexq1jXm2RJ-bwDg/viewform?usp=sf_link).  
 
 
 ## Programma
