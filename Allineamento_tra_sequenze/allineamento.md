@@ -1,13 +1,13 @@
 # ALLINEAMENTO DI SEQUENZE   
-**L'assunzione di base su cui si base il confronto tra sequenze è che se due sequenze sono identiche, avranno un comportamento identico nelle cellule viventi**.  
+**L' assunzione di base su cui si base il confronto tra sequenze è che se due sequenze sono identiche, avranno un comportamento identico nelle cellule viventi**.  
   
 Possiamo generalizzare questo concetto, dicendo che **più due sequenze sono similari tra loro, maggiore sarà la probabilità che abbiano una funzione similare**.  
-Questo principio ci permettedere di desumere le proprietà di una sequenza nucleotidica o aminocidica ignota, basandosi sulle caratteristiche della sequenza nota con cui riusciamo ad ottenre un allineamento.  
+Questo principio ci permette di desumere le proprietà di una sequenza nucleotidica o aminoacidica ignota, basandosi sulle caratteristiche della sequenza nota con cui riusciamo a ottenere un allineamento.  
 
 
 L’allineamento di due o più sequenze riporta **la rappresentazione di un’ipotesi di omologia posizionale** tra le basi o gli aminoacidi delle sequenze considerate.  
 Esso, infatti, presuppone che le sequenze da allineare siano **omologhe** e quindi **filogeneticamente correlate**.  
-_Allineare_ due sequenze significa rappresentarle una sotto l'altra, incolonnando i residui in modo da formare una matrice.  
+_Allineare_ due sequenze significa rappresentarle una sotto l' altra, incolonnando i residui in modo da formare una matrice.  
 ```
 FTFTALILLAVAV
 |  ||| ||| ||
@@ -25,7 +25,7 @@ FTFTALILLA-VAV
 Il programma **BLAST (Basic Local Alignment Search Tool)** può essere utilizzato per trovare in banca dati sequenze simili (spesso anche omologhe) a quella che stiamo esaminando.  
 Come abbiamo visto in precedenza (Ricerca in Banche dati mediante “parole chiave”) l’interrogazione di una banca dati può essere effettuata anche attraverso “sistemi di retrieval” ricercando criteri testuali nelle annotazioni contenute nelle entries delle sequenze.  
 Talvolta, però, le sequenze collezionate nella banca dati non sono correttamente annotate e quindi potrebbe non essere possibile selezionarle mediante la ricerca di parole chiave.  
-In questo caso è possibile eseguire la ricerca sulla base della similarità di sequenza utilizzando programmi di “database searching” come il **BLAST (Basic Local Alignment Search Tool)** che confronta una sequenza sonda (per convenzione definita **QUERY**) con tutte le sequenze di una banca dati.  
+In questo caso è possibile eseguire la ricerca sulla base della similarità̀ di sequenza utilizzando programmi di “database searching” come il **BLAST (Basic Local Alignment Search Tool)** che confronta una sequenza sonda (per convenzione definita **QUERY**) con tutte le sequenze di una banca dati.  
 ![blast_alg](blast_glossary-Image001.jpg)  
 [https://www.ncbi.nlm.nih.gov/books/NBK62051/**](https://www.ncbi.nlm.nih.gov/books/NBK62051/)  
   
@@ -57,14 +57,14 @@ Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:
     Nella pagina che si apre possiamo disingure tre macro sezioni:  
         - Pannello 1 (rosso): _sezione generale_. Abbiamo tra opzione per cambiare la tipologia di report;  
         - Pannello 2 (viola): _sezione di filtering_: possiamo filtrare i dati sulla base dell' **organismo**, **percentuale di similarità**, **e-value** e **query coverage**;  
-        - Pannello 3 (blue): _sezione dei risultati_: possiamo comabiare la modalità in cui sono visualizzati i risultati.   
+        - Pannello 3 (blue): _sezione dei risultati_: possiamo cambiare la modalità in cui sono visualizzati i risultati.  
     La modalità di visualizzazione di base è definita **Descriptions**, dove troviamo le seguenti informazioni:
         * _Description_: Non è altro che la descrizione della sequenza contro cui abbiamo ottenuto un match;  
-        * _Max Score_: il punteggio massimo ottenuto dall'allineamento;  
-        * _Total Score_: il punteggio totale ottenuto dall'allineamento;
-        * _Query Coverage_: porzione della sequenza query interessata dall'allineamento;     
-        * _E value_: è una misura che ci dice l'affibabolità dell'allineamento;  
-        * _Per. Ident_: percentuale di indentità tra la sequena query e quella match;
+        * _Max Score_: il punteggio massimo ottenuto dall' allineamento;  
+        * _Total Score_: il punteggio totale ottenuto dall' allineamento;
+        * _Query Coverage_: porzione della sequenza query interessata dall' allineamento;     
+        * _E value_: è una misura che ci dice l' affidabilità dell' allineamento;  
+        * _Per. Ident_: percentuale di indentità tra la sequenza query e quella match;
         * _Accession_: accession number della sequenza oggetto.  
     Se selezioniamo la modalità di visualizzasione dei risultati **Graphic Summary**, noteremo che il Pannello 1 e 2 rimarranno invariati ma cambierà il 3.  
 ![blast_graphic](./blast_graphic.jpg)
@@ -79,7 +79,7 @@ Esamina i risultati e osserva le sequenze omologhe di COX4 relative a specie di 
 
 ## ESERCIZIO 2
 Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina contenente l‘intera entry. È così possibile ricavare diverse informazioni, tra cui l‘AC delle sequenze nucleotidiche corrispondenti alla sequenza proteica.  
-Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della subunità IV della citocromo c ossidasi umana (ricercandola con una ricerca testuale). In questo caso, quale tipo di BLAST si dovrebbe utilizzare?  
+Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della sub-unità IV della citocromo c ossidasi umana (ricercandola con una ricerca testuale). In questo caso, quale tipo di BLAST si dovrebbe utilizzare?  
 Suggerimenti:
  - Il **gene name** è COX4I1  
  - Restringete la ricerca (*limits*) per **mRNA** e **RefSeq**  
@@ -95,7 +95,7 @@ FAKYFLHQSHEEREHAEKLMKLQNQRGGRIFLQDIKKPDCDDWESGLNAME
 CALHLEKNVNQSLLELHKLATDKNDPHLCDFIETHYLNEQVKAIKELGDHVT
 NLRKMGAPESGLAEYLFDKHTLGDSDNES
 ``` 
-Utilizzando il Protein BLAST, cercate di rispondere alle seguenti domande:   
+Utilizzando il Protein BLAST, cercate di rispondere alle seguenti domande:  
     1)	Di che proteina si potrebbe trattare, e da quale specie probabilmente proviene  
     2)	Contiene un dominio funzionale? Se si, quale?  
     3)	Esistono sequenze che si possono supporre ortologhe in altri organismi?   
