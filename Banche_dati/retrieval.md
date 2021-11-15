@@ -10,7 +10,7 @@ L’obiettivo dell’esercitazione è quello di selezionare i geni e le proteine
 __Nota preliminare__: ricorda che le virgolette consentono di delimitare più parole da ricercare insieme e che più operatori logici possono essere utilizzati in una stessa ricerca usando le parentesi tonde come in un’espressione matematica.  
   
 1.	Collegati al sito [https://www.ncbi.nlm.nih.gov/](https://www.ncbi.nlm.nih.gov/);   
-2.	Nel menù a tendina accando alla casella di ricerca seleziona **Nucleotide**;  
+2.	Nel menù a tendina accanto alla casella di ricerca seleziona **Nucleotide**;  
   
 
 ![NCBI Home Page](./ncbi_home.jpg)
@@ -18,33 +18,33 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
 3.	Richiedi la sequenza nucleotidica desiderata attraverso l’uso del seguente termine di ricerca: `"cytochrome c oxidase"`;  
     <details><summary></summary>
     <p>
-    <b>634.020</b>
+    <b>782.730</b>
     </p>
     </details>
 
 4.	Prova ad inserire degli errori nella nomenclatura (es: `"cytochrome c oxydase"` oppure `"cytocrome c oxidase"`). Nota le differenze nel risultato e prova a dedurne il motivo;  
     <details><summary></summary>
     <p>
-    `"cytochrome c oxydase"` <b>158</b>
+    `"cytochrome c oxydase"` <b>165</b>
     </p>
     <p>  
-    `"cytochrome c oxydase"` <b>221</b>
+    `"cytochrome c oxydase"` <b>220</b>
     </p>
     </details>   
 
 5.	Restringiamo la selezione richiedendo solo le sequenze nucleotidiche della subunità 4. Utilizzeremo l'operatore logico **AND**;   
-    a.	`"cytochrome c oxidase"` AND `"subunit 4"`  
+    a.	`"cytochrome c oxidase" AND "subunit 4"`  
     <details><summary></summary>
     <p>  
-    <b>3.766</b>
+    <b>4.860</b>
     </p>
     </details>   
-    
-    
-    b.	`"cytochrome c oxidase"` AND `"subunit iv"`  
+
+
+    b.	`"cytochrome c oxidase" AND "subunit iv"`  
     <details><summary></summary>
     <p>
-    <b>2.577</b>
+    <b>2.612</b>
     </p>
     </details>
 
@@ -54,7 +54,7 @@ NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries di
     a.	`"cytochrome c oxidase" AND ("subunit 4" OR "subunit iv")`  
     <details><summary></summary>
     <p>
-    <b>6.035</b>
+    <b>7.143</b>
     </p>
     </details>  
 
@@ -62,7 +62,7 @@ NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries di
     a.	`"cytochrome c oxidase" AND ("subunit 4" OR "subunit iv" OR "cox4")`
     <details><summary></summary>
     <p>
-    <b>6.099</b>
+    <b>7.220</b>
     </p>
     </details>
      
@@ -74,11 +74,11 @@ NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries di
     </p>
     </details>
 
-Prima di procedere al prossimo punto cliccare su “clear” per eliminare i limiti imposti precedentemente.  
+**Prima di procedere al prossimo punto cliccare su “clear” per eliminare i limiti imposti precedentemente.**  
 
 9.	Alternativamente possiamo sfruttare uno strumento più potente per selezionare le sole sequenze cox4 umane selezionando l’opzione **Advanced**: 
     a.	Nel primo campo di ricerca aggiungere la ricerca `""cytochrome c oxidase" AND ("subunit 4" OR "subunit iv" OR "cox4")"`;  
-    b.	Selezionare l’operatore **AND**;    
+    b.	Selezionare l’operatore **AND**;  
     c.	Selezionare il field `organism` e scrivere “Homo sapiens”.  
 
 ![advanced](./advanced.jpg)  
@@ -119,14 +119,13 @@ Esamina la entry selezionata nell’esercizio 1.
 - Osservando la **Feature Table** cosa potete annotare?  
 
 ## Esercizio 4. 
-Utilizzando ENTREZ prova a selezionare la entry **RefSeq** relativa alla proteina `"ATP synthase subunit 8"`, il cui **gene name** è `ATP8` di [Ciona robusta](https://invasions.si.edu/nemesis/calnemo/SpeciesSummary.jsp?TSN=-701). 
-  
+Utilizzando ENTREZ prova a selezionare la entry **RefSeq** relativa alla **proteina** `"ATP synthase F0 subunit 8"`, il cui **gene name** ufficiale è `ATP8` di [Ciona robusta](https://invasions.si.edu/nemesis/calnemo/SpeciesSummary.jsp?TSN=-701).  
+
 ## Esercizio 5. 
-Esamina la entry selezionata nell’esercizio 4 (YP_009357191.1).    
+Esamina la entry selezionata nell’esercizio 4 (YP_006341035.1).  
 Determina:  
 - l’accession number della sequenza nucleotidica da cui è stata ricavata la entry;  
-- la lunghezza della proteina;  
-- della sequenza nucleotidica che codifica per questa proteina.  
+- la lunghezza della proteina e della sequenza nucleotidica che codifica per questa proteina.  
 
 ## Esercizio 6. 
 Determina il numero di proteine umane presenti nella banca dati.  
