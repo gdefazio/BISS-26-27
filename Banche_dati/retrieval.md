@@ -144,7 +144,7 @@ Proviamo adesso a ricercare qualcosa di più interessante.
 - Quanti genomi di `severe acute respiratory syndrome coronavirus 2` sono disponibili?  
 - Aprite il link alla entry di riferimento e scaricate la sequenza genomica in formato `FASTA`.  
 
-## Esercizio 9. 
+## Esercizio 10. 
 - Quanti sequenze di `severe acute respiratory syndrome coronavirus 2` sono disponibili nella banca dati nucleotide?  
 
   
