@@ -9,17 +9,17 @@ Esso, infatti, presuppone che le sequenze da allineare siano **omologhe** e quin
 _Allineare_ due sequenze significa rappresentarle una sotto l' altra, incolonnando i residui in modo da formare una matrice.  
 In generale distinguiamo due tipologie di allieneamento:  
 a) **Allineamento Globale**: le sequenze sono allineate per la loro intera lunghezza;  
-    ```
-    FTFTALILLAVAV
-    |  ||| ||| ||
-    F--TAL-LLA-AV
-    ```  
+```
+FTFTALILLAVAV
+|  ||| ||| ||
+F--TAL-LLA-AV
+```  
 b) **Allineamento Locale**: in questo caso privilegiamo porzioni di similitudine tra le due sequenze allo scopo di massimizzare la similarità tra queste porzioni di sequenze.
-    ```
-    FTFTALILLA-VAV
-      |||| ||| | 
-    --FTAL-LLAAV-
-    ```   
+```
+FTFTALILLA-VAV
+  |||| ||| | 
+--FTAL-LLAAV-
+```   
 
 ## Caratterizzazione di una sequenza mediante ricerca di similarità in banche dati: Applicazione di BLAST per la ricerca di sequenze omologhe  
 Il programma **BLAST (Basic Local Alignment Search Tool)** può essere utilizzato per trovare in banca dati sequenze simili (spesso anche omologhe) a quella che stiamo esaminando.  
@@ -35,8 +35,12 @@ Esistono diverse versioni del BLAST:
 - **blastx**: permette di allineare QUERY nucleotidiche tradotte contro un database di riferimento proteico :sob:;   
 - **tblastn**: permette di allineare QUERY aminoacidica contro un database di riferimento nucleotidico tradotto :astonished:;  
 - **tblastx**: sia la QUERY che il database sono nucleotidici e vengono tradotti :scream:;   
-- **Gapped blast**: versione aggiornata dell'algortimo in cui sono ammessi gap durante la fase di estensione :scream:;
+- **Gapped blast**: versione aggiornata dell'algoritmo in cui sono ammessi gap durante la fase di estensione :scream:;
 - **PSI-BLAST**: Algoritmo che ricalcola gli score di allineamento interattivamente sulla base dei match osservati :scream:;
+
+Da qualche anno sono disponibili anche versioni ancora più ottimizzate dell' algoritmo pensate per rispondere a specifiche necessità:  
+![](Screenshot%202021-11-27%20at%2018.50.10.jpg)
+
 
 Supponiamo di voler cercare le sequenze simili alla *sub-unità IV della citocromo c ossidasi umana* (Accession Number: **P13073**).  
 Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:  
