@@ -66,6 +66,6 @@ Provate a cercare nel genoma dell’uomo il gene della ferritina “heavy” (FT
 Ripetete l’esperimento sul genoma del topo (usando la sequenza dell’uomo). In questo caso, **non selezionate megablast**.  
 Su che cromosoma si trova il gene omologo a COX4I1 (idem: provate a rispondere e solo dopo a guardare le annotazioni)? 
  
-
+[Browser Genomics](../Genome_Browser/Ensembl.md)
 [Back to the top](../README.md)
 
