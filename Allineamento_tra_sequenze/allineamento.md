@@ -1,25 +1,25 @@
 # ALLINEAMENTO DI SEQUENZE   
-**L' assunzione di base su cui si base il confronto tra sequenze è che se due sequenze sono identiche, avranno un comportamento identico nelle cellule viventi**.  
+**L' assunzione di base su cui fondiamo il confronto tra sequenze è che se due sequenze sono identiche, avranno un comportamento identico nelle cellule viventi**.  
   
-Possiamo generalizzare questo concetto, dicendo che **più due sequenze sono similari tra loro, maggiore sarà la probabilità che abbiano una funzione similare**.  
+Possiamo generalizzare questo concetto, dicendo che **più due sequenze sono similari tra di loro, maggiore sarà la probabilità che abbiano una funzione similare**.  
 Questo principio ci permette di desumere le proprietà di una sequenza nucleotidica o aminoacidica ignota, basandosi sulle caratteristiche della sequenza nota con cui riusciamo a ottenere un allineamento.  
-
 
 L’allineamento di due o più sequenze riporta **la rappresentazione di un’ipotesi di omologia posizionale** tra le basi o gli aminoacidi delle sequenze considerate.  
 Esso, infatti, presuppone che le sequenze da allineare siano **omologhe** e quindi **filogeneticamente correlate**.  
 _Allineare_ due sequenze significa rappresentarle una sotto l' altra, incolonnando i residui in modo da formare una matrice.  
-```
-FTFTALILLAVAV
-|  ||| ||| ||
-F--TAL-LLA-AV
-```   
-L’allineamento può essere realizzato utilizzando algoritmi di **allineamento globale**, che quindi considerano l’intera lunghezza delle sequenze in esame, o **algoritmi di allineamento locale**.   
-
-```
-FTFTALILLA-VAV
-  |||| ||| | 
---FTAL-LLAAV-
-```   
+In generale distinguiamo due tipologie di allieneamento:  
+a) **Allineamento Globale**: le sequenze sono allineate per la loro intera lunghezza;  
+    ```
+    FTFTALILLAVAV
+    |  ||| ||| ||
+    F--TAL-LLA-AV
+    ```  
+b) **Allineamento Locale**: in questo caso privilegiamo porzioni di similitudine tra le due sequenze allo scopo di massimizzare la similarità tra queste porzioni di sequenze.
+    ```
+    FTFTALILLA-VAV
+      |||| ||| | 
+    --FTAL-LLAAV-
+    ```   
 
 ## Caratterizzazione di una sequenza mediante ricerca di similarità in banche dati: Applicazione di BLAST per la ricerca di sequenze omologhe  
 Il programma **BLAST (Basic Local Alignment Search Tool)** può essere utilizzato per trovare in banca dati sequenze simili (spesso anche omologhe) a quella che stiamo esaminando.  
