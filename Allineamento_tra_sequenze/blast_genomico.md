@@ -50,7 +50,7 @@ Per verificare le risposte, è sufficiente osservare gli allineamenti ed utiliz
 </details>
 
 Un altro programma molto efficiente e veloce per confrontare una sequenza data contro un intero genoma è il **BLAT**.
-BLAT è accessibile presso il server dell'UCSC: [http://genome.ucsc.edu/cgi-bin/hgBlat?command=start](http://genome.ucsc.edu/cgi-bin/hgBlat?command=start).  
+[BLAT](http://genome.ucsc.edu/cgi-bin/hgBlat?command=start) è accessibile presso i server dell' UCSC.  
 
 ![blat](./blat.png)
 
