@@ -5,12 +5,12 @@ Immaginate di confrontare una sequenza di 100 bp con un intero cromosoma umano: 
 
 Le applicazioni di questo tipo di analisi sono diverse:
 1.	Dato un trascritto, si può cercare da quale regione del genoma corrispondente proviene (e quindi, dove si trova il rispettivo gene);  
-2.	Data una proteina, si può cercare una regione del genoma corrispondente che codifichi per questa proteina (**Nel caso dei genomi eucariotici, non è però possibile ricostruire l’intera struttura genica o nemmeno il trascritto che ha prodotto quella proteina. Per quale motivo?**);  
+2.	Data una proteina, si può cercare una regione del genoma corrispondente che codifichi per questa proteina (**Nel caso dei genomi eucariotici, non è però possibile ricostruire l’intera struttura genica o il trascritto che ha prodotto quella proteina. Per quale motivo?**);  
 3.	Dato un trascritto (o una proteina) di una specie, si può usare il BLAST sul genoma di un’altra specie per cercare qualcosa che sia “simile” (**mentre nei due casi precedenti ci si poteva aspettare l’identità nelle regioni allineate, Perché?**), sia a livello di sequenza nucleotidica (produce un trascritto simile a quello dato) sia a livello di traduzione (tradotta, produce un peptide simile a quello dato).  
-In effetti, l’analisi al punto 3) viene fatta, ad esempio, dallo staff di **ENSEMBL** ogni qual volta viene annotato un genoma appena assemblato, partendo da specie sufficientemente “vicine” (e le annotazioni di **“omologia/ortologia”** provengono proprio da BLAST “incrociati”).  
+In effetti, l’analisi al punto `3)` viene applicata, ad esempio, dallo staff di **ENSEMBL** ogni qual volta viene annotato un genoma appena assemblato, partendo da specie sufficientemente “vicine” (e le annotazioni di **“omologia/ortologia”** provengono proprio da BLAST “incrociati”).  
 
 Mentre per allineare i trascritti ad una sequenza genomica si può usare **nucleotide BLAST**  (query nucleotidi vs. database nucleotidico, anche nella variante **“MEGABLAST”** che suppone che le vostre sequenze siano “identiche a pezzi”), per “mappare” proteine su potenziali geni che le codificano o si può tradurre la proteina “all’indietro” in nucleotidi e “blastarla” sul genoma. 
-Per fare questo c’è una variante di BLAST apposita (**tblastn**), oppure, viceversa.  
+Per fare questo c’è una variante di BLAST apposita (**tblastn**).  
 
 Virtualmente tutti i **browser genomici** (_che vedremo nella prossima esercitazione_) “offrono” un servizio di blast sui diversi genomi, che producono i medesimi  risultati.  
 In questa esercitazione utilizzeremo (per motivi puramente estetici e di leggibilità dei risultati) quello disponibile con il **BLAST**, accessibile tramite il “solito” link:  
@@ -50,7 +50,8 @@ Per verificare le risposte, è sufficiente osservare gli allineamenti ed utiliz
 </details>
 
 Un altro programma molto efficiente e veloce per confrontare una sequenza data contro un intero genoma è il **BLAT**.
-BLAT è accessibile presso il server dell'UCSC: [http://genome.ucsc.edu/cgi-bin/hgBlat?command=start](http://genome.ucsc.edu/cgi-bin/hgBlat?command=start)
+BLAT è accessibile presso il server dell'UCSC: [http://genome.ucsc.edu/cgi-bin/hgBlat?command=start](http://genome.ucsc.edu/cgi-bin/hgBlat?command=start).  
+
 ![blat](./blat.png)
 
 Una volta selezionato il genoma e la versione dell' assembly è possibile condurre la ricerca dopo aver incollato nell'apposito riquadro la sequenza nucleotidica o proteica in esame.  
