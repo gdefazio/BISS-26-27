@@ -68,7 +68,7 @@ Nella sezione **Summary** sono riportate delle informazioni relative all'annotaz
 * UniProtKB: se disponibile il link alla banca dati **UniProtKB**;  
 * RefSeq: se disponibile il link alla banca dati **RefSeq**;  
 * Ensembl version: versione dell'annotazione ENSEMBL;  
-* Other assemblies: altre versioni dell'assembly;  
+* Other assemblies: altre versioni dell' assembly;  
 * Gene type: tipologia di gene;  
 * Annotation method: metodo di [annotazione](http://www.ensembl.org/info/genome/genebuild/genome_annotation.html.  
 
@@ -78,7 +78,7 @@ Relativamente ad entrambe le strand è riportata la posizione degli elementi tra
 - Utilizzando il menù di configurazione  possiamo selezionare le “track” da visualizzare e gestirne le opzioni di visualizzazione: 
  >ad esempio possiamo includere la rappresentazione relativa alle modificazioni Istoniche: selezioniamo la modifica **H3K27Ac**.  
 
-Possiamo visualizzare a questo punto l'informazione relativa a trascritti e proteine, cliccando sui link corrispondenti. Poi se vogliamo avere indicazioni più dettagliate sulla struttura in esoni ed introni e sulla loro localizzazione, possiamo cliccare sul box 
+Possiamo visualizzare a questo punto l' informazione relativa sia ai trascritti che alle proteine, cliccando sui link corrispondenti. Poi se vogliamo avere indicazioni più dettagliate sulla struttura in esoni ed introni e sulla loro localizzazione, possiamo cliccare sul box 
 a sinistra, dalla pagina relativa al trascritto:  
 ![options](./options.jpg)
 
