@@ -14,25 +14,26 @@ Prima di iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 
 ### Esercitazione 2 (29/11/2020 e 06/12/2021)
 #### Allineamento tra sequenze
-- [ ] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
-- [ ] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
+- [X] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
+- [X] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
 #### Genome Browser
 - [ ] [ENSEMBL](./Genome_Browser/Ensembl.md)
+- [X] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md#esercizi)
+- [X] [ENSEMBL: COVID-19](./Genome_Browser/Ensembl.md#covid-19)
 
 ### Esercitazione 3 ()
-- [ ] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md#esercizi)
-- [ ] [ENSEMBL: COVID-19](./Genome_Browser/Ensembl.md#covid-19)
 - [ ] [UCSC](./Genome_Browser/UCSC.md)
 - [ ] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
+- [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
+
 
 ### Esercitazione 4 ()
-### Metabarcoding
-- [ ] [Ancora BASH...:fearful: :fearful: :fearful: ](./BASH/Accesso_al_server.md#il-formato-fasta)  
-
+### Metabarcoding 
+- [ ] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
 
 ### Esercitazione 5 - 6 ()
-### Metabarcoding / Genome Assembly
-- [ ] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
-- [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
+
+
+
 
 ### [Relazioni]()  
