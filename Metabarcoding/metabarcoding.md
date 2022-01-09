@@ -15,14 +15,14 @@ Il grande interesse verso le comunità microbiche è dato dal fatto che esse son
 Proprio considerando il corpo umano, la composizione del microbioma cambia a seconda del sito anatomico o dell’età del soggetto (Turnbaugh et al., 2013), ma anche in base allo stile di vita.   
 Inoltre, l’avvento delle tecnologie di sequenziamento di nuova generazione ad elevato throughput (**Next-Generation Sequencing, NGS**) (Nowrousian, 2010) ha sostenuto lo studio di tutti i possibili habitat.  
 La metagenomica può effettuare il profiling del microbioma mediante due approcci:  
-1.	**Classificazione tassonomica**: in questo caso l'obiettivo principale è quello di identificare gli organismi viventi nell'ambiente (Simon and Daniel, 2011), possibilmente a livello di specie . Questa metodologia richiede, dopo il sequenziamento, una fase di classificazione per assegnare le read ai rispettivi gruppi tassonomici;  
-2.	**Caratterizzazione funzionale**: l'obiettivo principale è quello di rivelare il repertorio di funzioni genetiche della comunità in oggetto d’indagine mediante analisi del DNA o RNA totale o sistemi di espressione eterologhi (solitamente E. coli) (Prakash and Taylor, 2012; Simon and Daniel, 2011).  
+1.	**Classificazione tassonomica**: in questo caso l'obiettivo principale è quello d' identificare gli organismi viventi nell' ambiente (Simon and Daniel, 2011), possibilmente a livello di specie . Questa metodologia richiede, dopo il sequenziamento, una fase di classificazione per assegnare le read ai rispettivi gruppi tassonomici;  
+2.	**Caratterizzazione funzionale**: l'obbiettivo principale è quello di rivelare il repertorio di funzioni genetiche della comunità in oggetto d’indagine mediante analisi del DNA o RNA totale o sistemi di espressione eterologhi (solitamente E. coli) (Prakash and Taylor, 2012; Simon and Daniel, 2011).  
   
 Quanto al metodo di sequenziamento, sono utilizzati due approcci principali:  
 •	L’analisi dell’intero metagenoma/metatranscrittoma basata sul sequenziamento **shotgun** del DNA/RNA totale estratto dal campione. Quest’approccio consente di ottenere sia informazioni tassonomiche che funzionali ma è notevolmente costoso in termini di sequenziamento e analisi computazionale.  
-•	La strategia **amplicon-based** o **metabarcoding** che si basa sull'amplificazione selettiva di specifici marcatori tassonomici utilizzando coppie di **primer universali** capaci di essere efficienti su grandi gruppi tassonomici (ad esempio batteri, funghi, ecc) ed il successivo sequenziamento high-throughput delle librerie di ampliconi ottenute.  
+•	La strategia **amplicon-based** o **metabarcoding** che si basa sull' amplificazione selettiva di specifici marcatori tassonomici utilizzando coppie di **primer universali** capaci di essere efficienti su grandi gruppi tassonomici (ad esempio batteri, funghi, ecc) ed il successivo sequenziamento high-throughput delle librerie di ampliconi ottenute.  
     Quest’approccio può fornire informazioni solo sulla composizione tassonomica del campione ma con superiore capacità d’identificazione e risoluzione a livello di specie.  
-    Inoltre, risulta meno costoso in termini di sequenziamento e analisi computazionale.    
+    Inoltre, risulta meno costoso in termini di sequenziamento e analisi computazionale.  
     Le regioni marker più utilizzate includono:  
     * diverse combinazioni delle regioni iper-variabili del gene del **rRNA 16S (nei batteri)**;  
     * gli **spaziatori interni trascritti (ITS) dei geni del cluster degli RNA ribosomiali (nei funghi)**;  
@@ -46,30 +46,6 @@ Un marcatore genetico di specie ideale dovrebbe avere le seguenti caratteristich
 ![picture2](./Picture2.png)  
 *Figura 2: rappresentazione della variabilità del gene per l’rRNA 16S nei procarioti.*
 
-### Valutazione bioinformatica di una coppia di primer
-Come detto per selezionare il marcatore di interesse utilizziamo una **coppia di primer universali** capace di amplificare l'intero range tassonomico di interesse.    
-***Ma come facciamo a valutare che una coppia di primer sia realmente universale?***    
-Possiamo testare i nostri primer in silico e valutare come si comportano sui dati ad oggi conosciuti.  
-Per il 16S possiamo utilizzare uno dei servizi messi a disposizione dalla database [**SILVA**], chiamto **TestPrime**:  
-1. Collegatevi a TestPrime utilizzando il seguente [link](https://www.arb-silva.de/search/testprime/);    
-![testprime](./testprime.jpg)  
-
-2. Vogliamo testare la seguente coppia di primer per la regione V4:  
-    * Forward: `GTGCCAGCMGCCGCGGTAA`  
-    * Reverse:  `GGACTACNVGGGTWTCTAAT`  
-3. Impostiamo 4 mismatch.  
-All'avvio dell'esecuzione di aprirà una finestra che vi mostrerà tutti i possibili primer partendo da quelli contenenti le degenerazioni.  
-
-Ripetete l'analisi ma in questo caso selesionate l'opzione `Length of 0-mismatch zone at 3' end` e indicate `5 bases`.  
-
-***Summary dei risultati ottenuti***  
-
-|Regno|No restrizione al 3'|Restrizione al 3'|
-|:---:|:---:|:---:|
-|Bacteria|96.6|91.7|
-|Archaea|97.5|94.2|
-Eukaryota|93.7|20.8|  
-
 ### Analisi di dati reali
 Per questa esercitazioni utilizzeremo dei dati di ricente pubblicazione [Ravegnini et al. 2020](https://www.mdpi.com/1422-0067/21/24/9735).  
 Lo scopo dello studio riguadava la caratterizzazione del microbioma gastrico in soggetti affetti tumore (*Gastric cancer, GC*).  
@@ -89,19 +65,18 @@ Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.or
 Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIME   2 View**](https://view.qiime2.org/).  
 
 ## Preparazione dell'area di lavoro
-* Come prima operazione occore entrare nelle vostre cartelle:  
-    `cd cognome_nome`  
+* Come prima operazione occorre accedere al server con le credenziali che vi sono state assegnate;
 * Successivamente va create la cartella `Ravegnini_et_al` e bisogna posizionarsi al suo interno:  
     `mkdir Ravegnini_et_al && cd Ravegnini_et_al`
 * Adesso va attivato l'ambiente virtuale in cui è installato **QIIME2**:  
-    `conda activate qiime2-2020.11` 
+    `source /opt/anaconda3/bin/activate qiime2-2020.11` 
 * Creiamo una cartella che mantenga i dati temporanei e indichiamo al sistema operativo di utilizzarla:  
     ```
     mkdir tmp
     export TMPDIR="$PWD/tmp"
     ```  
 * Copiamo i dati all'interno della nostra cartella:  
-    `cp /home/epigen/microbiome_analysis/metadata.tsv .`               
+    `cp /home/share/microbiome_analysis/metadata.tsv .`               
 A questo punto abbiamo completato tutte le operazioni preliminari necessarie per preparare l'ambiente di lavoro.  
 Possiamo procedere con le analisi.  
 
@@ -110,7 +85,7 @@ Possiamo procedere con le analisi.
     ```
     qiime tools import \
     --type 'SampleData[PairedEndSequencesWithQuality]' \
-    --input-path /home/epigen/microbiome_analysis/input_data \
+    --input-path /home/share/microbiome_analysis/input_data \
     --input-format CasavaOneEightSingleLanePerSampleDirFmt \
     --output-path demux-paired-end.qza
     ```  
@@ -157,7 +132,7 @@ Possiamo procedere con le analisi.
           --o-denoising-stats denoising-stats_16S.qza &  
  
      Essendo una operazione molto lunga abbiamo già effettuato il denoising. Dovete solo copiare i file:  
-    `cp -r /home/epigen/microbiome_analysis/{rep-seqs_16S.qza,denoising-stats_16S.qza,table_16S.qza} .`   
+    `cp -r /home/share/microbiome_analysis/{rep-seqs_16S.qza,denoising-stats_16S.qza,table_16S.qza} .`   
 
 * Andiamo a creare dei file di visualizzazione per verificare come sia andata la procedura di **Denoising**:  
     ```
@@ -165,34 +140,37 @@ Possiamo procedere con le analisi.
        --i-table table_16S.qza \
        --o-visualization table_16S.qzv \
        --m-sample-metadata-file metadata.tsv 
-
+    ```
+    ```
     qiime feature-table tabulate-seqs \
         --i-data rep-seqs_16S.qza \
         --o-visualization rep-seqs.qzv
-
+    ```
+    ```
     qiime metadata tabulate \
         --m-input-file denoising-stats_16S.qza \
         --o-visualization denoising-stats_16S.qzv
     ```
   
-* Scarchiamo i file `table_16S.qzv`, `denoising-stats_16S.qzv` e `rep-seqs.qzv` e visualizziamoli con QIIME2 view.  
+* Scarichiamo i file `table_16S.qzv`, `denoising-stats_16S.qzv` e `rep-seqs.qzv` e visualizziamoli con QIIME2 view.  
 
 ## Classificazione tassonomica  
 * Effettuaiamo la classificazione tassonomica:  
     >nohup qiime feature-classifier classify-sklearn \
-      --i-classifier /home/epigen/microbiome_analysis/silva-138-99-515-806-nb-classifier.qza \
+      --i-classifier /home/share/microbiome_analysis/silva-138-99-515-806-nb-classifier.qza \
       --i-reads rep-seqs_16S.qza \
       --o-classification taxonomy_16S_SKLEARN.qza &
     
     Essendo una operazione molto lunga abbiamo già effettuato la classificazione tassonomica. Dovete solo copiare i file:  
-    `cp -r /home/epigen/microbiome_analysis/taxonomy_16S_SKLEARN.qza .`
+    `cp -r /home/share/microbiome_analysis/taxonomy_16S_SKLEARN.qza .`
     
 * Adesso andiamo a generare dei file *qzv* che ci permettano di valutare i risultati della classificazione tassonomica:  
     ```
     qiime metadata tabulate \
         --m-input-file taxonomy_16S_SKLEARN.qza \
         --o-visualization taxonomy_16S_SKLEARN.qzv
-  
+    ```
+    ```
     qiime taxa barplot \
         --i-table table_16S.qza \
         --i-taxonomy taxonomy_16S_SKLEARN.qza \
@@ -247,6 +225,7 @@ In particolare:
       --i-table table_16S.qza \
       --i-phylogeny rooted-tree_16S.qza \
       --p-max-depth 50000 \
+      --p-min-depth 1000\
       --m-metadata-file metadata.tsv \
       --o-visualization alpha-rarefaction.qzv
   ```  
@@ -258,6 +237,7 @@ In particolare:
       --i-table table_16S.qza \
       --p-sampling-depth 15000 \
       --m-metadata-file metadata.tsv \
+      --p-n-jobs-or-threads 1 \
       --output-dir core-metrics-results_16S
     ```  
 * Verifichiamo se vi siano delle differenze significative tra gli indici di alpha diversità:    
@@ -266,7 +246,9 @@ In particolare:
       --i-alpha-diversity core-metrics-results_16S/shannon_vector.qza \
       --m-metadata-file metadata.tsv \
       --o-visualization core-metrics-results_16S/shannon-Condition-significance_16S.qzv
-    
+    ```
+  
+    ```
     qiime diversity alpha-group-significance \
       --i-alpha-diversity core-metrics-results_16S/faith_pd_vector.qza \
       --m-metadata-file metadata.tsv \
@@ -280,14 +262,18 @@ In particolare:
       --m-metadata-column type \
       --o-visualization core-metrics-results_16S/unweighted-unifrac-Condition-significance.qzv \
       --p-pairwise
-    
+    ```
+  
+    ```
     qiime diversity beta-group-significance \
       --i-distance-matrix core-metrics-results_16S/weighted_unifrac_distance_matrix.qza \
       --m-metadata-file metadata.tsv \
       --m-metadata-column type \
       --o-visualization core-metrics-results_16S/weighted-unifrac-Condition-significance.qzv \
       --p-pairwise
-  
+    ```
+    
+    ```
     qiime diversity beta-group-significance \
       --i-distance-matrix core-metrics-results_16S/bray_curtis_distance_matrix.qza \
       --m-metadata-file metadata.tsv \
@@ -299,42 +285,43 @@ In particolare:
 ## Analisi comparativa tra le due tipologie tumorali  
 Utilizzeremo [**ANCOM (analysis of composition of microbiomes)**](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4450248/) per andare ad effettuare una analisi comparativa tra le due tipologie tumorali analizzate.  
 1. Abbiamo detto che la tabella delle ASV è ricca in zeri (**zero inflated**). Ancom aggiunge delle _pseudo-conte_ per eliminare gli zeri.  
-```
-qiime composition add-pseudocount \
-  --i-table table_16S.qza \
-  --o-composition-table comp-table.qza
-```
+
+    ```
+    qiime composition add-pseudocount \
+      --i-table table_16S.qza \
+      --o-composition-table comp-table.qza
+    ```
 2. effettuiamo l'analisi comparativa:  
-```
-qiime composition ancom \
-  --i-table comp-table.qza \
-  --m-metadata-file metadata.tsv \
-  --m-metadata-column type \
-  --o-visualization ancom-type.qzv
-```
-Abbiamo effettuto la comparazione a livello di ASV ma potremmo essere interessari a comparare a livelli tassonomici superiori.  
-1. Dobbiamo raggruppare i dati al livello tassonomico di interesse. In questo caso il 6 livello della tassonomia SILVA (genere).  
-```
-qiime taxa collapse \
-  --i-table table_16S.qza \
-  --i-taxonomy taxonomy_16S_SKLEARN.qza \
-  --p-level 6 \
-  --o-collapsed-table table-l6.qza
-```  
+    ```
+    qiime composition ancom \
+      --i-table comp-table.qza \
+      --m-metadata-file metadata.tsv \
+      --m-metadata-column type \
+      --o-visualization ancom-type.qzv
+    ```
+Abbiamo effettuato la comparazione a livello di ASV ma potremmo essere interessati a comparare a livelli tassonomici superiori.  
+1. Dobbiamo raggruppare i dati al livello tassonomico d' interesse. In questo caso il 6 livello della tassonomia SILVA (genere).  
+    ```
+    qiime taxa collapse \
+      --i-table table_16S.qza \
+      --i-taxonomy taxonomy_16S_SKLEARN.qza \
+      --p-level 6 \
+      --o-collapsed-table table-l6.qza
+    ```  
 2. aggiungiamo le pseudoconte.  
-```
-qiime composition add-pseudocount \
-  --i-table table-l6.qza \
-  --o-composition-table comp-table-l6.qza
-```  
-3. effettuiamo l'analisi comparativa
-```
-qiime composition ancom \
-  --i-table comp-table-l6.qza \
-  --m-metadata-file metadata.tsv \
-  --m-metadata-column type \
-  --o-visualization ancom-type-l6.qzv
-```
+    ```
+    qiime composition add-pseudocount \
+      --i-table table-l6.qza \
+      --o-composition-table comp-table-l6.qza
+    ```  
+3. effettuiamo l' analisi comparativa
+    ```
+    qiime composition ancom \
+      --i-table comp-table-l6.qza \
+      --m-metadata-file metadata.tsv \
+      --m-metadata-column type \
+      --o-visualization ancom-type-l6.qzv
+    ```
 
 ***PER SCARICARE TUTTI I DATI PRODOTTI DURANTE L'ESERCITAZIONE UTILIZZATE IL LINK SOTTOSTANTE***  
 :arrow_down_small: [**LINK**](https://drive.google.com/drive/folders/1xq64qRbubjqc9PXIuRaVUallDzNWzL7K?usp=sharing)

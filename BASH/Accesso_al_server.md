@@ -1,4 +1,4 @@
-Accesso Al server ed Introduzione al BASH
+Accesso al server e Introduzione al BASH
 ===================  
 - [Accesso al Server](#accesso-al-server)
 - [Configurazione FileZilla](#configurazion-filezilla)
@@ -8,8 +8,12 @@ Accesso Al server ed Introduzione al BASH
 
 
 # Accesso al Server
-Il resto delle Esercitazioni richiedere l'utilizzo di uno dei server disponibili presso l'**IBIOM (Istituto di Biomembrane, Bioenergetica e Biotecnologie molecolari)** del **CNR** di Bari.  
-Il server che andremo ad utilizzare è raggiungile al seguente indirizzo `srv00.recas.ba.infn.it`.  
+Il resto delle **Esercitazioni** richiederà l' utilizzo di server messi a disposizione dal Datacenter **RECAS**.  
+Ad ognuno di voi è stato assegnato un utente che utilizzerete per collegarvi sulle macchine che andremo ad utilizzare.  
+Le macchine per le esercitazioni hanno i seguenti indirizzi:  
+- **212.189.205.77**  
+- **90.147.102.58**  
+- **90.147.102.38**  
 
 Per accedervi dovrete tutti scaricare il file chiave che trovate in questa cartella. 
 - Per gli utenti dei sistemi UNIX-based (mac) scaricate il file `bmmm1920` nella cartella **Downloads**.  
@@ -19,7 +23,7 @@ Una volta completato il download del file non lo dovete aprire. Al massimo spost
 ***Soprattutto per chi di voi utilizza sistemi UNIX-based consiglio di non spostare il file, così lo troverà direttamente in download quando dovrà utilizzare il terminale.***  
 
 ## Sistemi operativi UNIX-BASED
-Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il **terminale** (cercate l'applicazione terminale tra quelle disponibili) e digitare i seguenti comandi:    
+Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il **terminale** (cercate l' applicazione terminale tra quelle disponibili) e digitare i seguenti comandi:    
 Il comando generale è:  
 ```
 chmod 600 /path/to/the/key/bmmm1920.ppk
@@ -35,18 +39,18 @@ ssh -X -i ~/Downloads/BASH_bmmm1920.txt epigen@srv00.recas.ba.infn.it
 ```
 Alla prima connessione il sistema vi chiederà se il server sia "fidato" e dovrete digitare `yes`.  
 Di seguito vi chiederà la **password** (vi verrà comunicata al momento) e dovrete inserirla. **Notate che il cursore non si muoverà mentre digitate la password!!!**.  
-Se avrete digitato la password correttamente avre avuto accesso al server.  
+Se avrete digitato la password correttamente potrete accedere al server.  
 
 ## WINDOWS
 In windows dovremo utilizzare **MobaXterm**.  
 1. Avviate `MobaXterm`;  
 2. Cliccate su **Session**;  
-![moba1](./moba1.jpg)  
+ ![moba1](./moba1.jpg)  
 3. Cliccate su `SSH`:  
-    - in `Remote host` inserite l'indirizzo del server: `srv00.recas.ba.infn.it`;  
-    - Spuntate `Specific username` e nel campo adiacente scrive **epigen**;  
+    - in `Remote host` inserite l' indirizzo del server a voi assegnato;  
+    - Spuntate `Specific username` e nel campo adiacente scrive lo user che vi è stato assegnato;  
     - in `advanced SSH settings` spuntate `Use private key` e dal menù a tendina selezionate il file che avete scaricato.  
-    - Cliccate su *OK* ed avviate la connessione.  
+    - Cliccate su *OK* e avviate la connessione.  
 
 
 # Configurazion FileZilla
@@ -56,12 +60,12 @@ Occorre configurarlo in modo appropriato:
 * Selezionate `New Site` si aprirà una nuova scheda in cui potrete indicare un nome a vostra scelta;  
 * Nel pannello a sinistra vanno inseriti i seguenti parametri:  
     - **Protocols**: `SFTP SSH File Transfert Protocol`  
-    - **Host**: `srv00.recas.ba.infn.it`
+    - **Host**: `l'indirizzo del server che vi è stato assegnato`
     - **Port**: `22`    
-    - **Logon Type**: ``key file``  
-    - **User**: ``epigen``
-    - **Key file**: selezionate il file `bmmm1920.ppk`
-* Cliccate su ``Connect``.  
+    - **Logon Type**: `key file`  
+    - **User**: `lo user name che vi è stato assegnato`
+    - **Key file**: selezionate il file che avete scaricato.  
+* Cliccate su `Connect`.  
 
 ![filezilla](./filezilla.jpg)
 
@@ -69,7 +73,7 @@ Occorre configurarlo in modo appropriato:
 Alcuni comandi che potrebbero esserci utili durante il tutorial:  
 * `pwd`: restituisce il path relativo alla directory in cui ci troviamo;  
 * `cd`: permette di spostarci tra le differenti directory;  
-* `ls`: elenca il contenuto di una directory;   
+* `ls`: elenca il contenuto di una directory;  
    Opzioni: 
     * `-l` (mostra più informazioni)  
     * `-a` (mostra i file nascosti)  
@@ -131,12 +135,12 @@ CCTACGGGAGGCAGCAGTAGGGAATCTTCGGCAATGGGGGCAACCCTGACCGAGCAACGCCGCGTGAGTGAAGAAGGTTT
 CCCCCGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGDGGGGGGEEGGGGGCEFGFGGFGGGGFGGGGDEFCEFFCFDFFFGCFGCFCCCFGGGFDFEC@CFDF
 ```
 Questo formato presenta una struttura suddivisa in 4 righe:  
-1. Riga di intestazione che inizia con “@”;  
+1. Riga d' intestazione che inizia con “@”;  
 2. Sequenza biologica;  
 3. Riga di separazione che inizia con un “+”. Talora può contenere una descrizione;  
 4. Quality score in formato ASCII.  
-Nella riga di intestazione possiamo visualizzare alcune [informazioni tecniche](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/FileFormat_FASTQ-files_swBS.htm):  
-* M03156: è l'identificativo del sequenziatore. Possiamo dire che è stata utilizzata una Miseq.  
+Nella riga d' intestazione possiamo visualizzare alcune [informazioni tecniche](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/FileFormat_FASTQ-files_swBS.htm):  
+* M03156: è l' identificativo del sequenziatore. Possiamo dire che è stata utilizzata una Miseq.  
 * 25: questo è un contatore progressivo che conteggia il numero di sequenziamenti eseguiti. In questo caso il 25imo.    
 * 000000000-AGC3U: identificativo della flow-cell.  
 * 1: flowcell line;  
@@ -157,17 +161,18 @@ Di fatto maggiore è il **Quality score** minore è la probabilità che la base 
 |30|0.001|  
 |40|0.0001|  
 
-Conoscendo il quality score associato a ciascuna base delle sequenze ottenute durante il sequenziamento è possibile calcolare l'**Expected Error (EE)**, come:  
+Conoscendo il quality score associato a ciascuna base delle sequenze ottenute durante il sequenziamento è possibile calcolare l'**Expected Error (EE)**, come:
+
 ![EE](./EE.png)  
-Di fatto, l'**EE** è dato dalla sommatoria delle *Probabilità di errore P* osservate. In modo estrmamente empirico data,data una sequenza stima il numero che ci aspettiamo siano errate nella sequenza.  
+Di fatto, l'**EE** è dato dalla sommatoria delle *Probabilità di errore P* osservate. In modo estremamente empirico, data una sequenza stima il numero di basi che ci aspettiamo siano state chiamate in modo erroneo nella sequenza nella sequenza.  
 
 ## Come valutare la qualità dei dati
 Una volta ottenuti dei dati di sequenziamento la prima cosa che va fatta è una valutazione della loro qualità.  
 A questo scopo utilizzeremo un tool ampiamente utilizzato [`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).  
-Eseguiamo le seqguenti operazioni:  
-1. Colleghiamoci al server;  
-2. Entrate nelle vostre cartelle:  
-    `cd cognome_nome`  
+Eseguiamo le seguenti operazioni:  
+1. Colleghiamoci al server;   
+2. Attiviamo l' ambiente virtuale che andremo a utilizzare:  
+   `source /opt/anaconda3/bin/activate qiime2-2020.11`
 3. Creiamo una cartella dove scaricheremo i dati per questo tutorial ed eseguiremo le analisi:  
     `mkdir fastqc_test && cd fastqc_test`  
 4. Adesso scarichiamo il file che dovremo utilizzare per le nostre analisi:  
@@ -184,9 +189,10 @@ Per avere una descrizione dei boxplot potete utilizzare la relativa pagina [Wiki
 Applicate il `FastQC` sui seguenti file:  
 * create la cartella `test_fastqc` e spostatevi al suo interno;  
 * Usando il seguente comando scaricate i 2 file:  
-   ```
+  ```
   wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=142ipR5m5ELJVpto6EGH8BNbJA9Ur5DAx' -O Sample1_S2_L001_R1_001.fastq.gz
-  
+  ```
+  ```
   wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1zGEWBk29KEijLUyZdrq-lLRyN7ikD2Ng' -O Sample1_S2_L001_R2_001.fastq.gz
    ```
 * Eseguite `FastQC` sui due file e commentate i risultati ottenuti.  
