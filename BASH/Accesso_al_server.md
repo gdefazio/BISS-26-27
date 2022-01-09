@@ -15,9 +15,7 @@ Le macchine per le esercitazioni hanno i seguenti indirizzi:
 - **90.147.102.58**  
 - **90.147.102.38**  
 
-Per accedervi dovrete tutti scaricare il file chiave che trovate in questa cartella. 
-- Per gli utenti dei sistemi UNIX-based (mac) scaricate il file `bmmm1920` nella cartella **Downloads**.  
-- Per gli utenti windows dovrete scaricare il file `bmmm1920.ppk` e non è un problema dove lo scaricherete.  
+Per accedervi dovrete accedere alla tabella disponibile a questo [link](). Dovete scaricare il file chiave corrispondente al vostro user.  
 
 Una volta completato il download del file non lo dovete aprire. Al massimo spostatelo nella cartella che trovate più comoda.  
 ***Soprattutto per chi di voi utilizza sistemi UNIX-based consiglio di non spostare il file, così lo troverà direttamente in download quando dovrà utilizzare il terminale.***  

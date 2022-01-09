@@ -16,6 +16,7 @@ Prima d' iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 #### Allineamento tra sequenze
 - [X] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
 - [X] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
+
 #### Genome Browser
 - [X] [ENSEMBL](./Genome_Browser/Ensembl.md)
 - [X] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md#esercizi)

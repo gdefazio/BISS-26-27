@@ -324,7 +324,7 @@ Abbiamo effettuato la comparazione a livello di ASV ma potremmo essere interessa
     ```
 
 ***PER SCARICARE TUTTI I DATI PRODOTTI DURANTE L'ESERCITAZIONE UTILIZZATE IL LINK SOTTOSTANTE***  
-:arrow_down_small: [**LINK**](https://drive.google.com/drive/folders/1xq64qRbubjqc9PXIuRaVUallDzNWzL7K?usp=sharing)
+:arrow_down_small: [**LINK**]()
 
 
 [Back to the top](../README.md) 
