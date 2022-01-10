@@ -69,7 +69,7 @@ Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro 
 * Successivamente va create la cartella `Ravegnini_et_al` e bisogna posizionarsi al suo interno:  
     `mkdir Ravegnini_et_al && cd Ravegnini_et_al`
 * Adesso va attivato l'ambiente virtuale in cui è installato **QIIME2**:  
-    `source /opt/anaconda3/bin/activate qiime2-2020.11` 
+    `source /opt/miniconda3/bin/activate qiime2-2020.11` 
 * Creiamo una cartella che mantenga i dati temporanei e indichiamo al sistema operativo di utilizzarla:  
     ```
     mkdir tmp

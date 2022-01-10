@@ -15,7 +15,8 @@ Le macchine per le esercitazioni hanno i seguenti indirizzi:
 - **90.147.102.58**  
 - **90.147.102.38**  
 
-Per accedervi dovrete accedere alla tabella disponibile a questo [link](). Dovete scaricare il file chiave corrispondente al vostro user.  
+Per accedervi dovrete accedere alla tabella disponibile a questo [link](https://docs.google.com/spreadsheets/d/1gBqln4anHbXGrjI3H_vHCIQBChlOfqgCZQ9Me7ou89s/edit?usp=sharing).  
+Dovrete scaricare il file chiave corrispondente al vostro user da questa [cartella](https://drive.google.com/drive/folders/1vhDFZR-QM19KI2zLqB_N7L39sjMBi5X9?usp=sharing).  
 
 Una volta completato il download del file non lo dovete aprire. Al massimo spostatelo nella cartella che trovate più comoda.  
 ***Soprattutto per chi di voi utilizza sistemi UNIX-based consiglio di non spostare il file, così lo troverà direttamente in download quando dovrà utilizzare il terminale.***  
@@ -24,16 +25,16 @@ Una volta completato il download del file non lo dovete aprire. Al massimo spost
 Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il **terminale** (cercate l' applicazione terminale tra quelle disponibili) e digitare i seguenti comandi:    
 Il comando generale è:  
 ```
-chmod 600 /path/to/the/key/bmmm1920.ppk
+chmod 600 /path/to/the/key/userX
 
-ssh -i /path/to/the/key/bmmm1920.ppk epigen@srv00.recas.ba.infn.it 
+ssh -i /path/to/the/key/userX userX@srv00.recas.ba.infn.it 
 ```
 
 Se avete scaricato il file in Downloads:  
 ```
-chmod 600 ~/Downloads/BASH_bmmm1920.txt
+chmod 600 ~/Downloads/userX
 
-ssh -X -i ~/Downloads/BASH_bmmm1920.txt epigen@srv00.recas.ba.infn.it 
+ssh -X -i ~/Downloads/userX userX@srv00.recas.ba.infn.it 
 ```
 Alla prima connessione il sistema vi chiederà se il server sia "fidato" e dovrete digitare `yes`.  
 Di seguito vi chiederà la **password** (vi verrà comunicata al momento) e dovrete inserirla. **Notate che il cursore non si muoverà mentre digitate la password!!!**.  
@@ -136,7 +137,7 @@ Questo formato presenta una struttura suddivisa in 4 righe:
 1. Riga d' intestazione che inizia con “@”;  
 2. Sequenza biologica;  
 3. Riga di separazione che inizia con un “+”. Talora può contenere una descrizione;  
-4. Quality score in formato ASCII.  
+4. Quality score in formato [ASCII](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.htm).  
 Nella riga d' intestazione possiamo visualizzare alcune [informazioni tecniche](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/FileFormat_FASTQ-files_swBS.htm):  
 * M03156: è l' identificativo del sequenziatore. Possiamo dire che è stata utilizzata una Miseq.  
 * 25: questo è un contatore progressivo che conteggia il numero di sequenziamenti eseguiti. In questo caso il 25imo.    
@@ -151,13 +152,13 @@ Il **Quality Score** o **Phred Socre** è una misura della probabilità che la b
 ![Q](./Q.png)  
 Di fatto maggiore è il **Quality score** minore è la probabilità che la base chiamata sia erronea:  
 
-|Q|P|  
-|:---:|:---:|  
-|0|1|  
-|10|0.1|  
-|20|0.01|  
-|30|0.001|  
-|40|0.0001|  
+|Q|P|ASCII|  
+|:---:|:---:|:---:|  
+|0|1|!|  
+|10|0.1|+|  
+|20|0.01|5|  
+|30|0.001|?|  
+|40|0.0001|I|  
 
 Conoscendo il quality score associato a ciascuna base delle sequenze ottenute durante il sequenziamento è possibile calcolare l'**Expected Error (EE)**, come:
 
@@ -170,7 +171,7 @@ A questo scopo utilizzeremo un tool ampiamente utilizzato [`FastQC`](https://www
 Eseguiamo le seguenti operazioni:  
 1. Colleghiamoci al server;   
 2. Attiviamo l' ambiente virtuale che andremo a utilizzare:  
-   `source /opt/anaconda3/bin/activate qiime2-2020.11`
+   `source /opt/miniconda3/bin/activate qiime2-2020.11`
 3. Creiamo una cartella dove scaricheremo i dati per questo tutorial ed eseguiremo le analisi:  
     `mkdir fastqc_test && cd fastqc_test`  
 4. Adesso scarichiamo il file che dovremo utilizzare per le nostre analisi:  
