@@ -186,13 +186,16 @@ La Diversità è una misura della complessità del sistema che stiamo osservando
 ![diversità](./diversita.png)
 
 In particolare:  
-    * **alpha**: diversità intra-campione. Si possono utillizzare diverse misure:  
-        * *Richness*: rappresenta il numero di specie differenti osservate in una comunità biologica;  
-        * *Eveness*: indica quanto sia uniforme la comunità osservata;  
-        * *Shannon Index*: è una misura quantitativa della richezza di specie;  
+    * **alpha**: diversità intra-campione. Si possono utillizzare diverse misure:
+
+        - *Richness*: rappresenta il numero di specie differenti osservate in una comunità biologica;  
+        - *Eveness*: indica quanto sia uniforme la comunità osservata;  
+        - *Shannon Index*: è una misura quantitativa della richezza di specie;  
             ![shannon](./shannon.gif)  
-        - *Faith's Phylogenetic Diversity*: una misura qualitativa della richness della comunità in esame che tiene conto delle relazioni filogenetiche.      
+        - *Faith's Phylogenetic Diversity*: una misura qualitativa della richness della comunità in esame che tiene conto delle relazioni filogenetiche.  
+
     * **beta**: diversità inter-campione: utilizziamo delle misure che indicano quanto differenti sono due comunità.  
+
      Queste misure non fanno altro che andare a compare i campioni a coppie, per cui alla fine dell'analisi si ottiene una matrice che indica la dissimilarità tra ciascuna coppia di campioni.  
      Esistno diverse tipologie di metriche per calcolare la Beta diversità:  
         - Distanza di **Jaccard**: una misura qualitativa della dissimilarità;  
