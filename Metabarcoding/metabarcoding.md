@@ -29,6 +29,7 @@ Quanto al metodo di sequenziamento, sono utilizzati due approcci principali:
     * specifiche porzioni del gene della Citocromo c ossidasi 1 mitocondriale (nei Metazoa).  
     
 ## Metabarcoding approach
+[Giusto un po' di teoria](https://docs.google.com/presentation/d/1X8s-J-gOjWvXYDAnRh39_nwKuLJtU0l0fG2MrLXyUpo/edit?usp=sharing).  
 Scopo dell’esercitazione odierna è l’analisi del microbioma umano attraverso l’approccio di metabarconding, che possiamo idealmente suddividere in 5 step principali:  
 1.	Raccolta dei campioni;  
 2.	Estrazione del metagenoma (insieme dei genomi degli \[micro\]organismi che condividono lo stesso ambiente);  
@@ -100,8 +101,8 @@ Possiamo procedere con le analisi.
 
 ## Denoising
 * Effettuiamo il **Denoising** dei dati:  
-    Il **Denoising** (letteralmente eliminazione del rumore di fondo (*noise*)) è una procedura che permette di riconoscere il rumore introdotto dalla PCR e dal sequenziamento.    
-    [Giusto un po' di teoria](https://docs.google.com/presentation/d/1X8s-J-gOjWvXYDAnRh39_nwKuLJtU0l0fG2MrLXyUpo/edit?usp=sharing).  
+    Il **Denoising** (letteralmente eliminazione del rumore di fondo (*noise*)) è una procedura che permette di riconoscere il rumore introdotto dalla PCR e dal sequenziamento.  
+      
     Il trimming delle sequenze PE: 
     ![read](./read.png)  
     
