@@ -186,7 +186,7 @@ La Diversità è una misura della complessità del sistema che stiamo osservando
 ![diversità](./diversita.png)
 
 In particolare:  
-    * **alpha**: diversità intra-campione. Si possono utillizzare diverse misure:
+    * **alpha**: diversità intra-campione. Si possono utillizzare diverse metriche:
         - *Richness*: rappresenta il numero di specie differenti osservate in una comunità biologica;  
         - *Eveness*: indica quanto sia uniforme la comunità osservata;  
         - *Shannon Index*: è una misura quantitativa della richezza di specie;  
