@@ -187,9 +187,9 @@ La Diversità è una misura della complessità del sistema che stiamo osservando
 
 In particolare:  
     * **alpha**: diversità intra-campione. Si possono utillizzare diverse misure:  
-        - *Richness*: rappresenta il numero di specie differenti osservate in una comunità biologica;  
-        - *Eveness*: indica quanto sia uniforme la comunità osservata;  
-        - *Shannon Index*: è una misura quantitativa della richezza di specie;  
+        * *Richness*: rappresenta il numero di specie differenti osservate in una comunità biologica;  
+        * *Eveness*: indica quanto sia uniforme la comunità osservata;  
+        * *Shannon Index*: è una misura quantitativa della richezza di specie;  
             ![shannon](./shannon.gif)  
         - *Faith's Phylogenetic Diversity*: una misura qualitativa della richness della comunità in esame che tiene conto delle relazioni filogenetiche.      
     * **beta**: diversità inter-campione: utilizziamo delle misure che indicano quanto differenti sono due comunità.  
