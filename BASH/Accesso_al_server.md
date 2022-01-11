@@ -32,9 +32,9 @@ ssh -i /path/to/the/key/userX userX@srv00.recas.ba.infn.it
 
 Se avete scaricato il file in Downloads:  
 ```
-chmod 600 ~/Downloads/userX
+chmod 600 ~/Desktop/user5
 
-ssh -X -i ~/Downloads/userX userX@srv00.recas.ba.infn.it 
+ssh -X -i ~/Desktop/user5 user5@212.189.205.77 
 ```
 Alla prima connessione il sistema vi chiederà se il server sia "fidato" e dovrete digitare `yes`.  
 Di seguito vi chiederà la **password** (vi verrà comunicata al momento) e dovrete inserirla. **Notate che il cursore non si muoverà mentre digitate la password!!!**.  
@@ -185,8 +185,7 @@ Eseguiamo le seguenti operazioni:
 Per avere una descrizione dei boxplot potete utilizzare la relativa pagina [Wikipedia](https://en.wikipedia.org/wiki/Box_plot).  
 
 ### Esercizio 1
-Applicate il `FastQC` sui seguenti file:  
-* create la cartella `test_fastqc` e spostatevi al suo interno;  
+Applicate il `FastQC` sui seguenti file:   
 * Usando il seguente comando scaricate i 2 file:  
   ```
   wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=142ipR5m5ELJVpto6EGH8BNbJA9Ur5DAx' -O Sample1_S2_L001_R1_001.fastq.gz
@@ -195,6 +194,7 @@ Applicate il `FastQC` sui seguenti file:
   wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1zGEWBk29KEijLUyZdrq-lLRyN7ikD2Ng' -O Sample1_S2_L001_R2_001.fastq.gz
    ```
 * Eseguite `FastQC` sui due file e commentate i risultati ottenuti.  
+  *Suggerimento*: il comando base per eseguire **fastqc** è `fastqc --noextract NOMEFILE`
 
 [Indice](#accesso-al-server-ed-introduzione-al-bash)
 
