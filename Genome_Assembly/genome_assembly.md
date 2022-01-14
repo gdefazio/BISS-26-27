@@ -16,7 +16,7 @@
 
 ## INTRODUZIONE
 Il sequenziamento di un genoma segue principalmente 4 fasi:  
-1. **Isolamento del genoma di interesse**. La qualità del DNA di partenza influenza profondamente il processo di sequenziamento ed assemblaggio del genoma. La qualità del DNA di partenza si misura in termini di **Purezza** e **Integrità strutturale**.  
+1. **Isolamento del genoma d' interesse**. La qualità del DNA di partenza influenza profondamente il processo di sequenziamento ed assemblaggio del genoma. La qualità del DNA di partenza si misura in termini di **Purezza** e **Integrità strutturale**.  
     * **Purezza**: l’utilizzo di una procedura di estrazione del DNA non appropriata per la matrice di partenza può portare alla presenza di contaminanti come *polisaccaridi*, *proteoglicani*, *proteine*, *metaboliti*, *pigmenti*, etc. Questi influenzano negativamente le procedure di preparazione delle librerie soprattutto per gli approcci PCR-free (**PacBio** e **Nanopore**) e **Mate-Pair** e riducono l’efficienza gli approcci che prevedono passaggi di amplificazione in PCR.  
     * **Integrità strutturale**: la presenza di *fenoli*, *etanolo* e *Sali* (e.g. EDTA) possono danneggiare il DNA. Una inappropriata conservazione del DNA a -20°C in acqua favorisce la degradazione per idrolisi. L’utilizzo di buffer per la conservazione a pH inadeguato favoriscono la formazione di nick.  
 2. **Frammentazione del DNA**: La frammentazione può essere ottenuta per *sonicazione*, *nebulizzazione* o *taglio enzimatico*. E’ un passaggio fondamentale perché il DNA presente nelle cellule deve essere frammentato nel modo più casuale possibile al fine di leggere ogni nucleotide ogni nucleotide del genoma ottenendone la migliore rappresentazione;  
@@ -107,25 +107,25 @@ Lo scopo delle esercitazioni è l'assemblaggio del genoma  di ***Escherichia col
 Utilizzeremo read prodotte con sequenziamento **Illumina** in modalità paired-end 2x100.  
 
 ### Valutazione preliminare della qualità delle sequenze e trimming
-Prima di procedere con l'assembly delle reads ottenute occore valutarne la qualità.  
+Prima di procedere con l' assembly delle reads ottenute occorre valutarne la qualità.  
 1.	Collegatevi al server.  
-2.	Posizionatevi nella vs cartella.  
-    `cd Cognome_Nome`  
+2.	Attiviamo l'ambiente virtuale che sarà necessario per l' esercitazione.  
+    `source /opt/miniconda3/bin/activate kallisto`  
 3.	Creiamo la cartella contenente i dati del genome assembly e spostiamoci al suo interno:  
     `mkdir genome_assembly && cd genome_assembly`        
 4.	Eseguiamo il [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) per valutare la qualità delle sequenze:  
     `mkdir pre_trimming`   
-    poi:  
+    poi:   
     ```
     fastqc --noextract -t 2 \
-    /home/epigen/genome_assembly/s_6_1.fastq.gz \
-    /home/epigen/genome_assembly/s_6_2.fastq.gz -o pre_trimming
+    /home/share/genome_assembly/s_6_1.fastq.gz \
+    /home/share/genome_assembly/s_6_2.fastq.gz -o pre_trimming
     ```  
     Scaricate i risultati del FastQC.  
 5.	effettuiamo il trimming delle sequenze:  
     ```
-    sickle pe -f /home/epigen/genome_assembly/s_6_1.fastq.gz \
-    -r /home/epigen/genome_assembly/s_6_2.fastq.gz \
+    sickle pe -f /home/share/genome_assembly/s_6_1.fastq.gz \
+    -r /home/share/genome_assembly/s_6_2.fastq.gz \
     -t sanger -o Sample_1.fastq -p Sample_2.fastq \
     -s Sample_s.fastq -q 25 -l 45
     ```  
@@ -180,7 +180,7 @@ Valuteremo la qualità dell’assemblaggio ottenuto con Velvet utilizzando dei k
         > velvetg run_25  
                                                                                                    
 5.	Calcoliamo le statistiche per valutare l’assemblaggio con **quast**:  
-    `quast.py -s /home/epigen/genome_assembly/.result_folder/run25_velvetg/contigs.fa -o quast_25`  
+    `quast.py -s /home/share/genome_assembly/velvet_25/contigs.fa -o quast_25 -r /home/share/genome_assembly/NC_000913.3.fasta.gz`  
     Scarichiamo la cartella generata da quast.  
 Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all'assemblaggio, utilizzando il programma [**Bandage** (Bioinformatics Application for Navigating De novo Assembly Graphs Easily)](http://rrwick.github.io/Bandage/) (**Figura 6**).  
 ![velvet_bandage](./velvet_k25_bandage.png)  
@@ -210,7 +210,7 @@ La riga di comando per laciare SPAdes è la seguente:
 
 Applichiamo quast sui dati generati con SPAdes:  
 1. Eseguiamo quast sull'assemby generato da SPAdes:  
-    `quast.py -s /home/epigen/genome_assembly/spades_application/contigs.fasta -o quast_spades`   
+    `quast.py -s /home/share/genome_assembly/spades_application/contigs.fasta -o quast_spades -r /home/share/genome_assembly/NC_000913.3.fasta.gz`   
     Scarichiamo la cartella generata da quast.   
 Anche in questo caso valutiamo il grafo generato (**Figura 7**).  
 ![spades_bandage](./spades_bandage.png)  
@@ -224,7 +224,7 @@ Possiamo provare a migliorare l’assemblaggio aggiungendo altri k-mer nella cos
 >spades.py --careful -o spades_application_multikmer -1 Sample_1.fastq -2 Sample_2.fastq -s Sample_s.fastq -k 21,33,55,67,71,81,91  
 
 Infine, ne valutiamo la qualità con quast:  
- `quast.py -s /home/epigen/genome_assembly/spades_application_multikmer/contigs.fasta -o quast_spades_multikmer`  
+ `quast.py -s /home/share/genome_assembly/spades_application_multikmer/contigs.fasta -o quast_spades_multikmer -r /home/share/genome_assembly/NC_000913.3.fasta.gz`  
  Scarichiamo la cartella generata da quast.  
 
 ![spades_more](./spades_bandage_mostkmer.png)  
@@ -246,11 +246,11 @@ In questo caso utilizzeremo un programma chiamato [**PROKKA**](https://academic.
 A scopo esemplificativo andremo a visualizzare o dati di annotazione ottenti con la prima applicazione di SPAdes.  
 Di seguito la linea di comando utilizzata da PROKKA:  
 
-> prokka --outdir genome_annotation --genus Escherichia --mincontiglen 200 --cpus 5 contigs.fasta  
+> prokka --outdir genome_annotation --genus Escherichia --mincontiglen 200 --cpus 5 /home/share/genome_assembly/spades_application/contigs.fasta  
 
 Adesso possiamo copiare i dati nella nostra cartella ed iniziare a visualizzare i prodotti ottenuti:  
 ```
-cp -r /home/epigen/genome_assembly/genome_annotation/ spades_basic_prokka_annotation
+cp -r /home/share/genome_assembly/genome_annotation/ spades_basic_prokka_annotation
 
 cd spades_basic_prokka_annotation
 ```

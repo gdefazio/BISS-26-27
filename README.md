@@ -23,13 +23,12 @@ Prima d' iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 - [X] [ENSEMBL: COVID-19](./Genome_Browser/Ensembl.md#covid-19)
 
 ### Esercitazione 3 (10-12/01/2022)
-- [ ] [UCSC](./Genome_Browser/UCSC.md)
-- [ ] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
-- [ ] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
+- [X] [UCSC](./Genome_Browser/UCSC.md)
+- [X] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
 
-
-### Esercitazione 4 ()
+### Esercitazione 4 (14-17/01/2022)
 ### Metabarcoding
+- [ ] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
 - [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
 
 ### Esercitazione 5 - 6 ()
