@@ -324,8 +324,4 @@ Abbiamo effettuato la comparazione a livello di ASV ma potremmo essere interessa
       --o-visualization ancom-type-l6.qzv
     ```
 
-***PER SCARICARE TUTTI I DATI PRODOTTI DURANTE L'ESERCITAZIONE UTILIZZATE IL LINK SOTTOSTANTE***  
-:arrow_down_small: [**LINK**]()
-
-
 [Back to the top](../README.md) 

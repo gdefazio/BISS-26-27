@@ -28,11 +28,11 @@ Prima d' iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 
 ### Esercitazione 4 (14-17/01/2022)
 ### Metabarcoding
-- [ ] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
+- [X] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
+
+### Esercitazione 5 - 6 (19-21/01/2022)
+- [ ] [Metabarcoding](./Metabarcoding/metabarcoding.md)
 - [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
-
-### Esercitazione 5 - 6 ()
-
 
 
 

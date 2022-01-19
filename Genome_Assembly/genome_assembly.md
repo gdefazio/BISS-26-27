@@ -147,10 +147,10 @@ Le informazioni relative alla rappresentazione i ciascun k-mer (coverage) sono u
 #### [Meccanismo di funzionamento di Velvet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2336801/?report=reader#!po=31.8182)
 1. Velvet converte le read in kmer della lunghezza predefinita dall'utente.  
 2. Ogni Kmer rappresenta un nodo del grafico. Due nodi sono connessi presentano una sovrapposizione della loro sequenza pari a k-1.  
-   Formalemente diremo che due nodi **N<sub>A</sub>** e **N<sub>B</sub>** sono connessi se gli ultimi `k-1`nt di **N<sub>A</sub>** corrispondono ai primi `k-1` nt di **N<sub>B</sub>**.  
+   Formalmente diremo che due nodi **N<sub>A</sub>** e **N<sub>B</sub>** sono connessi se gli ultimi `k-1`nt di **N<sub>A</sub>** corrispondono ai primi `k-1` nt di **N<sub>B</sub>**.  
    Questo processo è effettuato contemporaneamente sul **revertito complementare** delle sequenze.  
    ![graph generation](./velvet_1.jpg)  
-3. Semplificazione: Tutti i nodi che non interessano la generazione del path (non contengono biforcazioni) vengono uniti per ridurre l'utilizzo di memoria.  
+3. Semplificazione: Tutti i nodi che non interessano la generazione del path (non contengono biforcazioni) vengono uniti per ridurre l' utilizzo di memoria.  
    ![semplification](./velvet_2.jpg)
 4. Rimozione degli errori. Abbiamo principalmente 3 tipologie di errori:
     * Tips (errori di sequenziamento). Un nodo è considerato un tip se ricade in queste 3 casistiche:  
@@ -182,7 +182,7 @@ Valuteremo la qualità dell’assemblaggio ottenuto con Velvet utilizzando dei k
 5.	Calcoliamo le statistiche per valutare l’assemblaggio con **quast**:  
     `quast.py -s /home/share/genome_assembly/velvet_25/contigs.fa -o quast_25 -r /home/share/genome_assembly/NC_000913.3.fasta.gz`  
     Scarichiamo la cartella generata da quast.  
-Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all'assemblaggio, utilizzando il programma [**Bandage** (Bioinformatics Application for Navigating De novo Assembly Graphs Easily)](http://rrwick.github.io/Bandage/) (**Figura 6**).  
+Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all' assemblaggio, utilizzando il programma [**Bandage** (Bioinformatics Application for Navigating De novo Assembly Graphs Easily)](http://rrwick.github.io/Bandage/) (**Figura 6**).  
 ![velvet_bandage](./velvet_k25_bandage.png)  
 ***FIGURA 6: DE BRUIJN GRAPH OTTENUTO CON VELVET E K-MER LUNGHI 25NT.***  
 
