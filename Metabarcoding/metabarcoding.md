@@ -325,29 +325,20 @@ Abbiamo effettuato la comparazione a livello di ASV ma potremmo essere interessa
     ```
 
 ***Se volessimo effettuare la stessa analisi a livello di famiglia, cosa dovremmo fare?***  
+
 A. Aggreghiamo le conte a livello di famiglia (5):  
     ```
-    qiime taxa collapse \
-        --i-table table_16S.qza \
-        --i-taxonomy taxonomy_16S_SKLEARN.qza \
-        --p-level 5 \
-        --o-collapsed-table table-l5.qza
-    ```
-
+    qiime taxa collapse --i-table table_16S.qza --i-taxonomy taxonomy_16S_SKLEARN.qza \
+      --p-level 5 --o-collapsed-table table-l5.qza
+    ```  
 B. Aggiungiamo le pseudo-conte:  
    ```
-    qiime composition add-pseudocount \
-        --i-table table-l5.qza \
-        --o-composition-table comp-table-l5.qza
+    qiime composition add-pseudocount --i-table table-l5.qza --o-composition-table comp-table-l5.qza
    ```
-
 C. Applichiamo ANCOM:  
     ```
-    qiime composition ancom \
-        --i-table comp-table-l5.qza \
-        --m-metadata-file metadata.tsv \
-        --m-metadata-column type \
-        --o-visualization ancom-type-l5.qzv
+    qiime composition ancom --i-table comp-table-l5.qza --m-metadata-file metadata.tsv \
+      --m-metadata-column type --o-visualization ancom-type-l5.qzv
     ```
 
 
