@@ -30,10 +30,12 @@ Prima d' iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 ### Metabarcoding
 - [X] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
 
-### Esercitazione 5 - 6 (19-21/01/2022)
-- [ ] [Metabarcoding](./Metabarcoding/metabarcoding.md)
+### Esercitazione 5 (19-21/01/2022)
+- [X] [Metabarcoding](./Metabarcoding/metabarcoding.md)
+- [X] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
+
+### Esercitazione 6 (25/01/2022)
 - [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
-
-
+- [ ] [Analisi del Trascrittoma](./Trascrittoma/)
 
 ### [Relazioni]()  
