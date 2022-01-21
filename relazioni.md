@@ -1,21 +1,22 @@
 # RELAZIONE
   
 Ogni studente dovrà presentare una relazione relativa ai laboratori svolti entro **5gg LAVORATIVI** dalla data in cui è previsto l’esame orale.  
-Esempio: Prendiamo ad esempio l'esame previsto per il lunedì 08/02.   
+Esempio: Prendiamo ad esempio l' esame previsto per il giovedì 10/02.   
  
-|02 Febbraio|03 Febbraio|04 Febbraio|05 Febbraio|06 Febbraio|07 Febbraio|08 Febbraio|
+|04 Febbraio|05 Febbraio|06 Febbraio|07 Febbraio|08 Febbraio|09 Febbraio|10 Febbraio|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Martedì|Mercoledì|Giovedì|Venerdì|Sabato|Domenica|Lunedì|
+|Venerdì|Sabato|Domenica|Lunedì|Martedì|Mercoledì|Giovedì|
 |LAVORATIVO|LAVORATIVO|LAVORATIVO|LAVORATIVO|NON LAVORATIVO|NON LAVORATIVO|**ESAME**|
 |**LIMITE ULTIMO PER LA CONSEGNA**|4|3|2|1|1|1|
 
 La relazione dovrà riguardare **tutte** le seguenti tematiche:
-* Descrizione della procedura bioinformatica per l’assemblaggio e annotazione di un genoma batterico corredata da un breve commento dei risultati ottenuti;
+* Descrizione della procedura bioinformatica per l’assemblaggio e annotazione di un genoma batterico corredata da un breve commento dei risultati ottenuti.
   
-* Descrizione della procedura bioinformatica relativa all’analisi di dati di Metabarcoding e discussione dei dati ottenuti:  
-    - Vanno comparati i risultati ottenuti durante l'esercitazione con quelli ottenuti nel lavoro Ravegnini et al. 2020; 
-    - Inoltre, va effettuata una ricerca in **PubMed** relativa al ***Fusobacterium nucleatum*** e alla possibile associazione con patologie: selezionarne e discuterne uno.  
-    - Nella relazione va indicata la ricerca effettuata su **PubMed** e il PMID del lavoro scelto.  
+* Descrizione della procedura bioinformatica relativa all’analisi di dati di DNA-Metabarcoding e discussione dei dati ottenuti:  
+    - Vanno comparate sia le metodologie bioinformatiche che i risultati ottenuti durante l' esercitazione con quelli presentati nel lavoro [Ravegnini et al. 2020](https://www.mdpi.com/1422-0067/21/24/9735); 
+
+* Descrizione della procedura bioinformatica relativa all’analisi di dati di Trascrittomica e discussione dei dati ottenuti:  
+    - Vanno comparate sia le metodologie bioinformatiche che i risultati ottenuti durante l' esercitazione con quelli presentati nel lavoro [Annese et al. 2018, Scientific Reports](https://www.nature.com/articles/s41598-018-22701-2);      
     
 * Nella tabella sottostante è indicato per ciascuno di voi un gene umano per cui dovrà effettuare la ricerca su **ENSEMBL** e indicare le seguenti informazioni:
     - Simbolo ufficiale del Gene;   
