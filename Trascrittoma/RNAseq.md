@@ -55,8 +55,8 @@ La procedura di preparazione delle librerie di sequenziamento ha previsto l' uti
 Prima di procedere con l' analisi del trascrittoma dobbiamo valutare la qualità delle sequenze ed eventualmente optare per una procedura di trimming.  
 Considerato che abbiamo sequenziato 12 campioni e che quindi abbiamo un totale di 24 file fastq da valutare, utilizzeremo, oltre al **FastQC**, un tool chiamato [**MultiQC**](https://multiqc.info).  
 
-**Per questioni di spazio e tempi vedremo direttamente come generare il report prodotto da MultiQC**.  
-:bangbang: <span style="color:red">some **Quello che è riportato nel BOX 1 non va eseguito!!!** text</span> :bangbang:  
+**Per questioni di spazio e tempo vedremo direttamente come generare il report prodotto da MultiQC**.  
+:bangbang: **Quello che è riportato nel BOX 1 non va eseguito!!!** :bangbang:  
 
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 **BOX 1**  
@@ -68,11 +68,15 @@ Esecuzione del FastQC:
 
 Adesso possiamo procedere all' esecuzione di MultiQC:  
 ```
+    mkdir RNAseq && cd RNAseq
+    
+    source /opt/miniconda3/bin/activate kallisto 
+
     multiqc /home/share/RNAseq/fastqc_output/
 ```
 
 Nonostante siamo ampiamente soddisfatti della qualità dei dati effettuiamo comunque il trimming.  
-<span style="color:red"> **Quello che è riportato nel BOX 2 non va eseguito!!!** text</span>  
+:bangbang: **Quello che è riportato nel BOX 2 non va eseguito!!!** :bangbang:  
 
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 **BOX 2**  
@@ -105,12 +109,15 @@ Nel lavoro da cui abbiamo preso i dati che stiamo analizzando è stato utilizzat
 Successivamente è stato dedotto il livello di espressione a livello di trascritti e geni.  
 
 Per questa esercitazione utilizzeremo un approccio basato sugli pseudo-allineamenti, con un tool chiamato [**Kallisto**](https://www.nature.com/articles/nbt.3519).  
+Kallisto utilizza un approccio simile a quello visto per l'assemblaggio dei genomi, basato sui k-mer ed i grafici di de Bruijn, 
+che in questo caso chiamiamo ***transcriptome de Bruijn Graph (T-DBG)***.  
+Alla fine dell'analisi quello che otteniamo è una tabella dove per ogni trascritto è riportato il livello di espressione in [**TPM**](https://haroldpimentel.wordpress.com/2014/05/08/what-the-fpkm-a-review-rna-seq-expression-units/).
 ![](./41587_2016_Article_BFnbt3519_Fig1_HTML.webp)
 
-:bangbang: <span style="color:red"> **Quello che è riportato nel BOX 3 non va eseguito!!!** text</span> :bangbang:  
+:bangbang: **Quello che è riportato nel BOX 3 non va eseguito!!!** :bangbang:  
 
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
-**BOX 2**  
+**BOX 3**  
 Effettuiamo il trimming:  
 
 ```
@@ -120,12 +127,76 @@ for sample in $(cat ../sample_list)
 do 
     echo $sample
     kallisto quant -i /home/share/Kallisto_index/GRCh38_p13/Homo_sapiens_GRCh38_cdna_all_ncrna -o ../kallisto_quant/${sample} -b 100 --rf-stranded -t 20 ${sample}_R1_trimmed.fastq ${sample}_R2_trimmed.fastq
-    done'
+done
+    
+cd ..
 ```
 
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 
 # Analisi statistica
+Per l' analisi statistica utilizzeremo un tool chiamato [**sleuth**](nature.com/articles/nmeth.4324).  
+Sleuth è disegnato per importare i dati prodotti da _Kallisto_ e procedere all' analisi differenziale tra le condizioni in analisi,
+nel nostro caso HC e AD. 
+
+:bangbang: <span style="color:red"> **Quello che è riportato nel BOX 4 non va eseguito!!!** text</span> :bangbang:  
+
+:heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
+**BOX 4**  
+Sleuth è un pachetto di R, una piattaforma che utilizziamo per l'analisi statistica:  
+
+```
+library("sleuth")
+
+sample_id <- dir(file.path(".", "kallisto_quant"))
+sample_id
+
+kal_dirs <- file.path("kallisto_quant", sample_id)
+
+s2c <- read.table("metadata.csv", header = TRUE, stringsAsFactors=FALSE)
+
+s2c <- dplyr::mutate(s2c, path = kal_dirs)
+
+matrice = model.matrix(~condition,s2c) 
+
+so <- sleuth_prep(s2c, extra_bootstrap_summary = TRUE,full_model = matrice, filter_fun=function(x){basic_filter(x, 5, 0.25)})
+
+so <- sleuth_fit(so, ~condition, 'full')
+
+so <- sleuth_fit(so, ~1, 'reduced')
+
+so <- sleuth_lrt(so, 'reduced', 'full')
+
+sleuth_table <- sleuth_results(so, 'reduced:full', 'lrt', show_all = FALSE)
+sleuth_significant <- dplyr::filter(sleuth_table, qval <= 0.05)
+head(sleuth_significant, 20)
+
+save.image(file = "HD_AD_sleuth.RData")
+
+
+mart <- biomaRt::useMart(biomart = "ENSEMBL_MART_ENSEMBL",
+  dataset = "hsapiens_gene_ensembl",
+  host = 'ensembl.org')
+t2g <- biomaRt::getBM(attributes = c("ensembl_transcript_id", "ensembl_gene_id",
+    "external_gene_name"), mart = mart)
+t2g <- dplyr::rename(t2g, target_id = ensembl_transcript_id,
+  ens_gene = ensembl_gene_id, ext_gene = external_gene_name)
+
+so <- sleuth_prep(s2c, target_mapping = t2g)
+
+so <- sleuth_fit(so, ~condition, 'full')
+
+so <- sleuth_fit(so, ~1, 'reduced')
+
+save.image(file = "HD_AD_sleuth_gene.RData")
+
+so <- sleuth_lrt(so, 'reduced', 'full')
+
+plot_pca(so, color_by = 'condition')
+
+save.image(file = "HD_AD_sleuth.RData")
+```
+
 
 Eseguiti tutte le applicazioni troverete nella cartella in cui avete
 eseguito tutte le analisi il file gene_list.txt che contiene i dati che
