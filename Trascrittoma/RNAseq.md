@@ -189,21 +189,46 @@ t2g <- biomaRt::getBM(attributes = c("ensembl_transcript_id", "ensembl_gene_id",
 t2g <- dplyr::rename(t2g, target_id = ensembl_transcript_id,
   ens_gene = ensembl_gene_id, ext_gene = external_gene_name)
 
-so <- sleuth_prep(s2c, target_mapping = t2g)
+so <- sleuth_prep(s2c, target_mapping = t2g, aggregation_column = 'ens_gene')
 
 so <- sleuth_fit(so, ~condition, 'full')
 
 so <- sleuth_fit(so, ~1, 'reduced')
 
 so <- sleuth_lrt(so, 'reduced', 'full')
+
+
+sleuth_table_gene <- sleuth_results(so, 'reduced:full', 'lrt', show_all = FALSE)
+sleuth_significant_gene <- dplyr::filter(sleuth_table_gene, qval <= 0.05)
+head(sleuth_significant_gene, 20)
 ```
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:   
 
+Adesso possiamo procedere ad estrarre i dati ottenuti dall'analisi statistica e fare un po' di valutazioni:  
+1. Avviamo R:  
+```
+    R
+```
+2. Importiamo la libreria di Sleuth:  
+```
+    library("sleuth")
+```
+3. Carichiamo i dati pre-analizzati:  
+```
+    load("/home/share/RNAseq/HD_AD_sleuth_full.RData")
+```
+4. Salviamo i dati con le annotazioni relative ai geni e scarichiamoli sul nostro computer:  
+```
+    write.csv(sleuth_significant_gene, file="diff_trascript_genes.csv")
+```
 
+# Gene Ontology Enrichment analysis
+Utilizziamo [Panther](http://pantherdb.org) per utilizzare l'ontologia e vedere a quali classi appartengono i geni 
+che abbiamo estratto dall'analisi differenziale.  
 
-Eseguiti tutte le applicazioni troverete nella cartella in cui avete
-eseguito tutte le analisi il file gene_list.txt che contiene i dati che
-analizzeremo utilizzando [AMIGO](http://amigo.geneontology.org/amigo),
-per valutare l'arricchimento di specifici GO nei geni che risultano
-variati in modo statisticamente significativo.
+1. Collegatevi a [Panther](http://pantherdb.org);
+2. Incollata la lista con li accession number ENSEMBL. Selezionate **Statistical Overrepresentation set** e **GO cellular component**;  
+3. In "**Default whole-genome lists:**" selezionate _Homo sapiens gene_;  
+4. Cliccate su **Launch Analysis**.
+
 
