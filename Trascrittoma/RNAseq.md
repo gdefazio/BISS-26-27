@@ -144,19 +144,25 @@ nel nostro caso HC e AD.
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 **BOX 4**  
 Sleuth è un pachetto di R, una piattaforma che utilizziamo per l'analisi statistica:  
-
+1. importazione della libreria di Sleuth:
 ```
 library("sleuth")
-
+```
+2. Definiamo l'elenco dei campioni in analisi e associamo i file con le quantificazioni effettuate da kallisto:
+```
 sample_id <- dir(file.path(".", "kallisto_quant"))
 sample_id
 
 kal_dirs <- file.path("kallisto_quant", sample_id)
-
+```
+3. Importiamo il file con i metadata ed associamo a ciascun campione le conte generate da kallisto:
+```
 s2c <- read.table("metadata.csv", header = TRUE, stringsAsFactors=FALSE)
 
 s2c <- dplyr::mutate(s2c, path = kal_dirs)
-
+```
+4. Costriuamo il modello statistico sui cui si basa Sleuth:
+```
 matrice = model.matrix(~condition,s2c) 
 
 so <- sleuth_prep(s2c, extra_bootstrap_summary = TRUE,full_model = matrice, filter_fun=function(x){basic_filter(x, 5, 0.25)})
@@ -166,14 +172,15 @@ so <- sleuth_fit(so, ~condition, 'full')
 so <- sleuth_fit(so, ~1, 'reduced')
 
 so <- sleuth_lrt(so, 'reduced', 'full')
-
+```
+5. Raccogliamo i risultati a livello di Trascritti:
+```
 sleuth_table <- sleuth_results(so, 'reduced:full', 'lrt', show_all = FALSE)
 sleuth_significant <- dplyr::filter(sleuth_table, qval <= 0.05)
 head(sleuth_significant, 20)
-
-save.image(file = "HD_AD_sleuth.RData")
-
-
+```
+6. Associamo ai trascritti i nomi dei geni ed aggiorniamo il modello:
+```
 mart <- biomaRt::useMart(biomart = "ENSEMBL_MART_ENSEMBL",
   dataset = "hsapiens_gene_ensembl",
   host = 'ensembl.org')
@@ -188,14 +195,10 @@ so <- sleuth_fit(so, ~condition, 'full')
 
 so <- sleuth_fit(so, ~1, 'reduced')
 
-save.image(file = "HD_AD_sleuth_gene.RData")
-
 so <- sleuth_lrt(so, 'reduced', 'full')
-
-plot_pca(so, color_by = 'condition')
-
-save.image(file = "HD_AD_sleuth.RData")
 ```
+
+
 
 
 Eseguiti tutte le applicazioni troverete nella cartella in cui avete
@@ -204,17 +207,3 @@ analizzeremo utilizzando [AMIGO](http://amigo.geneontology.org/amigo),
 per valutare l'arricchimento di specifici GO nei geni che risultano
 variati in modo statisticamente significativo.
 
-# Bibliografia
-
-1\. Conesa, A. et al. A survey of best practices for RNA-seq data
-analysis. Genome Biol. **17,** (2016).2. Li, H. & Durbin, R. Fast and
-accurate short read alignment with Burrows--Wheeler transform.
-Bioinformatics **25,** 1754--1760 (2009).3. Dobin, A. et al. STAR:
-ultrafast universal RNA-seq aligner. Bioinformatics **29 %6,** 15-21 %&
-(2013).4. Li, H. et al. The Sequence Alignment/Map format and SAMtools.
-Bioinformatics **25,** 2078--9 (2009).5. HTSeq: Analysing
-high-throughput sequencing data with Python --- HTSeq 0.9.1
-documentation. Available at:
-https://htseq.readthedocs.io/en/release_0.9.1/. (Accessed: 23rd January
-2018)6. Anders, S. & Huber, W. Differential expression analysis for
-sequence count data. Genome Biol **11 %6,** R106 %& (2010).
