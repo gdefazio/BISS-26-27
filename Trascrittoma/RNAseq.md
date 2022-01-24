@@ -72,7 +72,7 @@ Adesso possiamo procedere all' esecuzione di MultiQC:
 ```
 
 Nonostante siamo ampiamente soddisfatti della qualità dei dati effettuiamo comunque il trimming.  
-<span style="color:red"> **Quello che è riportato nel BOX 2 non va eseguito!!!** text</span> :bangbang:  
+<span style="color:red"> **Quello che è riportato nel BOX 2 non va eseguito!!!** text</span>  
 
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 **BOX 2**  
