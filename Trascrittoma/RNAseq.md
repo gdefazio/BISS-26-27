@@ -59,12 +59,12 @@ Considerato che abbiamo sequenziato 12 campioni e che quindi abbiamo un totale d
 **Per questioni di spazio e tempi vedremo direttamente come generare il report prodotto da MultiQC**.  
 :bangbang: Quello che è riportato nel Box1 non va eseguito!!! :bangbang:    
 
---- 
+:heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign:
 **BOX 1**  
 Esecuzione del FastQC:
 1. ``mkdir fastqc_output``
 2. `fastqc input/*fastq.gz --noextract -o fastqc_output`
----
+:heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign::heavy_minus_sign:
 
 Adesso possiamo procedere all' esecuzione di MultiQC:  
 ```
