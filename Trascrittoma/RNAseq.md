@@ -1,6 +1,5 @@
----
-title: RNA SEQ
----
+RNAseq
+======
 
 # Introduzione
 
@@ -64,6 +63,7 @@ Considerato che abbiamo sequenziato 12 campioni e che quindi abbiamo un totale d
 Esecuzione del FastQC:
 1. ``mkdir fastqc_output``
 2. `fastqc input/*fastq.gz --noextract -o fastqc_output`  
+
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 
 Adesso possiamo procedere all' esecuzione di MultiQC:  
@@ -74,7 +74,7 @@ Adesso possiamo procedere all' esecuzione di MultiQC:
 Nonostante siamo ampiamente soddisfatti della qualità dei dati effettuiamo comunque il trimming.  
 :bangbang: Quello che è riportato nel Box2 non va eseguito!!! :bangbang:  
 
---- 
+:heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 **BOX 2**  
 Effettuiamo il trimming:  
 
@@ -94,7 +94,8 @@ do
   unset array
 done
 ```
----
+
+:heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 
 
 # Caratterizzazione dei trascritti espressi 
