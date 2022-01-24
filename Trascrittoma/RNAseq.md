@@ -52,168 +52,58 @@ Analizzeremo 12 campioni:
 
 La procedura di preparazione delle librerie di sequenziamento ha previsto l' utilizzo del kit **TruSeq Stranded Total RNA** dell'Illumina ed il sucessivo sequenziamento con piattaforma NextSeq 500 con layout 2x100.  
   
-# Valutazione della qualità delle sequenze Prodotte
+# Valutazione della qualità delle sequenze prodotte
 Prima di procedere con l' analisi del trascrittoma dobbiamo valutare la qualità delle sequenze ed eventualmente optare per una procedura di trimming.  
 Considerato che abbiamo sequenziato 12 campioni e che quindi abbiamo un totale di 24 file fastq da valutare, utilizzeremo, oltre al **FastQC**, un tool chiamato [**MultiQC**](https://multiqc.info).  
 
 **Per questioni di spazio e tempi vedremo direttamente come generare il report prodotto da MultiQC**.  
-Quello che è riportato nel Box1 non va eseguito!!!  
+:bangbang: Quello che è riportato nel Box1 non va eseguito!!! :bangbang:    
 
 --- 
-**BOX 1**
+**BOX 1**  
 Esecuzione del FastQC:
 1. ``mkdir fastqc_output``
 2. `fastqc input/*fastq.gz --noextract -o fastqc_output`
 ---
 
-Adesso possiamo procedere all'esecuzione di MultiQC: 
+Adesso possiamo procedere all' esecuzione di MultiQC:  
+```
+    multiqc /home/share/RNAseq/fastqc_output/
+```
+
+Nonostante siamo ampiamente soddisfatti della qualità dei dati effettuiamo comunque il trimming.  
+:bangbang: Quello che è riportato nel Box2 non va eseguito!!! :bangbang:  
+
+--- 
+**BOX 2**  
+Effettuiamo il trimming:  
+
+```
+cd input_data
+
+mkdir ../trimmed
+
+for sample in $(cat ../sample_list)
+do
+  echo $sample
+  shopt -s nullglob
+  array=($sample*)
+  shopt -u nullglob
+  echo "${array[@]}"
+  sickle pe -f ${array[0]} -r ${array[1]} -o ../trimmed/${sample}_R1_trimmed.fastq.gz -p ../trimmed/${sample}_R2_trimmed.fastq.gz -s ../trimmed/${sample}_unpaired.fastq.gz -q 30 -l 50 -t sanger -g
+  unset array
+done
+```
+---
+
 
 # Caratterizzazione dei trascritti espressi 
+Nel lavoro da cui abbiamo preso i dati che stiamo analizzando è stato utilizzato un approccio bassato sull' allineamento delle reads sul genoma di riferimento.  
+Successivamente è stato dedotto il livello di espressione a livello di trascritti e geni.  
 
+Per questa esercitazione utilizzeremo un approccio basato sugli pseudo-allineamenti, con un tool chiamto [**Kallisto**](https://www.nature.com/articles/nbt.3519).  
 
-Durante l'esercitazione per il Variant Calling abbiamo parlato del
-programma di mapping chiamato BWA (Burrows-Wheeler Alignment tool) , che
-utilizza un approccio basato sulla combinazione della trasformata di
-Burrows-Wheeler
-([https://en.wikipedia.org/wiki/Burrows--Wheeler_transform](https://en.wikipedia.org/wiki/Burrows–Wheeler_transform))
-e la costruzione di FM index (<https://en.wikipedia.org/wiki/FM-index>).
-Abbiamo sottolineato come questo approccio permetta di velocizzare il
-processo di mapping tanto da poter mappare milioni di reads in
-pochissime ore.
-
-Quando, però, dobbiamo procedere all'analisi di un trascrittoma si la
-complessità del problema è incrementata dalla presenza di una ulteriore
-difficoltà computazionale: le read posso mappare sulle giunzioni di
-splicing e per questo vanno utilizzati degli accorgimenti per
-considerare il fatto che un allineamento possa contenere una regione
-genomica non rappresentata nelle nostre read (le regioni introniche). Un
-programma che permette di ovviare a questa problematica e STAR ^3^
-utilizzando un approccio chiamato Maximal Mappable Prefix MMP (figura2).
-
-![](/Users/brunofosso/Documents/Lezioni_Universita'/import-resources/media/image2.jpeg){width="4.48125in"
-height="3.3877121609798775in"}
-
-Figura 2: Approccio MMP
-
-STAR è un programma computazionalmente intensivo, che però permette di
-pre-caricare il genoma di riferimento in memoria e poi condividerlo tra
-più processi di mapping:
-
-STAR \--genomeDir /home/bfosso/share/MetaShot_reference/Homo_sapiens
-\--genomeLoad LoadAndExit
-
-Possiamo procedure al mapping delle nostre read.
-
--   STAR \--runThreadN 10 \--genomeDir
-    /home/bfosso/share/MetaShot_reference/Homo_sapiens \--genomeLoad
-    LoadAndKeep \--readFilesIn SRR6458318_va1.fq SRR6458318_va2.fq
-    \--outSAMattributes NM \--alignIntronMax 1000000 \--alignIntronMin 1
-    \--outFileNamePrefix SRR6458318_data \--sjdbGTFfeatureExon
-    /home/bfosso/share/MetaShot_reference/Homo_sapiens/gencode.v21.annotation.gtf.gz
-
--   STAR \--runThreadN 10 \--genomeDir
-    /home/bfosso/share/MetaShot_reference/Homo_sapiens \--genomeLoad
-    LoadAndKeep \--readFilesIn SRR6458317_va1.fq SRR6458317_va2.fq
-    \--outSAMattributes NM \--alignIntronMax 1000000 \--alignIntronMin 1
-    \--outFileNamePrefix SRR6458317_data \--sjdbGTFfeatureExon
-    /home/bfosso/share/MetaShot_reference/Homo_sapiens/gencode.v21.annotation.gtf.gz
-
--   STAR \--runThreadN 10 \--genomeDir
-    /home/bfosso/share/MetaShot_reference/Homo_sapiens \--genomeLoad
-    LoadAndKeep \--readFilesIn SRR6458316_va1.fq SRR6458316_va2.fq
-    \--outSAMattributes NM \--alignIntronMax 1000000 \--alignIntronMin 1
-    \--outFileNamePrefix SRR6458316_data \--sjdbGTFfeatureExon
-    /home/bfosso/share/MetaShot_reference/Homo_sapiens/gencode.v21.annotation.gtf.gz
-
-Completato il mapping possiamo liberare la porzione di memoria occupata
-dal genoma di riferimento:
-
-STAR \--genomeDir /home/bfosso/share/MetaShot_reference/Homo_sapiens
-\--genomeLoad Remove
-
-STAR produce un file in formato SAM
-(<http://samtools.github.io/hts-specs/SAMtags.pdf>) , che dobbiamo
-convertire in BAM (la controparte binaria del file SAM).
-
--   samtools view -b -S -o SRR6458316_dataAligned.out.bam
-    SRR6458316_dataAligned.out.sam
-
--   samtools view -b -S -o SRR6458317_dataAligned.out.bam
-    SRR6458317_dataAligned.out.sam
-
--   samtools view -b -S -o SRR6458318_dataAligned.out.bam
-    SRR6458318_dataAligned.out.sam
-
-Successivamente ordiniamo i file bam e li indicizziamo:
-
--   samtools sort SRR6458316_dataAligned.out.bam -o
-    SRR6458316_dataAligned.out.sorted.bam
-
--   samtools sort SRR6458317_dataAligned.out.bam -o
-    SRR6458317_dataAligned.out.sorted.bam
-
--   samtools sort SRR6458318_dataAligned.out.bam -o
-    SRR6458318_dataAligned.out.sorted.bam
-
--   samtools index SRR6458316_dataAligned.out.sorted.bam
-
--   samtools index SRR6458317_dataAligned.out.sorted.bam
-
--   samtools index SRR6458318_dataAligned.out.sorted.bam
-
-Come per il variant calling dobbiamo eliminare alcuni artefatti della
-procedura sperimentale e in particolare, andiamo ad eliminare i
-duplicati di PCR.
-
--   java -jar \$picard MarkDuplicates INPUT=
-    SRR6458316_dataAligned.out.sorted.bam OUTPUT= SRR6458316_dep.bam
-    METRICS_FILE=metrics.txt
-
--   java -jar \$picard MarkDuplicates INPUT=
-    SRR6458317_dataAligned.out.sorted.bam OUTPUT= SRR6458317_dep.bam
-    METRICS_FILE=metrics.txt
-
--   java -jar \$picard MarkDuplicates INPUT=
-    SRR6458318_dataAligned.out.sorted.bam OUTPUT= SRR6458318_dep.bam
-    METRICS_FILE=metrics.txt
-
--   java -jar picard.jar BuildBamIndex INPUT=SRR6458316_dep.bam
-
--   java -jar picard.jar BuildBamIndex INPUT=SRR6458317_dep.bam
-
--   java -jar picard.jar BuildBamIndex INPUT=SRR6458318_dep.bam
-
-Sulla base dei dati di mapping andiamo a contare per ciascun gene le
-read che vi si allineano contro utilizzando HTSeq-count:
-
--   htseq-count -f bam -s no -r pos -t gene -i gene_id
-    SRR6458316_dep.bam gencode.v21.annotation.gtf \>
-    SRR6458318_gene_count
-
--   htseq-count -f bam -s no -r pos -t gene -i gene_id
-    SRR6458317_dep.bam gencode.v21.annotation.gtf \>
-    SRR6458317_gene_count
-
--   htseq-count -f bam -s no -r pos -t gene -i gene_id
-    SRR6458318_dep.bam gencode.v21.annotation.gtf \>
-    SRR6458316_gene_count
-
-Infine ripuliamo I file prodotti con HTSeq-count ^5^:
-
--   grep -v GFF SRR6458316_gene_count\|grep -v SAM\|grep -v Warning \>
-    SRR6458316_gene_count_cleaned
-
--   grep -v GFF SRR6458317_gene_count\|grep -v SAM\|grep -v Warning \>
-    SRR6458317_gene_count_cleaned
-
--   grep -v GFF SRR6458318_gene_count\|grep -v SAM\|grep -v Warning \>
-    SRR6458318_gene_count_cleaned
-
-Adesso possiamo procedere all' analisi statistica con R. Nella vostra
-area di lavoro troverete lo script stat_analysis.R che dovete scaricare
-sul vostro computer ed aprire con Rstudio. In questo script sono
-eseguiti tutti gli step necessari per confrontare i nostri campioni
-utilizzando DESeq2 ^6^.
+# Analisi statistica
 
 Eseguiti tutte le applicazioni troverete nella cartella in cui avete
 eseguito tutte le analisi il file gene_list.txt che contiene i dati che
