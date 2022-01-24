@@ -36,6 +36,6 @@ Prima d' iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 
 ### Esercitazione 6 (25/01/2022)
 - [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
-- [ ] [Analisi del Trascrittoma](./Trascrittoma/)
+- [ ] [Analisi del Trascrittoma](./Trascrittoma/RNAseq.md)
 
-### [Relazioni]()  
+### [Relazioni](./relazioni.md)  
