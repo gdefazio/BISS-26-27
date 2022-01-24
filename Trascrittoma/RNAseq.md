@@ -56,7 +56,7 @@ Prima di procedere con l' analisi del trascrittoma dobbiamo valutare la qualità
 Considerato che abbiamo sequenziato 12 campioni e che quindi abbiamo un totale di 24 file fastq da valutare, utilizzeremo, oltre al **FastQC**, un tool chiamato [**MultiQC**](https://multiqc.info).  
 
 **Per questioni di spazio e tempi vedremo direttamente come generare il report prodotto da MultiQC**.  
-:bangbang: Quello che è riportato nel Box1 non va eseguito!!! :bangbang:    
+:bangbang: <span style="color:red">some **Quello che è riportato nel BOX 1 non va eseguito!!!** text</span> :bangbang:  
 
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 **BOX 1**  
@@ -72,7 +72,7 @@ Adesso possiamo procedere all' esecuzione di MultiQC:
 ```
 
 Nonostante siamo ampiamente soddisfatti della qualità dei dati effettuiamo comunque il trimming.  
-:bangbang: Quello che è riportato nel Box2 non va eseguito!!! :bangbang:  
+:bangbang: <span style="color:red">some **Quello che è riportato nel BOX 2 non va eseguito!!!** text</span> :bangbang:  
 
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 **BOX 2**  
@@ -93,6 +93,8 @@ do
   sickle pe -f ${array[0]} -r ${array[1]} -o ../trimmed/${sample}_R1_trimmed.fastq.gz -p ../trimmed/${sample}_R2_trimmed.fastq.gz -s ../trimmed/${sample}_unpaired.fastq.gz -q 30 -l 50 -t sanger -g
   unset array
 done
+
+cd ..
 ```
 
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
@@ -102,7 +104,26 @@ done
 Nel lavoro da cui abbiamo preso i dati che stiamo analizzando è stato utilizzato un approccio bassato sull' allineamento delle reads sul genoma di riferimento.  
 Successivamente è stato dedotto il livello di espressione a livello di trascritti e geni.  
 
-Per questa esercitazione utilizzeremo un approccio basato sugli pseudo-allineamenti, con un tool chiamto [**Kallisto**](https://www.nature.com/articles/nbt.3519).  
+Per questa esercitazione utilizzeremo un approccio basato sugli pseudo-allineamenti, con un tool chiamato [**Kallisto**](https://www.nature.com/articles/nbt.3519).  
+![](./41587_2016_Article_BFnbt3519_Fig1_HTML.webp)
+
+:bangbang: <span style="color:red">some **Quello che è riportato nel BOX 3 non va eseguito!!!** text</span> :bangbang:  
+
+:heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
+**BOX 2**  
+Effettuiamo il trimming:  
+
+```
+cd ../trimmed
+
+for sample in $(cat ../sample_list)
+do 
+    echo $sample
+    kallisto quant -i /home/share/Kallisto_index/GRCh38_p13/Homo_sapiens_GRCh38_cdna_all_ncrna -o ../kallisto_quant/${sample} -b 100 --rf-stranded -t 20 ${sample}_R1_trimmed.fastq ${sample}_R2_trimmed.fastq
+    done'
+```
+
+:heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 
 # Analisi statistica
 
