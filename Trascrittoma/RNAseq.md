@@ -72,7 +72,7 @@ Adesso possiamo procedere all' esecuzione di MultiQC:
 ```
 
 Nonostante siamo ampiamente soddisfatti della qualità dei dati effettuiamo comunque il trimming.  
-:bangbang: <span style="color:red">some **Quello che è riportato nel BOX 2 non va eseguito!!!** text</span> :bangbang:  
+<span style="color:red"> **Quello che è riportato nel BOX 2 non va eseguito!!!** text</span> :bangbang:  
 
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 **BOX 2**  
@@ -107,7 +107,7 @@ Successivamente è stato dedotto il livello di espressione a livello di trascrit
 Per questa esercitazione utilizzeremo un approccio basato sugli pseudo-allineamenti, con un tool chiamato [**Kallisto**](https://www.nature.com/articles/nbt.3519).  
 ![](./41587_2016_Article_BFnbt3519_Fig1_HTML.webp)
 
-:bangbang: <span style="color:red">some **Quello che è riportato nel BOX 3 non va eseguito!!!** text</span> :bangbang:  
+:bangbang: <span style="color:red"> **Quello che è riportato nel BOX 3 non va eseguito!!!** text</span> :bangbang:  
 
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 **BOX 2**  
