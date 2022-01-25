@@ -13,14 +13,14 @@ Prendiamo ad esempio l' esame previsto per il giovedì 10/02.
 ---
 
 La relazione dovrà riguardare **tutte** le seguenti tematiche:
-1. Descrizione della procedura bioinformatica relativa all’analisi di dati di DNA-Metabarcoding e discussione dei dati ottenuti:  
-    - Vanno comparate sia le metodologie bioinformatiche che i risultati ottenuti durante l' esercitazione con quelli presentati nel lavoro [Ravegnini et al. 2020](https://www.mdpi.com/1422-0067/21/24/9735);  
-2. Descrizione della procedura bioinformatica per l’assemblaggio e annotazione di un genoma batterico corredata da un breve commento dei risultati ottenuti.  
-   - Tra le sequenze proteiche identificate da **PROKKA** sceglierne una e utilizzando uno dei tool che abbiamo visto durante le esercitazioni verificare che la predizione funzionale sia corretta.  
+1. Descrizione della procedura bioinformatica relativa all’analisi di dati di DNA-Metabarcoding e discussione dei dati ottenuti:
+   1. Vanno comparate sia le metodologie bioinformatiche che i risultati ottenuti durante l' esercitazione con quelli presentati nel lavoro [Ravegnini et al. 2020](https://www.mdpi.com/1422-0067/21/24/9735);  
+2. Descrizione della procedura bioinformatica per l’assemblaggio e annotazione di un genoma batterico corredata da un breve commento dei risultati ottenuti.
+   1. Tra le sequenze proteiche identificate da **PROKKA** sceglierne una e utilizzando uno dei tool che abbiamo visto durante le esercitazioni verificare che la predizione funzionale sia corretta.  
   
-3.Descrizione della procedura bioinformatica relativa all’analisi di dati di Trascrittomica e discussione dei dati ottenuti:  
-    - Vanno comparate sia le metodologie bioinformatiche che i risultati ottenuti durante l' esercitazione con quelli presentati nel lavoro [Annese et al. 2018, Scientific Reports](https://www.nature.com/articles/s41598-018-22701-2);  
-    - Tra i geni differenzialmente espressi va scelto uno ed indicate le seguenti informazioni:  
+3.Descrizione della procedura bioinformatica relativa all’analisi di dati di Trascrittomica e discussione dei dati ottenuti:
+    1. Vanno comparate sia le metodologie bioinformatiche che i risultati ottenuti durante l' esercitazione con quelli presentati nel lavoro [Annese et al. 2018, Scientific Reports](https://www.nature.com/articles/s41598-018-22701-2);  
+    2. Tra i geni differenzialmente espressi va scelto uno ed indicate le seguenti informazioni:  
         - Simbolo ufficiale del Gene;  
         - Identificativo del Gene;  
         - Localizzazione cromosomica comprensiva di coordinate e strand;  
