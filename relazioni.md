@@ -31,6 +31,6 @@ La relazione dovrà riguardare **tutte** le seguenti tematiche:
         - Numero di Ortologhi annotati.  
         - Utilizzando la sequenza proteica identificate la presenza di possibile proteine omologhe.  
 
-***Ciascuna relazione non dovrà superare le 5 pagine e per ciascuna di esse potete inserire al massimo 5 immagini***.  
+***Per ciascuna delle tre tematiche non dovranno superare le 5 pagine e per ciascuna di esse potete inserire al massimo 5 immagini***.  
 
 [Back to the top](../README.md) 
