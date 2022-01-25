@@ -20,16 +20,16 @@ La relazione dovrà riguardare **tutte** le seguenti tematiche:
   
 3.Descrizione della procedura bioinformatica relativa all’analisi di dati di Trascrittomica e discussione dei dati ottenuti:  
     - Vanno comparate sia le metodologie bioinformatiche che i risultati ottenuti durante l' esercitazione con quelli presentati nel lavoro [Annese et al. 2018, Scientific Reports](https://www.nature.com/articles/s41598-018-22701-2);  
-    - Tra i geni differenzialmente espressi va scelto uno ed indicate le seguenti informazioni:
-        - Simbolo ufficiale del Gene;   
-        - Identificativo del Gene;
+    - Tra i geni differenzialmente espressi va scelto uno ed indicate le seguenti informazioni:  
+        - Simbolo ufficiale del Gene;  
+        - Identificativo del Gene;  
         - Localizzazione cromosomica comprensiva di coordinate e strand;  
-        - Numero di trascritti annotati;
-            - Considerando il trascritto codificante proteina più lungo dovete indicare:
-                * l' identificativo del trascritto;
-                * il numero di Esoni che partecipano alla formazione di quel trascritto;
+        - Numero di trascritti annotati;  
+            - Considerando il trascritto codificante proteina più lungo dovete indicare:  
+                * l' identificativo del trascritto;  
+                * il numero di Esoni che partecipano alla formazione di quel trascritto;  
         - Numero di Ortologhi annotati.  
-        - Utilizzando la sequenza proteica identificate la presenza di possibile proteine omologhe.
+        - Utilizzando la sequenza proteica identificate la presenza di possibile proteine omologhe.  
 
 ***Ciascuna relazione non dovrà superare le 5 pagine e per ciascuna di esse potete inserire al massimo 5 immagini***.  
 
