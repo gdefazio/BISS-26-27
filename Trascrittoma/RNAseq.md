@@ -139,7 +139,7 @@ cd ..
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:  
 
 # Analisi statistica
-Per l' analisi statistica utilizzeremo un tool chiamato [**sleuth**](nature.com/articles/nmeth.4324).  
+Per l' analisi statistica utilizzeremo un tool chiamato [**sleuth**](https://www.nature.com/articles/nmeth.4324).  
 Sleuth è disegnato per importare i dati prodotti da _Kallisto_ e procedere all' analisi differenziale tra le condizioni in analisi,
 nel nostro caso HC e AD. 
 
@@ -234,7 +234,6 @@ che abbiamo estratto dall' analisi differenziale.
 2. Incollata la lista con li accession number ENSEMBL. Selezionate **Statistical Overrepresentation set** e **GO cellular component**;  
 3. In "**Default whole-genome lists:**" selezionate _Homo sapiens gene_;  
 4. Cliccate su **Launch Analysis**.
-
 
 
 

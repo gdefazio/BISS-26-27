@@ -4,14 +4,14 @@
 - [APPROCCI BIOINFORMATICI PER L’ASSEMBLAGGIO DELLE READ: I GRAFI DI DE BRUIJN](#approcci-bioinformatici-per-lassemblaggio-delle-read-i-grafi-di-de-bruijn)
 - [VALUTAZIONE DELL’ASSEMBLAGGIO OTTENUTO](#valutazione-dellassemblaggio-ottenuto)
 - [SCOPO DELL'ESERCITAZIONIE](#scopo-dellesercitazione)
-    * [Valutazione preliminare della qualità delle sequenze e trimming](#Valutazione preliminare della qualità delle sequenze e trimming)  
-    * [Velvet](#velvet)
-        * [Meccanismo di funzionamento di Velvet](#meccanismo-di-funzionamento-di-velvethttpswwwncbinlmnihgovpmcarticlespmc2336801reportreaderpo318182)
-        * [Applicazione di Velvet](#applicazione-di-velvet)
+    * [Valutazione preliminare della qualità delle sequenze e trimming](#valutazione-preliminare-della-qualit-delle-sequenze-e-trimming)  
+      * [Velvet](#velvet)
+          * [Meccanismo di funzionamento di Velvet](#meccanismo-di-funzionamento-di-spadeshttpswwwncbinlmnihgovpmcarticlespmc3342519po138889)
+          * [Applicazione di Velvet](#applicazione-di-velvet)
     * [SPAdes](#spades)
         * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spadeshttpswwwncbinlmnihgovpmcarticlespmc3342519po138889)
         * [Applicazione di SPAdes](#applicazione-di-spades)
-- [Annotazione funzionale del Genoma](#annotazione-funzionale-del-genoma)
+- [Annotazione funzionale del Genoma](#ann)
     
 
 ## INTRODUZIONE
