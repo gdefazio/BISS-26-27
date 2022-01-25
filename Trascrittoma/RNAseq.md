@@ -55,6 +55,14 @@ La procedura di preparazione delle librerie di sequenziamento ha previsto l' uti
 Prima di procedere con l' analisi del trascrittoma dobbiamo valutare la qualità delle sequenze ed eventualmente optare per una procedura di trimming.  
 Considerato che abbiamo sequenziato 12 campioni e che quindi abbiamo un totale di 24 file fastq da valutare, utilizzeremo, oltre al **FastQC**, un tool chiamato [**MultiQC**](https://multiqc.info).  
 
+```
+    cd 
+    
+    mkdir RNAseq && cd RNAseq
+    
+    source /opt/miniconda3/bin/activate kallisto 
+```
+
 **Per questioni di spazio e tempo vedremo direttamente come generare il report prodotto da MultiQC**.  
 :bangbang: **Quello che è riportato nel BOX 1 non va eseguito!!!** :bangbang:  
 
@@ -68,10 +76,6 @@ Esecuzione del FastQC:
 
 Adesso possiamo procedere all' esecuzione di MultiQC:  
 ```
-    mkdir RNAseq && cd RNAseq
-    
-    source /opt/miniconda3/bin/activate kallisto 
-
     multiqc /home/share/RNAseq/fastqc_output/
 ```
 
