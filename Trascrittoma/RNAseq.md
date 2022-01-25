@@ -208,7 +208,7 @@ head(sleuth_significant_gene, 20)
 ```
 :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign:   
 
-Adesso possiamo procedere ad estrarre i dati ottenuti dall'analisi statistica e fare un po' di valutazioni:  
+Adesso possiamo procedere a estrarre i dati ottenuti dall' analisi statistica e fare un po' di valutazioni:  
 1. Avviamo R:  
 ```
     R
