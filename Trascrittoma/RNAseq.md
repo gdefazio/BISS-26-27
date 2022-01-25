@@ -223,8 +223,8 @@ Adesso possiamo procedere ad estrarre i dati ottenuti dall'analisi statistica e 
 ```
 
 # Gene Ontology Enrichment analysis
-Utilizziamo [Panther](http://pantherdb.org) per utilizzare l'ontologia e vedere a quali classi appartengono i geni 
-che abbiamo estratto dall'analisi differenziale.  
+Utilizziamo [Panther](http://pantherdb.org) per utilizzare la [**Gene Ontology**](http://geneontology.org/docs/ontology-documentation/) e vedere a quali classi appartengono i geni 
+che abbiamo estratto dall' analisi differenziale.  
 
 1. Collegatevi a [Panther](http://pantherdb.org);
 2. Incollata la lista con li accession number ENSEMBL. Selezionate **Statistical Overrepresentation set** e **GO cellular component**;  
