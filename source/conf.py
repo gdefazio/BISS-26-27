@@ -12,7 +12,7 @@ author = 'Bruno Fosso <bruno.fosso@gmail.com>'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
+master_doc = 'contents'
 extensions = ["myst_parser"]
 
 templates_path = ['_templates']
