@@ -15,7 +15,7 @@ test:
 pages:
   script:
   - pip install -r requirements.txt
-  - sphinx-build -d build/doctrees . build/html
+  - sphinx-build -d source . build/html
   - mv build/html public/
   artifacts:
     paths:
