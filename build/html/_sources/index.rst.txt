@@ -11,6 +11,8 @@ Welcome to BAFG_2022_2023's documentation!
    :caption: Contents:
 
    README
+   Intro_Bionfo
+
 
 
 Indices and tables
