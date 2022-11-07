@@ -4,38 +4,34 @@ Prima d' iniziare, è il caso di conoscersi un po': [***QUESTIONARIO***](https:/
 
 
 ## Programma
-### Esercitazione 1 (15/11/2020 e 22/11/2021)
+### Esercitazione 1 (10/11/2022 e 17/11/2022)
 #### Banche dati: definizioni generali e sistemi di retrieval
-- [X] [Introduzione alla Bioinformatica](./Intro_Bioinfo.md)
-- [X] [Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
-- [X] [Sistemi di retrieval](Banche_dati/retrieval.md)  
-- [X] [PubMed](Banche_dati/pubmed.md)  
-- [X] [GISAID](Banche_dati/gisaid.md)  
+- [ ] [Introduzione alla Bioinformatica](./Intro_Bioinfo.md)
+- [ ] [Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
+- [ ] [Sistemi di retrieval](Banche_dati/retrieval.md)  
+- [ ] [PubMed](Banche_dati/pubmed.md)  
+- [ ] [GISAID](Banche_dati/gisaid.md)  
 
-### Esercitazione 2 (29/11/2020 e 06/12/2021)
+### Esercitazione 2 (29/11/2022 e 01/12/2022)
 #### Allineamento tra sequenze
-- [X] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
-- [X] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
+- [ ] [Allineamento](./Allineamento_tra_sequenze/allineamento.md)
+- [ ] [Utilizzo di BLAST e BLAT per l'analisi genomica](./Allineamento_tra_sequenze/blast_genomico.md)
 
-#### Genome Browser
-- [X] [ENSEMBL](./Genome_Browser/Ensembl.md)
-- [X] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md#esercizi)
-- [X] [ENSEMBL: COVID-19](./Genome_Browser/Ensembl.md#covid-19)
+#### Genome Browser 
+- [ ] [ENSEMBL](./Genome_Browser/Ensembl.md)
+- [ ] [ENSEMBL: esercizi](./Genome_Browser/Ensembl.md#esercizi)
+- [ ] [ENSEMBL: COVID-19](./Genome_Browser/Ensembl.md#covid-19)
 
-### Esercitazione 3 (10-12/01/2022)
-- [X] [UCSC](./Genome_Browser/UCSC.md)
-- [X] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
+### Esercitazione 3 (09-11/01/2023)
+- [ ] [UCSC](./Genome_Browser/UCSC.md)
+- [ ] [Connessione al server ed introduzione al BASH](./BASH/Accesso_al_server.md)  
 
-### Esercitazione 4 (14-17/01/2022)
+### Esercitazione 4 (16-18/01/2023)
 ### Metabarcoding
-- [X] [Introduzione al Metabarcoding](./Metabarcoding/metabarcoding.md)
+- [ ] [Metabarcoding](./Metabarcoding/metabarcoding.md)
 
-### Esercitazione 5 (19-21/01/2022)
-- [X] [Metabarcoding](./Metabarcoding/metabarcoding.md)
-- [X] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
-
-### Esercitazione 6 (25/01/2022)
-- [X] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
-- [X] [Analisi del Trascrittoma](./Trascrittoma/RNAseq.md)
+### Esercitazione 5 (20-29/01/2023)
+- [ ] [Genome Assembly](./Genome_Assembly/genome_assembly.md)
+- [ ] [Analisi del Trascrittoma](./Trascrittoma/RNAseq.md)
 
 ### [Relazioni](./relazioni.md)  
