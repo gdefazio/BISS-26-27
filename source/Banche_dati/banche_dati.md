@@ -7,7 +7,7 @@ I primi hanno una struttara semplice che non permette operazioni avanzate. I DB 
 Un **DB relazionale** è costituito da una serie di tabelle, ognuna delle quali è composta da una serie di righe che sono unicamente definite da un codice, denominato __chiave__.    
 Le tabelle sono tra loro connesse tramite **legami logici**.    
 
-![RVBD_prot](./db_figure.gif)  
+![RVBD_prot](db_figure.gif)  
 *Ref: https://f1000research.com/articles/8-530*
 
 Ogni tabella è costistuta da diverse righe e colonne:  
@@ -32,6 +32,6 @@ Immagina di aver prodotto una sequenza di un mRNA umano di un gene di tuo intere
 ## Esercizio 2: scaricare il file utilizzando il seguente [LINK](https://drive.google.com/open?id=1ttFY1BhOFBtxeisEXG1evapwyhMnPl7yNLU7cDmaoJA)
 Devi sottomettere la sequenza di un gene proteico di topo. Il gene è composto da due esoni: la sequenza per la ORF è completa. Sulla base delle informazioni suddette, completa la seguente ENTRY2 in formato Genbank.
 
-[Sistemi di Retrieval](./retrieval.md)                            
+[Sistemi di Retrieval](retrieval.md)                            
 
 [Back to the top](../README.md)

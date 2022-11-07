@@ -4,7 +4,7 @@ La consultazione della **Letteratura Scientifica** inerente la tematica che si s
 La banca dati ***PubMed***, sviluppata presso il [**National Center for Biotechnology Information (NCBI)**](https://www.ncbi.nlm.nih.gov/pmc/about/intro/) raccoglie circa **33 milioni** di lavori (articoli, review, e libri) scientifici pubblicati.  
 Oltre all'NCBI, il suo mantenimento, è supportato dalla [**U.S. Library of Medicine**](https://www.ncbi.nlm.nih.gov/pmc/about/intro/). Attualmente, ricerca e raccoglie articoli da oltre **7.600** riviste internazionali a carattere biomedico.  
 Per interrogare questa banca dati, utilizzando il proprio browser (e.g. Safari, Explorer, Chrome, Opera, Firefox…) ci si deve collegare al sito: [https://www.ncbi.nlm.nih.gov/pubmed/](https://www.ncbi.nlm.nih.gov/pubmed/).  
-![pubmed](./pubmed.jpg)  
+![pubmed](pubmed.jpg)  
   
 La ricerca è effettuata inserendo nella casella *Search* il termine o i termini d' interesse, eventualmente connettendoli con gli operatori logici **AND**, **OR** e **NOT**.  
 Cliccando su Search si ottiene il risultato della ricerca costituito da una serie di citazioni ad articoli che comprendono il titolo del lavoro, il primo autore, la rivista, l'anno di pubblicazione ed il numero identificativo della citazione (***PubMed IDentifier, PMID***).     
@@ -24,7 +24,7 @@ ii)        Quanti articoli trattano del gene `p53`?  Quanti riguardano anche i `
 iii)       Quanti articoli ha pubblicato il prof. G. `Pesole` nel `2005?  
     
 
-[GISAID](./gisaid.md)  
+[GISAID](gisaid.md)  
 
 
 [Back to the top](../README.md)

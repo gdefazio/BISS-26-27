@@ -46,7 +46,7 @@ If you have typed correctly you will logged into the server.
 Windows users should use **MobaXterm**.  
 1. Launch `MobaXterm`;  
 2. Click on **Session**;  
- ![moba1](./moba1.jpg)  
+ ![moba1](moba1.jpg)  
 3. Click on `SSH`:  
     - in `Remote host` type the assigned server address;  
     - Check `Specific username` and fill the adjacent field with the assigned user name;  
@@ -68,7 +68,7 @@ We need to configure it appropriately:
     - **Key file**: select the downloaded key file.  
 * Click on `Connect`.  
 
-![filezilla](./filezilla.jpg)
+![filezilla](filezilla.jpg)
 
 # A brief introduction to the Bash command line
 Following a short list of useful **BASH** commands:  
@@ -152,7 +152,7 @@ The header row contains some [technical information](https://support.illumina.co
 * N: indicates whether the read has been filtered (Y) or not (N);  
 
 The **Quality Score** or **Phred Score** is a measure of the probability that a base is erroneously called and it is computed with this formula:  
-![Q](./Q.png)  
+![Q](Q.png)  
 The higher the **Quality score** is the lower is the probability of an erroneous base call:  
 
 |Q|P|ASCII|  
@@ -165,7 +165,7 @@ The higher the **Quality score** is the lower is the probability of an erroneous
 
 By knowing the quality score associated to each sequenced base, it is possible to compute the **Expected Error (EE)**:
 
-![EE](./EE.png)  
+![EE](EE.png)  
 The **EE** is the sum of the observed *Probability errors P*.  
 The EE estimates the number of bases that are expected as erroneous in the analysed sequence.  
 

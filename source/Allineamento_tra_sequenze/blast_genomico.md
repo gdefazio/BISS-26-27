@@ -15,11 +15,11 @@ Per fare questo c’è una variante di BLAST apposita (**tblastn**).
 Virtualmente tutti i **browser genomici** (_che vedremo nella prossima esercitazione_) “offrono” un servizio di blast sui diversi genomi, che producono i medesimi  risultati.  
 In questa esercitazione utilizzeremo (per motivi puramente estetici e di leggibilità dei risultati) quello disponibile con il **BLAST**, accessibile tramite il “solito” link:  
 [https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)  
-![blast_human](./blast_human.png)
+![blast_human](blast_human.png)
 
 Come potete vedere, c’è una sezione dedicata ai genomi completi (o in fase di completamento). Cliccando sul link corrispondente a **human** (attenzione, ciascuna specie linka a una pagina diversa... quindi occorre “centrare” human!) venite portati a questa pagina:  
 Che, appunto vi dice che potete effettuare un BLAST sulle sequenze umane, ristretto a un tipo di sequenza (menù vicino a Database).   
-![human_page](./blast_human_page.jpg)
+![human_page](blast_human_page.jpg)
 
 Potete, inoltre, scegliere quale versione del blast utilizzare (blastn, blastx, tblastn, ecc. ecc.) e, nel caso un cui utilizziate blastn, se volete il **megablast**, che potete selezionare se attendete che la vostra sequenza sia identica (per lo meno, a pezzi, ad una o più regioni del genoma).  
 Tra le altre cose, è possibile selezionare la versione del database in cui effettuare la ricerca, che in questo caso è rappresnetato da diverse versioni del genoma umano o collezioni di mRNA. Se cliccate sul :question: sarà possibile visualizzare una descrizione del database.  
@@ -31,8 +31,8 @@ Infine avviate il blast.
 Quello che il programma farà, è un “blast” del trascritto confrontandolo con il genoma umano (quindi confrontandolo con la sequenza nucelotidica di ciascun cromosoma). 
 La procedura successiva è quella che abbiamo già visto.
  
-![cox](./human_cox.jpg)
-![cox_g](./human_cox_graphic.jpg)
+![cox](human_cox.jpg)
+![cox_g](human_cox_graphic.jpg)
 
 Come si può vedere il programma ha trovato due match (in questo caso, due cromosomi) in cui esistono regioni simili alla sequenza query.    
 Nel pannello **Description** notiamo che abbiamo due match: uno sul cromosoma 14 ed uno sul cromosoma 16.  
@@ -52,7 +52,7 @@ Per verificare le risposte, è sufficiente osservare gli allineamenti ed utiliz
 Un altro programma molto efficiente e veloce per confrontare una sequenza data contro un intero genoma è il **BLAT**.
 [BLAT](http://genome.ucsc.edu/cgi-bin/hgBlat?command=start) è accessibile presso i server dell' UCSC.  
 
-![blat](./blat.png)
+![blat](blat.png)
 
 Una volta selezionato il genoma e la versione dell' assembly è possibile condurre la ricerca dopo aver incollato nell'apposito riquadro la sequenza nucleotidica o proteica in esame.  
 Ad esempio, provate a cercare nel genoma umano la proteina corrispondente al gene COX4I1 precedentemente considerato (ricercate la sequenza nel database **nucleotide** su **NCBI** e copiate la sequenza in formato FASTA. Usate l’AC **NM_001861**!!!).   

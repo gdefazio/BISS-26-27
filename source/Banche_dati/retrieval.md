@@ -13,7 +13,7 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
 2.	Nel menù a tendina accanto alla casella di ricerca seleziona **Nucleotide**;  
   
 
-![NCBI Home Page](./ncbi_home.jpg)
+![NCBI Home Page](ncbi_home.jpg)
 
 3. Richiedi la sequenza nucleotidica desiderata attraverso l’uso del seguente termine di ricerca: `"cytochrome c oxidase"`;  
     <details><summary></summary>
@@ -80,7 +80,7 @@ NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries di
     b.	Selezionare l’operatore **AND**;  
     c.	Selezionare il field `organism` e scrivere “Homo sapiens”.  
 
-![advanced](./advanced.jpg)  
+![advanced](advanced.jpg)  
     <details><summary></summary>
     <p>
     <b>79</b>
@@ -155,7 +155,7 @@ Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 7-12
 Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)  
 
 
-[Ricerca bibliografica nella banca dati PubMed ](./pubmed.md)                     
+[Ricerca bibliografica nella banca dati PubMed ](pubmed.md)                     
 
 
 [Back to the top](../README.md)

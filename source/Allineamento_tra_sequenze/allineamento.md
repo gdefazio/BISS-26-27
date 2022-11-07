@@ -39,7 +39,7 @@ Esistono diverse versioni del BLAST:
 - **PSI-BLAST**: Algoritmo che ricalcola gli score di allineamento interattivamente sulla base dei match osservati :scream:;
 
 Da qualche anno sono disponibili anche versioni ancora più ottimizzate dell' algoritmo pensate per rispondere a specifiche necessità:  
-![](Screenshot%202021-11-27%20at%2018.50.10.jpg)
+![](Screenshot 2021-11-27 at 18.50.10.jpg)
 
 
 Supponiamo di voler cercare le sequenze simili alla *sub-unità IV della citocromo c ossidasi umana* (Accession Number: **P13073**).  
@@ -49,13 +49,13 @@ Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:
 3.	Clicca su **FASTA** (in alto a sinistra);  
 4.	Copia la sequenza aminoacidica in un file di testo;  
 5.	Collegati nuovamente al sito del **BLAST** [https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi).  
-![blast_home](./blast_home.png)
+![blast_home](blast_home.png)
 6.	Seleziona **Protein BLAST** e nella finesta che si apre incolla la sequenza proteica nella finestra. Lascia le impostazioni di base:   
     -   _Database_: **Non-redundant protein sequences (nr)**  
     -   _Algorithm_: **blastp (protein-protein BLAST)**  
     Premi il bottone *BLAST*.    
     NB: (É anche possibile inserire direttamente l'**Accession Number** invece della sequenza stessa);  
-![blast_result](./blast_description.jpg)
+![blast_result](blast_description.jpg)
 
 7.	E’ possibile visualizzare il risultato dell’analisi BLAST.  
     Nella pagina che si apre possiamo disingure tre macro sezioni:  
@@ -71,10 +71,10 @@ Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:
         * _Per. Ident_: percentuale di indentità tra la sequenza query e quella match;
         * _Accession_: accession number della sequenza oggetto.  
     Se selezioniamo la modalità di visualizzasione dei risultati **Graphic Summary**, noteremo che il Pannello 1 e 2 rimarranno invariati ma cambierà il 3.  
-![blast_graphic](./blast_graphic.jpg)
+![blast_graphic](blast_graphic.jpg)
     Nel riquadro in alto viene rappresenta la presenza dei domini conservati nella proteina query. Nel riquadro in basso è, invece, rappresento graficamente lo score ottenuto dagli allienamenti.  
     Se si seleziona una delle barre, verrà aperto un pop-up contenente le informazioni generali ed il **link** diretto al panello dove sono disponibili gli allineamenti (terza modalità di visualizzazione dei risultati).  
-![blast_aling](./blast_align.jpg)
+![blast_aling](blast_align.jpg)
     Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina contenente l‘intera entry. È così possibile ricavare diverse informazioni, tra cui l‘AC delle sequenze nucleotidiche corrispondenti alla sequenza proteica.  
 
 # ESERCIZI DA SVOLGERE    
@@ -114,6 +114,6 @@ Suggerimenti:
 Letture consigliate:    
 - Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli) - Capitolo 5  
 
-[Utilizzo di BLAST e BLAT per l'analisi genomica](./blast_genomico.md)                            
+[Utilizzo di BLAST e BLAT per l'analisi genomica](blast_genomico.md)                            
 
 [Back to the top](../README.md)

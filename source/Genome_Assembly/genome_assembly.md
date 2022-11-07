@@ -40,7 +40,7 @@ Con questa tecnologia è possibile produrre tre tipologie di read:
 ***Figura 1: PE e MP reads.** [REF](https://www.ecseq.com/support/ngs/what-is-mate-pair-sequencing-useful-for)*  
 
 In **Figura 1** è riporta schematicamente la procedura per la produzione delle PE e MP reads. Come è possibile osservare con le PE è possibile sequenziare frammenti le cui dimensioni variano tra le 200 e 800 bp, mentre con le MP è possibile sequenziare le estremità di frammenti molto più grandi (2-5 Kb).  
-![usage](./pe-mp_usage.png)  
+![usage](pe-mp_usage.png)  
 ***Figura 2: utilizzo di PE e MP nel “Genome Sequencing”.** [REF](https://www.ecseq.com/support/ngs/what-is-mate-pair-sequencing-useful-for)*  
 
 [Indice](#genome-assembly)
@@ -51,10 +51,10 @@ In parole semplici, un grafo di de Brujin descrive le sovrapposizioni di stringe
 Nel nostro caso le stringhe dei simboli sono costituite da sequenze di nucleotidi di una determinata lunghezza, dette **k-mer**, dove il **k** indica la lunghezza della parola.  
 I k-mer vengono ottenuti a partire dalle read di sequenziamento. Nella **Figura 3** e **Figura 4** sono mostrati i grafi di de Bruijn generati a partire da due sequenza di 17 nucleotidi suddivise in k-mer lunghi 7 (7mer).  
 In particolare, la Figura 3 rappresenta un grafo per un set di k-mer che non contengono alcuna ripetizione, mentre la Figura 4, rappresenta il un grafo contente un k-mer ripetuto.  
-![kmer](./kmer7.png)  
+![kmer](kmer7.png)  
 ***FIGURA 3: GRAFO DI DE BRUIJN IN UNA SEQUENZA CHE NON CONTIENE K-MER RIPETUTI.** [REF](HTTP://WWW.HOMOLOG.US/TUTORIALS/INDEX.PHP?P=2.1&S=1)*  
 
-![kmer2](./kmer7_1.png)  
+![kmer2](kmer7_1.png)  
 ***FIGURA 4: GRAFO DI DE BRUIJN IN UNA SEQUENZA CHE CONTIENE K-MER RIPETUTI.** [REF](HTTP://WWW.HOMOLOG.US/TUTORIALS/INDEX.PHP?P=2.1&S=1)*  
 
 In un grafo di de Bruijn i k-mer rappresentano gli archi che connettono due vertici **V<sub>a</sub>** e **V<sub>b</sub>**, qualora **V<sub>a</sub>** sia prefisso di **V<sub>b</sub>** (tolta la prima base) o **V<sub>b</sub>** sia suffisso di **V<sub>a</sub>** (tolta l’ultima base).  
@@ -63,9 +63,9 @@ Per la risoluzione del grafo si applica un metodo definiti **Percorso Euleriano*
 La presenza di regioni ripetute o errori di sequenziamento la individiazione di un percorso Euleriamo diventa più complessa per cui si accettano percorsi per cui un arco è visitato almeno una volta.  
 Gli esempi riportati nelle figure 3 e 4 mostrano una estrema semplificazione del problema, ma già la presenza di una ripetizione nella figura 4, fa si che la risoluzione del grafo (identificazione della sequenza biologica) diventi più complessa.  
 
-![grafoA](./grafoA.png)  
+![grafoA](grafoA.png)  
 
-![grafoB](./grafoB.png)  
+![grafoB](grafoB.png)  
 ***FIGURA 5: ESEMPIO DI GRAFO DI DE BRUIJN COMPLESSO***  
 
 In **Figura 5** è riportato un grafo di de Bruijn più complesso, che mostra delle biforcazioni dovute a polimorfismi e/o errori (nt in rosso) e un bubble (regione rappresentata in grande in 5b). Per esempio la risoluzione del bubble in figura 5b è possibile tenendo conto del coverage dei k-mer, in pratica il numero di volte che uno specifico k-mer è osservato nelle nostre reads.  
@@ -149,16 +149,16 @@ Le informazioni relative alla rappresentazione i ciascun k-mer (coverage) sono u
 2. Ogni Kmer rappresenta un nodo del grafico. Due nodi sono connessi presentano una sovrapposizione della loro sequenza pari a k-1.  
    Formalmente diremo che due nodi **N<sub>A</sub>** e **N<sub>B</sub>** sono connessi se gli ultimi `k-1`nt di **N<sub>A</sub>** corrispondono ai primi `k-1` nt di **N<sub>B</sub>**.  
    Questo processo è effettuato contemporaneamente sul **revertito complementare** delle sequenze.  
-   ![graph generation](./velvet_1.jpg)  
+   ![graph generation](velvet_1.jpg)  
 3. Semplificazione: Tutti i nodi che non interessano la generazione del path (non contengono biforcazioni) vengono uniti per ridurre l' utilizzo di memoria.  
-   ![semplification](./velvet_2.jpg)
+   ![semplification](velvet_2.jpg)
 4. Rimozione degli errori. Abbiamo principalmente 3 tipologie di errori:
     * Tips (errori di sequenziamento). Un nodo è considerato un tip se ricade in queste 3 casistiche:  
         - è disconnesso da uno dei due lati;  
         - l'arco che connette questo nodo ha una bassa *multiplicità* (multiplicity, il numero di volte in cui l'arco è osservato).
-    ![tips](./velvet_tips.pdf)    
+    ![tips](velvet_tips.pdf)    
     * Bubbles: Utilizza un algoritmo che pesa le informazioni tra i nodi e considera quale sia il path più probabile.  
-    ![bubble](./velvet_bublbles.jpg)  
+    ![bubble](velvet_bublbles.jpg)  
     * Connessioni errate: sono eliminati tutti quei path che hanno una bassa multiplicità.  
   
 #### Applicazione di Velvet
@@ -183,7 +183,7 @@ Valuteremo la qualità dell’assemblaggio ottenuto con Velvet utilizzando dei k
     `quast.py -s /home/share/genome_assembly/velvet_25/contigs.fa -o quast_25 -r /home/share/genome_assembly/NC_000913.3.fasta.gz`  
     Scarichiamo la cartella generata da quast.  
 Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all' assemblaggio, utilizzando il programma [**Bandage** (Bioinformatics Application for Navigating De novo Assembly Graphs Easily)](http://rrwick.github.io/Bandage/) (**Figura 6**).  
-![velvet_bandage](./velvet_k25_bandage.png)  
+![velvet_bandage](velvet_k25_bandage.png)  
 ***FIGURA 6: DE BRUIJN GRAPH OTTENUTO CON VELVET E K-MER LUNGHI 25NT.***  
 
 Come potete notare dalla complessità del grafico conferma che la lunghezza dei K-mer scelta non è stata sufficiente per ottenere un assemblaggio ottimale, anche in considerazione dell’elevato numero di bubbles generati.  
@@ -213,7 +213,7 @@ Applichiamo quast sui dati generati con SPAdes:
     `quast.py -s /home/share/genome_assembly/spades_application/contigs.fasta -o quast_spades -r /home/share/genome_assembly/NC_000913.3.fasta.gz`   
     Scarichiamo la cartella generata da quast.   
 Anche in questo caso valutiamo il grafo generato (**Figura 7**).  
-![spades_bandage](./spades_bandage.png)  
+![spades_bandage](spades_bandage.png)  
 ***FIGURA 7: DE BRUIJN GRAPH OTTENUTO CON SPADES***  
 Il grafo conferma i dati ottenuti con quast.  
 
@@ -227,7 +227,7 @@ Infine, ne valutiamo la qualità con quast:
  `quast.py -s /home/share/genome_assembly/spades_application_multikmer/contigs.fasta -o quast_spades_multikmer -r /home/share/genome_assembly/NC_000913.3.fasta.gz`  
  Scarichiamo la cartella generata da quast.  
 
-![spades_more](./spades_bandage_mostkmer.png)  
+![spades_more](spades_bandage_mostkmer.png)  
 ***Figura 8: DE BRUIJN GRAPH OTTENUTO CON SPADES utilizzando 7 differenti lunghezze di k-mer.***  
 
 ## Annotazione funzionale del Genoma

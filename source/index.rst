@@ -10,6 +10,7 @@ Welcome to BAFG_2022_2023's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   README
 
 
 Indices and tables

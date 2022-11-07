@@ -28,7 +28,7 @@ I marcatori per eccellenza sono gli aggregati intra-neuronali (NFT intraneural f
 
 Nel lavoro è stato analizzato il profilo trascrittomico di 6 pazienti affetti da LOAD e 6 soggetti sani di sesso maschile e di comparabile età di morte. Inoltre, sono stati inclusi anche 6 campioni di soggetti affetti da *Parkinson Disease (PD)*, 
 come una sorta di controllo di patologia neurodegenerativa e per capire quali sono le modificazioni specifiche dell' AD. I campioni utilizzati, ottenuti da una biobanca, riguardano la regione dell'Ippocampo CA1.  
-![](./memoria_fig_vol1_006500_004.jpg)
+![](memoria_fig_vol1_006500_004.jpg)
 _[](https://www.treccani.it/enciclopedia/memoria_%28Dizionario-di-Medicina%29/)_
 
 Noi ci soffermeremo sulla comparazione dei dati di RNA-seq tra soggetti sani e affetti da Alzheimer.  
@@ -116,7 +116,7 @@ Per questa esercitazione utilizzeremo un approccio basato sugli pseudo-allineame
 Kallisto utilizza un approccio simile a quello visto per l'assemblaggio dei genomi, basato sui k-mer ed i grafici di de Bruijn, 
 che in questo caso chiamiamo ***transcriptome de Bruijn Graph (T-DBG)***.  
 Alla fine dell'analisi quello che otteniamo è una tabella dove per ogni trascritto è riportato il livello di espressione in [**TPM**](https://haroldpimentel.wordpress.com/2014/05/08/what-the-fpkm-a-review-rna-seq-expression-units/).
-![](./41587_2016_Article_BFnbt3519_Fig1_HTML.webp)
+![](41587_2016_Article_BFnbt3519_Fig1_HTML.webp)
 
 :bangbang: **Quello che è riportato nel BOX 3 non va eseguito!!!** :bangbang:  
 

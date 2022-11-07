@@ -44,7 +44,7 @@ Se avrete digitato la password correttamente potrete accedere al server.
 In windows dovremo utilizzare **MobaXterm**.  
 1. Avviate `MobaXterm`;  
 2. Cliccate su **Session**;  
- ![moba1](./moba1.jpg)  
+ ![moba1](moba1.jpg)  
 3. Cliccate su `SSH`:  
     - in `Remote host` inserite l' indirizzo del server a voi assegnato;  
     - Spuntate `Specific username` e nel campo adiacente scrive lo user che vi è stato assegnato;  
@@ -66,7 +66,7 @@ Occorre configurarlo in modo appropriato:
     - **Key file**: selezionate il file che avete scaricato.  
 * Cliccate su `Connect`.  
 
-![filezilla](./filezilla.jpg)
+![filezilla](filezilla.jpg)
 
 # Breve introduzione alla linea di comando Bash
 Alcuni comandi che potrebbero esserci utili durante il tutorial:  
@@ -149,7 +149,7 @@ Nella riga d' intestazione possiamo visualizzare alcune [informazioni tecniche](
 * N: indica se la read è stata filtrata (Y) o meno (N);  
 
 Il **Quality Score** o **Phred Socre** è una misura della probabilità che la base letta sia erronea ed è calcolato utilizzando questa formula:  
-![Q](./Q.png)  
+![Q](Q.png)  
 Di fatto maggiore è il **Quality score** minore è la probabilità che la base chiamata sia erronea:  
 
 |Q|P|ASCII|  
@@ -162,7 +162,7 @@ Di fatto maggiore è il **Quality score** minore è la probabilità che la base 
 
 Conoscendo il quality score associato a ciascuna base delle sequenze ottenute durante il sequenziamento è possibile calcolare l'**Expected Error (EE)**, come:
 
-![EE](./EE.png)  
+![EE](EE.png)  
 Di fatto, l'**EE** è dato dalla sommatoria delle *Probabilità di errore P* osservate. In modo estremamente empirico, data una sequenza stima il numero di basi che ci aspettiamo siano state chiamate in modo erroneo nella sequenza nella sequenza.  
 
 ## Come valutare la qualità dei dati

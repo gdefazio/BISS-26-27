@@ -36,7 +36,7 @@ Scopo dell’esercitazione odierna è l’analisi del microbioma umano attravers
 3.	Amplificazione del marker tassonomico;  
 4.	Sequenziamento;  
 5.	Analisi bioinformatica dei dati.  
-![picture1](./Picture1.png)  
+![picture1](Picture1.png)  
 **Figura 1: rappresentazione schematica degli step che caratterizzano l’approccio metabercoding.**
 
 Un marcatore genetico di specie ideale dovrebbe avere le seguenti caratteristiche:  
@@ -44,7 +44,7 @@ Un marcatore genetico di specie ideale dovrebbe avere le seguenti caratteristich
 2.	essere abbastanza variabile da consentire la discriminazione ai più profondi livelli tassonomici;  
 3.	essere affiancato per regioni altamente conservate adatte per il disegno primer universali;  
 4.	avere una dimensione paragonabile ai limiti di lunghezza delle piattaforme NGS attuali.  
-![picture2](./Picture2.png)  
+![picture2](Picture2.png)  
 *Figura 2: rappresentazione della variabilità del gene per l’rRNA 16S nei procarioti.*
 
 ### Analisi di dati reali
@@ -104,10 +104,10 @@ Possiamo procedere con le analisi.
     Il **Denoising** (letteralmente eliminazione del rumore di fondo (*noise*)) è una procedura che permette di riconoscere il rumore introdotto dalla PCR e dal sequenziamento.  
       
     Il trimming delle sequenze PE: 
-    ![read](./read.png)  
+    ![read](read.png)  
     
     Prima di decidere se trimmare le sequenze al 3' e di quanto trimmare dobbiamo valutare quanto le due read si sovrappongono. Per farlo possiamo tenere conto della formula:  
-    ![sovrapposizione](./sovrapposizione.png)  
+    ![sovrapposizione](sovrapposizione.png)  
     Dove:  
         - R è la lunghezza nominale delle read;
         - L è la lunghezza media dell'amplicone.  
@@ -183,24 +183,24 @@ Possiamo procedere con le analisi.
 
 ## Alpha e Beta Diversità
 La Diversità è una misura della complessità del sistema che stiamo osservando, in funzione del numero di oggetti e della loro abbondanza relativa.  
-![diversità](./diversita.png)
+![diversità](diversita.png)
 
 In particolare:  
     * **alpha**: diversità intra-campione. Si possono utillizzare diverse metriche:
         - *Richness*: rappresenta il numero di specie differenti osservate in una comunità biologica;  
         - *Eveness*: indica quanto sia uniforme la comunità osservata;  
         - *Shannon Index*: è una misura quantitativa della richezza di specie;  
-            ![shannon](./shannon.gif)  
+            ![shannon](shannon.gif)  
         - *Faith's Phylogenetic Diversity*: una misura qualitativa della richness della comunità in esame che tiene conto delle relazioni filogenetiche.  
     * **beta**: diversità inter-campione: utilizziamo delle misure che indicano quanto differenti sono due comunità.
      Queste misure non fanno altro che andare a compare i campioni a coppie, per cui alla fine dell'analisi si ottiene una matrice che indica la dissimilarità tra ciascuna coppia di campioni.  
      Esistno diverse tipologie di metriche per calcolare la Beta diversità:  
         - Distanza di **Jaccard**: una misura qualitativa della dissimilarità;  
-          ![jaccard dissimilarity](./Jaccard-Dissimilarity.gif)  
-          ![jaccard similarity](./Jaccard_similarity.gif)  
+          ![jaccard dissimilarity](Jaccard-Dissimilarity.gif)  
+          ![jaccard similarity](Jaccard_similarity.gif)  
           X e Y rappresentano i campioni in analisi ed in particolare le specie osservate. Quindi la misura tiene conto solo del fatto che una specie sia osservata o meno e non della sua abbondanza.   
         - Distanza di **Bray-Curtis**: una misura quantitiva della dissimilarità;  
-          ![bray curtis](./bray_curtis.gif)  
+          ![bray curtis](bray_curtis.gif)  
           Dove:  
               - *i* e *j* sono i due campioni in analisi;  
               - S<sub>i</sub> e S<sub>j</sub> rappresentano la somma delle conte delle specie osservate nei siti *i* e *j*;  

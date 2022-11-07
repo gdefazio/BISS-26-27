@@ -6,11 +6,11 @@ I due browser genomici più diffusi sono **ENSEMBL** e **UCSC**, di cui vedremo 
 Collegati al sito della banca dati Ensembl:
 [http://www.ensembl.org](http://www.ensembl.org)  
 Noterai che questa banca dati contiene i dati genomici e le relative annotazioni di diversi metazoi, dall'uomo al nematode *C. elegans* (apri il menu a tendina select a species).  
-![ensemble_home](./ENSEMBL_home.jpg)
+![ensemble_home](ENSEMBL_home.jpg)
 
 La banca dati **Ensembl** viene continuamente aggiornata e quindi è opportuno, quando la si consulta, **prendere nota della versione del genoma che stiamo consultando.**  
 Cliccando sull’icona corrispondente al genoma umano si accede ad una pagina specifica dalla quale è possibile scaricare anche l’intera sequenza in formato FASTA.  
-![home_humna](./home_human.jpg)
+![home_humna](home_human.jpg)
 
 Alcuni dati statistici relativi all'attuale versione (release) del genoma sono accessibili al sito seguente: [http://www.ensembl.org/Homo_sapiens/Info/Annotation](http://www.ensembl.org/Homo_sapiens/Info/Annotation)  
 Esamina con attenzione le informazioni contenute in questa pagina:
@@ -34,7 +34,7 @@ La ricerca può essere effettuata utilizzando differenti modalotà di interrogaz
 
 La denominazione dei geni presenta enormi problemi di standardizzazione della nomenclatura. Ad uno stesso gene vengono spesso assegnati nomi diversi in specie diverse e questo accade spesso anche all'interno della stessa specie.  
 Nel caso dei geni umani è stata creata una nomenclatura ufficiale dei geni accessibile attraverso la pagina del consorzio internazionale [**Human Genome Organization (HuGO)**](http://www.genenames.org/).  
-![hugo_home](./HUGO.png)
+![hugo_home](HUGO.png)
 
 Consulta questo sito per ottenere il nome ufficiale del gene cox4, ed in particolare, il nome ufficiale associato all'isoforma 1:  
 * Selezione **Genes**  
@@ -55,7 +55,7 @@ Cliccando su **go** esamina i risultati:
 Seguendo il link relativo al gene ENSEMBL si ottiene una scheda sul gene in esame nella quale sono riportate diverse informazioni circa:  
 * la localizzazione del gene; 
 * come pure i riferimenti incrociati a trascritti e proteine.    
-![cox4](./COX4I1.jpg)
+![cox4](COX4I1.jpg)
 
 Nella sezione **Summary** sono riportate delle informazioni relative all'annotazione del gene:
 * Name: simbolo ufficiale;  
@@ -80,7 +80,7 @@ Relativamente ad entrambe le strand è riportata la posizione degli elementi tra
 
 Possiamo visualizzare a questo punto l' informazione relativa sia ai trascritti che alle proteine, cliccando sui link corrispondenti. Poi se vogliamo avere indicazioni più dettagliate sulla struttura in esoni ed introni e sulla loro localizzazione, possiamo cliccare sul box 
 a sinistra, dalla pagina relativa al trascritto:  
-![options](./options.jpg)
+![options](options.jpg)
 
 * Selezioniamo il trascritto, **ENST00000253452** e usiamo il box laterale per cercare di rispondere alle seguenti domande:  
     * da quanti esoni è costituito il gene?  
@@ -90,11 +90,11 @@ a sinistra, dalla pagina relativa al trascritto:
     
 La sezione "Protein Summary" fornisce informazioni circa la struttura proteica, le proprietà chimico fisiche e la presenza di domini funzionali. Scegliamo la prima proteina codificata **ENSP00000253452**.  
 Comparirà una descrizione grafica della proteina e dei domini funzionali o strutturali riconosciuti in essa e una serie di informazioni chimico fisiche.  
-![protein](./protein_summary.jpg)
+![protein](protein_summary.jpg)
 
 Tornando alla scheda relativa al gene, possiamo anche determinare i geni **ortologhi** (e **paraloghi**) in altri organismi selezionando la voce **"Orthologues"** nel box a sinistra, nella sezione **Comparative Genomics**.    
 Notare che per ciascun organismo corrispondente è mostrato il rapporto quantitativo tra gli ortologhi.  
-![ortologhi](./ortologhi.jpg)
+![ortologhi](ortologhi.jpg)
 
 Al di sotto è riportata una lista delle specie in cui sono stati identificati dei geni ortogologhi. 
 Nello **“Species set”** è possibile restringere la visualizzazione degli ortologhi ad uno specifico gruppo (ad es. i roditori `Rodents`).  
@@ -104,7 +104,7 @@ Utilizzando il campo “Filter” in alto a destra è possibile ricercare una sp
 Se desideriamo esportare una qualunque sequenza relativa a questo gene (nucleotidica o proteica) dobbiamo selezionare la voce "Sequence" (sulla sinistra sotto il box).  
 Automaticamente la pagina verrà aggiornata e cliccando sull’opzione “Download sequence”, si aprirà una form che consente l'estrazione di varie tipologie di sequenza (gene, regione codificante, regioni non tradotte, etc.) in modo da salvarle sul nostro computer per effettuare ulteriori analisi.  
 Proviamo a salvare la sequenza del gene in formato FASTA, includendo 100 bp a monte e a valle e selezionando solo l’opzione genomic (quindi deselezionare tutti gli altri tipi di sequenza). Visualizzare la sequenza in formato text.
-![download](./download_sequence.jpg)
+![download](download_sequence.jpg)
 
 ## Analisi del contesto genomico di un gene
 Se clicchiamo sulla scheda **"Location"** possiamo esaminare la sezione **"Region in detail"** e ottenere informazioni sul contesto genomico del gene in esame.  
@@ -150,7 +150,7 @@ E' stata realizzata una release di ENSEMBL per raccogliere e mostrare i dati rel
 Si tratta di una risorsa ancora in via di sviluppo, il cui contenuto viene constantemente aggioranto, a seconda delle nuove infomazioni disponibili.  
 Potete trovare il pre-print del lavoro su **bioRxiv**: [https://doi.org/10.1101/2020.12.18.422865](https://doi.org/10.1101/2020.12.18.422865).  
 
-![home_ensembl_covid19](Screenshot%202021-01-07%20at%2020.07.02.jpg)
+![home_ensembl_covid19](Screenshot 2021-01-07 at 20.07.02.jpg)
 
 Prima di procedere con l'ispezione delle informazioni disponibili, recuperiamo un po' di statistiche relative alla versione del database che stiamo utilizzando.  
 Cliccalte sul seguente [**LINK**](https://covid-19.ensembl.org/Sars_cov_2/Info/Annotation).  
@@ -182,7 +182,7 @@ La variante inglese è caratterizzata da 14 mutazioni nella regione della protei
 
 Andiamo ad effettuare una inspezione delle varianti annotate per la proteina **SPIKE**:  
 1. Dal Grafico selezioniamo la regione corrispondente al trascritto della proteina S *ENSSAST00005000004.1*;
-    ![select prot](Screenshot%202021-01-08%20at%2010.08.48.jpg)  
+    ![select prot](Screenshot 2021-01-08 at 10.08.48.jpg)  
 2. Nella scheda del trascritto andiamo ad osservare le caratteristiche del prodotto proteico `Protein Information:
     - Guardiamo prima la sezione `Protein Summary`;  
     - Andiamo a vedere i domini annotati `Domains & features`.  
@@ -193,7 +193,7 @@ Andiamo ad effettuare una inspezione delle varianti annotate per la proteina **S
 
 
 
-[UCSC](./UCSC.md)             
+[UCSC](UCSC.md)             
 
 
 [Back to the top](../README.md)
