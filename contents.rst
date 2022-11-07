@@ -3,29 +3,26 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to BAFG_2022_2023's documentation!
+Materiale per le esercitazione del corso BAFG 2022-2023
 ==========================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   source/README
-   source/Intro_Bionfo
-   source/relazioni
-   source/BASH/Accesso_al_server
-   source/BASH/Server_login
-   source/Banche_dati/banche_dati
-   source/Banche_dati/retrieval
-   source/Banche_dati/pubmed
-   source/Banche_dati/gisaid
-   source/Genome_Browser/Ensembl
-   source/Genome_Browser/UCSC
-   source/Allineamento_tra_sequenze/allineamento
-   source/Allineamento_tra_sequenze/blast_genomico
-   source/Genome_Assembly/genome_assembly
-   source/Metabarcoding/metabarcoding
-   source/Trascrittoma/RNAseq
+   BASH/Accesso_al_server
+   BASH/Server_login
+   Banche_dati/banche_dati
+   Banche_dati/retrieval
+   Banche_dati/pubmed
+   Banche_dati/gisaid
+   Genome_Browser/Ensembl
+   Genome_Browser/UCSC
+   Allineamento_tra_sequenze/allineamento
+   Allineamento_tra_sequenze/blast_genomico
+   Genome_Assembly/genome_assembly
+   Metabarcoding/metabarcoding
+   Trascrittoma/RNAseq
 
 
 
@@ -33,6 +30,6 @@ Welcome to BAFG_2022_2023's documentation!
 Indices and tables
 ==================
 
-* :ref:`genindex`
+* :ref:`README`
 * :ref:`modindex`
 * :ref:`search`
