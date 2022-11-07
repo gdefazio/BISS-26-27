@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Introduzione alla Bioinformatica &#8212; BAFG_2022_2023  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pyramid.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">BAFG_2022_2023  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><em><strong>Introduzione alla Bioinformatica</strong></em></a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="introduzione-alla-bioinformatica">
+<h1><em><strong>Introduzione alla Bioinformatica</strong></em><a class="headerlink" href="#introduzione-alla-bioinformatica" title="Permalink to this heading">¶</a></h1>
+<p>Prima di addentrarci nello studio di questa disciplina è opportuno soffermarsi su quale sia la definizione più appropriata per il termine <em><strong>Bioinformatica</strong></em>, delinearne i principali ambiti di ricerca e applicazione.<br />
+Nel corso degli anni sono state proposte numerose definizioni che possono essere così sintetizzate:</p>
+<p><em><strong>La Bioinformatica si occupa della ricerca, dello sviluppo e dell’applicazione di approcci computazionali per l’interpretazione di dati biologici.</strong></em></p>
+<p><strong>Questi includono l’informazione genetica racchiusa nei genomi e le modalità della loro espressione (trascrittoma, proteoma, microbioma, pathways metabolici, ecc.).</strong></p>
+<p>La ricerca nel settore della Bioinformatica si occupa quindi di sviluppare gli approcci più appropriati per collezionare i dati biologici in apposite banche dati, di mettere a punto gli strumenti più idonei per la loro interrogazione e di sviluppare metodologie per la loro analisi con l’obiettivo di contribuire alla comprensione dei meccanismi molecolari alla base della vita.</p>
+<p>La Bioinformatica è per sua natura <strong>multidisciplinare</strong> richiedendo il concorso di competenze diverse (Biologia Molecolare, Biochimica, Fisiologia, Genetica, Informatica, Matematica, Statistica, Chimica, Fisica, Ingegneria, ecc.) ed ha applicazioni pratiche in vasti settori della scienza.</p>
+<p>L’aumento esponenziale dei dati biologici, cui assistiamo in questi anni a seguito del completamento di numerosi progetti di sequenziamento genomico (incluso il genoma umano) e dell’avvio di numerosi progetti su larga scala per lo studio del trascrittoma, del proteoma e del microbioma di numerosi organismi, comporta una crescente importanza della Bioinformatica in tutti i settori della ricerca a livello biomolecolare. <a class="reference external" href="https://www.ncbi.nlm.nih.gov/genbank/statistics/">https://www.ncbi.nlm.nih.gov/genbank/statistics/</a></p>
+<p>I principali tipi di dati biologici sono:<br />
+-	<strong>Sequenze nucleotidiche</strong> (vedi <a class="reference external" href="https://www.ncbi.nlm.nih.gov/guide/dna-rna/">https://www.ncbi.nlm.nih.gov/guide/dna-rna/</a> per una lista delle risorse di sequenze di DNA o RNA oppure <a class="reference external" href="http://www.ebi.ac.uk/ena">http://www.ebi.ac.uk/ena</a> per un archivio di informazioni sul sequenziamento nucleotidico nel mondo);<br />
+-	<strong>Sequenze proteiche</strong> (vedi <a class="reference external" href="https://www.ncbi.nlm.nih.gov/guide/proteins/">https://www.ncbi.nlm.nih.gov/guide/proteins/</a> per un elenco di risorse proteiche oppure <a class="reference external" href="http://us.expasy.org/sprot/">http://us.expasy.org/sprot/</a> per informazioni su una delle più importanti risorse di sequenze proteiche, la <em>UniProtKB/Swiss-Prot</em>);<br />
+-	<strong>Dati Genomici</strong> (vedi <span class="xref myst">ncbi.nlm.nih.gov/genome/</span> banca pubblica che collezione sequenze ed annotazioni dei genomi);<br />
+-	<strong>Strutture tridimensionali</strong> di proteine ed altre macromolecole (vedi <a class="reference external" href="https://www.ncbi.nlm.nih.gov/guide/domains-structures/">https://www.ncbi.nlm.nih.gov/guide/domains-structures/</a> per le risorse di domini e strutture molecolari oppure <a class="reference external" href="http://www.rcsb.org/pdb/">http://www.rcsb.org/pdb/</a> per la risorsa di macromolecole biologiche <em>PDB</em>);<br />
+-	<strong>Dati di espressione</strong> (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/guide/genes-expression/">https://www.ncbi.nlm.nih.gov/guide/genes-expression/</a> per le risorse relative all’espressione dei geni e ai fenotipi correlati);<br />
+-	<strong>Dati metabolici</strong> (<a class="reference external" href="http://www.genome.jp/kegg/">http://www.genome.jp/kegg/</a> per una risorsa sulle relazioni metaboliche tra i geni e i loro prodotti);<br />
+-	<strong>Letteratura scientifica</strong> (per accedere ad un’importante risorsa di letteratura biomedica <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/">https://www.ncbi.nlm.nih.gov/pubmed/</a>).</p>
+<p>Una buona conoscenza di base della <strong>Biologia Molecolare</strong> ed in generale delle discipline biologiche di base(e.g. <em>Fisiologia</em>, <em>Biochimica</em> e <em>Genetica</em>) è fondamentale per comprendere e utilizzare al meglio gli strumenti che la Bioinformatica mette a disposizione della nostra attività di ricerca.</p>
+<p>Uno dei principali compiti affidati alla Bioinformatica è archiviare i dati sopra citati, con tutte le informazioni ad essi correlate, in apposite <em>Banche Dati</em> o Database in modo da potervi accedere con opportuni programmi di interrogazione (retrieval).<br />
+La consultazione di una banca dati consiste quindi nel formulare una richiesta volta a selezionare un insieme di voci (<em>entries</em>) della stessa che soddisfino i nostri criteri di selezione (<em>query</em>). Ad esempio possiamo essere interessati a tutte le proteine codificate dal genoma umano (criterio 1), più lunghe di 1,000 amminoacidi (criterio 2) e che contengano uno specifico dominio catalitico (criterio 3), quindi in questo esempio i tre criteri riportati saranno combinati per intersezione.<br />
+I sistemi di retrieval consentono appunto di effettuare queries combinando diversi criteri tra loro utilizzando una serie di operatori logici quali intersezione (<strong>AND</strong>), unione (<strong>OR</strong>) o esclusione (<strong>BUT NOT</strong>).</p>
+<p>Lo sviluppo della Bioinformatica ed in generale degli strumenti bioinformatici è stato affiancato da un enorme sviluppo della rete internet (o <strong>world wide web</strong>). Lo sviluppo della rete internet ha reso possibile la “globalizzazione” delle informazioni.<br />
+E’ sufficiente avere un computer connesso alla rete per accedere, da una qualunque località, a tutte le informazioni archiviate in qualunque altro computer in rete sulla terra.</p>
+<p>Gli indirizzi internet sopra riportati (noti come <em>URL</em> o <em>uniform resource locators</em>) consentono l’accesso, utilizzando un Browser come <em>Safari</em>, <em>Chrome</em> o <em>Firefox</em> a documenti elettronici attraverso il protocollo <em>http/https</em> (<em>HyperText Transfer Protocol</em>).<br />
+La maggior parte delle risorse bioinformatiche, sia banche dati che programmi di analisi, sono disponibili ai ricercatori – normalmente in forma gratuita - sulla rete internet.</p>
+<p>Prima di iniziare queste Esercitazioni è opportuno ricordare alcuni concetti base di biologia molecolare riguardanti:<br />
+•	la struttura di un gene (promotore, ORF, esone, introne, siti di splicing, segnale di poliadenilazione, etc);<br />
+•	la struttura di un trascritto (UTR, ORF, sequenza di Shine e Dalgarno, sito di poliadenilazione, etc);<br />
+•	gli elementi di una proteina (peptide segnale, segmenti transmembrana, siti di fosforilazione, domini);<br />
+•	le differenze di funzione e struttura tra un gene e uno pseudogene;<br />
+•	la differenza tra sequenze genomiche e Expressed Sequence Tag (EST).</p>
+<p>Letture consigliate:</p>
+<ul class="simple">
+<li><p>Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 1-6.</p></li>
+<li><p>Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)</p></li>
+</ul>
+<p><a class="reference internal" href="Banche_dati/banche_dati.html"><span class="doc std std-doc">Definizione di Database e struttura delle entry <strong>GenBank</strong></span></a></p>
+<p><a class="reference internal" href="README.html"><span class="doc std std-doc">Back to the top</span></a></p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Intro_Bioinfo.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">BAFG_2022_2023  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><em><strong>Introduzione alla Bioinformatica</strong></em></a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Bruno Fosso &lt;bruno.fosso@gmail.com&gt;.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
+</html>

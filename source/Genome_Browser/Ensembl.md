@@ -112,7 +112,7 @@ Se clicchiamo sulla scheda **"Location"** possiamo esaminare la sezione **"Regio
 * A quale distanza si trovano?  
 * Qual è la composizione in basi?  
 
-# Esercizi
+## Esercizi
 ### Esercizio 1
 Determina la lunghezza del trascritto `ENST00000253452` e della proteina relativa al trascritto in esame.  
 Guardare la pagina relativa al gene.  

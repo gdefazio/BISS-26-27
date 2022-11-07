@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Banche Dati &#8212; BAFG_2022_2023  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pyramid.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sistemi di retrieval" href="retrieval.html" />
+    <link rel="prev" title="Server login and BASH introduction" href="../BASH/Server_login.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="retrieval.html" title="Sistemi di retrieval"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../BASH/Server_login.html" title="Server login and BASH introduction"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">BAFG_2022_2023  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Banche Dati</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="banche-dati">
+<h1>Banche Dati<a class="headerlink" href="#banche-dati" title="Permalink to this heading">¶</a></h1>
+<p>Definizione: <strong>Un Database (Base di Dati) è un sistema di archiviazione di dati organizzati per consentirne una facile consultazione.</strong><br />
+<strong>Possiamo, inoltre, definirlo come un insieme di dati tra loro correlati, memorizzati su un supporto di memoria di massa che possono essere manipolati da programmi chiamati Database Management System (DBMS).</strong></p>
+<p>In generale, possiamo identificare due tipologie di database: <strong>DB non-relazionali</strong> e <strong>DB relazionali</strong>.<br />
+I primi hanno una struttara semplice che non permette operazioni avanzate. I DB che utilizzeremo sono tutti di tipo <strong>relazionale</strong>.<br />
+Un <strong>DB relazionale</strong> è costituito da una serie di tabelle, ognuna delle quali è composta da una serie di righe che sono unicamente definite da un codice, denominato <strong>chiave</strong>.<br />
+Le tabelle sono tra loro connesse tramite <strong>legami logici</strong>.</p>
+<p><img alt="RVBD_prot" src="../_images/db_figure.gif" /><br />
+<em>Ref: https://f1000research.com/articles/8-530</em></p>
+<p>Ogni tabella è costistuta da diverse righe e colonne:</p>
+<ul class="simple">
+<li><p>le righe rappresentano i <strong>record</strong>, cioè i dati raccolti per ogni singolo elemento del DB;</p></li>
+<li><p>le colonne rappresentano i <strong>campi</strong>. Per ogni tabella, almeno uno dei campi deve identificare il singolo elemento in modo univoco. Suddetta chiave è detta <strong>chiave primaria</strong>.</p></li>
+</ul>
+<p>Tale strutturazione rende più semplice l’immagazzinamento dei dati e più efficace la successiva ricerca che viene effettuata con sistemi di retrieval che possono essere accomunati ai comuni motori di ricerca (es. Google) che normalmente usiamo per consultare la rete.</p>
+<p>Consideriamo ora le banche dati di <em>sequenze nucleotidiche</em>. La vita di una entry inizia non appena un ricercatore ottiene una sequenza e ne richiede l’archiviazione nella banca dati.<br />
+Questo normalmente viene fatto con dei sistemi automatici di sottomissione che ne guidano le varie fasi (vedi ad esempio <a class="reference external" href="https://www.ncbi.nlm.nih.gov/guide/howto/submit-sequence-data/"><em>“How to: Submit sequence data to NCBI”</em>:</a>).<br />
+Ogni entry, prima di essere archiviata, riceve un codice d’identificazione univoco, detto <strong>accession number</strong>.<br />
+Le tre banche dati di sequenze nucleotidiche originariamente create (la banca dati europea <strong>EMBL</strong> (1981), l’americana <strong>GENBANK</strong> (1982) e la giapponese <strong>DDBJ</strong> (1986)) contengono attualmente esattamente gli stessi dati, grazie all’ <strong>International Nucleotide Sequence Database Collaboration</strong> (<strong>INSDC 1992</strong> <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/29190397/">PMID: 29190397</a>).<br />
+Come si può osservare dal confronto di una stessa entry in formato <em>(<a class="reference external" href="https://www.ncbi.nlm.nih.gov/nucleotide/4884045">GenBank</a>)</em> e in formato <em>(<a class="reference external" href="https://www.ebi.ac.uk/ena/browser/view/AJ009673">EMBL</a></em>, la differenza di formato è costituita principalmente dal nome degli identificativi dei diversi campi.<br />
+La parte più importante della entry è la cosiddetta <strong>Feature Table</strong> che riporta le proprietà di specifiche regioni contenute all’interno della entry (ad es. la localizzazione di una sequenza codificante, ecc.).<br />
+Da notare i riferimenti crociati con altre banche dati (bibliografiche come Medline, proteiche o nucleotidiche).</p>
+<section id="esercizio-1-scaricare-il-file-utilizzando-il-seguente-link">
+<h2>Esercizio 1: scaricare il file utilizzando il seguente <a class="reference external" href="https://drive.google.com/open?id=1QHFJoZXIZp0OgWflGrcLEaKJIdXwTRmMK_tmW_YVihI">LINK</a><a class="headerlink" href="#esercizio-1-scaricare-il-file-utilizzando-il-seguente-link" title="Permalink to this heading">¶</a></h2>
+<p>Immagina di aver prodotto una sequenza di un mRNA umano di un gene di tuo interesse e di doverla sottomettere a GenBank. Avendo presente il formato di una entry GenBank completa i campi di questa ENTRY1 con “punto interrogativo” in modo che i dati siano coerenti e biologicamente corretti.</p>
+</section>
+<section id="esercizio-2-scaricare-il-file-utilizzando-il-seguente-link">
+<h2>Esercizio 2: scaricare il file utilizzando il seguente <a class="reference external" href="https://drive.google.com/open?id=1ttFY1BhOFBtxeisEXG1evapwyhMnPl7yNLU7cDmaoJA">LINK</a><a class="headerlink" href="#esercizio-2-scaricare-il-file-utilizzando-il-seguente-link" title="Permalink to this heading">¶</a></h2>
+<p>Devi sottomettere la sequenza di un gene proteico di topo. Il gene è composto da due esoni: la sequenza per la ORF è completa. Sulla base delle informazioni suddette, completa la seguente ENTRY2 in formato Genbank.</p>
+<p><a class="reference internal" href="retrieval.html"><span class="doc std std-doc">Sistemi di Retrieval</span></a></p>
+<p><a class="reference internal" href="../README.html"><span class="doc std std-doc">Back to the top</span></a></p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Banche Dati</a><ul>
+<li><a class="reference internal" href="#esercizio-1-scaricare-il-file-utilizzando-il-seguente-link">Esercizio 1: scaricare il file utilizzando il seguente LINK</a></li>
+<li><a class="reference internal" href="#esercizio-2-scaricare-il-file-utilizzando-il-seguente-link">Esercizio 2: scaricare il file utilizzando il seguente LINK</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../BASH/Server_login.html"
+                          title="previous chapter">Server login and BASH introduction</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="retrieval.html"
+                          title="next chapter">Sistemi di retrieval</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Banche_dati/banche_dati.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="retrieval.html" title="Sistemi di retrieval"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../BASH/Server_login.html" title="Server login and BASH introduction"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">BAFG_2022_2023  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Banche Dati</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Bruno Fosso &lt;bruno.fosso@gmail.com&gt;.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
+</html>
