@@ -10,22 +10,22 @@ Welcome to BAFG_2022_2023's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   README
-   Intro_Bionfo
-   relazioni
-   BASH/Accesso_al_server
-   BASH/Server_login
-   Banche_dati/banche_dati
-   Banche_dati/retrieval
-   Banche_dati/pubmed
-   Banche_dati/gisaid
-   Genome_Browser/Ensembl
-   Genome_Browser/UCSC
-   Allineamento_tra_sequenze/allineamento
-   Allineamento_tra_sequenze/blast_genomico
-   Genome_Assembly/genome_assembly
-   Metabarcoding/metabarcoding
-   Trascrittoma/RNAseq
+   source/README
+   source/Intro_Bionfo
+   source/relazioni
+   source/BASH/Accesso_al_server
+   source/BASH/Server_login
+   source/Banche_dati/banche_dati
+   source/Banche_dati/retrieval
+   source/Banche_dati/pubmed
+   source/Banche_dati/gisaid
+   source/Genome_Browser/Ensembl
+   source/Genome_Browser/UCSC
+   source/Allineamento_tra_sequenze/allineamento
+   source/Allineamento_tra_sequenze/blast_genomico
+   source/Genome_Assembly/genome_assembly
+   source/Metabarcoding/metabarcoding
+   source/Trascrittoma/RNAseq
 
 
 
