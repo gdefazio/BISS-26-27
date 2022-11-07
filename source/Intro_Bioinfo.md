@@ -16,7 +16,7 @@ L’aumento esponenziale dei dati biologici, cui assistiamo in questi anni a seg
 I principali tipi di dati biologici sono:  
     -	**Sequenze nucleotidiche** (vedi [https://www.ncbi.nlm.nih.gov/guide/dna-rna/](https://www.ncbi.nlm.nih.gov/guide/dna-rna/) per una lista delle risorse di sequenze di DNA o RNA oppure [http://www.ebi.ac.uk/ena](http://www.ebi.ac.uk/ena) per un archivio di informazioni sul sequenziamento nucleotidico nel mondo);  
     -	**Sequenze proteiche** (vedi [https://www.ncbi.nlm.nih.gov/guide/proteins/](https://www.ncbi.nlm.nih.gov/guide/proteins/) per un elenco di risorse proteiche oppure [http://us.expasy.org/sprot/](http://us.expasy.org/sprot/) per informazioni su una delle più importanti risorse di sequenze proteiche, la *UniProtKB/Swiss-Prot*);   
-    -	**Dati Genomici** (vedi [ncbi.nlm.nih.gov/genome/](ncbi.nlm.nih.gov/genome/) banca pubblica che collezione sequenze ed annotazioni dei genomi);   
+    -	**Dati Genomici** (vedi [ncbi.nlm.nih.gov/genome/](https://www.ncbi.nlm.nih.gov/genome) banca pubblica che collezione sequenze ed annotazioni dei genomi);   
     -	**Strutture tridimensionali** di proteine ed altre macromolecole (vedi [https://www.ncbi.nlm.nih.gov/guide/domains-structures/](https://www.ncbi.nlm.nih.gov/guide/domains-structures/) per le risorse di domini e strutture molecolari oppure [http://www.rcsb.org/pdb/](http://www.rcsb.org/pdb/) per la risorsa di macromolecole biologiche *PDB*);     
     -	**Dati di espressione** ([https://www.ncbi.nlm.nih.gov/guide/genes-expression/](https://www.ncbi.nlm.nih.gov/guide/genes-expression/) per le risorse relative all’espressione dei geni e ai fenotipi correlati);   
     -	**Dati metabolici** ([http://www.genome.jp/kegg/](http://www.genome.jp/kegg/) per una risorsa sulle relazioni metaboliche tra i geni e i loro prodotti);  
@@ -45,6 +45,6 @@ Letture consigliate:
 - Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 1-6.  
 - Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)
 
-[Definizione di Database e struttura delle entry **GenBank**](../Banche_dati/banche_dati.md)  
+[Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
 
-[Back to the top](../README.md)
+[Back to the top](README.md)

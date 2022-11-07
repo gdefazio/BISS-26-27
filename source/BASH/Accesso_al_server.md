@@ -1,7 +1,7 @@
 Accesso al server e Introduzione al BASH
 ===================  
 - [Accesso al Server](#accesso-al-server)
-- [Configurazione FileZilla](#configurazion-filezilla)
+- [Configurazione FileZilla](#configurazione-filezilla)
 - [Breve introduzione alla linea di comando Bash](#breve-introduzione-alla-linea-di-comando-bash)
 - [Il formato FASTA](#il-formato-fasta)
 - [Il formato FASTQ](#il-formato-fastq)
@@ -9,7 +9,7 @@ Accesso al server e Introduzione al BASH
 
 # Accesso al Server
 Il resto delle **Esercitazioni** richiederà l' utilizzo di server messi a disposizione dal Datacenter **RECAS**.  
-Ad ognuno di voi è stato assegnato un utente che utilizzerete per collegarvi sulle macchine che andremo ad utilizzare.  
+A ognuno di voi è stato assegnato un utente che utilizzerete per collegarvi sulle macchine che andremo a utilizzare.  
 Le macchine per le esercitazioni hanno i seguenti indirizzi:  
 - **212.189.205.77**  
 - **90.147.102.58**  
@@ -22,7 +22,7 @@ Una volta completato il download del file non lo dovete aprire. Al massimo spost
 ***Soprattutto per chi di voi utilizza sistemi UNIX-based consiglio di non spostare il file, così lo troverà direttamente in download quando dovrà utilizzare il terminale.***  
 
 ## Sistemi operativi UNIX-BASED
-Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il **terminale** (cercate l' applicazione terminale tra quelle disponibili) e digitare i seguenti comandi:    
+Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il **terminale** (cercate l' applicazione terminale tra quelle disponibili) e digitare i seguenti comandi:  
 Il comando generale è:  
 ```
 chmod 600 /path/to/the/key/userX
@@ -52,8 +52,8 @@ In windows dovremo utilizzare **MobaXterm**.
     - Cliccate su *OK* e avviate la connessione.  
 
 
-# Configurazion FileZilla
-**FileZilla** è un tool che ci permette di scambiare file tra il nostro computer ed il server.  
+# Configurazione FileZilla
+**FileZilla** è un tool che ci permette di scambiare file tra il nostro computer e il server.  
 Occorre configurarlo in modo appropriato:
 * Su `File` selezionate `Site Manager`;  
 * Selezionate `New Site` si aprirà una nuova scheda in cui potrete indicare un nome a vostra scelta;  
@@ -87,7 +87,7 @@ Alcuni comandi che potrebbero esserci utili durante il tutorial:
 * `whoami`: mostra lo user name dell’utilizzatore corrente;  
 * `ssh`: permette di collegare la nostra macchina con un server remoto  
 
-[Indice](#accesso-al-server-ed-introduzione-al-bash)
+[Indice](#accesso-al-server)
 
 # Il formato FASTA
 Il formato FASTA è un formato testuale comunemente utilizzato in bioinformatica per annotare le sequenze biologiche, sia nucleotidiche che aminoacidiche.  
@@ -122,10 +122,10 @@ AAAAAAAAGGAATTC
 Presenta la riga iniziale che comincia con il simbolo di maggiore “>”, a cui fa seguito un identificativo unico, seguito da una opzionale corta definizione.  
 Le linee a seguire contengono la sequenza amminoacidica o nucleotidica. La sequenza biologica è rappresentata con un alfabeto con un codice a singola lettera per indicare il nucleotide o l’aminoacido (per avere ulteriori informazioni circa il formato FASTA consultare la relativa pagina [Wikipedia](https://en.wikipedia.org/wiki/FASTA_format)).
 
-[Indice](#accesso-al-server-ed-introduzione-al-bash)
+[Indice](#accesso-al-server)
 
 # Il formato FASTQ
-Il formato FASTQ è formato testuale utilizzato per annotare le sequenze biologiche nucleotiche ed i quality-score associati a seguito di una procedura di sequenziamento del DNA.    
+Il formato FASTQ è formato testuale utilizzato per annotare le sequenze biologiche nucleotidiche e i quality-score associati con il base-calling.   
 E’ il formato utilizzato per i dati di sequenziamento (per ulteriori informazioni circa il formato FASTQ potete consultare la relativa pagina [Wikipedia](https://en.wikipedia.org/wiki/FASTQ_format)).  
 ```
 @M03156:25:000000000-AGC3U:1:1101:10602:1714 1:N:0:82
@@ -139,26 +139,26 @@ Questo formato presenta una struttura suddivisa in 4 righe:
 3. Riga di separazione che inizia con un “+”. Talora può contenere una descrizione;  
 4. Quality score in formato [ASCII](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.htm).  
 Nella riga d' intestazione possiamo visualizzare alcune [informazioni tecniche](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/FileFormat_FASTQ-files_swBS.htm):  
-* M03156: è l' identificativo del sequenziatore. Possiamo dire che è stata utilizzata una Miseq.  
+* M03156: è l' identificativo del sequenziatore. Possiamo dire che è stata utilizzata una MiSeq.  
 * 25: questo è un contatore progressivo che conteggia il numero di sequenziamenti eseguiti. In questo caso il 25imo.    
 * 000000000-AGC3U: identificativo della flow-cell.  
 * 1: flowcell line;  
 * 1101: tile number nella flowcell;  
 * 10602:1714: coordinate cartesiane del cluster;  
-* 1: read della coppia PE. Può assumere 2 valore 1 o 2;  
+* 1: read della coppia PE. Può assumere 2 valori 1 o 2;  
 * N: indica se la read è stata filtrata (Y) o meno (N);  
 
-Il **Quality Score** o **Phred Socre** è una misura della probabilità che la base letta sia erronea ed è calcolato utilizzando questa formula:  
+Il **Quality Score** o **Phred Score** è una misura della probabilità che la base letta sia erronea ed è calcolato utilizzando questa formula:  
 ![Q](Q.png)  
 Di fatto maggiore è il **Quality score** minore è la probabilità che la base chiamata sia erronea:  
 
-|Q|P|ASCII|  
-|:---:|:---:|:---:|  
-|0|1|!|  
-|10|0.1|+|  
-|20|0.01|5|  
-|30|0.001|?|  
-|40|0.0001|I|  
+|  Q  |   P    | ASCII |
+|:---:|:------:|:-----:|
+|  0  |   1    |   !   |
+| 10  |  0.1   |   +   |
+| 20  |  0.01  |   5   |
+| 30  | 0.001  |   ?   |
+| 40  | 0.0001 |   I   | 
 
 Conoscendo il quality score associato a ciascuna base delle sequenze ottenute durante il sequenziamento è possibile calcolare l'**Expected Error (EE)**, come:
 
@@ -196,6 +196,6 @@ Applicate il `FastQC` sui seguenti file:
 * Eseguite `FastQC` sui due file e commentate i risultati ottenuti.  
   *Suggerimento*: il comando base per eseguire **fastqc** è `fastqc --noextract NOMEFILE`
 
-[Indice](#accesso-al-server-ed-introduzione-al-bash)
+[Indice](#accesso-al-server)
 
 [Back to the top](../README.md) 

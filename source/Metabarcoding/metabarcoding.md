@@ -2,8 +2,7 @@ Metabarcoding
 ==============
 - [Introduzione](#introduzione)
 - [Metabarcoding approach](#metabarcoding-approach)
-    * [Valutazione bioinformatica di una coppia di primer](#valutazione-bioinformatica-di-una-coppia-di-primer)
-    * [Analisis di dati reali](#analisi-di-dati-reali)
+- [Analisis di dati reali](#analisi-di-dati-reali)
 
 
 ## Introduzione
@@ -47,7 +46,7 @@ Un marcatore genetico di specie ideale dovrebbe avere le seguenti caratteristich
 ![picture2](Picture2.png)  
 *Figura 2: rappresentazione della variabilità del gene per l’rRNA 16S nei procarioti.*
 
-### Analisi di dati reali
+## Analisi di dati reali
 Per questa esercitazioni utilizzeremo dei dati di ricente pubblicazione [Ravegnini et al. 2020](https://www.mdpi.com/1422-0067/21/24/9735).  
 Lo scopo dello studio riguadava la caratterizzazione del microbioma gastrico in soggetti affetti tumore (*Gastric cancer, GC*).  
 I GC sono la quinta forma tumorale per incidenza nel monda e la terza causa di morte per tumore.  L'avvento della genomica ha permesso di capire come in realtà si tratti di una complessa rappresentazione di patologie, dove differenti mutazioni danno origine a diverse forme tumorali.  

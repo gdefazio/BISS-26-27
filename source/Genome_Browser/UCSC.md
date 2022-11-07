@@ -38,7 +38,7 @@ Proviamo ad utilizzare il genome browser. Nella sezione `Comparative Genomics` a
 ***Cosa notate?**
 
 
-[Back to the top](../README.md#esercitazione-3-08012021) 
+[Back to the top](../README.md) 
 
 
 

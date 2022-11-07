@@ -11,12 +11,12 @@
     * [SPAdes](#spades)
         * [Meccanismo di funzionamento di SPAdes](#meccanismo-di-funzionamento-di-spadeshttpswwwncbinlmnihgovpmcarticlespmc3342519po138889)
         * [Applicazione di SPAdes](#applicazione-di-spades)
-- [Annotazione funzionale del Genoma](#ann)
+- [Annotazione funzionale del Genoma](#annotazione-funzionale-del-genoma)
     
 
 ## INTRODUZIONE
-Il sequenziamento di un genoma segue principalmente 4 fasi:  
-1. **Isolamento del genoma d' interesse**. La qualità del DNA di partenza influenza profondamente il processo di sequenziamento ed assemblaggio del genoma. La qualità del DNA di partenza si misura in termini di **Purezza** e **Integrità strutturale**.  
+Il sequenziamento di un genoma segue principalmente quattro fasi:  
+1. **Isolamento del genoma d' interesse**. La qualità del DNA di partenza influenza profondamente il processo di sequenziamento e assemblaggio del genoma. La qualità del DNA di partenza si misura in termini di **Purezza** e **Integrità strutturale**.  
     * **Purezza**: l’utilizzo di una procedura di estrazione del DNA non appropriata per la matrice di partenza può portare alla presenza di contaminanti come *polisaccaridi*, *proteoglicani*, *proteine*, *metaboliti*, *pigmenti*, etc. Questi influenzano negativamente le procedure di preparazione delle librerie soprattutto per gli approcci PCR-free (**PacBio** e **Nanopore**) e **Mate-Pair** e riducono l’efficienza gli approcci che prevedono passaggi di amplificazione in PCR.  
     * **Integrità strutturale**: la presenza di *fenoli*, *etanolo* e *Sali* (e.g. EDTA) possono danneggiare il DNA. Una inappropriata conservazione del DNA a -20°C in acqua favorisce la degradazione per idrolisi. L’utilizzo di buffer per la conservazione a pH inadeguato favoriscono la formazione di nick.  
 2. **Frammentazione del DNA**: La frammentazione può essere ottenuta per *sonicazione*, *nebulizzazione* o *taglio enzimatico*. E’ un passaggio fondamentale perché il DNA presente nelle cellule deve essere frammentato nel modo più casuale possibile al fine di leggere ogni nucleotide ogni nucleotide del genoma ottenendone la migliore rappresentazione;  
@@ -235,13 +235,13 @@ Una volta assemblato un genoma ed essere giunti alla conclusione che la qualità
 Con **annotazione** di un genoma intendiamo la procedura bioinformatica attraverso la quale identifichiamo i geni, i prodotti di questi geni e cerchiamo di associare una funziona a questi prodotti.  
 In questo caso utilizzeremo un programma chiamato [**PROKKA**](https://academic.oup.com/bioinformatics/article/30/14/2068/2390517). Questo programma utilizza una serie di altri tool per identificare le "feature" le loro coordinate e associare una annotazione funzionale.  
 
-|Tool|Funzione|
-|:---:|:---:|
-|Prodigal|Coding sequence (CDS) |
-|RNAmmer|Ribosomal RNA genes (rRNA) |
-|Aragorn|Transfer RNA genes |  
-|SignalP|Signal leader peptides |
-|Infernal|Non-coding RNA |
+|   Tool   |          Funzione          |
+|:--------:|:--------------------------:|
+| Prodigal |   Coding sequence (CDS)    |
+| RNAmmer  | Ribosomal RNA genes (rRNA) |
+| Aragorn  |     Transfer RNA genes     |  
+| SignalP  |   Signal leader peptides   |
+| Infernal |       Non-coding RNA       |
 
 A scopo esemplificativo andremo a visualizzare o dati di annotazione ottenti con la prima applicazione di SPAdes.  
 Di seguito la linea di comando utilizzata da PROKKA:  
@@ -256,19 +256,19 @@ cd spades_basic_prokka_annotation
 ```
 All'interno della cartella troveremo i file con le seguenti estensioni:  
 
-|Suffix|Description of file contents|
-|:---:|:---:|
-|.fna|FASTA file contente i contigs (nucleotide)|
-|.faa|FASTA file la traduzione delle CDS (protein)| 
-|.ffn|FASTA file contenente tutte le annotazioni genomiche (nucleotide)| 
-|.fsa|Contig formattati per la sottomissione in banca dati (nucleotide)| 
-|.tbl|Feature table per la sottomissione in banca dati| 
-|.sqn|Sequin per la sottomissione in banca dati| 
-|.gbk|Genbank file contenente sequenze e annotazionie| 
-|.gff|GFF v3 file contenente sequenze e annotazionie| 
-|.log|Log file di Prokka| 
-|.txt|statistiche relative al processo di annotazione|
-|.err|file che riporta le problematiche associate al file .sqn| 
+| Suffix |                   Description of file contents                    |
+|:------:|:-----------------------------------------------------------------:|
+|  .fna  |            FASTA file contente i contigs (nucleotide)             |
+|  .faa  |           FASTA file la traduzione delle CDS (protein)            | 
+|  .ffn  | FASTA file contenente tutte le annotazioni genomiche (nucleotide) | 
+|  .fsa  | Contig formattati per la sottomissione in banca dati (nucleotide) | 
+|  .tbl  |         Feature table per la sottomissione in banca dati          | 
+|  .sqn  |             Sequin per la sottomissione in banca dati             | 
+|  .gbk  |          Genbank file contenente sequenze e annotazionie          | 
+|  .gff  |          GFF v3 file contenente sequenze e annotazionie           | 
+|  .log  |                        Log file di Prokka                         | 
+|  .txt  |          statistiche relative al processo di annotazione          |
+|  .err  |     file che riporta le problematiche associate al file .sqn      | 
 
 [Back to the top](../README.md) 
 

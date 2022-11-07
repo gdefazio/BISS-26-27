@@ -1,10 +1,10 @@
 Server login and BASH introduction
 ===================  
-- [Server login](#accesso-al-server)
-- [FileZilla Configuration](#configurazion-filezilla)
-- [Brief introduction to the Bash command line](#breve-introduzione-alla-linea-di-comando-bash)
-- [The FASTA file format](#il-formato-fasta)
-- [The FASTQ file format](#il-formato-fastq)
+- [Server login](#server-login)
+- [FileZilla Configuration](#filezilla-configuration)
+- [Brief introduction to the Bash command line](#a-brief-introduction-to-the-bash-command-line)
+- [The FASTA file format](#the-fasta-file-format)
+- [The FASTQ file format](#the-fastq-file-format)
 
 
 # Server login
@@ -89,7 +89,7 @@ Following a short list of useful **BASH** commands:
 * `whoami`: shows the username of the current user;  
 * `ssh`: allows to login our machine with another remote server  
 
-[Indice](#accesso-al-server-ed-introduzione-al-bash)
+[Indice](#server-login)
 
 # The FASTA file format
 The FASTA file format is commonly used in bioinformatics to store biologic sequences, both nucleotide and amino acids.  
@@ -125,7 +125,7 @@ It is easy to recognize the header row that starts with “>” symbol, followed
 The following lines contain nucleotide or amino acid sequence.  
 The biological sequence is reported by using a single-letter code to indicate nucleotide or amino acid (for more [Wikipedia](https://en.wikipedia.org/wiki/FASTA_format)).
 
-[Indice](#accesso-al-server-ed-introduzione-al-bash)
+[Indice](#server-login)
 
 # The FASTQ file format
 The FASTQ file format is used to store nucleotide and the related quality-scores obtained by DNA sequencing.    
@@ -155,13 +155,13 @@ The **Quality Score** or **Phred Score** is a measure of the probability that a 
 ![Q](Q.png)  
 The higher the **Quality score** is the lower is the probability of an erroneous base call:  
 
-|Q|P|ASCII|  
-|:---:|:---:|:---:|  
-|0|1|!|  
-|10|0.1|+|  
-|20|0.01|5|  
-|30|0.001|?|  
-|40|0.0001|I|  
+|  Q  |   P    | ASCII |
+|:---:|:------:|:-----:|
+|  0  |   1    |   !   |
+| 10  |  0.1   |   +   |
+| 20  |  0.01  |   5   |  
+| 30  | 0.001  |   ?   |  
+| 40  | 0.0001 |   I   |  
 
 By knowing the quality score associated to each sequenced base, it is possible to compute the **Expected Error (EE)**:
 
@@ -200,6 +200,6 @@ Execute `FastQC` on these files:
 * launch `FastQC` on downloaded files and comment the obtained results.
 *hint*: the basic command line to execute **fastqc** is `fastqc --noextract FILENAME`
 
-[Indice](#accesso-al-server-ed-introduzione-al-bash)
+[Indice](#server-login)
 
 [Back to the top](../README.md) 
