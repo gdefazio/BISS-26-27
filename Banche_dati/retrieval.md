@@ -1,13 +1,19 @@
 # Sistemi di retrieval
-Ci eserciteremo adesso ad utilizzare il sistema di retrieval **ENTREZ** per l’interrogazione delle Banche Dati ospitate presso l'**NCBI**.  
-Il sistema permette di combinare i criteri di ricerca utilizzando gli operatori logici l’intersezione (**AND**), l’unione (**OR**) o l’esclusione (**NOT**).  
+Utilizzeremo il sistema di retrieval **ENTREZ** per l’interrogazione delle Banche Dati ospitate presso l'**NCBI**.  
+Il sistema permette di combinare i criteri di ricerca utilizzando gli operatori logici l’intersezione (**AND**), 
+l’unione (**OR**) o l’esclusione (**NOT**).  
 
-Riferiremo le nostre ricerche ad un particolare esempio, la **Citocromo C ossidasi**, che come saprete, è un complesso multimerico localizzato nella membrana mitocondriale interna, partecipante al trasporto degli elettroni nella catena respiratoria mitocondriale.  
+Riferiremo le nostre ricerche a un particolare esempio, la **Citocromo C ossidasi**, 
+che come saprete, è un complesso multimerico localizzato nella membrana mitocondriale interna, 
+partecipante al trasporto degli elettroni nella catena respiratoria mitocondriale.  
 Essa è costituita da **13 peptidi** di cui **3** codificati dal **genoma mitocondriale** e **10** dal **genoma nucleare**.  
   
-L’obiettivo dell’esercitazione è quello di selezionare i geni e le proteine corrispondenti alla **subunità 4 umana** utilizzando il sistema di interrogazione **ENTREZ**.  
+L’obiettivo dell’esercitazione è quello di selezionare i geni e le proteine corrispondenti alla **sub-unità 4 umana** 
+utilizzando il sistema d' interrogazione **ENTREZ**.  
  
-__Nota preliminare__: ricorda che le virgolette consentono di delimitare più parole da ricercare insieme e che più operatori logici possono essere utilizzati in una stessa ricerca usando le parentesi tonde come in un’espressione matematica.  
+__Nota preliminare__: ricordate che le virgolette consentono di delimitare più parole da ricercare insieme e che più 
+operatori logici possono essere utilizzati in una stessa ricerca usando le parentesi tonde come in un’espressione 
+matematica.  
   
 1.	Collegati al sito [https://www.ncbi.nlm.nih.gov/](https://www.ncbi.nlm.nih.gov/);   
 2.	Nel menù a tendina accanto alla casella di ricerca seleziona **Nucleotide**;  
@@ -18,14 +24,14 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
 3. Richiedi la sequenza nucleotidica desiderata attraverso l’uso del seguente termine di ricerca: `"cytochrome c oxidase"`;  
     <details><summary></summary>
     <p>
-    <b>782.730</b>
+    <b>941.730</b>
     </p>
     </details>
 
-4. Prova ad inserire degli errori nella nomenclatura (es: `"cytochrome c oxydase"` oppure `"cytocrome c oxidase"`). Nota le differenze nel risultato e prova a dedurne il motivo;  
+4. Prova a inserire degli errori nella nomenclatura (es: `"cytochrome c oxydase"` oppure `"cytocrome c oxidase"`). Nota le differenze nel risultato e prova a dedurne il motivo;  
     <details><summary></summary>
     <p>
-    `"cytochrome c oxydase"` <b>165</b>
+    `"cytochrome c oxydase"` <b>141</b>
     </p>
     <p>  
     `"cytochrome c oxydase"` <b>220</b>
@@ -36,14 +42,14 @@ __Nota preliminare__: ricorda che le virgolette consentono di delimitare più pa
     a.	`"cytochrome c oxidase" AND "subunit 4"`  
         <details><summary></summary>
         <p>
-        <b>4.860</b>
+        <b>5.498</b>
         </p>
         </details>   
 
     b.	`"cytochrome c oxidase" AND "subunit iv"`  
         <details><summary></summary>
         <p>
-        <b>2.612</b>
+        <b>2.696</b>
         </p>
         </details>
 
@@ -53,7 +59,7 @@ NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries di
     a.	`"cytochrome c oxidase" AND ("subunit 4" OR "subunit iv")`  
     <details><summary></summary>
     <p>
-    <b>7.143</b>
+    <b>7.851</b>
     </p>
     </details>  
 
@@ -61,11 +67,11 @@ NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries di
     a.	`"cytochrome c oxidase" AND ("subunit 4" OR "subunit iv" OR "cox4")`
     <details><summary></summary>
     <p>
-    <b>7.220</b>
+    <b>7.938</b>
     </p>
     </details>
      
-8.	Se siamo interessati a restringere le ricerche ad una specifica specie, ad esempio solo alle sequenze “umane”, possiamo modificare le opzioni note come **Limits** che trovate in alto a sinistra della pagina contenente la vostra ricerca. Se non è già presente `Homo sapiens` clicchiamo su **customize** e scriviamo “Homo sapiens” nel menù che si aprirà.  
+8.	Se siamo interessati a restringere le ricerche a una specifica specie, ad esempio solo alle sequenze “umane”, possiamo modificare le opzioni note come **Limits** che trovate in alto a sinistra della pagina contenente la vostra ricerca. Se non è già presente `Homo sapiens` clicchiamo su **customize** e scriviamo “Homo sapiens” nel menù che si aprirà.  
     Infine clicchiamo su “add”. In questo modo otterremo tutte le sequenze nucleotidiche specifiche dell’uomo.  
     <details><summary></summary>
     <p>
@@ -88,7 +94,7 @@ NB: entrambe le nomenclature sono corrette, ma otteniamo un numero di entries di
     </details>
     
 10.	 Scorrendo le sequenze potremmo notare che alcune corrispondono a **Pseudogeni**. Escludi le sequenze nucleotidiche annotate come "pseudogene" selezionando le sequenze attraverso la chiave `Pseudogene`:  
-    a.	Ritorna su Advanced e interseca la query **#?** (derivata dalla ricerca precendente) con la query **#?** (corrispondente all’ultima ricerca) questa volta utilizzando l’operatore **NOT**: #? NOT #?   
+    a.	Ritorna su Advanced e interseca la query **#?** (derivata dalla ricerca precedente) con la query **#?** (corrispondente all’ultima ricerca) questa volta utilizzando l’operatore **NOT**: #? NOT #?   
     NB: Il numero di sequenze trovate si è ridotto.
     <details><summary></summary>
     <p>
@@ -108,31 +114,32 @@ Suggerimenti:
  
 ## Esercizio 2. 
 Esamina la entry selezionata nell’esercizio 1:  
-- Determinate la lunghezza del trascritto, della regione codificante, del 5’UTR e del 3’UTR.  
+- Determinate la lunghezza del trascritto, della regione codificante, del 5’ UTR e del 3’ UTR.  
    
 ### Esercizio 3.
 Esamina la entry selezionata nell’esercizio 1.  
-- Sei in grado di individiare la proteina associata?  
+- Sei in grado d'individuare la proteina associata?  
 - Qual è il suo accession number?  
 - Quanto è lunga la proteina?  
 - Osservando la **Feature Table** cosa potete annotare?  
 
 ## Esercizio 4. 
-Utilizzando ENTREZ prova a selezionare la entry **RefSeq** relativa alla **proteina** `"ATP synthase F0 subunit 8"`, il cui **gene name** ufficiale è `ATP8` di [Ciona robusta](https://invasions.si.edu/nemesis/calnemo/SpeciesSummary.jsp?TSN=-701).  
+Utilizzando ENTREZ prova a selezionare la entry **RefSeq** più lunga relativa alla **proteina** `"tumor protein tp73"`, 
+il cui **gene name** ufficiale è `tp73` di [_Rattus norvegicus_](https://www.ensembl.org/Rattus_norvegicus/Info/Index).  
 
 ## Esercizio 5. 
-Esamina la entry selezionata nell’esercizio 4 (YP_006341035.1).  
+Esamina la entry selezionata nell’esercizio 4.  
 Determina:  
 - l’accession number della sequenza nucleotidica da cui è stata ricavata la entry;  
 - la lunghezza della proteina e della sequenza nucleotidica che codifica per questa proteina.  
 
 ## Esercizio 6. 
-Determina il numero di proteine umane presenti nella banca dati.  
-Di queste proteine quante sono codificate dal genoma mitocondriale? 
+- Determina il numero di proteine umane presenti nella banca dati.  
+- Di queste proteine quante sono codificate dal genoma mitocondriale? 
 
 ## Esercizio 7. 
-Determina il numero di sequenze di rRNA 16S appartenenti al genere Escherichia sono disponibili nella banca dati.  
-Quante di queste non sono parziali?
+- Determina il numero di sequenze di rRNA 16S appartenenti al genere Escherichia sono disponibili nella banca dati.  
+- Quante di queste sono complete o quasi (lunghezza compresa tra 1300 e 1500 nt)?
   
 ## Esercizio 8. 
 Interrogate la banca dati “Genome”.  
