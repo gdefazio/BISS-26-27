@@ -196,7 +196,7 @@ Andiamo ad effettuare una inspezione delle varianti annotate per la proteina **S
 [UCSC](UCSC.md)             
 
 
-[Back to the top](../README.md)
+[Programma Esercitazioni](../README.md)
 
 
 

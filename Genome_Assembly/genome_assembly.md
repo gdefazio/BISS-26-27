@@ -270,7 +270,7 @@ All'interno della cartella troveremo i file con le seguenti estensioni:
 |  .txt  |          statistiche relative al processo di annotazione          |
 |  .err  |     file che riporta le problematiche associate al file .sqn      | 
 
-[Back to the top](../README.md) 
+[Programma Esercitazioni](../README.md) 
 
   
 
