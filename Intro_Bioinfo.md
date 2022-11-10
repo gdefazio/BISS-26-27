@@ -8,10 +8,10 @@ Nel corso degli anni sono state proposte numerose definizioni che possono essere
 
 **Questi includono l’informazione genetica racchiusa nei genomi e le modalità della loro espressione (trascrittoma, proteoma, microbioma, pathways metabolici, ecc.).**  
 
-*** Tre sono gli ambiti di applicazione principali della Bioinformatica: ***    
-***     1. Raccolta, Conservazione e Distribuzione di dati biologici;***  
-***     2. Sviluppo di algoritmi.***  
-***     3. Utilizzo degli strumenti sviluppati per generare nuova conoscenza.***  
+Tre sono gli ambiti di applicazione principali della Bioinformatica:  
+***1. Raccolta, Conservazione e Distribuzione di dati biologici;***  
+***2. Sviluppo di algoritmi.***  
+***3. Utilizzo degli strumenti sviluppati per generare nuova conoscenza.***  
 
 La Bioinformatica è per sua natura **multidisciplinare** richiedendo il concorso di competenze diverse 
 (Biologia Molecolare, Biochimica, Fisiologia, Genetica, Informatica, Matematica, Statistica, Chimica, Fisica, Ingegneria
