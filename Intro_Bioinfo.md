@@ -60,4 +60,4 @@ Letture consigliate:
 
 [Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
 
-[Back to the top](README.md)
+[Programma Esercitazioni](README.md)

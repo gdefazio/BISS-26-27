@@ -1,8 +1,11 @@
 # Ricerca bibliografica nella banca dati PubMed 
   
-La consultazione della **Letteratura Scientifica** inerente la tematica che si sta affrontando è una delle fasi essenziali di ogni progetto di ricerca.  
-La banca dati ***PubMed***, sviluppata presso il [**National Center for Biotechnology Information (NCBI)**](https://www.ncbi.nlm.nih.gov/pmc/about/intro/) raccoglie circa **33 milioni** di lavori (articoli, review, e libri) scientifici pubblicati.  
-Oltre all'NCBI, il suo mantenimento, è supportato dalla [**U.S. Library of Medicine**](https://www.ncbi.nlm.nih.gov/pmc/about/intro/). Attualmente, ricerca e raccoglie articoli da oltre **7.600** riviste internazionali a carattere biomedico.  
+La consultazione della **Letteratura Scientifica** inerente la tematica che si sta affrontando è una delle fasi 
+essenziali di ogni progetto di ricerca.  
+La banca dati ***PubMed***, sviluppata presso il [**National Center for Biotechnology Information (NCBI)**](https://www.ncbi.nlm.nih.gov/pmc/about/intro/) 
+raccoglie circa **34 milioni** di lavori (articoli, review, e libri) scientifici pubblicati.  
+Oltre all' NCBI, il suo mantenimento, è supportato dalla [**U.S. Library of Medicine**](https://www.ncbi.nlm.nih.gov/pmc/about/intro/).  
+Attualmente, ricerca e raccoglie articoli da oltre **7.600** riviste internazionali a carattere biomedico.  
 Per interrogare questa banca dati, utilizzando il proprio browser (e.g. Safari, Explorer, Chrome, Opera, Firefox…) ci si deve collegare al sito: [https://www.ncbi.nlm.nih.gov/pubmed/](https://www.ncbi.nlm.nih.gov/pubmed/).  
 ![pubmed](pubmed.jpg)  
   
@@ -19,12 +22,9 @@ Per combinare precedenti ricerche ed eventualmente restringere l’insieme dei r
 **Advanced** mostra un elenco storico di tutte le ricerche effettuate che possono essere combinate con operatori logici per effettuare nuove ricerche. 
 
 Proviamo ora a svolgere alcuni semplici esercizi.  
-i)         Quanti articoli nella banca dati PubMed contengono la parola `Bioinformatics`?  
-ii)        Quanti articoli trattano del gene `p53`?  Quanti riguardano anche i `mitocondri`?  
-iii)       Quanti articoli ha pubblicato il prof. G. `Pesole` nel `2005?  
+1. Quanti articoli nella banca dati PubMed contengono la parola `Bioinformatics`?  
+2. Quanti articoli trattano del gene `p53`?  Quanti riguardano anche i `mitocondri`?  
+3. Quanti articoli ha pubblicato il prof. G. `Pesole` nel `2005?  
     
 
-[GISAID](gisaid.md)  
-
-
-[Back to the top](../README.md)
+[Programma Esercitazioni](../README.md)

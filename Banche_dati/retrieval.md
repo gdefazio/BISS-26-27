@@ -145,24 +145,13 @@ Determina:
 Interrogate la banca dati “Genome”.  
 - Quanti genomi di `Escherichia coli` sono disponibili?  
 - Quanti di `Fusobacterium nucleatum`?  
-   
-## Esercizio 9. 
-Proviamo adesso a ricercare qualcosa di più interessante.  
-- Quanti genomi di `severe acute respiratory syndrome coronavirus 2` sono disponibili?  
-- Aprite il link alla entry di riferimento e scaricate la sequenza genomica in formato `FASTA`.  
 
-## Esercizio 10. 
-- Quanti sequenze di `severe acute respiratory syndrome coronavirus 2` sono disponibili nella banca dati nucleotide?  
-
-  
-
-
-Letture consigliate:  
-Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.) – pag. 7-12   
-Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli)  
+# Letture consigliate 
+- Valle G. et al. Introduzione alla Bioinformatica (Zanichelli Ed.)   
+- Citterich M. et al. Fondamenti di Bioinformatica (Zanichelli Ed.)  
 
 
 [Ricerca bibliografica nella banca dati PubMed ](pubmed.md)                     
 
 
-[Back to the top](../README.md)
+[Programma Esercitazioni](../README.md)
