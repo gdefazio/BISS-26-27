@@ -116,7 +116,7 @@ Suggerimenti:
 Esamina la entry selezionata nell’esercizio 1:  
 - Determinate la lunghezza del trascritto, della regione codificante, del 5’ UTR e del 3’ UTR.  
    
-### Esercizio 3.
+## Esercizio 3.
 Esamina la entry selezionata nell’esercizio 1.  
 - Sei in grado d'individuare la proteina associata?  
 - Qual è il suo accession number?  
