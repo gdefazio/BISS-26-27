@@ -1,7 +1,10 @@
 # UTILIZZO DI BLAST E BLAT PER L'ANALISI GENOMICA
-Negli esempi che abbiamo appena visto, abbiamo utilizzato il **BLAST** per effettuare ricerche nelle banche dati come se stessimo facendo una ricerca testuale.  
-Se ci pensate, lo stesso concetto (e, quindi, lo stesso strumento) può essere usato per confrontare sequenze anche di dimensioni estremamente differenti.  
-Immaginate di confrontare una sequenza di 100 bp con un intero cromosoma umano: quello che il **BLAST** vi potrà dire è se esiste una regione del cromosoma “abbastanza simile” alla vostra sequenza di 100 bp, o addirittura ad una parte di essa.  
+Negli esempi che abbiamo appena visto, abbiamo utilizzato il **BLAST** per effettuare ricerche nelle banche dati come se
+stessimo facendo una ricerca testuale.  
+Se ci pensate, lo stesso concetto (e, quindi, lo stesso strumento) può essere usato per confrontare sequenze anche di 
+dimensioni estremamente differenti.  
+Immaginate di confrontare una sequenza di 100 bp con un intero cromosoma umano: quello che il **BLAST** vi potrà dire è 
+se esiste una regione del cromosoma “abbastanza simile” alla vostra sequenza di 100 bp, o addirittura a una parte di essa.  
 
 Le applicazioni di questo tipo di analisi sono diverse:
 1.	Dato un trascritto, si può cercare da quale regione del genoma corrispondente proviene (e quindi, dove si trova il rispettivo gene);  
@@ -65,7 +68,7 @@ Provate a cercare nel genoma dell’uomo il gene della ferritina “heavy” (FT
 ## ESERCIZIO 2  
 Ripetete l’esperimento sul genoma del topo (usando la sequenza dell’uomo). In questo caso, **non selezionate megablast**.  
 Su che cromosoma si trova il gene omologo a COX4I1 (idem: provate a rispondere e solo dopo a guardare le annotazioni)? 
- 
-[Genome Browser](../Genome_Browser/Ensembl.md)  
-[Back to the top](../README.md)
+  
+
+[Banche_dati](../README.md)
 

@@ -33,4 +33,4 @@ La relazione dovrà riguardare **tutte** le seguenti tematiche:
 
 ***Per ciascuna delle tre tematiche non dovranno superare le 5 pagine e per ciascuna di esse potete inserire al massimo 5 immagini***.  
 
-[Back to the top](../README.md) 
+[Banche_dati](../README.md) 
