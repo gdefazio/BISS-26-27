@@ -53,17 +53,81 @@ Il blast è capace di selezionare un sotto-insieme di sequenze disponibili in un
 l'allineamento locale. _Questo significa che la collezione di sequenze di riferimento (**subject sequences**) è indicizzata 
 prima di effettuare la ricerca vera e propria_.  
 
-1. La sequenza **QUERY** è scomposta in tutti i possibili **W-mer** di una specifica lunghezza (nel caso in figura 3 nt)  
-2. I **W-mer** identificati sono comparati con quelli disponibili nella collezione di riferimento indicizzata 
-3. A questo punto sono considerati tutti quelle _sequenze_ per cui si ottengono _hit_ che superano una certa soglia (*soglia T*)  
-   1. La *soglia T* è definita sulla base di matrici di sostituzione (e.g. **BLOSUM** o **PAM**)  
-   2. Le regioni di bassa complessità (e.g. stretch omopolimerici) sono esclusi da questa ricerca  
-   3. A partire da questo hit iniziale viene calcolato lo **score (punteggio) di allineamento)**  
-4. Gli hit sono estesi a monte e valle senza inserire _gap_. 
-   1. Ogni qualvolta viene aggiunto una carattere all'allineamento viene aggiunto un punteggio frutto allo score di allineamento
-5. Il parametro **X**: definisce la soglia massima di perdita di punteggio. In pratica misura quanto possiamo tollerare l'inserzione di caratteri con un punteggio negativo  
-   1. Quando un allineamento non passa il filtro imposto dal parametro X, otteniamo un **HSP (High-scoring Segment Pair)**   
-6. **S**: punteggio per cui un HSP è considerato utile.  
+Prima di entrare nei dettagli dell'algoritmo proviamo ad astrarre il problema, per cui al posto di sequenze biologiche 
+utilizzeremo delle semplici frasi di testo.  
+1. Supponiamo che la nostra sequenza query sia `may the force be with me`. :crossed_swords:
+2. Supponiamo ora che la nostra collezione di riferimento contenga solo quattro frasi subject:
+   1. _may the fourth_
+   2. _may the fist be with you_
+   3. _may the god bless you_
+   4. _brutal force goes wrong_
+3. Per semplificare la ricerca possiamo come prima operazione andiamo a creare un indice che raccoglie il numero di volte che una stringa è osservata. Quindi inizieremo a scomporre le frasi in parole lunghe 3 caratteri (**W=3**) e segnare in quale frase e posizione si trovano:
+```
+    may the fourth
+    may
+     ay_ 
+      y_t
+       _th
+         he_
+            ....
+```  
+
+
+|  W  |             Frase             | posizione |
+|:---:|:-----------------------------:|:---------:|
+|  may |   may the fourth   |    01     |
+| ay\_ |   may the fourth   |    02     |
+| y\_t |   may the fourth   |    03     |
+| \_th |   may the fourth   |    04     |
+| he\_ |   may the fourth   |    05     |  
+
+
+4. Adesso scomponiamo la nostra frase QUERY sempre in parole **W=3** e le cerchiamo nell'indice. Non siamo restrittivi e decidiamo di permettere una ricerca non esatta:  
+```
+    may_the_force_be_with_me
+    W:
+            for
+    Indice:
+            for [frase  i, posizione 09] score=2
+            for [frase ii, posizione 09] score=1
+            for [frase iv, posizione 08] score=3
+    
+```  
+5. Impostiamo un primo **_filtro T_** per cui tutti gli score < 2 sono scartati.
+```
+    may_the_force_be_with_me
+            for
+    Indice:
+            for [frase  i, posizione 09] score=2
+            for [frase ii, posizione 09] score=1 <-- SCARTATO
+            for [frase iv, posizione 08] score=3
+    
+```  
+6. Trovata una corrispondenza iniziale cerchiamo di allungarla a destra e sinistra:
+   1. A ogni corrispondenza aumentiamo lo score di 1 (+1)
+   2. A ogni missmatch togliamo 1 punto (-1)
+   3. Quando otteniamo due score negativi blocchiamo l'estensione.
+```
+    # indica un mismatch
+    QUERY         may_the_force_be_with_me
+    SUBJ  i       may_the_fo###             score=10 (-3)
+    SUBJ iv            ###force_###           score=5 (-6)
+    Indice:
+```
+7. Infine possiamo assumere che il match sulla frase _subject iv_ sia frutto di una casuale condivisione di una parola e lo possiamo scartare (punteggio troppo basso).  
+8. 
+
+9. La sequenza **QUERY** è scomposta in tutti i possibili **W-mer** di una specifica lunghezza (nel caso in figura 3 nt)  
+10. I **W-mer** identificati sono comparati con quelli disponibili nella collezione di riferimento indicizzata 
+11. A questo punto sono considerati tutti quelle _sequenze_ per cui si ottengono _hit_ che superano una certa soglia (*soglia T*)  
+    1. La *soglia T* è definita sulla base di matrici di sostituzione (e.g. **BLOSUM** o **PAM**)  
+    2. Le regioni di bassa complessità (e.g. stretch omopolimerici) sono esclusi da questa ricerca  
+    3. A partire da questo hit iniziale viene calcolato lo **score (punteggio) di allineamento)**  
+12. Gli hit sono estesi a monte e valle senza inserire _gap_. 
+    1. Ogni qualvolta viene aggiunto una carattere all'allineamento viene aggiunto un punteggio frutto allo score di allineamento
+13. Il parametro **X**: definisce la soglia massima di perdita di punteggio. In pratica misura quanto possiamo tollerare l'inserzione di caratteri con un punteggio negativo  
+    1. Quando un allineamento non passa il filtro imposto dal parametro X, otteniamo un **HSP (High-scoring Segment Pair)**   
+14. **S**: punteggio per cui un HSP è considerato utile.  
 
 È semplice intuire che la fase computazionalmente più importante è quella relativa all'estensione degli _hit_ iniziali sui **W-mer**.  
 La versione più recenti considera solo quelle sequenze per cui si identificano due **W-mer** hit posti a una distanza inferiore a un **parametro A**
@@ -76,7 +140,7 @@ Per cui più basso è l'**E-value** maggiore sarà l'affidabilità dell'allineam
 **NB:** il calcolo dell'**E-value** è funzione del numero di sequenze e quindi residui contenuti nella collezione di riferimento.  
 
 ![blast_alg](blast_glossary-Image001.jpg)  
-[*https://www.ncbi.nlm.nih.gov/books/NBK62051/*](https://www.ncbi.nlm.nih.gov/books/NBK62051/)  
+[*https://www.ncbi.nlm.nih.gov/books/NBK62051/*](https://www.ncbi.nlm.nih.gov/books/NBK62051/)
 _______
   
 Esistono diverse versioni del BLAST:  

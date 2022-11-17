@@ -198,4 +198,4 @@ Applicate il `FastQC` sui seguenti file:
 
 [Indice](#accesso-al-server)
 
-[Back to the top](../README.md) 
+[Programma Esercitazioni](../README.md) 
