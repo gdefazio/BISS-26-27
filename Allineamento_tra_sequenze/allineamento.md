@@ -49,14 +49,11 @@ _database searching_ come il **BLAST (Basic Local Alignment Search Tool)** che c
 
 _______
 ### Algoritmo di funzionamento del BLAST
-Il blast è capace di selezionare un sotto-insieme di sequenze disponibili in una banca dati su cui andare poi a calcolare 
-l'allineamento locale. _Questo significa che la collezione di sequenze di riferimento (**subject sequences**) è indicizzata 
-prima di effettuare la ricerca vera e propria_.  
-
 Prima di entrare nei dettagli dell'algoritmo proviamo ad astrarre il problema, per cui al posto di sequenze biologiche 
 utilizzeremo delle semplici frasi di testo.  
-1. Supponiamo che la nostra sequenza query sia `may the force be with me`. :crossed_swords:
-2. Supponiamo ora che la nostra collezione di riferimento contenga solo quattro frasi subject:
+
+1. Supponiamo che la nostra frase **query** sia `may the force be with me`. :crossed_swords:
+2. Supponiamo ora che la nostra collezione di riferimento contenga solo quattro frasi **subject**:
    1. _may the fourth_
    2. _may the fist be with you_
    3. _may the god bless you_
@@ -115,19 +112,22 @@ utilizzeremo delle semplici frasi di testo.
     Indice:
 ```
 7. Infine possiamo assumere che il match sulla frase _subject iv_ sia frutto di una casuale condivisione di una parola e lo possiamo scartare (punteggio troppo basso).  
-8. 
 
-9. La sequenza **QUERY** è scomposta in tutti i possibili **W-mer** di una specifica lunghezza (nel caso in figura 3 nt)  
-10. I **W-mer** identificati sono comparati con quelli disponibili nella collezione di riferimento indicizzata 
-11. A questo punto sono considerati tutti quelle _sequenze_ per cui si ottengono _hit_ che superano una certa soglia (*soglia T*)  
-    1. La *soglia T* è definita sulla base di matrici di sostituzione (e.g. **BLOSUM** o **PAM**)  
-    2. Le regioni di bassa complessità (e.g. stretch omopolimerici) sono esclusi da questa ricerca  
-    3. A partire da questo hit iniziale viene calcolato lo **score (punteggio) di allineamento)**  
-12. Gli hit sono estesi a monte e valle senza inserire _gap_. 
-    1. Ogni qualvolta viene aggiunto una carattere all'allineamento viene aggiunto un punteggio frutto allo score di allineamento
-13. Il parametro **X**: definisce la soglia massima di perdita di punteggio. In pratica misura quanto possiamo tollerare l'inserzione di caratteri con un punteggio negativo  
-    1. Quando un allineamento non passa il filtro imposto dal parametro X, otteniamo un **HSP (High-scoring Segment Pair)**   
-14. **S**: punteggio per cui un HSP è considerato utile.  
+Il blast è capace di selezionare un sotto-insieme di sequenze disponibili in una banca dati su cui andare poi a calcolare 
+l'allineamento locale. _Questo significa che la collezione di sequenze di riferimento (**subject sequences**) è indicizzata 
+prima di effettuare la ricerca vera e propria_.
+
+1. La sequenza **QUERY** è scomposta in tutti i possibili **W-mer** di una specifica lunghezza (nel caso in figura 3 nt)  
+2. I **W-mer** identificati sono comparati con quelli disponibili nella collezione di riferimento indicizzata 
+3. A questo punto sono considerati tutti quelle _sequenze_ per cui si ottengono _hit_ che superano una certa soglia (*soglia T*)  
+   1. La *soglia T* è definita sulla base di matrici di sostituzione (e.g. **BLOSUM** o **PAM**)  
+   2. Le regioni di bassa complessità (e.g. stretch omopolimerici) sono esclusi da questa ricerca  
+   3. A partire da questo hit iniziale viene calcolato lo **score (punteggio) di allineamento)**  
+4. Gli hit sono estesi a monte e valle senza inserire _gap_. 
+   1. Ogni qualvolta viene aggiunto una carattere all'allineamento viene aggiunto un punteggio frutto allo score di allineamento
+5. Il parametro **X**: definisce la soglia massima di perdita di punteggio. In pratica misura quanto possiamo tollerare l'inserzione di caratteri con un punteggio negativo  
+   1. Quando un allineamento non passa il filtro imposto dal parametro X, otteniamo un **HSP (High-scoring Segment Pair)**   
+6. **S**: punteggio per cui un HSP è considerato utile.  
 
 È semplice intuire che la fase computazionalmente più importante è quella relativa all'estensione degli _hit_ iniziali sui **W-mer**.  
 La versione più recenti considera solo quelle sequenze per cui si identificano due **W-mer** hit posti a una distanza inferiore a un **parametro A**
