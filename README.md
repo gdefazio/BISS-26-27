@@ -3,12 +3,12 @@
 ## Programma
 ### Esercitazione 1 (10/11/2022 e 17/11/2022)
 #### Banche dati: definizioni generali e sistemi di retrieval
-- [ ] [Introduzione alla Bioinformatica](Intro_Bioinfo.md)
-- [ ] [Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
-- [ ] [Sistemi di retrieval](Banche_dati/retrieval.md)  
-- [ ] [PubMed](Banche_dati/pubmed.md)
+- [X] [Introduzione alla Bioinformatica](Intro_Bioinfo.md)
+- [X] [Definizione di Database e struttura delle entry **GenBank**](Banche_dati/banche_dati.md)  
+- [X] [Sistemi di retrieval](Banche_dati/retrieval.md)  
+- [X] [PubMed](Banche_dati/pubmed.md)
 
-### Esercitazione 2 (29/11/2022 e 01/12/2022)
+### Esercitazione 2 (24/11/2022 e 01/12/2022)
 #### Allineamento tra sequenze
 - [ ] [Allineamento](Allineamento_tra_sequenze/allineamento.md)
 - [ ] [Utilizzo di BLAST e BLAT per l'analisi genomica](Allineamento_tra_sequenze/blast_genomico.md)
