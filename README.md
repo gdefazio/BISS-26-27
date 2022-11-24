@@ -20,11 +20,11 @@
 
 ### Esercitazione 3 (09-11/01/2023)
 - [ ] [UCSC](Genome_Browser/UCSC.md)
-- [ ] [Connessione al server ed introduzione al BASH](BASH/Accesso_al_server.md)  
+- [ ] [Connessione al server e introduzione al BASH](BASH/Accesso_al_server.md)  
 
 ### Esercitazione 4 (16-18/01/2023)
-### Metabarcoding
-- [ ] [Metabarcoding](Metabarcoding/metabarcoding.md)
+### DNA Metabarcoding
+- [ ] [DNA Metabarcoding](Metabarcoding/metabarcoding.md)
 
 ### Esercitazione 5 (20-29/01/2023)
 - [ ] [Genome Assembly](Genome_Assembly/genome_assembly.md)

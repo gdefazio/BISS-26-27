@@ -21,13 +21,13 @@ a) **Allineamento Globale**: le sequenze sono allineate per la loro intera lungh
 ```
 FTFTALILLAVAV
 |  ||| ||| ||
-F--TAL-LLA-AV
+F-FTAL-LLA-AV
 ```  
 b) **Allineamento Locale**: in questo caso privilegiamo porzioni di similitudine tra le due sequenze allo scopo di massimizzare la similarità tra queste porzioni di sequenze.
 ```
 FTFTALILLA-VAV
-  |||| ||| | 
---FTAL-LLAAV-
+  |||| ||
+  FTALVLL
 ```   
 
 _______
@@ -115,8 +115,25 @@ utilizzeremo delle semplici frasi di testo.
 
 Il blast è capace di selezionare un sotto-insieme di sequenze disponibili in una banca dati su cui andare poi a calcolare 
 l'allineamento locale. _Questo significa che la collezione di sequenze di riferimento (**subject sequences**) è indicizzata 
-prima di effettuare la ricerca vera e propria_.
+prima di effettuare la ricerca vera e propria_.  
+_______________
+Prima di procedere con l'algoritmo del blast occorre chiarire un altro concetto.  
+Nell'esempio precedente abbiamo deciso in modo arbitrario di assegnare uno score di +1 in caso di match e uno score di -1 in caso di mismatch.  
+Per essere più precisi avremmo dovuto considerare la probabilità che una specifica lettera potesse essere sostituita da un altra
+tenendo conto di tutte le parole simili presenti le vocabolario (e.g. la probabilità di osservare **e** al posto di **a**).  
 
+In modo simile possiamo valutare la probabilità di osservare uno sostituzione aminoacidica nel corso dell'evoluzione.  
+Le matrici _**PAM (Point Accepted Mutation)**_ sono state costruite osservando gli alberi filogenetici di 71 famiglie proteiche (due 
+sequenze della stessa famiglia presentano almeno l'85% di similarità). Si è calcolata la probabilità di osservare una specifica
+sostituzione pesandola rispetto al fatto che potesse essere completamente casuale.  
+Altra cosa fondamentale è il **passo evolutivo**, cioè quanto due sequenze sono lontane sulla linea evolutiva. Possiamo 
+assumere che la distanza evolutiva di _1 passo_ sia pari ad _1 sostituzione ogni 100 AA_.  
+Possiamo quindi calcolare la probabilità di sostituzione con questa formula:  
+$σ(a,b) = int[10*log(M(a,b)/C(a,b))]$
+
+
+
+_______________
 1. La sequenza **QUERY** è scomposta in tutti i possibili **W-mer** di una specifica lunghezza (nel caso in figura 3 nt)  
 2. I **W-mer** identificati sono comparati con quelli disponibili nella collezione di riferimento indicizzata 
 3. A questo punto sono considerati tutti quelle _sequenze_ per cui si ottengono _hit_ che superano una certa soglia (*soglia T*)  
