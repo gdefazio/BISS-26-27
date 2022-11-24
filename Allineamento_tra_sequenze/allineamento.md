@@ -117,11 +117,13 @@ Il blast è capace di selezionare un sotto-insieme di sequenze disponibili in un
 l'allineamento locale. _Questo significa che la collezione di sequenze di riferimento (**subject sequences**) è indicizzata 
 prima di effettuare la ricerca vera e propria_.  
 _______________
-Prima di procedere con l'algoritmo del blast occorre chiarire un altro concetto.  
+Prima di procedere con l'algoritmo del BLAST occorre chiarire un altro concetto.  
+![scoring_matrices](Scoring+Matrices.png)
 Nell'esempio precedente abbiamo deciso in modo arbitrario di assegnare uno score di +1 in caso di match e uno score di -1 in caso di mismatch.  
 Per essere più precisi avremmo dovuto considerare la probabilità che una specifica lettera potesse essere sostituita da un altra
 tenendo conto di tutte le parole simili presenti le vocabolario (e.g. la probabilità di osservare **e** al posto di **a**).  
 
+#### Le Matrici PAM
 In modo simile possiamo valutare la probabilità di osservare uno sostituzione aminoacidica nel corso dell'evoluzione.  
 Le matrici _**PAM (Point Accepted Mutation)**_ sono state costruite osservando gli alberi filogenetici di 71 famiglie proteiche (due 
 sequenze della stessa famiglia presentano almeno l'85% di similarità). Si è calcolata la probabilità di osservare una specifica
@@ -129,9 +131,36 @@ sostituzione pesandola rispetto al fatto che potesse essere completamente casual
 Altra cosa fondamentale è il **passo evolutivo**, cioè quanto due sequenze sono lontane sulla linea evolutiva. Possiamo 
 assumere che la distanza evolutiva di _1 passo_ sia pari ad _1 sostituzione ogni 100 AA_.  
 Possiamo quindi calcolare la probabilità di sostituzione con questa formula:  
-$σ(a,b) = int[10*log \frac{M(a,b)}{C(a,b)}]$
 
+**$σ(a,b) = int[10*log \frac{M(a,b)}{C(a,b)}]$**
 
+_M(a,b) = la probabilità di trovare a allineato con b_  
+_C(a,b) = la probabilità di un allineamento casuale tra a e b. Quindi semplicemente è pari alla probabilità di osservare un
+AA nelle sequenze in esame_  
+
+La matrice così calcolata, assumendo un singolo passo evolutivo, è definita come **PAM1**.  
+Moltiplicando la PAM1 per se stessa un certo numero di volte possiamo ottenere matrici che simulano distanza evolutive 
+più ampie (PAM10 o PAM250). Ovviamente maggiore è la distanza evolutiva, maggiori saranno le differenze attese tra le sequenze.  
+**NB: questo approccio assume che la probabilità di osservare una sostituzione sia indipendente!!!**
+
+#### Le Matrici BLOSUM
+Le matrici **BLOSUM (BLOCKS Substitution Matrix)** si basano sulla banca dati **BLOCKS** che contiene allineamenti multipli 
+di sequenze proteiche curate manualmente. Ciascuna coppia di sequenze aminoacidiche può condividere una similarità compresa 
+tra il 30% e il 95%.  
+Quello che si fa in questo caso è di settare la percentuale di similarità da investigare. Ad esempio la matrice BLOSUM30 è basata 
+sull'analisi di sequenze che condividono il 30% di similarità. La probabilità di osservare una sostituzione è:  
+
+**$σ(a,b) = int[k*log \frac{B(a,b)}{C(a,b)}]$**
+
+_B(a,b) = la probabilità di trovare a allineato con b nelle coppie di sequenze selezionate_  
+_C(a,b) = la probabilità di un allineamento casuale tra a e b. Quindi semplicemente è pari alla probabilità di osservare un
+AA nelle sequenze in esame_  
+_k = è una costante che solitamente è pari a $\frac{2}{log2}$_  
+
+**NB: questo approccio misura la probabilità di osservare una sostituzione basandosi su osservazioni dirette!!!**  
+
+Solitamente le matrice più utilizzate sono le BLOSUM e gli sviluppatori dei programmi selezionano la matrice che può essere più 
+idonea per l'utilizzo del programma stesso.  
 
 _______________
 1. La sequenza **QUERY** è scomposta in tutti i possibili **W-mer** di una specifica lunghezza (nel caso in figura 3 nt)  
