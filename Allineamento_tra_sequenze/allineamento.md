@@ -129,7 +129,7 @@ sostituzione pesandola rispetto al fatto che potesse essere completamente casual
 Altra cosa fondamentale è il **passo evolutivo**, cioè quanto due sequenze sono lontane sulla linea evolutiva. Possiamo 
 assumere che la distanza evolutiva di _1 passo_ sia pari ad _1 sostituzione ogni 100 AA_.  
 Possiamo quindi calcolare la probabilità di sostituzione con questa formula:  
-$σ(a,b) = int[10*log frac{M(a,b)}{C(a,b)}]$
+$σ(a,b) = int[10*log \frac{M(a,b)}{C(a,b)}]$
 
 
 
