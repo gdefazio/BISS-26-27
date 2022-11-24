@@ -118,7 +118,7 @@ l'allineamento locale. _Questo significa che la collezione di sequenze di riferi
 prima di effettuare la ricerca vera e propria_.  
 _______________
 Prima di procedere con l'algoritmo del BLAST occorre chiarire un altro concetto.  
-![scoring_matrices](Scoring+Matrices.png)
+![scoring_matrices](Screenshot%202022-11-24%20at%2011.27.50.jpg)  
 Nell'esempio precedente abbiamo deciso in modo arbitrario di assegnare uno score di +1 in caso di match e uno score di -1 in caso di mismatch.  
 Per essere più precisi avremmo dovuto considerare la probabilità che una specifica lettera potesse essere sostituita da un altra
 tenendo conto di tutte le parole simili presenti le vocabolario (e.g. la probabilità di osservare **e** al posto di **a**).  
