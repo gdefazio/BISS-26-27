@@ -242,14 +242,14 @@ Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:
 Esamina i risultati e osserva le sequenze omologhe di COX4 relative a specie di mammiferi.  
 
 ## ESERCIZIO 2
-Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina contenente l‘intera entry. È così possibile ricavare diverse informazioni, tra cui l‘AC delle sequenze nucleotidiche corrispondenti alla sequenza proteica.  
+Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina contenente l‘intera entry.  
+È così possibile ricavare diverse informazioni, tra cui l‘AC delle sequenze nucleotidiche corrispondenti alla sequenza proteica.  
 Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della sub-unità IV della citocromo c ossidasi umana (ricercandola con una ricerca testuale). In questo caso, quale tipo di BLAST si dovrebbe utilizzare?  
 Suggerimenti:
- - Il **gene name** è COX4I1  
+ - Il **gene name** è **COX4I1**  
  - Restringete la ricerca (*limits*) per **mRNA** e **RefSeq**  
- - selezionate la **Transcript Variant 5**      
+ - selezionate la **Transcript Variant 5**  
 
-# ESERCIZI DA SVOLGERE 
 ## ESERCIZIO 3
 Data questa sequenza:
 ```

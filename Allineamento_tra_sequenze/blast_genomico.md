@@ -12,15 +12,18 @@ Le applicazioni di questo tipo di analisi sono diverse:
 3.	Dato un trascritto (o una proteina) di una specie, si può usare il BLAST sul genoma di un’altra specie per cercare qualcosa che sia “simile” (**mentre nei due casi precedenti ci si poteva aspettare l’identità nelle regioni allineate, Perché?**), sia a livello di sequenza nucleotidica (produce un trascritto simile a quello dato) sia a livello di traduzione (tradotta, produce un peptide simile a quello dato).  
 In effetti, l’analisi al punto `3)` viene applicata, ad esempio, dallo staff di **ENSEMBL** ogni qual volta viene annotato un genoma appena assemblato, partendo da specie sufficientemente “vicine” (e le annotazioni di **“omologia/ortologia”** provengono proprio da BLAST “incrociati”).  
 
-Mentre per allineare i trascritti ad una sequenza genomica si può usare **nucleotide BLAST**  (query nucleotidi vs. database nucleotidico, anche nella variante **“MEGABLAST”** che suppone che le vostre sequenze siano “identiche a pezzi”), per “mappare” proteine su potenziali geni che le codificano o si può tradurre la proteina “all’indietro” in nucleotidi e “blastarla” sul genoma. 
+Mentre per allineare i trascritti a una sequenza genomica si può usare **nucleotide BLAST** 
+(query nucleotidi vs database nucleotidico, anche nella variante **“MEGABLAST”** che suppone che le vostre sequenze 
+siano “identiche a pezzi”), per “mappare” proteine su potenziali geni che le codificano o si può tradurre la proteina 
+“all’indietro” in nucleotidi e “blastarla” sul genoma. 
 Per fare questo c’è una variante di BLAST apposita (**tblastn**).  
 
-Virtualmente tutti i **browser genomici** (_che vedremo nella prossima esercitazione_) “offrono” un servizio di blast sui diversi genomi, che producono i medesimi  risultati.  
+Virtualmente tutti i **browser genomici** (_che vedremo nella prossima esercitazione_) “offrono” un servizio di blast sui diversi genomi, che producono i medesimi risultati.  
 In questa esercitazione utilizzeremo (per motivi puramente estetici e di leggibilità dei risultati) quello disponibile con il **BLAST**, accessibile tramite il “solito” link:  
 [https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)  
 ![blast_human](blast_human.png)
 
-Come potete vedere, c’è una sezione dedicata ai genomi completi (o in fase di completamento). Cliccando sul link corrispondente a **human** (attenzione, ciascuna specie linka a una pagina diversa... quindi occorre “centrare” human!) venite portati a questa pagina:  
+Come potete vedere, c’è una sezione dedicata ai genomi completi (o in fase di completamento). Cliccando sul link corrispondente a **human** (attenzione, ciascuna specie linka a una pagina diversa...quindi occorre “centrare” human!) venite portati a questa pagina:  
 Che, appunto vi dice che potete effettuare un BLAST sulle sequenze umane, ristretto a un tipo di sequenza (menù vicino a Database).   
 ![human_page](blast_human_page.jpg)
 
@@ -52,18 +55,26 @@ Per verificare le risposte, è sufficiente osservare gli allineamenti ed utiliz
     </p>
 </details>
 
-Un altro programma molto efficiente e veloce per confrontare una sequenza data contro un intero genoma è il **BLAT**.
+Un altro programma molto efficiente e veloce per confrontare una sequenza data contro un intero genoma è il 
+[**BLAT (BLAST-Like Alignment Tool)**](https://pubmed.ncbi.nlm.nih.gov/11932250).
 [BLAT](http://genome.ucsc.edu/cgi-bin/hgBlat?command=start) è accessibile presso i server dell' UCSC.  
+
+BLAT è disegnato per trovate match tra sequenze lunghe almeno 40nt che condividono almeno il 95% di similarità o nel caso di 
+una ricerca tradotto o a livello aminoacidico ≥ 80%.   
+
 
 ![blat](blat.png)
 
-Una volta selezionato il genoma e la versione dell' assembly è possibile condurre la ricerca dopo aver incollato nell'apposito riquadro la sequenza nucleotidica o proteica in esame.  
-Ad esempio, provate a cercare nel genoma umano la proteina corrispondente al gene COX4I1 precedentemente considerato (ricercate la sequenza nel database **nucleotide** su **NCBI** e copiate la sequenza in formato FASTA. Usate l’AC **NM_001861**!!!).   
-Il risultato della ricerca è una tabella che mostra gli "hits" in ordine descrescente di score. E' possibile visualizzare i risultati nel "Browser" oppure direttamente l'allineamento.  
-Potete ricavare le coordinate cromosomiche del gene cox4? 
+Una volta selezionato il genoma e la versione dell' assembly è possibile condurre la ricerca dopo aver incollato nell'
+apposito riquadro la sequenza nucleotidica o proteica in esame.  
+Ad esempio, provate a cercare nel genoma umano la proteina corrispondente al gene COX4I1 precedentemente considerato 
+(ricercate la sequenza nel database **nucleotide** su **NCBI** e copiate la sequenza in formato FASTA. Usate l’Accession Number **NM_001861**!!!).   
+Il risultato della ricerca è una tabella che mostra gli "hits" in ordine decrescente di score. È possibile visualizzare i risultati nel "Browser" oppure direttamente l'allineamento.  
+Potete ricavare le coordinate cromosomiche del gene COX4I1? 
 
 ## ESERCIZIO 1   
-Provate a cercare nel genoma dell’uomo il gene della ferritina “heavy” (FTH1) a partire dal trascritto (NM_002032). Su che cromosoma è localizzato?   
+Provate a cercare nel genoma dell’uomo il gene della ferritina “heavy” (FTH1) a partire dal trascritto (NM_002032). 
+Su che cromosoma è localizzato?   
 
 ## ESERCIZIO 2  
 Ripetete l’esperimento sul genoma del topo (usando la sequenza dell’uomo). In questo caso, **non selezionate megablast**.  
