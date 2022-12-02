@@ -199,7 +199,7 @@ Esistono diverse versioni del BLAST:
 - **PSI-BLAST**: Algoritmo che ricalcola gli score di allineamento interattivamente sulla base dei match osservati :scream:;  
 
 Da qualche anno sono disponibili anche versioni ancora più ottimizzate dell' algoritmo pensate per rispondere a specifiche necessità:  
-![](Screenshot 2021-11-27 at 18.50.10.jpg)
+![](Screenshot%202021-11-27%20at%2018.50.10.jpg)
 
 
 Supponiamo di voler cercare le sequenze simili alla *sub-unità IV della citocromo c ossidasi umana* (Accession Number: **P13073**).  
@@ -240,10 +240,10 @@ Per fare questa ricerca dobbiamo disporre della sequenza sonda in formato FASTA:
 # ESERCIZI DA SVOLGERE    
 ## ESERCIZIO 1  
 Esamina i risultati e osserva le sequenze omologhe di COX4 relative a specie di mammiferi.  
-
-## ESERCIZIO 2
 Seguendo i links delle diverse sequenze trovate si viene rimandati alla pagina contenente l‘intera entry.  
 È così possibile ricavare diverse informazioni, tra cui l‘AC delle sequenze nucleotidiche corrispondenti alla sequenza proteica.  
+
+## ESERCIZIO 2
 Prova a ripetere l’esercizio utilizzando la sequenza di mRNA della sub-unità IV della citocromo c ossidasi umana (ricercandola con una ricerca testuale). In questo caso, quale tipo di BLAST si dovrebbe utilizzare?  
 Suggerimenti:
  - Il **gene name** è **COX4I1**  

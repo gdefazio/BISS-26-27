@@ -10,15 +10,13 @@
 
 ### Esercitazione 2 (24/11/2022 e 01/12/2022)
 #### Allineamento tra sequenze
-- [ ] [Allineamento](Allineamento_tra_sequenze/allineamento.md)
-- [ ] [Utilizzo di BLAST e BLAT per l'analisi genomica](Allineamento_tra_sequenze/blast_genomico.md)
-
-#### Genome Browser 
-- [ ] [ENSEMBL](Genome_Browser/Ensembl.md)
-- [ ] [ENSEMBL: esercizi](Genome_Browser/Ensembl.md#esercizi)
-- [ ] [ENSEMBL: COVID-19](Genome_Browser/Ensembl.md#covid-19)
+- [X] [Allineamento](Allineamento_tra_sequenze/allineamento.md)
+- [X] [Utilizzo di BLAST e BLAT per l'analisi genomica](Allineamento_tra_sequenze/blast_genomico.md)
 
 ### Esercitazione 3 (09-11/01/2023)
+#### Genome Browser 
+- [ ] [ENSEMBL](Genome_Browser/Ensembl.md)
+- [ ] [ENSEMBL: COVID-19](Genome_Browser/Ensembl.md#covid-19)
 - [ ] [UCSC](Genome_Browser/UCSC.md)
 - [ ] [Connessione al server e introduzione al BASH](BASH/Accesso_al_server.md)  
 
