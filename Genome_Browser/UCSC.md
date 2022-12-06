@@ -34,9 +34,10 @@ Anche su UCSC è disponibile una risorsa dedica al **SARS-COV-2**,
 chiamata [**COVID-19 Pandemic Resources at UCSC **](http://genome.ucsc.edu/covid19.html).  
 ![http://genome.ucsc.edu/covid19.html](Screenshot 2021-01-08 at 11.08.05.jpg).  
 
-Proviamo ad utilizzare il genome browser. Nella sezione `Comparative Genomics` attiviamo le seguenti track in modalità *full*:  
-    - 119 Vertebrate CoVs;  
-    - Human CoV.  
+Proviamo a utilizzare il genome browser. Nella sezione `Comparative Genomics` attiviamo le seguenti track in 
+modalità *full*:  
+- 119 Vertebrate CoVs;  
+- Human CoV.  
 
 ***Cosa notate?**
 

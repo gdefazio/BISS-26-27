@@ -8,7 +8,7 @@ Accesso al server e Introduzione al BASH
 
 
 # Accesso al Server
-Il resto delle **Esercitazioni** richiederà l' utilizzo di server messi a disposizione dal Datacenter **RECAS**.  
+Il resto delle **Esercitazioni** richiederà l' utilizzo di server messi a disposizione dal Datacenter **ReCaS**.  
 A ognuno di voi è stato assegnato un utente che utilizzerete per collegarvi sulle macchine che andremo a utilizzare.  
 Le macchine per le esercitazioni hanno i seguenti indirizzi:  
 - **212.189.205.77**  
