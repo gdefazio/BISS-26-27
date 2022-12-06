@@ -13,19 +13,20 @@
 - [X] [Allineamento](Allineamento_tra_sequenze/allineamento.md)
 - [X] [Utilizzo di BLAST e BLAT per l'analisi genomica](Allineamento_tra_sequenze/blast_genomico.md)
 
-### Esercitazione 3 (09-11/01/2023)
+### Esercitazione 3 (06/12/2022 - 09/01/2023)
 #### Genome Browser 
 - [ ] [ENSEMBL](Genome_Browser/Ensembl.md)
-- [ ] [ENSEMBL: COVID-19](Genome_Browser/Ensembl.md#covid-19)
 - [ ] [UCSC](Genome_Browser/UCSC.md)
 - [ ] [Connessione al server e introduzione al BASH](BASH/Accesso_al_server.md)  
 
-### Esercitazione 4 (16-18/01/2023)
+### Esercitazione 4 (11-13/01/2023)
 ### DNA Metabarcoding
 - [ ] [DNA Metabarcoding](Metabarcoding/metabarcoding.md)
 
-### Esercitazione 5 (20-29/01/2023)
+### Esercitazione 5 (16-18/01/2023)
 - [ ] [Genome Assembly](Genome_Assembly/genome_assembly.md)
+
+### Esercitazione 6 (20-24/01/2023)
 - [ ] [Analisi del Trascrittoma](Trascrittoma/RNAseq.md)
 
 ### [Relazioni](relazioni.md)  
