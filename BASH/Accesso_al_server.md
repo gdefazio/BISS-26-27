@@ -15,11 +15,12 @@ Le macchine per le esercitazioni hanno i seguenti indirizzi:
 - **90.147.102.58**  
 - **90.147.102.38**  
 
-Per accedervi dovrete accedere alla tabella disponibile a questo [link](https://docs.google.com/spreadsheets/d/1gBqln4anHbXGrjI3H_vHCIQBChlOfqgCZQ9Me7ou89s/edit?usp=sharing).  
-Dovrete scaricare il file chiave corrispondente al vostro user da questa [cartella](https://drive.google.com/drive/folders/1vhDFZR-QM19KI2zLqB_N7L39sjMBi5X9?usp=sharing).  
+Per accedervi dovrete accedere alla tabella disponibile a questo [link](https://docs.google.com/spreadsheets/d/1HQAnOIkwrdo4EIX2OIB1Xxv2i_V4bet-W7BJyGeQq1g/edit?usp=sharing).  
+Dovrete scaricare il file chiave corrispondente al vostro user da questa [cartella](https://drive.google.com/drive/folders/1VAo4zdzec7UPPXLgJJsv8qWhNbvZMfy8?usp=sharing).  
 
 Una volta completato il download del file non lo dovete aprire. Al massimo spostatelo nella cartella che trovate più comoda.  
-***Soprattutto per chi di voi utilizza sistemi UNIX-based consiglio di non spostare il file, così lo troverà direttamente in download quando dovrà utilizzare il terminale.***  
+***Soprattutto per chi di voi utilizza sistemi UNIX-based consiglio di non spostare il file, così lo troverà direttamente
+in download quando dovrà utilizzare il terminale.***  
 
 ## Sistemi operativi UNIX-BASED
 Gli utilizzatori di sistemi operativi UNIX-based dovranno utilizzare direttamente il **terminale** (cercate l' applicazione terminale tra quelle disponibili) e digitare i seguenti comandi:  
@@ -37,7 +38,8 @@ chmod 600 ~/Desktop/user5
 ssh -X -i ~/Desktop/user5 user5@212.189.205.77 
 ```
 Alla prima connessione il sistema vi chiederà se il server sia "fidato" e dovrete digitare `yes`.  
-Di seguito vi chiederà la **password** (vi verrà comunicata al momento) e dovrete inserirla. **Notate che il cursore non si muoverà mentre digitate la password!!!**.  
+Di seguito vi chiederà la **password** (vi verrà comunicata al momento) e dovrete inserirla.  
+**Notate che il cursore non si muoverà mentre digitate la password!!!**.  
 Se avrete digitato la password correttamente potrete accedere al server.  
 
 ## WINDOWS

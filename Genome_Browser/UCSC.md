@@ -31,7 +31,7 @@ ottenere moltissime altre informazioni di vario genere.
 
 # COVID-19 Pandemic Resources at UCSC 
 Anche su UCSC è disponibile una risorsa dedica al **SARS-COV-2**, 
-chiamata [**COVID-19 Pandemic Resources at UCSC **](http://genome.ucsc.edu/covid19.html).  
+chiamata [**COVID-19 Pandemic Resources at UCSC**](http://genome.ucsc.edu/covid19.html).  
 ![http://genome.ucsc.edu/covid19.html](Screenshot 2021-01-08 at 11.08.05.jpg).  
 
 Proviamo a utilizzare il genome browser. Nella sezione `Comparative Genomics` attiviamo le seguenti track in 
