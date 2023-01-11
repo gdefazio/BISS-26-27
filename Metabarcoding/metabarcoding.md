@@ -5,10 +5,16 @@ Metabarcoding
 - [Analisis di dati reali](#analisi-di-dati-reali)
 
 
-## Introduzione
-L'approccio metagenomico si basa sull'analisi del materiale genetico totale (**metagenoma**) direttamente estratto da un campione ambientale (Kunin et al., 2008; Wooley et al., 2010).  
-Anche se il metagenoma consiste nell'intero contenuto genetico delle specie viventi in un determinato habitat, questo nuovo approccio è applicato principalmente per indagare sulle comunità microbiche.  
-Considerando che circa il **99%** delle specie batteriche non possono essere isolate e coltivate mediante tecniche standard di laboratorio (Staley and Konopka, 1985), l'approccio metagenomico, che non prevede alcuna procedura di coltivazione, offre uno strumento senza precedenti per allargare la conoscenza del mondo microbico. L’importanza di poter di poter accedere alla porzione microbica “nascosta” risiede nel fatto che circa i due terzi della biodiversità presente sulla terra siano composti da microorganismi (Singh et al., 2009).  
+# Introduzione
+L'approccio metagenomico si basa sull'analisi del materiale genetico totale (**metagenoma**) direttamente estratto da un 
+campione ambientale (Kunin et al., 2008; Wooley et al., 2010).  
+Anche se il metagenoma consiste nell'intero contenuto genetico delle specie viventi in un determinato habitat, questo 
+nuovo approccio è applicato principalmente per indagare sulle comunità microbiche.  
+Considerando che circa il **99%** delle specie batteriche non possono essere isolate e coltivate mediante tecniche 
+standard di laboratorio (Staley and Konopka, 1985), l'approccio metagenomico, che non prevede alcuna procedura di 
+coltivazione, offre uno strumento senza precedenti per allargare la conoscenza del mondo microbico. L’importanza di 
+poter di poter accedere alla porzione microbica “nascosta” risiede nel fatto che circa i due terzi della biodiversità 
+presente sulla terra siano composti da microorganismi (Singh et al., 2009).  
 I microorganismi, i loro genomi e le iterazioni che tra loro stabiliscono in ogni ambiente che colonizzano sono definiti con il termine **microbiota**.  
 Il grande interesse verso le comunità microbiche è dato dal fatto che esse sono capaci di colonizzare qualsiasi habitat, dal terreno alle acque oceaniche, compreso il corpo umano.  
 Proprio considerando il corpo umano, la composizione del microbioma cambia a seconda del sito anatomico o dell’età del soggetto (Turnbaugh et al., 2013), ma anche in base allo stile di vita.   
@@ -46,7 +52,7 @@ Un marcatore genetico di specie ideale dovrebbe avere le seguenti caratteristich
 ![picture2](Picture2.png)  
 *Figura 2: rappresentazione della variabilità del gene per l’rRNA 16S nei procarioti.*
 
-## Analisi di dati reali
+# Analisi di dati reali
 Per questa esercitazioni utilizzeremo dei dati di ricente pubblicazione [Ravegnini et al. 2020](https://www.mdpi.com/1422-0067/21/24/9735).  
 Lo scopo dello studio riguadava la caratterizzazione del microbioma gastrico in soggetti affetti tumore (*Gastric cancer, GC*).  
 I GC sono la quinta forma tumorale per incidenza nel monda e la terza causa di morte per tumore.  L'avvento della genomica ha permesso di capire come in realtà si tratti di una complessa rappresentazione di patologie, dove differenti mutazioni danno origine a diverse forme tumorali.  
@@ -215,6 +221,7 @@ In particolare:
       --o-alignment aligned-rep-seqs_16S.qza \
       --o-masked-alignment masked-aligned-rep-seqs_16S.qza \
       --o-tree unrooted-tree_16S.qza \
+      --p-n-threads 1 \
       --o-rooted-tree rooted-tree_16S.qza
     ```  
 * Al fine di poter comparare i dati ottenuti li dobbiamo **normalizzare**. La procedura di Normalizzazione utilizzata per i dati del microbioma è la **Rarefazione**.  
@@ -240,7 +247,8 @@ In particolare:
       --p-n-jobs-or-threads 1 \
       --output-dir core-metrics-results_16S
     ```  
-* Verifichiamo se vi siano delle differenze significative tra gli indici di alpha diversità:    
+  
+* Verifichiamo se vi siano delle differenze significative tra gli indici di alpha diversità:  
     ```  
     qiime diversity alpha-group-significance \
       --i-alpha-diversity core-metrics-results_16S/shannon_vector.qza \
@@ -254,6 +262,7 @@ In particolare:
       --m-metadata-file metadata.tsv \
       --o-visualization core-metrics-results_16S/faith_pd-Condition-significance.qzv
     ```  
+  
 * Verifichiamo se vi siano delle differenze significative tra gli indici di beta diversità:  
     ```
     qiime diversity beta-group-significance \
