@@ -87,18 +87,18 @@ A questo punto abbiamo completato tutte le operazioni preliminari necessarie per
 Possiamo procedere con le analisi.  
 
 ## Importazione dei dati
-* Importiamo i dati in QIIME2:  
-    ```
-    qiime tools import \
-    --type 'SampleData[PairedEndSequencesWithQuality]' \
-    --input-path /home/share/microbiome_analysis/input_data \
-    --input-format CasavaOneEightSingleLanePerSampleDirFmt \
-    --output-path demux-paired-end.qza
-    ```  
+* Importiamo i dati in QIIME2. _Al fine di limitare la quantità di disco occupato non importerete i dati nella vostra cartella_:  
+    
+    > qiime tools import \
+       --type 'SampleData[PairedEndSequencesWithQuality]' \
+       --input-path /home/share/microbiome_analysis/input_data \
+       --input-format CasavaOneEightSingleLanePerSampleDirFmt \
+       --output-path demux-paired-end.qza
+      
 * Creiamo un file di visualizzazione (estensione *qzv*) per valutare la qualità dei nostri dati:  
     ```
     qiime demux summarize \
-    --i-data  demux-paired-end.qza \
+    --i-data  /home/share/microbiome_analysis/demux-paired-end.qza \
     --o-visualization demux-paired_end.qzv
     ```
 * Scarchiamo il file `demux-paired_end.qzv` e visualizziamolo con QIIME2 view.  

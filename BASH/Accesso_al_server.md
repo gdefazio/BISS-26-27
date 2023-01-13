@@ -175,28 +175,19 @@ Eseguiamo le seguenti operazioni:
 2. Attiviamo l' ambiente virtuale che andremo a utilizzare:  
    `source /opt/miniconda3/bin/activate qiime2-2020.11`
 3. Creiamo una cartella dove scaricheremo i dati per questo tutorial ed eseguiremo le analisi:  
-    `mkdir fastqc_test && cd fastqc_test`  
-4. Adesso scarichiamo il file che dovremo utilizzare per le nostre analisi:  
-    `wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1n6mrvGO0_dS-hkICDnIFZNkUFCWbtEhl' -O T216P_S82_L001_R1_001.fastq.gz`  
-5. Eseguiamo il FastQC:  
-    `fastqc --noextract  T216P_S82_L001_R1_001.fastq.gz`  
-6. Scarichiamo sui nostri computer i seguenti file i seguenti file:  
-    * `T216P_S82_L001_R1_001_fastqc.html`  
-    * `T216P_S82_L001_R1_001_fastqc.zip`  
+    `mkdir fastqc_test && cd fastqc_test`   
+4. Eseguiamo il FastQC:  
+    `fastqc --noextract  /home/share/fastqc_test/T216P_S82_L001_R1_001.fastq.gz`  
+5. Scarichiamo sui nostri computer i seguenti file i seguenti file:  
+    * `T216P_S82_L001_R1_001_fastqc.html`
 
 Per avere una descrizione dei boxplot potete utilizzare la relativa pagina [Wikipedia](https://en.wikipedia.org/wiki/Box_plot).  
 
 ### Esercizio 1
-Applicate il `FastQC` sui seguenti file:   
-* Usando il seguente comando scaricate i 2 file:  
-  ```
-  wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=142ipR5m5ELJVpto6EGH8BNbJA9Ur5DAx' -O Sample1_S2_L001_R1_001.fastq.gz
-  ```
-  ```
-  wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1zGEWBk29KEijLUyZdrq-lLRyN7ikD2Ng' -O Sample1_S2_L001_R2_001.fastq.gz
-   ```
-* Eseguite `FastQC` sui due file e commentate i risultati ottenuti.  
-  *Suggerimento*: il comando base per eseguire **fastqc** è `fastqc --noextract NOMEFILE`
+Applicate il `FastQC` sui seguenti file `Sample1_S2_L001_R1_001.fastq.gz` e `Sample1_S2_L001_R1_001.fastq.gz` che trovate 
+nella cartella `/home/share/fastqc_test`.  
+  
+    *Suggerimento*: il comando base per eseguire **fastqc** è `fastqc --noextract NOMEFILE`
 
 [Indice](#accesso-al-server)
 
