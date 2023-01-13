@@ -179,7 +179,7 @@ Eseguiamo le seguenti operazioni:
 4. Copiamo il file:  
    `cp /home/share/fastqc_test/T216P_S82_L001_R1_001.fastq.gz .`
 5. Eseguiamo il FastQC:  
-    `fastqc --noextract  /home/share/fastqc_test/T216P_S82_L001_R1_001.fastq.gz`  
+    `fastqc --noextract  T216P_S82_L001_R1_001.fastq.gz`  
 6. Scarichiamo sui nostri computer i seguenti file i seguenti file:  
     * `T216P_S82_L001_R1_001_fastqc.html`
 
