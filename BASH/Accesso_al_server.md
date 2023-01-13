@@ -176,7 +176,7 @@ Eseguiamo le seguenti operazioni:
    `source /opt/miniconda3/bin/activate qiime2-2020.11`
 3. Creiamo una cartella dove scaricheremo i dati per questo tutorial ed eseguiremo le analisi:  
     `mkdir fastqc_test && cd fastqc_test`   
-4. Copiamo il file:
+4. Copiamo il file:  
    `cp /home/share/fastqc_test/T216P_S82_L001_R1_001.fastq.gz .`
 5. Eseguiamo il FastQC:  
     `fastqc --noextract  /home/share/fastqc_test/T216P_S82_L001_R1_001.fastq.gz`  
