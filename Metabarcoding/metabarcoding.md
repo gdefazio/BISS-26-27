@@ -2,7 +2,7 @@ Metabarcoding
 ==============
 - [Introduzione](#introduzione)
 - [Metabarcoding approach](#metabarcoding-approach)
-- [Analisis di dati reali](#analisi-di-dati-reali)
+- [Analisi di dati reali](#analisi-di-dati-reali)
 
 
 # Introduzione
@@ -18,9 +18,9 @@ presente sulla terra siano composti da microorganismi (Singh et al., 2009).
 I microorganismi, i loro genomi e le iterazioni che tra loro stabiliscono in ogni ambiente che colonizzano sono definiti con il termine **microbiota**.  
 Il grande interesse verso le comunità microbiche è dato dal fatto che esse sono capaci di colonizzare qualsiasi habitat, dal terreno alle acque oceaniche, compreso il corpo umano.  
 Proprio considerando il corpo umano, la composizione del microbioma cambia a seconda del sito anatomico o dell’età del soggetto (Turnbaugh et al., 2013), ma anche in base allo stile di vita.   
-Inoltre, l’avvento delle tecnologie di sequenziamento di nuova generazione ad elevato throughput (**Next-Generation Sequencing, NGS**) (Nowrousian, 2010) ha sostenuto lo studio di tutti i possibili habitat.  
+Inoltre, l’avvento delle tecnologie di sequenziamento di nuova generazione a elevato throughput (**Next-Generation Sequencing, NGS**) (Nowrousian, 2010) ha sostenuto lo studio di tutti i possibili habitat.  
 La metagenomica può effettuare il profiling del microbioma mediante due approcci:  
-1.	**Classificazione tassonomica**: in questo caso l'obiettivo principale è quello d' identificare gli organismi viventi nell' ambiente (Simon and Daniel, 2011), possibilmente a livello di specie . Questa metodologia richiede, dopo il sequenziamento, una fase di classificazione per assegnare le read ai rispettivi gruppi tassonomici;  
+1.	**Classificazione tassonomica**: in questo caso l'obiettivo principale è quello d' identificare gli organismi viventi nell' ambiente (Simon and Daniel, 2011), possibilmente a livello di specie. Questa metodologia richiede, dopo il sequenziamento, una fase di classificazione per assegnare le read ai rispettivi gruppi tassonomici;  
 2.	**Caratterizzazione funzionale**: l'obbiettivo principale è quello di rivelare il repertorio di funzioni genetiche della comunità in oggetto d’indagine mediante analisi del DNA o RNA totale o sistemi di espressione eterologhi (solitamente E. coli) (Prakash and Taylor, 2012; Simon and Daniel, 2011).  
   
 Quanto al metodo di sequenziamento, sono utilizzati due approcci principali:  
@@ -34,7 +34,7 @@ Quanto al metodo di sequenziamento, sono utilizzati due approcci principali:
     * specifiche porzioni del gene della Citocromo c ossidasi 1 mitocondriale (nei Metazoa).  
     
 ## Metabarcoding approach
-[Giusto un po' di teoria](https://docs.google.com/presentation/d/1X8s-J-gOjWvXYDAnRh39_nwKuLJtU0l0fG2MrLXyUpo/edit?usp=sharing).  
+[Giusto un po' di teoria](https://docs.google.com/presentation/d/1fP-sWpi_G3dnXOL_VB-ohXLCiaspA-NLwcgfB1BRckM/edit?usp=sharing).  
 Scopo dell’esercitazione odierna è l’analisi del microbioma umano attraverso l’approccio di metabarconding, che possiamo idealmente suddividere in 5 step principali:  
 1.	Raccolta dei campioni;  
 2.	Estrazione del metagenoma (insieme dei genomi degli \[micro\]organismi che condividono lo stesso ambiente);  
@@ -42,7 +42,7 @@ Scopo dell’esercitazione odierna è l’analisi del microbioma umano attravers
 4.	Sequenziamento;  
 5.	Analisi bioinformatica dei dati.  
 ![picture1](Picture1.png)  
-**Figura 1: rappresentazione schematica degli step che caratterizzano l’approccio metabercoding.**
+**Figura 1: rappresentazione schematica degli step che caratterizzano l’approccio metabarcoding.**
 
 Un marcatore genetico di specie ideale dovrebbe avere le seguenti caratteristiche:  
 1.	essere ubiquitario, o almeno largamente condiviso nel range tassonomico di interesse;  
@@ -58,7 +58,7 @@ Lo scopo dello studio riguadava la caratterizzazione del microbioma gastrico in 
 I GC sono la quinta forma tumorale per incidenza nel monda e la terza causa di morte per tumore.  L'avvento della genomica ha permesso di capire come in realtà si tratti di una complessa rappresentazione di patologie, dove differenti mutazioni danno origine a diverse forme tumorali.  
 Noi studieremo i dati di soggetti affetti da:  
     - **ADC**: Adenocarcima. E' la forma più comune e rappresenta il 95% dei GC. Ha solitamente origine nella mucosa  
-    - **SRCC**: Single-ring Cell Carcinoma. Forma più rara che si origine nelle cellule ghiandolari.    
+    - **SRCC**: Single-ring Cell Carcinoma. Forma più rara che si origine nelle cellule ghiandolari.  
 Per i nostri scopi analizzeremo 20 campioni:
 * 10 campioni ADC;  
 * 10 campioni SRCC.  
@@ -68,7 +68,7 @@ Per i nostri scopi analizzeremo 20 campioni:
  
 I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA 16S e successivamente sequenziando gli ampliconi in modalità paired-end (PE) 2x300 con piattaforma Illumina MiSeq®.  
 Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.org/).  
-Questo tool implementa sia un sistema che traccia l'orgigine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIME   2 View**](https://view.qiime2.org/).  
+Questo tool implementa sia un sistema che traccia l'orgine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIME 2 View**](https://view.qiime2.org/).  
 
 ## Preparazione dell'area di lavoro
 * Come prima operazione occorre accedere al server con le credenziali che vi sono state assegnate;
@@ -101,7 +101,7 @@ Possiamo procedere con le analisi.
     --i-data  /home/share/microbiome_analysis/demux-paired-end.qza \
     --o-visualization demux-paired_end.qzv
     ```
-* Scarchiamo il file `demux-paired_end.qzv` e visualizziamolo con QIIME2 view.  
+* Scarichiamo il file `demux-paired_end.qzv` e visualizziamolo con QIIME2 view.  
     * Come valutiamo la qualità del sequenziamento?  
 
 ## Denoising
@@ -161,7 +161,7 @@ Possiamo procedere con le analisi.
 * Scarichiamo i file `table_16S.qzv`, `denoising-stats_16S.qzv` e `rep-seqs.qzv` e visualizziamoli con QIIME2 view.  
 
 ## Classificazione tassonomica  
-* Effettuaiamo la classificazione tassonomica:  
+* Effettuiamo la classificazione tassonomica:  
     >nohup qiime feature-classifier classify-sklearn \
       --i-classifier /home/share/microbiome_analysis/silva-138-99-515-806-nb-classifier.qza \
       --i-reads rep-seqs_16S.qza \
@@ -184,7 +184,7 @@ Possiamo procedere con le analisi.
         --o-visualization taxa-bar-plots_16S_SKLEARN.qzv
     ```
 
-* Scarchiamo i file `taxonomy_16S_SKLEARN.qzv` e `taxa-bar-plots_16S_SKLEARN.qzv` e visualizziamoli con QIIME2 view.  
+* Scarichiamo i file `taxonomy_16S_SKLEARN.qzv` e `taxa-bar-plots_16S_SKLEARN.qzv` e visualizziamoli con QIIME2 view.  
 
 ## Alpha e Beta Diversità
 La Diversità è una misura della complessità del sistema che stiamo osservando, in funzione del numero di oggetti e della loro abbondanza relativa.  
@@ -199,19 +199,19 @@ In particolare:
         - *Faith's Phylogenetic Diversity*: una misura qualitativa della richness della comunità in esame che tiene conto delle relazioni filogenetiche.  
     * **beta**: diversità inter-campione: utilizziamo delle misure che indicano quanto differenti sono due comunità.
      Queste misure non fanno altro che andare a compare i campioni a coppie, per cui alla fine dell'analisi si ottiene una matrice che indica la dissimilarità tra ciascuna coppia di campioni.  
-     Esistno diverse tipologie di metriche per calcolare la Beta diversità:  
+     Esistono diverse tipologie di metriche per calcolare la Beta diversità:  
         - Distanza di **Jaccard**: una misura qualitativa della dissimilarità;  
           ![jaccard dissimilarity](Jaccard-Dissimilarity.gif)  
           ![jaccard similarity](Jaccard_similarity.gif)  
           X e Y rappresentano i campioni in analisi ed in particolare le specie osservate. Quindi la misura tiene conto solo del fatto che una specie sia osservata o meno e non della sua abbondanza.   
-        - Distanza di **Bray-Curtis**: una misura quantitiva della dissimilarità;  
+        - Distanza di **Bray-Curtis**: una misura quantitativa della dissimilarità;  
           ![bray curtis](bray_curtis.gif)  
           Dove:  
               - *i* e *j* sono i due campioni in analisi;  
               - S<sub>i</sub> e S<sub>j</sub> rappresentano la somma delle conte delle specie osservate nei siti *i* e *j*;  
-              - C<sub>ij</sub>: E' la somma della conte più basse delle specie osservate in entrambe i siti.  
+              - C<sub>ij</sub>: E' la somma delle conte più basse delle specie osservate in entrambe i siti.  
         - Distanza *unweighted UniFrac*: una misura qualitativa della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;  
-        - Distanza *weighted UniFrac*: una misura quantitiva della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;       
+        - Distanza *weighted UniFrac*: una misura quantitativa della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;  
     * **gamma**: diversità totale.  
    
 * Prima di procedere con le misure di diversità dobbiamo costruire un albero filogenetico a partire dalle ASV ottenute.  
@@ -292,7 +292,7 @@ In particolare:
     ```  
 
 ## Analisi comparativa tra le due tipologie tumorali  
-Utilizzeremo [**ANCOM (analysis of composition of microbiomes)**](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4450248/) per andare ad effettuare una analisi comparativa tra le due tipologie tumorali analizzate.  
+Utilizzeremo [**ANCOM (analysis of composition of microbiomes)**](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4450248/) per andare a effettuare una analisi comparativa tra le due tipologie tumorali analizzate.  
 1. Abbiamo detto che la tabella delle ASV è ricca in zeri (**zero inflated**). Ancom aggiunge delle _pseudo-conte_ per eliminare gli zeri.  
 
     ```
