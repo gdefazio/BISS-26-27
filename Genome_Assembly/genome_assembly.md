@@ -60,7 +60,7 @@ In particolare, la Figura 3 rappresenta un grafo per un set di k-mer che non con
 In un grafo di de Bruijn i k-mer rappresentano gli archi che connettono due vertici **V<sub>a</sub>** e **V<sub>b</sub>**, qualora **V<sub>a</sub>** sia prefisso di **V<sub>b</sub>** (tolta la prima base) o **V<sub>b</sub>** sia suffisso di **V<sub>a</sub>** (tolta l’ultima base).  
 Il vantaggio di questo approccio consta nel fatto di non dover calcolare la similarità tra tutte le coppie di k-mer.
 Per la risoluzione del grafo si applica un metodo definiti **Percorso Euleriano**, che prevede esattamente un passaggio per ciascun arco.  
-La presenza di regioni ripetute o errori di sequenziamento la individiazione di un percorso Euleriamo diventa più complessa per cui si accettano percorsi per cui un arco è visitato almeno una volta.  
+La presenza di regioni ripetute o errori di sequenziamento la individuazione di un percorso Euleriano diventa più complessa per cui si accettano percorsi per cui un arco è visitato almeno una volta.  
 Gli esempi riportati nelle figure 3 e 4 mostrano una estrema semplificazione del problema, ma già la presenza di una ripetizione nella figura 4, fa si che la risoluzione del grafo (identificazione della sequenza biologica) diventi più complessa.  
 
 ![grafoA](grafoA.png)  
@@ -82,8 +82,8 @@ Non ci sono regole particolari per la scelta della lunghezza dei k-mer ma possia
     ```  
 * deve essere inferiore alla lunghezza delle read, altrimenti sarà difficile osservare overlap.  
 
-In linea generale k-mer corti aumentano la connettività ma (ottimo per regioni del genoma a basso coverage) ma aumentano le connessioni ambigue (regioni ripettute).     
-I kmer più lunghi permettono di aumentare la specificità (ridurre il rumore durante l’assemblaggio) ma tendono a ridurre la connettività.    
+In linea generale k-mer corti aumentano la connettività ma (ottimo per regioni del genoma a basso coverage) ma aumentano le connessioni ambigue (regioni ripetute).   
+I kmer più lunghi permettono di aumentare la specificità (ridurre il rumore durante l’assemblaggio) ma tendono a ridurre la connettività.  
 *Parliamo di coverage del kmer: non ci si riferisce al numero di volte in cui un singolo nt viene osservato ma al numero di volte in cui uno specifico k-mer è osservato. Come abbiamo precedentemente visto quest’ultima osservazione può essere utilizzata per risolvere le bubble nei grafi di de Bruijn.*
 
 [Indice](#genome-assembly)
@@ -164,7 +164,7 @@ Le informazioni relative alla rappresentazione i ciascun k-mer (coverage) sono u
 #### Applicazione di Velvet
 Valuteremo la qualità dell’assemblaggio ottenuto con Velvet utilizzando dei kmer di lunghezza pari a 25nt.  
 *** NB: per questioni di tempo e di capacità computazioni non potremo applicare Velvet***  
-1. Creaimo una cartella che conterrà i dati di Velvet:  
+1. Creiamo una cartella che conterrà i dati di Velvet:  
     `mkdir velvet && cd velvet`
 2.	Prima di lanciare Velvet è necessario utilizzare uno dei suoi applicativi per convertire le sequenze i un formato adeguato:  
     
@@ -201,7 +201,7 @@ SPAdes applica un processo a 4 stadi:
 **Stadio 4**: genera i contig.  
     
 #### Applicazione di SPAdes   
-La riga di comando per laciare SPAdes è la seguente:
+La riga di comando per lanciare SPAdes è la seguente:
 1. Creiamo una cartella per i dati di SPAdes:  
     `cd .. && mkdir spades && cd spades`  
 ***Per questioni di natura prettamente computazionale l’esecuzione di SPAdes è già stata effettuata. Però possiamo valutare la qualità dell'assemblaggio ottenuto.***  
@@ -243,7 +243,7 @@ In questo caso utilizzeremo un programma chiamato [**PROKKA**](https://academic.
 | SignalP  |   Signal leader peptides   |
 | Infernal |       Non-coding RNA       |
 
-A scopo esemplificativo andremo a visualizzare o dati di annotazione ottenti con la prima applicazione di SPAdes.  
+A scopo esemplificativo andremo a visualizzare o dati di annotazione ottenuti con la prima applicazione di SPAdes.  
 Di seguito la linea di comando utilizzata da PROKKA:  
 
 > prokka --outdir genome_annotation --genus Escherichia --mincontiglen 200 --cpus 5 /home/share/genome_assembly/spades_application/contigs.fasta  
@@ -264,8 +264,8 @@ All'interno della cartella troveremo i file con le seguenti estensioni:
 |  .fsa  | Contig formattati per la sottomissione in banca dati (nucleotide) | 
 |  .tbl  |         Feature table per la sottomissione in banca dati          | 
 |  .sqn  |             Sequin per la sottomissione in banca dati             | 
-|  .gbk  |          Genbank file contenente sequenze e annotazionie          | 
-|  .gff  |          GFF v3 file contenente sequenze e annotazionie           | 
+|  .gbk  |          Genbank file contenente sequenze e annotazione           | 
+|  .gff  |           GFF v3 file contenente sequenze e annotazione           | 
 |  .log  |                        Log file di Prokka                         | 
 |  .txt  |          statistiche relative al processo di annotazione          |
 |  .err  |     file che riporta le problematiche associate al file .sqn      | 
