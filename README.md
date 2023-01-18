@@ -15,15 +15,16 @@
 
 ### Esercitazione 3 (06/12/2022 - 09/01/2023)
 #### Genome Browser 
-- [ ] [ENSEMBL](Genome_Browser/Ensembl.md)
-- [ ] [UCSC](Genome_Browser/UCSC.md)
-- [ ] [Connessione al server e introduzione al BASH](BASH/Accesso_al_server.md)  
+- [X] [ENSEMBL](Genome_Browser/Ensembl.md)
+- [X] [UCSC](Genome_Browser/UCSC.md)
+- [X] [Connessione al server e introduzione al BASH](BASH/Accesso_al_server.md)  
 
 ### Esercitazione 4 (11-13/01/2023)
 ### DNA Metabarcoding
-- [ ] [DNA Metabarcoding](Metabarcoding/metabarcoding.md)
+- [X] [DNA Metabarcoding](Metabarcoding/metabarcoding.md)
 
 ### Esercitazione 5 (16-18/01/2023)
+- [X] [DNA Metabarcoding](Metabarcoding/metabarcoding.md)
 - [ ] [Genome Assembly](Genome_Assembly/genome_assembly.md)
 
 ### Esercitazione 6 (20-24/01/2023)
