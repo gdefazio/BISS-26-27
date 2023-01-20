@@ -202,4 +202,4 @@ Execute `FastQC` on these files:
 
 [Indice](#server-login)
 
-[Back to the top](../README.md) 
+[Back to the top](../../dati_esercitazioni/README.md) 

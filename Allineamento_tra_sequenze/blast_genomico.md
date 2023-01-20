@@ -81,5 +81,5 @@ Ripetete l’esperimento sul genoma del topo (usando la sequenza dell’uomo). I
 Su che cromosoma si trova il gene omologo a COX4I1 (idem: provate a rispondere e solo dopo a guardare le annotazioni)? 
   
 
-[Programma Esercitazioni](../README.md)
+[Programma Esercitazioni](../../dati_esercitazioni/README.md)
 

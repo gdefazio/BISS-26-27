@@ -205,7 +205,7 @@ Andiamo a effettuare una ispezione delle varianti annotate per la proteina **SPI
 [UCSC](UCSC.md)             
 
 
-[Programma Esercitazioni](../README.md)
+[Programma Esercitazioni](../../dati_esercitazioni/README.md)
 
 
 

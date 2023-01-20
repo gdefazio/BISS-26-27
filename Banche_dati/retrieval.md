@@ -154,4 +154,4 @@ Interrogate la banca dati “Genome”.
 [Ricerca bibliografica nella banca dati PubMed ](pubmed.md)                     
 
 
-[Programma Esercitazioni](../README.md)
+[Programma Esercitazioni](../../dati_esercitazioni/README.md)

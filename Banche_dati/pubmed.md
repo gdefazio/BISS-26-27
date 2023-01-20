@@ -27,4 +27,4 @@ Proviamo ora a svolgere alcuni semplici esercizi.
 3. Quanti articoli ha pubblicato il prof. G. `Pesole` nel `2005?  
     
 
-[Programma Esercitazioni](../README.md)
+[Programma Esercitazioni](../../dati_esercitazioni/README.md)

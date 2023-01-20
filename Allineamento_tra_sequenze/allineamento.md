@@ -276,4 +276,4 @@ Letture consigliate:
 
 [Utilizzo di BLAST e BLAT per l'analisi genomica](blast_genomico.md)                            
 
-[Programma Esercitazioni](../README.md)
+[Programma Esercitazioni](../../dati_esercitazioni/README.md)

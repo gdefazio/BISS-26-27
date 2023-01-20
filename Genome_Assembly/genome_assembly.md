@@ -122,7 +122,7 @@ Prima di procedere con l' assembly delle reads ottenute occorre valutarne la qua
     /home/share/genome_assembly/s_6_2.fastq.gz -o pre_trimming
     ```  
     Scaricate i risultati del FastQC.  
-5.	effettuiamo il trimming delle sequenze:  
+5.	effettuiamo il trimming delle sequenze utilizzando il programma **sickle** \[1\]:  
     ```
     sickle pe -f /home/share/genome_assembly/s_6_1.fastq.gz \
     -r /home/share/genome_assembly/s_6_2.fastq.gz \
@@ -180,7 +180,7 @@ Valuteremo la qualità dell’assemblaggio ottenuto con Velvet utilizzando dei k
         > velvetg run_25  
                                                                                                    
 5.	Calcoliamo le statistiche per valutare l’assemblaggio con **quast**:  
-    `quast.py -s /home/share/genome_assembly/velvet_25/contigs.fa -o quast_25 -r /home/share/genome_assembly/NC_000913.3.fasta.gz`  
+    `quast.py -s /home/share/genome_assembly/velvet_25/contigs.fa -o quast_VELVET -r /home/share/genome_assembly/NC_000913.3.fasta.gz`  
     Scarichiamo la cartella generata da quast.  
 Possiamo, inoltre, valutare il grafo che programma ha generato per procedere all' assemblaggio, utilizzando il programma [**Bandage** (Bioinformatics Application for Navigating De novo Assembly Graphs Easily)](http://rrwick.github.io/Bandage/) (**Figura 6**).  
 ![velvet_bandage](velvet_k25_bandage.png)  
@@ -270,7 +270,12 @@ All'interno della cartella troveremo i file con le seguenti estensioni:
 |  .txt  |          statistiche relative al processo di annotazione          |
 |  .err  |     file che riporta le problematiche associate al file .sqn      | 
 
-[Programma Esercitazioni](../README.md) 
+
+## Letture consigliate
+\[1\] Joshi NA, Fass JN. (2011). Sickle: A sliding-window, adaptive, quality-based trimming tool for FastQ files 
+(Version 1.33) [Software].  Available at [https://github.com/najoshi/sickle](https://github.com/najoshi/sickle).
+
+[Programma Esercitazioni](../../dati_esercitazioni/README.md) 
 
   
 

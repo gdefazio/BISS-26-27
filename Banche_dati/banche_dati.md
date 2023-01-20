@@ -52,4 +52,4 @@ Devi sottomettere la sequenza di un gene proteico di topo. Il gene è composto d
 
 [Sistemi di Retrieval](retrieval.md)                            
 
-[Programma Esercitazioni](../README.md)
+[Programma Esercitazioni](../../dati_esercitazioni/README.md)
