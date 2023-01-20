@@ -25,7 +25,7 @@ La relazione dovrà riguardare **tutte** le seguenti tematiche:
        * l' identificativo del trascritto;  
        * il numero di Esoni che partecipano alla formazione di quel trascritto;
        * Utilizzando la sequenza proteica identificate la presenza di possibile proteine omologhe.
-     - Qualora si tratti di un gene non codificante proteina descrivete il prodotto. Utilizzando il bast dovrete trovare eventuali trascritti omologhi in banca dati e definire se anche questi siano non codificanti proteina.
+     - Qualora si tratti di un gene non codificante proteina descrivete il prodotto. Utilizzando il blast dovrete trovare eventuali trascritti omologhi in banca dati e definire se anche questi siano non codificanti proteina.
    - Numero di Ortologhi annotati.  
              
 
