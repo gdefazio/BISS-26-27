@@ -168,7 +168,7 @@ Valuteremo la qualità dell’assemblaggio ottenuto con Velvet utilizzando dei k
     `mkdir velvet && cd velvet`
 2.	Prima di lanciare Velvet è necessario utilizzare uno dei suoi applicativi per convertire le sequenze i un formato adeguato:  
     
-        > shuffleSequences_fastq.pl Sample_1.fastq Sample_2.fastq Sample_alternate.fastq  
+        >shuffleSequences_fastq.pl Sample_1.fastq Sample_2.fastq Sample_alternate.fastq  
       
 3.	Iniziamo ad utilizzare Velvet per assemblare le nostre read. Utilizzeremo k-mer lunghi 25 nt.  
     Velvet si compone di due applicativi. Il primo è **velveth** e prepara i dati di partenza in un formato adeguato per le successive analisi:  
