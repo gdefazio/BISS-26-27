@@ -28,6 +28,6 @@
 - [ ] [Genome Assembly](Genome_Assembly/genome_assembly.md)
 
 ### Esercitazione 6 (20-24/01/2023)
-- [ ] [Analisi del Trascrittoma](../dati_esercitazioni/Trascrittoma/RNAseq.md)
+- [ ] [Genome Assembly](Genome_Assembly/genome_assembly.md)
 
 ### [Relazioni](relazioni.md)  
