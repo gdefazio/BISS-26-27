@@ -42,7 +42,7 @@ modalità *full*:
 ***Cosa notate?**
 
 
-[Programma Esercitazioni](../../dati_esercitazioni/README.md) 
+[Programma Esercitazioni](../README.md) 
 
 
 

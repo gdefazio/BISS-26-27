@@ -353,4 +353,4 @@ C. Applichiamo ANCOM:
 ## Letture consigliate    
 - Michael C. Whitlock, Dolph Schluter ANALISI STATISTICA DEI DATI BIOLOGICI - Capitolo 13  
 
-[Programma Esercitazioni](../../dati_esercitazioni/README.md) 
+[Programma Esercitazioni](../README.md) 

@@ -275,7 +275,7 @@ All'interno della cartella troveremo i file con le seguenti estensioni:
 \[1\] Joshi NA, Fass JN. (2011). Sickle: A sliding-window, adaptive, quality-based trimming tool for FastQ files 
 (Version 1.33) [Software].  Available at [https://github.com/najoshi/sickle](https://github.com/najoshi/sickle).
 
-[Programma Esercitazioni](../../dati_esercitazioni/README.md) 
+[Programma Esercitazioni](../README.md) 
 
   
 

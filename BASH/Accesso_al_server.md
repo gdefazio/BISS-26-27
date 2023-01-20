@@ -193,4 +193,4 @@ nella cartella `/home/share/fastqc_test`.
 
 [Indice](#accesso-al-server)
 
-[Programma Esercitazioni](../../dati_esercitazioni/README.md) 
+[Programma Esercitazioni](../README.md) 
