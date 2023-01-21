@@ -191,28 +191,25 @@ La Diversità è una misura della complessità del sistema che stiamo osservando
 ![diversità](diversita.png)
 
 In particolare:  
-    * **alpha**: diversità intra-campione. Si possono utilizzare diverse metriche:  
-        - *Richness*: rappresenta il numero di specie differenti osservate in una comunità biologica;  
-        - *Eveness*: indica quanto sia uniforme la comunità osservata;  
-        - *Shannon Index*: è una misura quantitativa della richezza di specie;  
-            ![shannon](shannon.gif)  
-        - *Faith's Phylogenetic Diversity*: una misura qualitativa della richness della comunità in esame che tiene conto delle relazioni filogenetiche.  
-    * **beta**: diversità inter-campione: utilizziamo delle misure che indicano quanto differenti sono due comunità.
-     Queste misure non fanno altro che andare a compare i campioni a coppie, per cui alla fine dell'analisi si ottiene una matrice che indica la dissimilarità tra ciascuna coppia di campioni.  
-     Esistono diverse tipologie di metriche per calcolare la Beta diversità:  
-        - Distanza di **Jaccard**: una misura qualitativa della dissimilarità;  
-          ![jaccard dissimilarity](Jaccard-Dissimilarity.gif)  
-          ![jaccard similarity](Jaccard_similarity.gif)  
-          X e Y rappresentano i campioni in analisi ed in particolare le specie osservate. Quindi la misura tiene conto solo del fatto che una specie sia osservata o meno e non della sua abbondanza.   
-        - Distanza di **Bray-Curtis**: una misura quantitativa della dissimilarità;  
-          ![bray curtis](bray_curtis.gif)  
-          Dove:  
-              - *i* e *j* sono i due campioni in analisi;  
-              - S<sub>i</sub> e S<sub>j</sub> rappresentano la somma delle conte delle specie osservate nei siti *i* e *j*;  
-              - C<sub>ij</sub>: E' la somma delle conte più basse delle specie osservate in entrambe i siti.  
-        - Distanza *unweighted UniFrac*: una misura qualitativa della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;  
-        - Distanza *weighted UniFrac*: una misura quantitativa della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;  
-    * **gamma**: diversità totale.  
+- **alpha**: diversità intra-campione. Si possono utilizzare diverse metriche:- *Richness*: rappresenta il numero di specie differenti osservate in una comunità biologica;
+  - *Eveness*: indica quanto sia uniforme la comunità osservata;
+  - *Shannon Index*: è una misura quantitativa della richezza di specie;  
+              ![shannon](shannon.gif)  
+  - *Faith's Phylogenetic Diversity*: una misura qualitativa della richness della comunità in esame che tiene conto delle relazioni filogenetiche.  
+- **beta**: diversità inter-campione: utilizziamo delle misure che indicano quanto differenti sono due comunità. Queste misure non fanno altro che andare a compare i campioni a coppie, per cui alla fine dell'analisi si ottiene una matrice che indica la dissimilarità tra ciascuna coppia di campioni. Esistono diverse tipologie di metriche per calcolare la Beta diversità:  
+  - Distanza di **Jaccard**: una misura qualitativa della dissimilarità;  
+              ![jaccard dissimilarity](Jaccard-Dissimilarity.gif)  
+              ![jaccard similarity](Jaccard_similarity.gif)  
+              X e Y rappresentano i campioni in analisi ed in particolare le specie osservate. Quindi la misura tiene conto solo del fatto che una specie sia osservata o meno e non della sua abbondanza.   
+  - Distanza di **Bray-Curtis**: una misura quantitativa della dissimilarità;  
+              ![bray curtis](bray_curtis.gif)  
+              Dove:  
+                  - *i* e *j* sono i due campioni in analisi;  
+                  - S<sub>i</sub> e S<sub>j</sub> rappresentano la somma delle conte delle specie osservate nei siti *i* e *j*;  
+                  - C<sub>ij</sub>: E' la somma delle conte più basse delle specie osservate in entrambe i siti.  
+  - Distanza *unweighted UniFrac*: una misura qualitativa della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;  
+  - Distanza *weighted UniFrac*: una misura quantitativa della dissimilarità che incorpora le relazioni filogenetiche tra le ASV;  
+- **gamma**: diversità totale.  
    
 * Prima di procedere con le misure di diversità dobbiamo costruire un albero filogenetico a partire dalle ASV ottenute.  
     ```

@@ -156,7 +156,6 @@ Le informazioni relative alla rappresentazione i ciascun k-mer (coverage) sono u
     * Tips (errori di sequenziamento). Un nodo è considerato un tip se ricade in queste 3 casistiche:  
         - è disconnesso da uno dei due lati;  
         - l'arco che connette questo nodo ha una bassa *multiplicità* (multiplicity, il numero di volte in cui l'arco è osservato).
-    ![tips](velvet_tips.pdf)    
     * Bubbles: Utilizza un algoritmo che pesa le informazioni tra i nodi e considera quale sia il path più probabile.  
     ![bubble](velvet_bublbles.jpg)  
     * Connessioni errate: sono eliminati tutti quei path che hanno una bassa multiplicità.  
