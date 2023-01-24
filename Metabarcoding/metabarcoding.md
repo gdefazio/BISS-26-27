@@ -7,7 +7,7 @@ Metabarcoding
   - [Importazione dei dati](#importazione-dei-dati)
   - [Denoising](#denoising)
   - [Classificazione tassonomica](#classificazione-tassonomica)
-  - [Alpha e Beta Diversità](#alpha-e-beta-diversit)
+  - [Alpha e Beta Diversità](#alpha-e-beta-diversita)
   - [Analisi comparativa tra le due tipologie tumorali](#analisi-comparativa-tra-le-due-tipologie-tumorali)
 
 
@@ -192,7 +192,7 @@ Possiamo procedere con le analisi.
 
 * Scarichiamo i file `taxonomy_16S_SKLEARN.qzv` e `taxa-bar-plots_16S_SKLEARN.qzv` e visualizziamoli con QIIME2 view.  
 
-### Alpha e Beta Diversità
+### Alpha e Beta Diversita'
 La Diversità è una misura della complessità del sistema che stiamo osservando, in funzione del numero di oggetti e della loro abbondanza relativa.  
 ![diversità](diversita.png)
 
