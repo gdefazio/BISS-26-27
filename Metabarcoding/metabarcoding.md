@@ -3,6 +3,12 @@ Metabarcoding
 - [Introduzione](#introduzione)
 - [Metabarcoding approach](#metabarcoding-approach)
 - [Analisi di dati reali](#analisi-di-dati-reali)
+  - [Preparazione dell'area di lavoro](#preparazione-dellarea-di-lavoro)
+  - [Importazione dei dati](#importazione-dei-dati)
+  - [Denoising](#denoising)
+  - [Classificazione tassonomica](#classificazione-tassonomica)
+  - [Alpha e Beta Diversità](#alpha-e-beta-diversit)
+  - [Analisi comparativa tra le due tipologie tumorali](#analisi-comparativa-tra-le-due-tipologie-tumorali)
 
 
 # Introduzione
@@ -57,7 +63,7 @@ Per questa esercitazioni utilizzeremo dei dati di ricente pubblicazione [Ravegni
 Lo scopo dello studio riguadava la caratterizzazione del microbioma gastrico in soggetti affetti tumore (*Gastric cancer, GC*).  
 I GC sono la quinta forma tumorale per incidenza nel monda e la terza causa di morte per tumore.  L'avvento della genomica ha permesso di capire come in realtà si tratti di una complessa rappresentazione di patologie, dove differenti mutazioni danno origine a diverse forme tumorali.  
 Noi studieremo i dati di soggetti affetti da:  
-    - **ADC**: Adenocarcima. E' la forma più comune e rappresenta il 95% dei GC. Ha solitamente origine nella mucosa  
+    - **ADC**: Adenocarcinoma. E' la forma più comune e rappresenta il 95% dei GC. Ha solitamente origine nella mucosa  
     - **SRCC**: Single-ring Cell Carcinoma. Forma più rara che si origine nelle cellule ghiandolari.  
 Per i nostri scopi analizzeremo 20 campioni:
 * 10 campioni ADC;  
@@ -70,7 +76,7 @@ I dati sono stati ottenuti amplificando la regione iper-variabile V3-V4 del rRNA
 Effettueremo tutte le analisi utilizzando il tool [**QIIME2**](https://qiime2.org/).  
 Questo tool implementa sia un sistema che traccia l'orgine dei dati e la loro elaborazione che uno per la loro visuallizzazione, chiamato [**QIIME 2 View**](https://view.qiime2.org/).  
 
-## Preparazione dell'area di lavoro
+### Preparazione dell'area di lavoro
 * Come prima operazione occorre accedere al server con le credenziali che vi sono state assegnate;
 * Successivamente va create la cartella `Ravegnini_et_al` e bisogna posizionarsi al suo interno:  
     `mkdir Ravegnini_et_al && cd Ravegnini_et_al`
@@ -86,7 +92,7 @@ Questo tool implementa sia un sistema che traccia l'orgine dei dati e la loro el
 A questo punto abbiamo completato tutte le operazioni preliminari necessarie per preparare l'ambiente di lavoro.  
 Possiamo procedere con le analisi.  
 
-## Importazione dei dati
+### Importazione dei dati
 * Importiamo i dati in QIIME2. _Al fine di limitare la quantità di disco occupato non importerete i dati nella vostra cartella_:  
     
     > qiime tools import \
@@ -104,7 +110,7 @@ Possiamo procedere con le analisi.
 * Scarichiamo il file `demux-paired_end.qzv` e visualizziamolo con QIIME2 view.  
     * Come valutiamo la qualità del sequenziamento?  
 
-## Denoising
+### Denoising
 * Effettuiamo il **Denoising** dei dati:  
     Il **Denoising** (letteralmente eliminazione del rumore di fondo (*noise*)) è una procedura che permette di riconoscere il rumore introdotto dalla PCR e dal sequenziamento.  
       
@@ -160,7 +166,7 @@ Possiamo procedere con le analisi.
   
 * Scarichiamo i file `table_16S.qzv`, `denoising-stats_16S.qzv` e `rep-seqs.qzv` e visualizziamoli con QIIME2 view.  
 
-## Classificazione tassonomica  
+### Classificazione tassonomica  
 * Effettuiamo la classificazione tassonomica:  
     >nohup qiime feature-classifier classify-sklearn \
       --i-classifier /home/share/microbiome_analysis/silva-138-99-515-806-nb-classifier.qza \
@@ -186,7 +192,7 @@ Possiamo procedere con le analisi.
 
 * Scarichiamo i file `taxonomy_16S_SKLEARN.qzv` e `taxa-bar-plots_16S_SKLEARN.qzv` e visualizziamoli con QIIME2 view.  
 
-## Alpha e Beta Diversità
+### Alpha e Beta Diversità
 La Diversità è una misura della complessità del sistema che stiamo osservando, in funzione del numero di oggetti e della loro abbondanza relativa.  
 ![diversità](diversita.png)
 
@@ -288,7 +294,7 @@ In particolare:
       --p-pairwise
     ```  
 
-## Analisi comparativa tra le due tipologie tumorali  
+### Analisi comparativa tra le due tipologie tumorali  
 Utilizzeremo [**ANCOM (analysis of composition of microbiomes)**](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4450248/) per andare a effettuare una analisi comparativa tra le due tipologie tumorali analizzate.  
 1. Abbiamo detto che la tabella delle ASV è ricca in zeri (**zero inflated**). Ancom aggiunge delle _pseudo-conte_ per eliminare gli zeri.  
 
