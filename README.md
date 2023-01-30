@@ -25,9 +25,9 @@
 
 ### Esercitazione 5 (16-18/01/2023)
 - [X] [DNA Metabarcoding](Metabarcoding/metabarcoding.md)
-- [ ] [Genome Assembly](Genome_Assembly/genome_assembly.md)
+- [X] [Genome Assembly](Genome_Assembly/genome_assembly.md)
 
 ### Esercitazione 6 (20-24/01/2023)
-- [ ] [Genome Assembly](Genome_Assembly/genome_assembly.md)
+- [X] [Genome Assembly](Genome_Assembly/genome_assembly.md)
 
 ### [Relazioni](relazioni.md)  
