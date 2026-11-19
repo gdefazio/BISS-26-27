@@ -124,7 +124,7 @@ Esamina la entry selezionata nell’esercizio 1.
 - Osservando la **Feature Table** cosa potete annotare?  
 
 ## Esercizio 4. 
-Utilizzando ENTREZ prova a selezionare la entry **RefSeq** più lunga relativa alla **proteina** `"tumor protein tp73"`, 
+Utilizzando ENTREZ prova a selezionare la entry **RefSeq protein** più lunga relativa alla **proteina** `"tumor protein tp73"`, 
 il cui **gene name** ufficiale è `tp73` di [_Rattus norvegicus_](https://www.ensembl.org/Rattus_norvegicus/Info/Index).  
 
 ## Esercizio 5. 
